@@ -41,7 +41,7 @@ module.exports = {
             },
             {
               label: 'Subgraphs',
-              to: 'docs/subgraphs',
+              to: '/subgraphs',
             },
           ],
         },

@@ -1,0 +1,63 @@
+---
+id: services
+title: Contract Services
+sidebar_label: Contract Services
+slug: /services
+---
+
+## Overview
+
+Services within DAOhaus handle contract calls. They build and supply web3 to read-only calls and handle catching errors. The services are set up for functional instatiation.
+
+1. create contract
+1. call service (function) on contract
+1. pass args for handling post-process
+
+## Moloch Service
+
+```js
+await MolochService({
+  // web3: injectedProvider,            <-- needed for write calls
+  daoAddress: daoid,
+  chainID: daochain,
+  version: daoOverview.version,
+})("collectTokens")({ args, address, poll, onTxHash });
+```
+
+## Token Service
+
+```js
+await TokenService({
+  // web3: injectedProvider,          <-- needed for write calls
+  tokenAddress: token,
+  chainID: daochain,
+})("approve")({ args, address, poll, onTxHash });
+```
+
+## Minion Service
+
+```js
+await MinionService({
+  // web3: injectedProvider,          <-- needed for write calls
+  minion: minionAddress,
+  chainID,
+})("getAction")({ proposalId });
+```
+
+## Summon (Moloch Factory) Service
+
+```js
+await SummonService({
+  web3: injectedProvider, // always write
+  chainID: injectedChain.chain_id,
+})("summonMoloch")({ args: summonParams, from: address, poll, onTxHash });
+```
+
+## Minion Factory Service
+
+```js
+await MinionFactoryService({
+  web3: injectedProvider, // always write
+  chainID: injectedChain.chain_id,
+})("summonMinion")({ args: summonParams, from: address, poll, onTxHash });
+```

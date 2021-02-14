@@ -5,7 +5,19 @@ sidebar_label: Contexts
 slug: /contexts
 ---
 
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+## Overview
+
+<img alt="DAOhaus Contexts" src={useBaseUrl("img/new_context_structure.png")} />
+
 ## Custom Theme Context
+
+```js
+import useCustomTheme from '../contexts/CustomThemeContext';
+...
+const { theme, updateTheme } = useCustomTheme();
+```
 
 - `theme` - chakra theme context extended with the default and/or custom theme
 - `updateTheme` - update the theme for the interface
@@ -14,6 +26,12 @@ slug: /contexts
 - `resetTheme` - clear set theme to default
 
 ## DAO Context
+
+```js
+import useDao from '../contexts/DaoContext';
+...
+const { daoOverview, daoProposals } = useDao();
+```
 
 - `daoProposals` - Array of DAO proposals
 - `daoActivities` - Array of DAO activities from proposals history
@@ -25,23 +43,36 @@ slug: /contexts
 
 ## DAO Member Context
 
+```js
+import useDaoMember from '../contexts/DaoMemberContext';
+...
+const { theme, updateTheme } = useDaoMember();
+```
+
 - `currentMemberRef`
 - `isMember`
 - `daoMember`
 - `memberWalletRef`
 
-## Default Provider Context
-
-- `changeDappChain`
-- `dappProvider`
-- `setConnectBy`
-
 ## Explore Context
+
+```js
+import React, { useContext } from 'react';
+import ExploreContext from '../contexts/ExploreContext';
+...
+const { exploreDaos } = useContext(ExploreContext);
+```
 
 - `exploreDaos` -
 - `hasLoadedExploreData` -
 
 ## Injected Provider Context
+
+```js
+import useInjectedProvider from '../contexts/InjectedProviderContext';
+...
+const { address, injectedChain } = useInjectedProvider();
+```
 
 - `injectedProvider`
 - `requestWallet`
@@ -52,6 +83,12 @@ slug: /contexts
 
 ## MetaData Context
 
+```js
+import useMetaData from '../contexts/MetaDataContext';
+...
+const { daoMetaData, customTerms } = useMetaData();
+```
+
 - `daoMetaData`
 - `hasFetchedMetadata`
 - `shouldUpdateTheme`
@@ -59,6 +96,12 @@ slug: /contexts
 - `refetchMetaData`
 
 ## Overlay Context
+
+```js
+import useOverlay from '../contexts/OverlayContext';
+...
+const { daoSwitcherModal, successToast } = useOverlay();
+```
 
 - `daoSwitcherModal`
 - `setDaoSwitcherModal`
@@ -80,15 +123,33 @@ slug: /contexts
 
 ## Token Context
 
+```js
+import useToken from '../contexts/TokenContext';
+...
+const { currentDaoTokens } = useToken();
+```
+
 - `currentDaoTokens`
 - `shouldFetchInit`
 - `shouldFetchContract`
 
 ## TX Context
 
+```js
+import useTX from '../contexts/TXContext';
+...
+const { refreshDao } = useTX();
+```
+
 - `refreshDao` - refresh dao data after a tx
 
 ## User Context
+
+```js
+import useUser from '../contexts/UserContext';
+...
+const { userHubDaos, outstandingTXs } = useUser();
+```
 
 - `userHubDaos`
 - `hasLoadedHubData`

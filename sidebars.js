@@ -1,7 +1,7 @@
 module.exports = {
   mainSidebar: {
-    Foundation: ['contracts', 'subgraphs'],
-    'Front End': ['proposals', 'activities', 'bank', 'contexts', 'services', 'utilities'],
+    Moloch: ['contracts', 'subgraphs'],
+    Client: ['proposals', 'activities', 'bank', 'contexts', 'services', 'tx-polling', 'summoning', 'utilities'],
     Boosts: ['default-boosts', 'new-boosts']
   },
 };

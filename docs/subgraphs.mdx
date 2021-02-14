@@ -1,7 +1,7 @@
 ---
 id: subgraphs
-title: Getting Data for DAOhaus
-sidebar_label: DAOhaus Subgraphs
+title: Getting Moloch Data
+sidebar_label: Subgraphs
 slug: /subgraphs
 ---
 
@@ -11,13 +11,11 @@ TheGraph is a data protocol that lays on top of other public blockchain indexing
 
 ## Subgraphs
 
-### Primary "Supergraph"
+### Primary "Supergraph" Subgraph
 
-The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: members, proposals, votes, and tokens.
+The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: members, proposals, votes, and tokens. [Jump to explorers 👇](#daohaus-subgraph-explorers)
 
-#### Entities
-
-##### Moloches
+#### Moloches
 
 ```json
 {
@@ -52,12 +50,12 @@ The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: 
 }
 ```
 
-##### Members
+#### Members
 
 ```json
 
 {
-    members (
+    members {
         id                          // ID               address + dao address
         createdAt                   // String           time entity was created
         moloch                      // Moloch           connected moloch entities
@@ -77,11 +75,11 @@ The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: 
         proposedToKick              // Boolean          has been proposed to be kicked
         kicked                      // Boolean          has been kicked
         jailed                      // Proposal         proposal Id for guild kick
-    )
+    }
 }
 ```
 
-##### Proposals
+#### Proposals
 
 ```json
 {
@@ -141,7 +139,7 @@ The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: 
 }
 ```
 
-##### Tokens
+#### Tokens
 
 ```json
 {
@@ -156,55 +154,55 @@ The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: 
 }
 ```
 
-##### Minions
+#### Minions
 
 ```json
 {
     minions {
-        id: ID!
-        createdAt: String!
-        minionAddress: Bytes!
-        molochAddress: Bytes!
-        moloch: Moloch!
-        details: String!
-        minionType: String!
-        proposals: [Proposal!]
+        id                  // ID
+        createdAt           // String
+        minionAddress       // Bytes
+        molochAddress       // Bytes
+        moloch              // Moloch
+        details             // String
+        minionType          // String
+        proposals           // [Proposal]
     }
 }
 ```
 
-##### Votes
+#### Votes
 
 ```json
 {
     votes {
-        id: ID!
-        createdAt: String!
-        proposal: Proposal!
-        member: Member!
-        uintVote: Int!
-        molochAddress: Bytes!
-        memberAddress: Bytes
-        memberPower: BigInt
-        proposalIndex: BigInt
-        delegateKey: Bytes
+        id                  // ID
+        createdAt           // String
+        proposal            // Proposal
+        member              // Member
+        uintVote            // Int
+        molochAddress       // Bytes
+        memberAddress       // Bytes
+        memberPower         // BigInt
+        proposalIndex       // BigInt
+        delegateKey         // Bytes
     }
 }
 ```
 
-##### RageQuits
+#### RageQuits
 
 ```json
 {
     ragequits {
-        id: ID!
-        createdAt: String!
-        moloch: Moloch!
-        molochAddress: Bytes!
-        member: Member!
-        memberAddress: Bytes!
-        shares: BigInt!
-        loot: BigInt!
+        id                  // ID
+        createdAt           // String
+        moloch              // Moloch
+        molochAddress       // Bytes
+        member              // Member
+        memberAddress       // Bytes
+        shares              // BigInt
+        loot                // BigInt
     }
 }
 ```
@@ -221,28 +219,26 @@ The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: 
 
 The DAOhaus Stats Subgraph provides aggregated stats and metrics for users, communities, and across the ecosystem.
 
-#### Stats Entities
-
-##### Moloches Stats
+#### Moloches Stats
 
 ```json
 {
     moloch {
-        id: ID!
-        timestamp: String!
-        summoner: Bytes!
-        title: String
-        version: String
-        newContract: String
-        deleted: Boolean
-        summoningTime: BigInt!
-        guildBankAddress: Bytes
-        proposalCount: BigInt!
-        memberCount: BigInt!
-        voteCount: BigInt!
-        rageQuitCount: BigInt!
-        balances: [Balance!]
-        totalGas: BigInt!
+        id                      // ID
+        timestamp               // String
+        summoner                // Bytes
+        title                   // String
+        version                 // String
+        newContract             // String
+        deleted                 // Boolean
+        summoningTime           // BigInt
+        guildBankAddress        // Bytes
+        proposalCount           // BigInt
+        memberCount             // BigInt
+        voteCount               // BigInt
+        rageQuitCount           // BigInt
+        balances                // [Balance]
+        totalGas                // BigInt
     }
 }
 ```
@@ -252,44 +248,44 @@ The DAOhaus Stats Subgraph provides aggregated stats and metrics for users, comm
 ```json
 {
     balances {
-        id: ID!
-        timestamp: String!
-        balance: BigInt!
-        tokenAddress: Bytes!
-        molochAddress: Bytes!
-        moloch: Moloch!
-        payment: Boolean!
-        tribute: Boolean!
-        action: String!
-        amount: BigInt
-        rageQuitAllShares: Boolean
-        version: String!
-        tokenSymbol: String
-        tokenDecimals: BigInt
-        currentShares: BigInt!
-        currentLoot: BigInt
+        id                      // ID!
+        timestamp               // String!
+        balance                 // BigInt!
+        tokenAddress            // Bytes!
+        molochAddress           // Bytes!
+        moloch                  // Moloch!
+        payment                 // Boolean!
+        tribute                 // Boolean!
+        action                  // String!
+        amount                  // BigInt
+        rageQuitAllShares       // Boolean
+        version                 // String!
+        tokenSymbol             // String
+        tokenDecimals           // BigInt
+        currentShares           // BigInt!
+        currentLoot             // BigInt
     }
 }
 ```
 
-##### Stats Badge
+#### Stats Badge
 
 ```json
 {
     badges {
-        id: ID!
-        memberAddress: Bytes!
-        voteCount: BigInt!
-        summonCount: BigInt!
-        proposalSponsorCount: BigInt!
-        proposalSubmissionCount: BigInt!
-        proposalProcessorCount: BigInt!
-        rageQuitCount: BigInt!
-        jailedCount: BigInt!
-        memberships: BigInt!
-        dissents: BigInt!
-        assents: BigInt!
-        totalGas: BigInt!
+        id                      // ID
+        memberAddress           // Bytes
+        voteCount               // BigInt
+        summonCount             // BigInt
+        proposalSponsorCount    // BigInt
+        proposalSubmissionCount // BigInt
+        proposalProcessorCount  // BigInt
+        rageQuitCount           // BigInt
+        jailedCount             // BigInt
+        memberships             // BigInt
+        dissents                // BigInt
+        assents                 // BigInt
+        totalGas                // BigInt
     }
 }
 ```

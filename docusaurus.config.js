@@ -83,12 +83,12 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/HausDAO/daohaus-docs/edit/master/website/',
+            'https://github.com/HausDAO/daohaus-docs/edit/prod/',
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/HausDAO/daohaus-docs/edit/master/website/blog/',
+            'https://github.com/HausDAO/daohaus-docs/edit/prod/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

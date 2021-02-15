@@ -18,14 +18,14 @@ module.exports = {
       items: [
         {
           to: "/",
-          activeBasePath: "docs",
-          label: "Docs",
+          activeBasePath: "how",
+          label: "How",
           position: "left",
         },
         {
-          to: "/how",
-          activeBasePath: "how",
-          label: "How",
+          to: "/docs",
+          activeBasePath: "docs",
+          label: "Docs",
           position: "left",
         },
         {

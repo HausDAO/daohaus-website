@@ -1,19 +1,19 @@
 module.exports = {
   mainSidebar: {
-    Moloch: ["developer/contracts", "developer/subgraphs"],
+    Moloch: ["docs/contracts", "docs/subgraphs"],
     Client: [
-      "developer/proposals",
-      "developer/activities",
-      "developer/bank",
-      "developer/contexts",
-      "developer/services",
-      "developer/tx-polling",
-      "developer/summoning",
-      "developer/utilities",
+      "docs/proposals",
+      "docs/activities",
+      "docs/bank",
+      "docs/contexts",
+      "docs/services",
+      "docs/tx-polling",
+      "docs/summoning",
+      "docs/utilities",
     ],
-    Boosts: ["developer/default-boosts", "developer/new-boosts"],
+    Boosts: ["docs/default-boosts", "docs/new-boosts"],
   },
   howSidebar: {
-    Intro: ["how/intro", "how/intro-2"],
+    Intro: ["intro", "intro-2"],
   },
 };

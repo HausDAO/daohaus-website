@@ -15,5 +15,8 @@ module.exports = {
   },
   howSidebar: {
     Intro: ["intro", "intro-2"],
+    Treasury: ["treasury"],
+    Membership: ["membership"],
+    Proposals: ["proposals"],
   },
 };

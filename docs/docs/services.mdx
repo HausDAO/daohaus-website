@@ -7,11 +7,37 @@ slug: /services
 
 ## Overview
 
-Services within DAOhaus handle contract calls. They build and supply web3 to read-only calls and handle catching errors. The services are set up for functional instatiation.
+DAOhaus uses higher-order functions to make calls on contracts instead of JS classes. The goal of this pattern is to minimize state within the app as managing state between the contract, React's contexts, and JS classes (previously used for contract interaction) was challenging and sometimes difficult to follow. 
 
-1. create contract
-1. call service (function) on contract
-1. pass args for handling post-process
+Stateless contract calls allow us to initiate a transaction without thinking about the transactions that the client had called previously. 
+
+Each contract will usually curry three function calls from a service.  
+
+1. Instantion of a web3.js contract object
+```js
+await MolochService({
+  // web3: injectedProvider,            <-- needed for write calls
+  daoAddress: daoid,
+  chainID: daochain,
+  version: daoOverview.version,
+}) 
+```
+2. Selection of service (function) on contract
+
+```js
+await MolochService({
+  ...
+})("collectTokens");
+```
+3. Pass in args for handling post-process. This final call will execute the TX (except in the case of PollService). 
+
+```js
+await MolochService({
+ ...
+})("collectTokens")({ args, address, poll, onTxHash });
+```
+
+Here are the various services used throughout the app. 
 
 ## Moloch Service
 

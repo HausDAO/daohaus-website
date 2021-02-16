@@ -9,8 +9,6 @@ slug: /services
 
 DAOhaus uses higher-order functions to make calls on contracts instead of JS classes. The goal of this pattern is to minimize state within the app as managing state between the contract, React's contexts, and JS classes (previously used for contract interaction) was challenging and sometimes difficult to follow. 
 
-Stateless contract calls allow us to initiate a transaction without thinking about the transactions that the client had called previously. 
-
 Each contract will usually curry three function calls from a service.  
 
 1. Instantion of a web3.js contract object

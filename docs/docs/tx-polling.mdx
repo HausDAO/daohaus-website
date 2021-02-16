@@ -56,8 +56,10 @@ const poll = createPoll({ action: 'submitProposal', cachePoll })({
 
 Create poll returns as a callback function so that the poll itself can be passed into a Contract Service. There are some key functions being passed into CreatePoll that are worth mentioning. 
 
-`cachePoll` - Saves all the poll data and arguments (with the exception of the poll actions) in LocalStorage so that TXs can continue to poll when the user reopens the browser window.  
+`cachePoll` - Saves all the poll data and arguments (with the exception of the poll actions) in LocalStorage so that TXs can continue to poll when the user reopens the browser window.   
+
 `resolvePoll` - From UserContext. Changes a poll's status to resolved. Without this, a user's cached TX will poll until its limit runs out. 
+
 `refreshDao` - From TXContext. A function that refetches all Dao specific data and signals rerenders all the way down the component tree. This is necessary to ensure that the client data represents the state found on the contract **after** the TX is mined -- and in most cases -- after the Graph has indexed that data. 
 
 Once the poll is initialized, it's wrapped in a callback. We then pass that into a ContractService where it will be called with access to relevant contract data (ex. transactionHash). 

@@ -2,10 +2,10 @@
 id: tx-polling
 title: Polling Service
 sidebar_label: Tx Polling Service
-slug: /tx-polling
+slug: /docs/tx-polling
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 ## Transaction Polling Service
 
@@ -18,7 +18,7 @@ Polls are used in the DaoHaus client to check and see if transactions are comple
 1. Create a poll using CreatePoll() from PollService.js.
 
 ```js
-const poll = createPoll({ action: 'submitProposal', cachePoll });
+const poll = createPoll({ action: "submitProposal", cachePoll });
 ```
 
 It's important to note that PollServices are curried together the same way the ContractServices are. In the first pass, we're passing in a cachingFunction served from UserContext (TXs are saved in the users TX data). There are some optional arguments that can be passed in as well. These optional params control the interval and speed of the poll.
@@ -27,7 +27,7 @@ Ex.
 
 ```js
 const poll = createPoll({
-  action: 'submitProposal',
+  action: "submitProposal",
   cachePoll,
   interval: 2000,
   tries: 20,
@@ -39,7 +39,7 @@ const poll = createPoll({
 On the next call, we pass in all of the arguments required to call the poll. This includes the actions, an object of callback functions that execute at various stages within the poll's lifecycle.
 
 ```js
-const poll = createPoll({ action: 'submitProposal', cachePoll })({
+const poll = createPoll({ action: "submitProposal", cachePoll })({
   daoID: daoid,
   chainID: daochain,
   hash,
@@ -53,7 +53,7 @@ const poll = createPoll({ action: 'submitProposal', cachePoll })({
     },
     onSuccess: (txHash) => {
       successToast({
-        title: 'Member Proposal Submitted to the Dao!',
+        title: "Member Proposal Submitted to the Dao!",
       });
       refreshDao();
       resolvePoll(txHash);
@@ -78,7 +78,7 @@ await MolochService({
   daoAddress: daoid,
   chainID: daochain,
   version: daoOverview.version,
-})('submitProposal')({ args, address, poll, onTxHash });
+})("submitProposal")({ args, address, poll, onTxHash });
 ```
 
-<img alt="Transaction Diagram" src={useBaseUrl('img/tx_diagram.png')} />
+<img alt="Transaction Diagram" src={useBaseUrl("img/tx_diagram.png")} />

@@ -1,9 +1,33 @@
 ---
 id: membership
-title: Membership Intro
-sidebar_label: Membership
+title: Membership Basics
+sidebar_label: Basics
 ---
 
 ## Membership
 
 Membership in a DAO can be very fluid. Easy in/easy out.
+
+### Shares
+
+Shares are granted to members in order to allow them to vote on proposals in the DAO. Shares also represent a claim on the tokens held in the DAO.
+
+### Loot
+
+Loot is essentially a non-voting, economic share of the DAO's tokens. If you just have Loot, you won’t be able to vote on proposals, but you can ragequit all the same.
+
+### Ragequit
+
+This is part of the magic of Moloch. Rage Quit allows a member or Loot holder of the DAO to leave the DAO with all or part of their share of the tokens. Imagine a DAO that has 1000 DAI, 50 Shares, and 50 Loot. That means if you own 10 Shares of the DAO and ragequit all of your shares, you’d leave with 100 DAI, or 10% of the treasury.
+
+### GuildKick
+
+A proposal to kick out a member of the DAO. Converts any Shares they may have into Loot, thereby removing voting power. _Warning_ once a member is guildkicked, they become _jailed_ and cannot be added as a member ever again.
+
+### Jailed
+
+Status of a member after a successful guildkick. Can be ragekicked at this time.
+
+### RageKick
+
+After a successful GuildKick, anyone can ragekick that member. Ragekick acts exactly as a ragequit, burning their Loot and returning their proportionate tokens.

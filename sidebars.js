@@ -14,9 +14,9 @@ module.exports = {
     Boosts: ["docs/default-boosts", "docs/new-boosts"],
   },
   howSidebar: {
-    Intro: ["intro", "intro-2"],
+    Intro: ["intro", "intro-dao", "intro-moloch"],
     Treasury: ["treasury"],
     Membership: ["membership"],
-    Proposals: ["proposals"],
+    Proposals: ["proposals-intro", "proposal-types"],
   },
 };

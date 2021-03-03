@@ -14,9 +14,8 @@ module.exports = {
     Boosts: ["docs/default-boosts", "docs/new-boosts"],
   },
   howSidebar: {
-    Intro: ["intro", "intro-dao", "intro-moloch"],
-    Treasury: ["treasury"],
-    Membership: ["membership"],
-    Proposals: ["proposals-intro", "proposal-types"],
+    Intro: ["intro", "intro-dao", "intro-moloch", "glossary"],
+    Basics: ["treasury", "membership", "proposals-intro", "proposal-types"],
+    HowTo: ["summon", "networks-intro"],
   },
 };

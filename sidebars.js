@@ -15,7 +15,14 @@ module.exports = {
   },
   howSidebar: {
     Intro: ["intro", "intro-dao", "intro-moloch", "glossary"],
-    Basics: ["treasury", "membership", "proposals-intro", "proposal-types"],
-    HowTo: ["summon", "networks-intro"],
+    Basics: ["treasury", "membership", "proposals-intro", "profile"],
+    HowTo: [
+      "summon",
+      "add-member",
+      "request-funding",
+      "withdraw-internal",
+      "weth",
+      "networks-intro",
+    ],
   },
 };

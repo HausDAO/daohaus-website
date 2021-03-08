@@ -23,7 +23,7 @@ module.exports = {
       "request-funding",
       "withdraw-internal",
       "weth",
-      "networks-intro",
+      "networks",
     ],
   },
 };

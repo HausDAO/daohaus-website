@@ -19,14 +19,19 @@ module.exports = {
         {
           to: "/",
           activeBasePath: "how",
-          label: "How",
+          label: "Users",
           position: "left",
         },
         {
           to: "/docs",
           activeBasePath: "docs",
-          label: "Docs",
+          label: "Developers",
           position: "left",
+        },
+        {
+          href: "https://app.daohaus.club",
+          label: "Launch App",
+          position: "right",
         },
         {
           href: "https://github.com/HausDAO/daohaus-docs",

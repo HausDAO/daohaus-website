@@ -17,6 +17,7 @@ module.exports = {
     Intro: ["intro", "intro-dao", "intro-moloch", "glossary"],
     Basics: ["treasury", "membership", "proposals-intro", "profile"],
     HowTo: [
+      "navigation",
       "hub",
       "summon",
       "add-member",

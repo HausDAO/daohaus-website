@@ -2,7 +2,7 @@ module.exports = {
   mainSidebar: {
     Moloch: ["docs/contracts", "docs/subgraphs"],
     Client: [
-      "docs/proposals",
+      "docs/dev-proposals",
       "docs/activities",
       "docs/bank",
       "docs/contexts",

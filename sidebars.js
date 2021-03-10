@@ -26,6 +26,6 @@ module.exports = {
 			'weth',
 			'networks',
 		],
-		UberHaus: ['uberhaus-governance'],
+		UberHaus: ['uberhaus-governance', 'cco'],
 	},
 };

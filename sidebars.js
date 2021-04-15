@@ -12,6 +12,16 @@ module.exports = {
       'docs/utilities',
     ],
     Boosts: ['docs/default-boosts', 'docs/new-boosts'],
+    'JS Code Review': [
+      'docs/goals-and-ideals',
+      'docs/javascript',
+      'docs/async-await',
+      'docs/caching',
+      'docs/react-structure',
+      'docs/react-components',
+      'docs/react-use-effect',
+      'docs/react-jsx',
+    ],
   },
   howSidebar: {
     Intro: ['intro', 'intro-dao', 'intro-moloch', 'glossary'],

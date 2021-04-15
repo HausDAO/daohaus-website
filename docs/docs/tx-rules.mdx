@@ -8,6 +8,6 @@ slug: /docs/tx-rules
 - Polls are used to continually fetch data from an API after a TX
 - Tests are used to test whether or not that data has updated
 - Once the test passed, we have functions that refresh the React app state.
-- Polls must test the item that React reads for UI updates. For example, if React gets a bank balance from the graph, then a TX poll should be aimed at the part of the graph data that is expecting the value to update.
+- **Polls must test the item that React reads for UI updates.** For example, if React gets a bank balance from the graph, then a TX poll should be aimed at the part of the graph data that is expecting the value to update.
 - Polls must pass all of the necessary arguments to cachePoll() as well so that the poll can be automatically rebuilt if the user closes, then opens their window
 - Cache poll should be tested for every new transaction

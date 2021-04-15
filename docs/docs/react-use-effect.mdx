@@ -5,13 +5,57 @@ sidebar_label: React/useEffect
 slug: /docs/react-use-effect
 ---
 
-- Include all dependencies in the dependency array
-- If logic inside of a useEffect calls a function, either:
-  - have that function call a useCallback and include each dependency of that function in the useCallback's dep-array
-  - include the function inside of the useEffect itself
-  - Or refactor the function to outide the component
-- Do not force the useEffect to run. Istead have the useEffect listen to the dependency and render accordingly.
-- Check to see how often the useEffect is running. If it sets state or runs complex logic, create guards to escape if it doesn't need to run.
-- If the useEffect sets a value in state based on synchronous props, consider using useMemo to save that value directly inside the component instead.
-- Always unsubscribe from listeners
-- Unsubscribe from asynchronous calls (not currently implemented)
+import Link from '@docusaurus/Link';
+
+useEffect is a big enough pain in the ass to justify its own page. While powerful and extremely useful, there are common conventions that devs should follow in order to prevent it from causing strange strange bugs.
+
+#### Include all dependencies in the dependency array
+
+**Linter:** Our linter currently doesn't lint for dep-array inclusion. There's a lot of legacy code that hasn't been updated to properly follow this pattern, so turning it on and updating all components at once would come at too high of a cost to the progress of the app. Our plan is to fix this gradually.
+
+In the interim, devs are resposible for ensuring that every changing value referenced inside the useEffect is also referenced in the dependency array.
+
+#### Rules for calling functions inside the useEffect
+
+This applies to functions inside of the React Component. Functions outside of a react component (ex. a JS utility function) don't rely on state or props, and therefore do not need to be included in the dep array.
+
+- If possible, try to include that function inside of the useEffect itself
+- If that gets too messy (code duplication), then see if the function can be refactored into a pure function and move outside of the component.
+- if it relies too heavily on state, then its time bring out useCallback as a last resort. useCallback also has a dep array. Be sure to include all dependencies in that array.
+
+Read more about this in the <a href='https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies'>React Docs </a>
+
+#### Monitor your useEffect.
+
+Check to see how often logic or async calls are running inside the useEffect. Optimize by escaping only refactoring computationally expensive operations to a function and only running that function when necessary.
+
+#### When to useEffect vs. useMemo vs. lazy-initialization
+
+As a general rule of thumb
+
+- useEffect is great for fetches and awaiting asynchronous data
+- useMemo is good for calculating and updating expensive synchronous operations and saving it to a constant
+
+```js
+const value = useMemo(() => {
+  // only when incoming value changes
+  // or after first render
+  // update value
+  return expensiveOperation(incomingValue);
+}, [incomingValue]);
+```
+
+- lazy-initialization is a great pattern for initializing state once without holding up the rendering of the component
+
+```js
+//  this waits for the component to render, computes, then sets state
+const [value, setValue] = useState(() => {
+  expensiveOperation(incomingValue);
+});
+```
+
+#### When to use the useRef/useEffect pattern
+
+Read more about this in <Link to='/docs/utilities-patterns'> Common Utilities and Patterns</Link>
+
+#### Always unsubscribe from listeners

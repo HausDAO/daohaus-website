@@ -5,6 +5,8 @@ sidebar_label: React/Components
 slug: /docs/react-components
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 #### Keep em simple
 
 It should be easy to understand the rendering logic of a React Component. Can someone understand your Component after five minutes of reading it? If not, then it needs to be refactored.
@@ -21,7 +23,9 @@ We should try to cap component length at 250 lines.
 
 #### Always use a unique key when mapping components (not index).
 
-#### Use React's callback function pattern to set self-referential state
+#### Use Functional Updates to set self-referential state
+
+When setting state based on a previous value, use functional updates to ensure values that are up to date.
 
 Avoid:
 
@@ -44,3 +48,5 @@ const increment = () => {
 ```
 
 Doing so ensures that the state is never stale and always updates based on the previous value.
+
+Read more about functional updates in the <a href='https://reactjs.org/docs/hooks-reference.html#functional-updates'> React Docs </a>

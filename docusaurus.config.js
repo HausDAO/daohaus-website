@@ -51,7 +51,7 @@ module.exports = {
             },
             {
               label: "Developers",
-              href: "/docs/devs",
+              to: "/docs/devs",
             },
           ],
         },

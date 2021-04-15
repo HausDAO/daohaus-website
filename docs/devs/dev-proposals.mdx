@@ -2,7 +2,7 @@
 id: dev-proposals
 title: DAO Proposals
 sidebar_label: Proposals
-slug: /docs/proposals
+slug: /devs/proposals
 ---
 
 import useBaseUrl from "@docusaurus/useBaseUrl";

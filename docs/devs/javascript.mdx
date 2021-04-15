@@ -2,7 +2,7 @@
 id: javascript
 title: Javascript Rules
 sidebar_label: Javascript Rules
-slug: /docs/javascript
+slug: /devs/javascript
 ---
 
 #### Prefer pure functions. Avoid side effects.
@@ -32,8 +32,8 @@ Avoid this
 ```js
 const complicatedControlFlow = condition
   ? otherCondition
-    ? 'result1'
-    : 'result2'
+    ? "result1"
+    : "result2"
   : `Wait, I'm confused. What is this one for?`;
 ```
 
@@ -46,11 +46,11 @@ Use this instead:
 ```js
 const handleFlow = (condition, otherCondition) => {
   if (condition && otherCondition) {
-    return 'result1';
+    return "result1";
   } else if (condition && !otherCondition) {
-    return 'result2';
+    return "result2";
   } else {
-    return 'I get it now';
+    return "I get it now";
   }
 };
 

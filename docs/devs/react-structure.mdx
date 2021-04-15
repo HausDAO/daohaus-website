@@ -2,7 +2,7 @@
 id: react-structure
 title: React Structure
 sidebar_label: React/Structure
-slug: /docs/react-structure
+slug: /devs/react-structure
 ---
 
 #### Use JS to handle complex logic and state, not JSX.
@@ -28,7 +28,7 @@ Avoid this:
 
 ```js
 const [bigState, setBigState] = useState({
-  birds: ['Crow', 'Sparrow', 'Ostrich'],
+  birds: ["Crow", "Sparrow", "Ostrich"],
   likesIceCream: true,
 });
 ```
@@ -36,7 +36,7 @@ const [bigState, setBigState] = useState({
 Use this:
 
 ```js
-const [birds, setBirds] = useState(['Crow', 'Sparrow', 'Ostrich']);
+const [birds, setBirds] = useState(["Crow", "Sparrow", "Ostrich"]);
 const [likesIceCream, setLikeIceCream] = useState(true);
 ```
 

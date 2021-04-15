@@ -42,11 +42,6 @@ module.exports = {
           position: "right",
         },
         {
-          to: "/docs",
-          label: "Help",
-          position: "right",
-        },
-        {
           label: "Docs",
           position: "right",
           items: [
@@ -56,7 +51,7 @@ module.exports = {
             },
             {
               label: "Developers",
-              href: "/developers",
+              href: "/docs/devs",
             },
           ],
         },

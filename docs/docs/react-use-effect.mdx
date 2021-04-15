@@ -1,0 +1,17 @@
+---
+id: react-use-effect
+title: Use Effect
+sidebar_label: React/useEffect
+slug: /docs/react-use-effect
+---
+
+- Include all dependencies in the dependency array
+- If logic inside of a useEffect calls a function, either:
+  - have that function call a useCallback and include each dependency of that function in the useCallback's dep-array
+  - include the function inside of the useEffect itself
+  - Or refactor the function to outide the component
+- Do not force the useEffect to run. Istead have the useEffect listen to the dependency and render accordingly.
+- Check to see how often the useEffect is running. If it sets state or runs complex logic, create guards to escape if it doesn't need to run.
+- If the useEffect sets a value in state based on synchronous props, consider using useMemo to save that value directly inside the component instead.
+- Always unsubscribe from listeners
+- Unsubscribe from asynchronous calls (not currently implemented)

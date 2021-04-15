@@ -1,0 +1,13 @@
+---
+id: react-jsx
+title: JSX
+sidebar_label: React/JSX
+slug: /docs/react-jsx
+---
+
+- JSX should only be responsible for UI rendering and some rendering logic. Higher order logic should be performed outside of the return statement, or better yet, outside of the component (if possible).
+- Eliminate as much as logic as possible from JSX
+- Eliminate as much style as possible from JSX.
+- Anonomous callback functions inside of props create a new function every time, and will eventually bog down a computer's memory. Unless completely necessary, save a function to a constant inside the component (ex. handleClick) and pass it to props as a callback.
+- Complex nested ternary patterns should replaced with functions that use if/else blocks for control flow.
+- Complex ternary patterns are a good sign that this piece of the UI can be its own component

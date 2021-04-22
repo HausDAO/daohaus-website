@@ -35,7 +35,7 @@
 
 .SummonHero {
   padding-left: 100px;
-  width: calc(50% - 100px);
+  width: calc(50%);
   background-color: $primary-dark;
   position: relative;
   display: flex;
@@ -73,7 +73,7 @@
         }
       }
     }
-    :hover svg path {
+    a:hover svg path {
       transition: all 0.15s linear;
       fill: #433185;
     }

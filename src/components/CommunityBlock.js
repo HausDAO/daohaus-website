@@ -1,10 +1,9 @@
 import React from "react";
 
-// import Icon from '@ant-design/icons';
-// import { ReactComponent as DiscordSvg } from '../../../assets/branding/Discord.svg';
-// import { ReactComponent as SubstackSvg } from '../../../assets/Substack.svg';
 import { DiGithubAlt } from "react-icons/di";
+import { RiDiscordFill } from "react-icons/ri";
 import HausHugeType from "@site/static/img/haus__hugeType.png";
+import SubstackSvg from "@site/static/img/Substack.svg";
 
 import "../css/community.scss";
 
@@ -35,7 +34,7 @@ const CommunityBlock = () => {
               rel="noopener noreferrer"
               className="SocialIcon"
             >
-              {/* <Icon component={DiscordSvg} /> */}
+              <RiDiscordFill />
             </a>
             <h4 className="tradColor">Discord</h4>
             <p>Get support, provide feedback, ask anything about DAOs.</p>
@@ -47,7 +46,7 @@ const CommunityBlock = () => {
               rel="noopener noreferrer"
               className="SocialIcon"
             >
-              {/* <Icon component={SubstackSvg} /> */}
+              <SubstackSvg />
             </a>
             <h4 className="yellowColor">Substack</h4>
             <p>

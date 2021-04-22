@@ -82,6 +82,9 @@ a {
   &:not(.Button):hover {
     color: $primary-hover;
   }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 img {
@@ -147,6 +150,7 @@ button:not(.hamburger):not([role="switch"]),
   &.Secondary {
     border: 2px solid transparent;
     background-color: $secondary;
+    color: white !important;
     &:hover {
       border: 2px solid transparent;
       background-color: $primary-hover;
@@ -154,7 +158,7 @@ button:not(.hamburger):not([role="switch"]),
     &.Outlined {
       border: 2px solid $secondary;
       background-color: transparent;
-      color: $secondary;
+      color: $secondary !important;
       &:hover {
         border: 2px solid $secondary-hover;
         background-color: transparent;
@@ -556,240 +560,6 @@ p.Large {
   }
 }
 
-// Switch
-
-.ant-switch {
-  margin: 0;
-  padding: 0;
-  color: $background-hover;
-  font-variant: tabular-nums;
-  line-height: 1.5715;
-  list-style: none;
-  -webkit-font-feature-settings: "tnum";
-  font-feature-settings: "tnum", "tnum";
-  position: relative;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  min-width: 44px;
-  height: 22px;
-  line-height: 22px;
-  vertical-align: middle;
-  background-color: $background-hover;
-  border: 0;
-  border-radius: 100px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  &:focus {
-    outline: none;
-  }
-}
-
-.ant-switch-checked {
-  background-color: $orange;
-}
-
-.ant-switch-checked .ant-switch-handle {
-  left: calc(100% - 18px - 2px);
-}
-
-.ant-switch-handle {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 18px;
-  height: 18px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.ant-switch-checked .ant-switch-inner {
-  margin: 0 25px 0 7px;
-}
-
-.ant-click-animating-node {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  border-radius: inherit;
-  -webkit-box-shadow: 0 0 0 0 #1890ff;
-  box-shadow: 0 0 0 0 #1890ff;
-  -webkit-box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
-  box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
-  opacity: 0.2;
-  -webkit-animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1),
-    waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
-  animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1),
-    waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  content: "";
-  pointer-events: none;
-}
-
-.ant-switch-handle::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  border-radius: 9px;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
-  box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  content: "";
-}
-
-// Wizard
-.Wizard {
-  h3 {
-    font-size: 2em;
-  }
-  p:first-child {
-    font-size: 1.5em;
-  }
-}
-
-.Step {
-  position: relative;
-}
-
-.ButtonGroup {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  margin: 25px 0px;
-  width: 100%;
-  button {
-    display: inline-block;
-    &:not(:first-child) {
-      margin-left: 15px;
-    }
-  }
-}
-
-.Summary {
-  p:first-child {
-    font-size: 1.35em;
-  }
-  .Value {
-    margin-bottom: 25px;
-  }
-  .Label {
-  }
-}
-
-// Application List
-.ApplicationList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  @media (max-width: $mobile) {
-    flex-direction: column;
-  }
-  &__Item {
-    width: 30%;
-    margin-right: 25px;
-    @media (max-width: $grid) {
-      width: 45%;
-      margin-right: 25px;
-    }
-
-    @media (max-width: $mobile) {
-      width: 100%;
-      margin-right: 0px;
-    }
-    a {
-      background-color: white;
-      margin-top: 25px;
-      margin-bottom: 25px;
-      box-shadow: $shadow;
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      padding: 15px;
-      transition: all 0.15s linear;
-      min-height: 103px;
-      &:hover {
-        scale: 1.05;
-      }
-    }
-    .MemberInfo {
-      justify-content: space-between;
-      font-size: 0.85em;
-      color: black;
-      p {
-        margin: 0 0 15px 0;
-        color: black;
-      }
-      :nth-child(1) {
-        margin-right: 10px;
-      }
-    }
-    .ProfileInfo {
-      justify-content: flex-start;
-      align-content: center;
-      font-size: 0.85em;
-      color: black;
-      &__Pseudo {
-        height: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-      }
-      h2 {
-        margin: 0px 0px 0px 0px;
-        font-size: 1.25em;
-      }
-      p {
-        margin: 0 0 0px 0;
-        color: black;
-      }
-      :nth-child(1) {
-        margin-right: 10px;
-      }
-    }
-    .PledgeInfo {
-      justify-content: space-between;
-      font-size: 0.85em;
-      color: black;
-      p {
-        margin: 15px 0 0 0;
-        color: black;
-      }
-      :nth-child(1) {
-        margin-right: 10px;
-      }
-    }
-  }
-}
-
-// Profile
-.ProfileImg {
-  width: 150px;
-  height: 150px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  @media (max-width: $mobile) {
-    margin: 25px auto;
-  }
-}
-
 // Forms
 
 .Form {
@@ -965,18 +735,6 @@ label.Select {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2em;
-  }
-}
-
-.Applicant__List {
-  display: block;
-  width: 100%;
-  * {
-    float: none;
-  }
-  .List--Item {
-    margin: 25px 0px;
-    font-size: 1.5em;
   }
 }
 

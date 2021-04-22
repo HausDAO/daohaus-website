@@ -20,15 +20,15 @@ module.exports = {
       },
       items: [
         {
-          to: "/token",
-          activeBasePath: "token",
-          label: "Token",
-          position: "right",
-        },
-        {
           to: "/community",
           activeBasePath: "community",
           label: "Community",
+          position: "right",
+        },
+        {
+          to: "/token",
+          activeBasePath: "token",
+          label: "Token",
           position: "right",
         },
         {
@@ -63,7 +63,6 @@ module.exports = {
       ],
     },
     footer: {
-      style: "dark",
       links: [
         {
           items: [
@@ -81,7 +80,11 @@ module.exports = {
             },
             {
               to: "/docs",
-              label: "DAO Basics",
+              label: "User Docs",
+            },
+            {
+              to: "/docs/devs",
+              label: "Developer Docs",
             },
           ],
         },
@@ -96,7 +99,7 @@ module.exports = {
               href: "https://discord.gg/NPEJysW",
             },
             {
-              label: "Suibstack",
+              label: "Substack",
               href: "https://daohaus.substack.com/",
             },
             {
@@ -106,6 +109,10 @@ module.exports = {
           ],
         },
       ],
+      logo: {
+        alt: "HAUS logo",
+        src: "img/logo.png",
+      },
       copyright: `Built by the community via HausDAO.`,
     },
   },

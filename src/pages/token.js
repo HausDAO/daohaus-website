@@ -48,18 +48,27 @@ const Token = () => {
                   >
                     Read the Launch Article
                   </a>
-                  {/* <a
-                  href="https://medium.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="Button Big"
-                >
-                  FarmHaus
-                </a> */}
+                  <a
+                    href="https://app.honeyswap.org/#/swap"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="Button Big Secondary"
+                  >
+                    Get HAUS
+                  </a>
                 </div>
               </div>
               <div className="Column--50">
-                <img src={HausToken} alt="" />
+                <a
+                  href="https://www.coingecko.com/en/coins/daohaus"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div style={{ textAlign: "center" }}>
+                    <img style={{ margin: "0 auto" }} src={HausToken} alt="" />
+                  </div>
+                  <p style={{ textAlign: "center" }}>View HAUS on CoinGecko</p>
+                </a>
               </div>
             </div>
           </div>
@@ -67,41 +76,58 @@ const Token = () => {
 
         <div className="Block PrimaryBg">
           <div className="Block__Contents">
-            <div className="Row">
+            <div class="Row">
               <div className="Column--50">
                 <h2 style={{ textDecoration: "strikethrough" }}>
-                  The HAUS CCO is complete!
+                  The FarmHaus is open
                 </h2>
                 <p className="BigP">
-                  A CCO, or ‘Community Contribution Opportunity’, is exactly
-                  that. An opportunity for the community to contribute in
-                  exchange for the community’s token (HAUS in our case).
+                  The farms are live on xDAI and there are three staking
+                  opportunities to yield more HAUS, with rewards increasing
+                  based on effort and value to the network.
                 </p>
-                <p>1.1M raised in 75 seconds.</p>
-                <p className="yellowColor">
-                  <i>Claiming opens in a few days.</i>
+                <p>
+                  1. Get HAUS on{" "}
+                  <a href="https://app.honeyswap.org/#/swap">Honeyswap</a>
                 </p>
-                <div className="HeroButtonGroup">
-                  <a
-                    href="https://docs.daohaus.club/cco"
-                    className="Button Secondary Outlined"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    What's a CCO?
-                  </a>
-                  {/* <a
-                  href="https://app.daohaus.club/cco"
-                  className="Button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'white' }}
-                >
-                  Claim
-                </a> */}
-                </div>
+                <p>
+                  2. Stake into one of the farms at the{" "}
+                  <a href="https://farm.daohaus.club">FarmHaus</a>
+                </p>
+                <p>3. Earn more HAUS</p>
               </div>
               <div className="Column--50"></div>
+            </div>
+            <div className="Row">
+              <div className="Column--33">
+                <h2>Ronin</h2>
+                <p>Stake HAUS alone for 1x rewards</p>
+                <p>
+                  <i>Signal governance with Snapshot</i>
+                </p>
+                <a
+                  href="https://docs.daohaus.club/cco"
+                  className="Button Secondary Outlined"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Farm
+                </a>
+              </div>
+              <div className="Column--33">
+                <h3>Shogun</h3>
+                <p>Stake HAUS/xDAI LP tokens and earn 2x rewards</p>
+                <p>
+                  <i>Signal governance with Snapshot</i>
+                </p>
+              </div>
+              <div className="Column--33">
+                <h3>Clan</h3>
+                <p>Stake HAUS as a DAO into UberHaus and earn 3x rewards</p>
+                <p>
+                  <i>Direct governance through UberHaus</i>
+                </p>
+              </div>
             </div>
           </div>
         </div>

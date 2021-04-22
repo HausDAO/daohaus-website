@@ -5,14 +5,11 @@ import { Carousel } from "antd";
 
 import CommunityBlock from "../components/CommunityBlock";
 
-// import Icon from "@ant-design/icons";
-// import { ImTwitter } from 'react-icons/im';
-// import { DiGithubAlt } from 'react-icons/di';
-// import { ReactComponent as DiscordSvg } from "@site/static/img/Discord.svg";
-// import { ReactComponent as SubstackSvg } from "@site/static/img/Substack.svg";
-
 import { ImTwitter } from "react-icons/im";
 import { DiGithubAlt } from "react-icons/di";
+import { RiDiscordFill } from "react-icons/ri";
+import SubstackSvg from "@site/static/img/Substack.svg";
+import DiscordSvg from "@site/static/img/Discord_alt.svg";
 
 import InfographicTrad from "@site/static/img/infographic__trad.png";
 import InfographicDAO from "@site/static/img/infographic__dao.png";
@@ -76,14 +73,14 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {/* <Icon component={DiscordSvg} /> */}
+                <DiscordSvg />
               </a>
               <a
                 href="https://daohaus.substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {/* <Icon component={SubstackSvg} style={{ fill: "#513e97" }} /> */}
+                <SubstackSvg />
               </a>
               <a
                 href="https://github.com/HausDAO/pokemol-web"
@@ -104,8 +101,6 @@ export default function Home() {
               <a
                 href="https://docs.daohaus.club"
                 className="Button Big Secondary Outlined"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 DAO Basics
               </a>

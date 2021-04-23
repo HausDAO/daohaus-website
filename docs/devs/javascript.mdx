@@ -20,9 +20,9 @@ Pure functions are:
 - Array methods like map and filter return a new array, which helps prevent object mutation
 - Helps take the work out setting up the values in a for loop
 
-#### When iterating over objects, either convert to arrays and use the rule above or use a 'for in' loop enclosed in its own function.
+#### When iterating over objects, use a 'for in' loop or convert to an array
 
-- For in has a cleaner syntax, and will only iterate over the amount of keys in the object
+- 'For in' has a cleaner syntax, and will only iterate over the amount of keys in the object
 - Whereas a for loop can loop infinitely
 
 #### Ternary operators should be limited to two conditions.
@@ -37,7 +37,7 @@ const complicatedControlFlow = condition
   : `Wait, I'm confused. What is this one for?`;
 ```
 
-While the above example is more compact and declarative, it's pretty tough to read.
+While the above example is more compact and declarative, it's pretty tough to understand.
 
 It's much better to call a separate function and use if/else blocks.
 
@@ -58,42 +58,6 @@ const complicatedControlFlow = handleFlow(condition, otherCondition);
 ```
 
 For many, the above example is easier to disect. Moving to an if/else code block allows us to flatten the logic and make it more readable.
-
-#### Prefer unary operators where applicable
-
-Generally use
-
-```js
-exists && <Component />;
-```
-
-instead of
-
-```js
-exists ? <Component /> : null;
-```
-
-However in JSX, there's a strange effect that happens when testing for 0 as falsy value.
-
-```js
-const array = [];
-
-array.length && <Component />;
-
-//  inserts a '0' in UI.
-```
-
-This is because 0 is a falsy value, but the JSX parsing engine will still interpret this 0 as a value, whereas other falsy values (null, undefined, false, '0') do not render anything.
-
-So in this case, use:
-
-```js
-const array = [];
-
-array.length > 0 && <Component />;
-
-//  inserts a '0' in UI.
-```
 
 #### Prefer constants and multiple returns over reassigning variables.
 

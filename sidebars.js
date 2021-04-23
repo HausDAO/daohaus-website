@@ -14,6 +14,7 @@ module.exports = {
     Boosts: ["devs/default-boosts", "devs/new-boosts"],
     "JS Code Review": [
       "devs/goals-and-ideals",
+      'devs/review-process',
       "devs/javascript",
       "devs/async-await",
       "devs/caching",
@@ -21,6 +22,7 @@ module.exports = {
       "devs/react-components",
       "devs/react-use-effect",
       "devs/react-jsx",
+      'devs/react-layout',
     ],
   },
   howSidebar: {

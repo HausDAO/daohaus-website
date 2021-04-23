@@ -76,7 +76,7 @@ const Token = () => {
 
         <div className="Block PrimaryBg">
           <div className="Block__Contents">
-            <div class="Row">
+            <div className="Row">
               <div className="Column--50">
                 <h2 style={{ textDecoration: "strikethrough" }}>
                   The FarmHaus is open

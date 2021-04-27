@@ -98,7 +98,7 @@ const Token = () => {
               </div>
               <div className="Column--50"></div>
             </div>
-            <div className="Row">
+            <div className="Row Farms">
               <div className="Column--33">
                 <h2>Ronin</h2>
                 <p>Stake HAUS alone for 1x rewards</p>

@@ -96,7 +96,7 @@ module.exports = {
             },
             {
               label: "Discord",
-              href: "https://discord.gg/NPEJysW",
+              href: "https://discord.gg/aDEsfJCQ",
             },
             {
               label: "Substack",

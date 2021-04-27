@@ -4,8 +4,6 @@ title: The Hub
 sidebar_label: The Hub
 ---
 
-## The Hub
-
 The Hub is the central place within the app where you can:
 
 - [Summon](/summon) a new DAO

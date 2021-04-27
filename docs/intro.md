@@ -17,4 +17,4 @@ This documentation is to help users utilize the platform. We have a great new fo
 
 ### Support beyond the documentation
 
-Feel free to hit us up in our #Support Channel on [Discord](https://discord.gg/CAqTnwGpez). Let us know any bugs you find, requests for new features, or just ask us anything about daos.
+Feel free to hit us up in our <span class='channels'>#Support</span> Channel on [Discord](https://discord.gg/CAqTnwGpez). Let us know of any bugs you find, requests for new features, or just ask us anything about daos.

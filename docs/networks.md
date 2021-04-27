@@ -1,0 +1,67 @@
+---
+id: networks
+title: Other Network Setup
+sidebar_label: Other Networks
+---
+
+### DAOhaus works on various networks other than Ethereum mainnet.
+
+These guides should help you get setup and ready to interact with your DAO on networks other than Ethereum mainnet. Typically all you need to do is setup Metamask for a network and know where to bridge tokens. Everything else acts the same as Mainnet, except transactions are a substantially less expensive and faster, allowing for wider participation.
+
+First, go to your Metamask wallet and click on the networks tab and go to "Custom RPC".  From here you will want to go through the following 👇
+
+### xDAI Chain
+
+#### Add to Metamask
+
+```
+Network Name: xDai
+
+New RPC URL: https://rpc.xdaichain.com/
+
+Chain ID: 0x64 (100)
+
+Symbol: xDai
+
+Block Explorer URL: https://blockscout.com/xdai/mainnet
+
+```
+
+> In-depth Guide -> https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup
+
+#### Bridge Tokens
+
+xDAI <-> DAI -> http://bridge.xdaichain.com/
+
+Once you are on the xDai bridge site, you will see the amount of Dai you have on Ethereum Mainnet as well as the amount of xDAi that you have available on xDai Chain. (You can easily navigate between xDai side chain and Ethereum Mainnet if you click on the networks tab your Metamask Wallet)
+
+In order to swap your Mainnet Dai for xDai, you need to be connected to Ethereum Mainnet.  If you want to swap your xDai for Dai, you need to be connected to xDai Side chain.
+
+#### To swap your tokens enter the amount you are looking to swap and hit "transfer".
+
+... And just like that, you have your xDai on xDai Side Chain
+
+All other tokens -> https://omni.xdaichain.com/
+
+### Polygon (Formerly MATIC)
+
+#### Add to Metamask
+
+```
+Network Name: Matic Mainnet
+
+New RPC URL: https://rpc-mainnet.maticvigil.com/
+
+Chain ID: 137 
+
+Symbol: MATIC
+
+Block Explorer URL: https://explorer.matic.network/
+
+```
+
+> In-depth Guide -> https://docs.matic.network/docs/develop/metamask/config-matic
+
+#### Bridge tokens
+
+All tokens -> https://wallet.matic.network/bridge

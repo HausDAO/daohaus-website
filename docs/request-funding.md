@@ -1,0 +1,20 @@
+---
+id: request-funding
+title: Request Funding
+sidebar_label: Request Funding
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+### How to request funding from a DAO
+
+Within the DAO, navigate to Proposals and submit a Funding Proposal. Every community is unique, so check with them on how they'd like you to fill out the title, description and link for the proposal.
+
+If your proposal passes, the funds will be available to withdraw from your internal balances, which can be found by navigating to your profile page on [DAOhaus](https://app.daohaus.club/)
+
+> **Important!** Make sure the 'Applicant' is an ethereum address you control, _not a centralized wallet_, as you'll need to withdraw the tokens if/when the proposal passes. Gnosis Safes are okay as well, though require a bit of advanced transaction building magic, so only really advanced users who know _exactly what they're doing_ should use one. Otherwise, **FUNDS MAY BE LOST FOREVER!**
+
+<img
+  alt="Member Proposal Fields"
+  src={useBaseUrl("img/funding_proposal.png")}
+/>{" "}

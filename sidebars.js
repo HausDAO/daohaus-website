@@ -27,7 +27,7 @@ module.exports = {
   },
   howSidebar: {
     Intro: ['intro', 'intro-dao', 'intro-moloch', 'glossary'],
-    Basics: ['treasury', 'membership', 'proposals-intro', 'profile'],
+    Basics: ['bank', 'membership', 'proposals-intro', 'profile'],
     HowTo: [
       'navigation',
       'hub',

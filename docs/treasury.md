@@ -1,12 +1,10 @@
 ---
-id: treasury
+id: bank
 title: Bank
 sidebar_label: Bank
 ---
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
-
-## Bank (or Treasury)
 
 The bank is the core inventory of the DAO and can hold up to 200 different ERC-20 tokens. All members share direct ownership of the bank based on their Shares and/or Loot in relation to one another.
 

@@ -1,0 +1,56 @@
+---
+id: utilities
+title: Client-side Utilities
+sidebar_label: Common Utilities and Patterns
+slug: /devs/utilities-patterns
+---
+
+## Utilities
+
+- `handleGetProfile` - Asynchronous. Takes in a user's address and checks cache for 3Box profile data. If no cache exists, it fetches the user's profile data from 3Box's API.
+
+```js
+const profile = await handleGetProfile(addr);
+```
+
+- `getCopy` - Takes in a customTerms object from the API and a term. It searches that object for the DAO's custom term if they have one. GetCopy is designed to return a capitalized version of the term passed in as the second argument if customTerms is undefined or the terms isn't found in the object. This prevents exceptions being thrown when the Metadata from the API hasn't yet resolved.
+
+```js
+//  customTerms = undefined
+getCopy(customTerms, "members");
+//  ==> Members
+
+//  customTerms = {members: 'Players' }
+getCopy(customTerms, "members");
+// ==> Players
+```
+
+## Patterns
+
+- `useRef/useEffect Pattern` - In tricky situations, the useRef/Effect pattern is a handy tool to prevent excess renders or refetches. This is preferable to locking a useEffect with state, as setting state might require 1 more render. However the pattern does create situations where the app does not react or rerender to certain events. For this reason, it's best to leave this pattern to higher level contexts that make multiple fetches, useEffects with a lot of dependencies, or as a comparison of a component's present state with its previous state.
+
+Ex.
+
+```js
+//  because React will be set outside of React using a callback
+//  we need a way to set state more than once without triggering this useEffect
+//  However, we need a way to detect a new user address.
+
+//  useRef does takes care of both cases. It acts as an instance variable that is unaffacted
+//  by the render cycle of the component, allowing a refetch only when it absolutely needs to.
+const hasLoadedHubData = userHubDaos.length === 4;
+const prevAddress = useRef(null);
+
+useEffect(() => {
+  const bigQuery = () => {
+   ...
+  };
+  if (!userHubDaos.length && address && prevAddress.current === null) {
+    bigQuery();
+    prevAddress.current = address;
+  } else if (prevAddress.current !== address && address) {
+    setUserHubDaos([]);
+    prevAddress.current = null;
+  }
+}, [address, userHubDaos, setUserHubDaos]);
+```

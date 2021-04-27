@@ -1,0 +1,42 @@
+---
+id: goals-and-ideals
+title: Overview
+sidebar_label: Overview
+slug: /devs/goals-and-ideals
+---
+
+import Link from "@docusaurus/Link";
+
+- Organize the app to make it easier to debug, maintain, and integrate new functionality
+- Create a common code paradigm used by all devs on the team.
+- Share the rules of this paradigm to make it easier for new devs to contribute lasting code.
+- Make code more consistent and readable
+- Make it easier to debug.
+
+### Overarching Ideals
+
+- Less code. Perform the greatest amount of work with the least amount of expression.
+- Less state. Strive to eliminate excess state wherever possible.
+- DRY
+- Functional is generally preferred over Object Oriented.
+- No hard rules. Devs should be free to break any rule at any time. However, if they do wish to break a rule, they should outline their reasoning in a comment.
+- Any major changes or new patterns should be posted in #code-review on Discord
+- Clean as you go. Devs rarely refactor code months later, despite their best intentions. So it's best to deliver clean code from the outset.
+- Criticism and review should be frequent and good-spirited.
+- This is an ongoing process. We need to debate and discuss these rules in order to improve them.
+
+### Review Process
+
+- TBD (meeting, Pull request)
+
+### Style guide
+
+Our linter is currently set to adhere to the <a href="https://airbnb.io/javascript/">AirBNB JS Style guide </a>
+
+### New Devs
+
+- To save yourself some time, read through the review guidelines thoroughly
+- Learn the <Link to='/docs/devs/contexts'>structure of the app </Link>.
+- If you're tasked with interacting with a contract (TXs), learn the <Link to='/docs/devs/tx-polling'>TX/polling/test cycle </Link>.
+- Brush up on React by scouring the docs. Familiarize yourself with some of the more advanced aspects of hooks, contexts, and lazy-loading.
+- If you're not comfortable with Async, take some time to browse <Link to='/docs/devs/async-await'>some examples </Link>in the docs. Check out some tutorials.

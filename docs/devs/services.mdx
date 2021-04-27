@@ -1,0 +1,90 @@
+---
+id: services
+title: Contract Services
+sidebar_label: Contract Services
+slug: /devs/services
+---
+
+## Overview
+
+DAOhaus uses higher-order functions to make calls on contracts instead of JS classes. The goal of this pattern is to minimize state within the app as managing state between the contract, React's contexts, and JS classes (previously used for contract interaction) was challenging and sometimes difficult to follow.
+
+Each contract will usually curry three function calls from a service.
+
+1. Instantion of a web3.js contract object
+
+```js
+await MolochService({
+  // web3: injectedProvider,            <-- needed for write calls
+  daoAddress: daoid,
+  chainID: daochain,
+  version: daoOverview.version,
+});
+```
+
+2. Selection of service (function) on contract
+
+```js
+await MolochService({
+  ...
+})("collectTokens");
+```
+
+3. Pass in args for handling post-process. This final call will execute the TX (except in the case of PollService).
+
+```js
+await MolochService({
+ ...
+})("collectTokens")({ args, address, poll, onTxHash });
+```
+
+Here are the various services used throughout the app.
+
+## Moloch Service
+
+```js
+await MolochService({
+  // web3: injectedProvider,            <-- needed for write calls
+  daoAddress: daoid,
+  chainID: daochain,
+  version: daoOverview.version,
+})("collectTokens")({ args, address, poll, onTxHash });
+```
+
+## Token Service
+
+```js
+await TokenService({
+  // web3: injectedProvider,          <-- needed for write calls
+  tokenAddress: token,
+  chainID: daochain,
+})("approve")({ args, address, poll, onTxHash });
+```
+
+## Minion Service
+
+```js
+await MinionService({
+  // web3: injectedProvider,          <-- needed for write calls
+  minion: minionAddress,
+  chainID,
+})("getAction")({ proposalId });
+```
+
+## Summon (Moloch Factory) Service
+
+```js
+await SummonService({
+  web3: injectedProvider, // always write
+  chainID: injectedChain.chain_id,
+})("summonMoloch")({ args: summonParams, from: address, poll, onTxHash });
+```
+
+## Minion Factory Service
+
+```js
+await MinionFactoryService({
+  web3: injectedProvider, // always write
+  chainID: injectedChain.chain_id,
+})("summonMinion")({ args: summonParams, from: address, poll, onTxHash });
+```

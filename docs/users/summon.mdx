@@ -1,0 +1,62 @@
+---
+id: summon
+title: Summon a DAO
+sidebar_label: Summon a DAO
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+## How to Summon a DAO
+
+### Fun Mode
+
+Choose your network, a template, and [Summon a DAO](https://app.daohaus.club/summon) with one click. Along with Ethereum Mainnet, you can also summon on some other [networks](docs/users/networks):
+
+> Note: At least one summoner is required, so someone has some voting power to start. By default, your own address will be added as the summoner with 1 share and you can modify/add up to 50 others, as well as define share numbers for each.
+
+#### Templates
+
+These templates are based on what real communities have used, and thus are a great place to start. If you're sure you want to do something different, you can use Hard Mode or hit us up in our Discord for help.
+The only real considerations are how fast you'd like to move, and which token you'd like to use primarily (for proposal deposits and rewards). Slower is typically more secure as it gives members time to process and vote on proposals that may be incredibly high value. Faster is usually less secure, as a potentially malicious proposal could sneak through without members getting a chance to vote it down.
+
+**Guilds**
+
+Best for Cooperatives with small to medium financial throughput.
+
+**Grants**
+
+Distribute wealth together. Medium to Large financial throughput
+
+**Investments**
+
+Large to XXL financial throughput.
+
+**Protocols/Products**
+
+Govern a protocol or product.
+
+**Social Clubs**
+
+Little to no financial decisions.
+
+<img alt="summoning fun mode" src={useBaseUrl("img/how_summon.png")} />
+
+#### Explanations of available Settings
+
+**Primary Token**: Which token to accept for proposal deposits and rewards, if any
+
+**Proposal Velocity**: How many proposals possible in a day
+
+**Voting Period**: How long proposals are open for voting
+
+**Grace Period**: How long members have to ragequit before a proposal is processed
+
+**Proposal Deposit**: Used to protect against member spam. Deposited by user when sponsoring a proposal. Returned to their internal balance (minus processing reward if applicable) after the proposal is processed.
+
+**Proposal Reward**: Used to reward members who process proposals. Originally meant to reimburse those spending gas to process proposals, so not as necessary on networks like xDAI and Polygon.
+
+### Hard Mode
+
+For Advanced users only, who know what they are doing. If you really need to do something custom, find us in our Discord and we'll help you out.
+
+<img alt="summoning hard mode" src={useBaseUrl("img/how_summon-hard.png")} />

@@ -106,7 +106,7 @@ const Token = () => {
                   <i>Signal governance with Snapshot</i>
                 </p>
                 <a
-                  href="https://docs.daohaus.club/cco"
+                  href="https://farm.daohaus.club"
                   className="Button Secondary Outlined"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -120,6 +120,14 @@ const Token = () => {
                 <p>
                   <i>Signal governance with Snapshot</i>
                 </p>
+                <a
+                  href="https://farm.daohaus.club"
+                  className="Button Secondary Outlined"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Farm
+                </a>
               </div>
               <div className="Column--33">
                 <h3>Clan</h3>
@@ -127,6 +135,12 @@ const Token = () => {
                 <p>
                   <i>Direct governance through UberHaus</i>
                 </p>
+                <a
+                  href="https://docs.daohaus.club/docs/uber_actions"
+                  className="Button Secondary Outlined"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
           </div>

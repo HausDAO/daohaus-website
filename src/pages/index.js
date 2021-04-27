@@ -69,7 +69,7 @@ export default function Home() {
             </p>
             <div className="Social">
               <a
-                href="https://discord.gg/NPEJysW"
+                href="https://discord.gg/aDEsfJCQ"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
             <div className="HeroButtonGroup">
               <a
-                href="https://docs.daohaus.club"
+                href="https://daohaus.club/docs"
                 className="Button Big Secondary Outlined"
               >
                 DAO Basics
@@ -296,8 +296,8 @@ export default function Home() {
                   Communities
                 </h3>
                 <p className="BigP">
-                  DAOhaus communities have raised over $20M collectively and
-                  distributed almost $10M throughout the ecoystem to support
+                  DAOhaus communities have raised over $50M collectively and
+                  distributed almost $20M throughout the ecosystem to support
                   their various goals.{" "}
                 </p>
                 <a
@@ -320,15 +320,15 @@ export default function Home() {
             <h3>How a DAO works</h3>
             <p>Just the basics.</p>
             <p className="TinyP">
-              Follow our{" "}
+              Learn more in our{" "}
               <a
                 href="https://daohaus.substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Substack
-              </a>{" "}
-              for the latest.
+                help documentation
+              </a>
+              .
             </p>
             <div className="Row AlignCenter">
               <div className="Column--50">

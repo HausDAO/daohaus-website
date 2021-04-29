@@ -4,7 +4,7 @@ title: Withdraw Internal Balance
 sidebar_label: Withdraw to Wallet
 ---
 
-## How to withdraw from your internal balance.
+### How to withdraw from your internal balance.
 
 Funds will be sent to your internal balance in these cases:
 

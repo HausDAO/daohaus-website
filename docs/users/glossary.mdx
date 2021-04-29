@@ -4,11 +4,11 @@ title: Glossary
 sidebar_label: Glossary
 ---
 
-## Glossary of common terms
+## Common Terminology for DAOs
 
 **Internal Balance**
 
-Funds received from the DAO to your member address, like from a funding proposal or return of your proposal deposit. Withdraw to your wallet from your profile page in the DAO.
+Funds that are claimable from your **Member Profile** which have been released to you through a funding proposal from the DAO.  You may claim those funds from your **Member Profile** on [DAOhaus](https://daohaus.gg)
 
 **GuildKick**
 
@@ -28,7 +28,7 @@ Same as Ragequit, but enforced by other members and burns all shares and loot, r
 
 **Shares**
 
-Grants voting rights and proportionate ownership of core treasury.
+Grants voting rights and proportionate ownership of core treasury. Shares are DAO specific and cannot be transfered or traded.
 
 **Summon**
 
@@ -36,4 +36,4 @@ Launch a new DAO
 
 **Summoner**
 
-The original member or members who summoned the DAO
+The original member or members who create the DAO

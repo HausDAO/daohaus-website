@@ -4,15 +4,14 @@ title: Navigating DAOhaus
 sidebar_label: Navigating DAOhaus
 ---
 
-## Finding your way around the Haus and its DAOs
+If you’re new to the DAO space you can search for and see all of the DAOs created on DAOhaus on the [Explore](https://app.daohaus.club/explore) page. Feel free to sort by membership size, DAO type, or other factors.
 
 ### Navigating the Hub:
 
-- Home: See all DAOs you're a member of and notifications of recent activity.
+- Hub: See all DAOs you're a member of and notifications of recent activity.
 - Explore: Explore existing DAOs
 - Summon: Summon a new DAO
 - Help: Link to docs for users and developers
-- About: Link to the informational website of DAOhaus
 - Links: Other helpful links for the community
 
 > Pro tip: bookmark https://daohaus.gg to head straight to your Hub ;)
@@ -25,4 +24,6 @@ sidebar_label: Navigating DAOhaus
 - Members: View members, their details, and recent activity
 - Settings: View DAO contract information and set metadata
 - Apps: View and add apps to get more superpowers for a DAO
-- Links: Links to external community resources like chat, blog, website, etc
+- Allies: View DAO on DAO membership, displays DAOs your DAO is a part of
+- Profile: View your profile page, only information relevant to you displays here
+- Community Links: Links to external community resources like chat, blog, website, etc

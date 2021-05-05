@@ -42,6 +42,7 @@ module.exports = {
       "users/navigation",
       "users/hub",
       "users/summon",
+      "users/boost",
       "users/add-member",
       "users/request-funding",
       "users/withdraw-internal",

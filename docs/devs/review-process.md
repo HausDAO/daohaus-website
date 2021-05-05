@@ -8,14 +8,14 @@ slug: /devs/review-process
 ### Before Submitting
 
 - Run the code
-- Try to do your own QA and try to break the component
+- Try to do your own QA and break the component
 - Skim changes and make sure the code is clean
-- Make sure that every aspect in the 'Delivables' portion of the spec has been implemented.
-- For Contact interaction:
+- Make sure that every aspect in the 'Deliverables' portion of the spec has been implemented.
+- For contract interaction:
   - Test the TX many times with different args
   - Make sure the poll updates
   - Make sure that all of the relevant values have been refreshed properly after TX
-  - Close the browser window during the TX and open it again. Make sure the caching utilities works.
+  - Close the browser window during the TX and open it again. Make sure the caching utilities work.
 
 ### Submit a PR
 

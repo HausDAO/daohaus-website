@@ -89,9 +89,9 @@ if (thing) {
 
 #### Prefer currying, closure, and higher order functions over classes and big objects.
 
-Classes are great for organizing state with its corresponding logic. Unfortunately, we're also holding state in React Components. This can create a lot of bugs that are difficult track later on.
+Classes are great for organizing state with its corresponding logic. Unfortunately, we're also holding state in React Components. This can create a lot of bugs that are difficult to track later on.
 
-Functional programming practices help us eliminate state wherever possible. While bothersome initially, this approach saves time in the long run.
+Functional programming practices help us eliminate state wherever possible. While cumbersome initially, this approach saves time in the long run.
 
 #### Return null instead of undefined.
 

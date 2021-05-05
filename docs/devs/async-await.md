@@ -7,7 +7,7 @@ slug: /devs/async-await
 
 #### All Async/Await calls need to be wrapped in a try/catch block
 
-Not wrapping a fetch in a try/catch assumes that this call will work 100% of the time. Obviously it won't.
+Not wrapping a fetch in a try/catch assumes that this call will work 100% of the time, it won't.
 
 #### All promise/.then calls require a .catch
 

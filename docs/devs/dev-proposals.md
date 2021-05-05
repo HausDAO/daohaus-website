@@ -2,7 +2,7 @@
 id: dev-proposals
 title: DAO Proposals
 sidebar_label: Proposals
-slug: /devs/proposals
+slug: /docs/proposals
 ---
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -26,7 +26,7 @@ Fields can be configured to match the desired proposal type inputs.
 
 #### Pre-made proposal configurations
 
-##### Member Proposal
+### Member Proposal
 
 The member proposal is a simple way to join a DAO with tribute.
 
@@ -36,9 +36,9 @@ Fields:
 
 - Details
 - Shares Requested
-- Tribute Offered
+- Token Tribute
 
-##### Funding Proposal
+### Funding Proposal
 
 The funding proposal is a straight forward way to request or grant funds from the DAO.
 
@@ -50,14 +50,12 @@ The funding proposal is a straight forward way to request or grant funds from th
 Fields:
 
 - Details
-- Recipient
+- Applicant
 - Payment Requested
 
-##### Loot Grab Proposal
+### Loot Grab Proposal
 
-The loot grab proposal is a proposal where members provide contribution for non-voting shares in the DAO.
-
-**_UPDATE_**
+The loot grab proposal is a proposal where members provide tribute for non-voting shares in the DAO.
 
 <img
   alt="Loot Grad Proposal Fields"
@@ -67,11 +65,12 @@ The loot grab proposal is a proposal where members provide contribution for non-
 Fields:
 
 - Details
-- Recipient
+- Applicant
+- Payment Requested
+- Loot Requested 
 - Tribute Offered
-- Loot Requested is calculated in the proposal settings
 
-##### Trade Proposal
+### Trade Proposal
 
 The trade proposal is a simple swap between the proposer and the DAO at a proposed price.
 
@@ -80,9 +79,8 @@ The trade proposal is a simple swap between the proposer and the DAO at a propos
 Fields:
 
 - Details
-- Recipient
-- Payment Requested
-- Tribute Offered
+- Token Tribute
+- Trade for Payment Requested
 
 ### Whitelist Proposal
 
@@ -112,7 +110,7 @@ The guild kick proposal function `submitGuildkickProposal` is used to prepare a 
 - Details
 - Member Address
 
-## Some Intricacies of Proposal Fields
+## Things to Remember About Proposal Fields
 
 ### Applicant
 

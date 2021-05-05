@@ -7,7 +7,7 @@ slug: /devs/react-use-effect
 
 import Link from "@docusaurus/Link";
 
-useEffect is a big enough pain in the ass to justify its own page. While powerful and extremely useful, there are common conventions that devs should follow in order to prevent it from causing strange strange bugs.
+useEffect is a big enough pain in the hip to justify its own page. While powerful and extremely useful, there are common conventions that devs should follow in order to prevent it from causing strange, strange bugs.
 
 #### Include all dependencies in the dependency array
 
@@ -21,7 +21,7 @@ This applies to functions inside of the React Component. Functions outside of a 
 
 - If possible, try to include that function inside of the useEffect itself
 - If that gets too messy (code duplication), then see if the function can be refactored into a pure function and move outside of the component.
-- if it relies too heavily on state, then its time bring out useCallback as a last resort. useCallback also has a dep array. Be sure to include all dependencies in that array.
+- If it relies too heavily on state, then its time brings out useCallback as a last resort. useCallback also has a dep array. Be sure to include all dependencies in that array.
 
 Read more about this in the <a href='https://reactjs.org/devs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies'>React Docs </a>
 
@@ -45,7 +45,7 @@ const value = useMemo(() => {
 }, [incomingValue]);
 ```
 
-- lazy-initialization is a great pattern for initializing state once without holding up the rendering of the component
+- lazy-initialization is a great pattern for initializing state once without holding up rendering of the component
 
 ```js
 //  this waits for the component to render, computes, then sets state

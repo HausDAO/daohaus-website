@@ -11,7 +11,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 ### Overview
 
-Polls are used in the DaoHaus client to check and see if transactions are completed. This can be challenging in the Web3 world where a TX on Ethereum Mainnet could possibly take days. To add to the complexity, much of our client data comes from the Graph, a source of truth that isn't immediately aligned with the contract it indexes. We wanted to make sure that whatever data the user was seeing, it was true in both the Graph and the contract.
+Polls are used in the DAOhaus client to check and see if transactions are completed. This can be challenging in the Web3 world where a TX on Ethereum Mainnet could possibly take days. To add to the complexity, much of our client data comes from the Graph, a source of truth that isn't immediately aligned with the contract it indexes. We wanted to make sure that whatever data the user was seeing, it was true in both the Graph and the contract.
 
 ### How to Create a Poll
 
@@ -34,9 +34,7 @@ const poll = createPoll({
 });
 ```
 
-2.
-
-On the next call, we pass in all of the arguments required to call the poll. This includes the actions, an object of callback functions that execute at various stages within the poll's lifecycle.
+2. On the next call, we pass in all of the arguments required to call the poll. This includes the actions, an object of callback functions that execute at various stages within the poll's lifecycle.
 
 ```js
 const poll = createPoll({ action: "submitProposal", cachePoll })({

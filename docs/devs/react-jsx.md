@@ -44,9 +44,9 @@ return (
 );
 ```
 
-Note: this solution works when the expected value is a string. Other data types cannot be stored on dom elements. However, in most cases, the data we are referencing is usally a value inside the component (ex. state).
+*Note: this solution works when the expected value is a string. Other data types cannot be stored on dom elements. However, in most cases, the data we are referencing is a value inside the component (ex. state).*
 
-create a new function every time, and will eventually bog down a computer's memory. Unless completely necessary, save a function to a constant inside the component (ex. handleClick) and pass it to props as a callback.
+Create a new function every time, and it will eventually bog down a computer's memory. Unless completely necessary, save a function to a constant inside the component (ex. handleClick) and pass it to props as a callback.
 
 #### Prefer unary operators where applicable
 
@@ -56,7 +56,7 @@ Generally use
 exists && <Component />;
 ```
 
-instead of
+Instead of
 
 ```js
 exists ? <Component /> : null;

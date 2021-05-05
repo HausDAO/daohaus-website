@@ -2,12 +2,12 @@
 id: subgraphs
 title: Getting Moloch Data
 sidebar_label: Subgraphs
-slug: /devs/subgraphs
+slug: /docs/subgraphs
 ---
 
 ## What is TheGraph?
 
-TheGraph is a data protocol that lays on top of other public blockchain indexing data and providing a consumable interface for user applications. By indexing Moloch contracts with The Graph any user with access to TheGraph can find data about all compatible DAOs instantly.
+The Graph is an indexing protocol that the incentivzes and coordinates indexing of public blockchain data.  The Graph provides queryable data using GraphQL for your API to plug into. By indexing Moloch contracts with The Graph any user with access to TheGraph can find data on all compatible DAOs instantly.
 
 ## Subgraphs
 
@@ -217,7 +217,7 @@ The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: 
 
 ### Stats Subgraph
 
-The DAOhaus Stats Subgraph provides aggregated stats and metrics for users, communities, and across the ecosystem.
+The DAOhaus Stats Subgraph provides aggregated stats and metrics for users and communities across the platform.
 
 #### Moloches Stats
 
@@ -317,3 +317,4 @@ The transmutation subgraph tracks transmutation proposal entities.
 
 - [Kovan](https://thegraph.com/explorer)
 - [xDai](https://thegraph.com/explorer)
+

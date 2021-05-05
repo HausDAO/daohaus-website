@@ -64,7 +64,7 @@ const HeavySubPage = lazy(() => import("../pages/HeavySubPage"));
 - Return statement (JSX)
 ```
 
-Example
+Example:
 
 ```js
 /// FUNCTION DECLARATION

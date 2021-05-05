@@ -11,7 +11,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 It should be easy to understand the rendering logic of a React Component. Can someone understand your Component after five minutes of reading it? If not, then it needs to be refactored.
 
-Page components, routers, and contexts are naturally larger, as they generally lots of the compliated application logic
+Page components, routers, and contexts are naturally larger, as they generally hold the majority of the complicated application logic
 
 Goal: We should try to cap component length between 200-300 lines.
 

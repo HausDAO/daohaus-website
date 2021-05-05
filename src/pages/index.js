@@ -69,7 +69,7 @@ export default function Home() {
             </p>
             <div className="Social">
               <a
-                href="https://discord.gg/aDEsfJCQ"
+                href="https://discord.gg/DVDekf8F"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -131,7 +131,7 @@ const Community = () => {
                 <p className="daoColor">
                   For now, find us in our{" "}
                   <a
-                    href="https://discord.gg/NPEJysW"
+                    href="https://discord.gg/DVDekf8F"
                     rel="noopener noreferrer"
                     target="_blank"
                   >

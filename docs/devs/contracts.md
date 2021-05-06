@@ -2,7 +2,7 @@
 id: contracts
 title: Contracts
 sidebar_label: Contracts
-slug: /docs
+slug: /devs
 ---
 
 ## Moloch Version 2

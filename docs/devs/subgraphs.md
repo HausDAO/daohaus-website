@@ -2,7 +2,7 @@
 id: subgraphs
 title: Getting Moloch Data
 sidebar_label: Subgraphs
-slug: /docs/subgraphs
+slug: /devs/subgraphs
 ---
 
 ## What is TheGraph?

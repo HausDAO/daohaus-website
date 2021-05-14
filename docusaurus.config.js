@@ -8,7 +8,20 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "hausdao", // Usually your GitHub org/user name.
   projectName: "daohaus-docs", // Usually your repo name.
-  themeConfig: {
+  themeConfig: { 
+    metadatas: [
+      {name: 'og:type', content: 'website'},
+      {name: 'og:url', content: 'https://daohaus.club/'},
+      {name: 'og:title', content: 'DAOhaus'},
+      {name: 'og:description', content: 'DAOhaus is a no code platform for Moloch DAOs.'},
+      {name: 'og:site_name', content: 'DAOhaus'},
+      {name: 'og:image', content: 'https://daohaus.club/images/daohaus-main.jpg'},
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:site', content: '@nowdaoit'},
+      {name: 'twitter:title', content: 'DAOhaus'},
+      {name: 'twitter:description', content: 'DAOhaus is a no code platform for Moloch DAOs.'},
+      {name: 'twitter:image', content: 'https://daohaus.club/images/daohaus-main.jpg'}
+    ],
     colorMode: {
       disableSwitch: true,
     },

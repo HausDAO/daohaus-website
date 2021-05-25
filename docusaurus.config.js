@@ -9,13 +9,11 @@ module.exports = {
   organizationName: "hausdao", // Usually your GitHub org/user name.
   projectName: "daohaus-docs", // Usually your repo name.
   themeConfig: { 
+    image: 'https://daohaus.club/images/daohaus-main.jpg',
     metadatas: [
       {name: 'og:type', content: 'website'},
-      {name: 'og:url', content: 'https://daohaus.club/'},
-      {name: 'og:title', content: 'DAOhaus'},
       {name: 'og:description', content: 'DAOhaus is a no code platform for Moloch DAOs.'},
       {name: 'og:site_name', content: 'DAOhaus'},
-      {name: 'og:image', content: 'https://daohaus.club/images/daohaus-main.jpg'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:site', content: '@nowdaoit'},
       {name: 'twitter:title', content: 'DAOhaus'},
@@ -85,7 +83,7 @@ module.exports = {
             },
             {
               label: "Explore DAOs",
-              href: "https://app.daohaus.club/explore",
+              href: "https://app.daohaus.club/explore",yarn
             },
             {
               label: "Summon a DAO",

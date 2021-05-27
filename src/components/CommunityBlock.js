@@ -29,7 +29,7 @@ const CommunityBlock = () => {
         <div className="Row" style={{ marginTop: 75 }}>
           <div className="Column--33 SocialItem">
             <a
-              href="https://discord.gg/DVDekf8F"
+              href="https://discord.gg/daohaus"
               target="_blank"
               rel="noopener noreferrer"
               className="SocialIcon"

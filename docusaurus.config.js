@@ -1,7 +1,7 @@
 module.exports = {
   title: "DAOhaus",
   tagline: "A place for all your DAOs",
-  url: "https://docs.daohaus.club",
+  url: "https://daohaus.club/docs",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -83,7 +83,7 @@ module.exports = {
             },
             {
               label: "Explore DAOs",
-              href: "https://app.daohaus.club/explore",yarn
+              href: "https://app.daohaus.club/explore",
             },
             {
               label: "Summon a DAO",
@@ -107,7 +107,7 @@ module.exports = {
             },
             {
               label: "Discord",
-              href: "https://discord.gg/aDEsfJCQ",
+              href: "https://discord.gg/daohaus",
             },
             {
               label: "Substack",

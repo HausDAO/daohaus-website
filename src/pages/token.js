@@ -27,7 +27,7 @@ const Token = () => {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />"
+      description="Daohaus Docs: Learnin' and burnin'"
     >
       <div className="Home">
         <div className="Block PrimaryDark">
@@ -136,7 +136,7 @@ const Token = () => {
                   <i>Direct governance through UberHaus</i>
                 </p>
                 <a
-                  href="https://docs.daohaus.club/docs/uber_actions"
+                  href="https://daohaus.club/docs/uber_actions"
                   className="Button Secondary Outlined"
                 >
                   Learn More
@@ -254,7 +254,7 @@ const Token = () => {
                 </p>
                 <div className="ButtonGroup">
                   <a
-                    href="https://docs.daohaus.club/uberhaus-governance"
+                    href="https://daohaus.club/uberhaus-governance"
                     className="Button Outlined"
                     target="_blank"
                     rel="noopener noreferrer"

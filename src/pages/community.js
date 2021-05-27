@@ -20,7 +20,7 @@ const Community = () => {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />"
+      description="Daohaus Docs: Learnin' and burnin'"
     >
       <div className="Home">
         <div className="Block PrimaryDark">
@@ -58,7 +58,7 @@ const Community = () => {
                 <p className="yellowColor">
                   Weekly at 11am PST / 8pm CET in our{" "}
                   <a
-                    href="https://discord.gg/NPEJysW"
+                    href="https://discord.gg/daohaus"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -131,7 +131,7 @@ const Community = () => {
                 <p className="daoColor">
                   For now, find us in our{" "}
                   <a
-                    href="https://discord.gg/DVDekf8F"
+                    href="https://discord.gg/daohaus"
                     rel="noopener noreferrer"
                     target="_blank"
                   >

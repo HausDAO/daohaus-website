@@ -65,4 +65,4 @@ You dun did it, Steve Buscemi never seizes to impress and you can be sure he’s
 
 If you want to learn more about MintGate, we suggest you to check out there docs [here](https://mintgate.gitbook.io/mintgate-docs/).
 
-Otherwise, if you are having any trouble with setting up your MintGate or you notice there is something that could use fixing, drop into the [DAOhaus discord](https://discord.gg/ucKwVQ4DD8)!
+Otherwise, if you are having any trouble with setting up your MintGate or you notice there is something that could use fixing, drop into the [DAOhaus discord](https://discord.gg/daohaus)!

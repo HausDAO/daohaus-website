@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Description will go into a meta tag in <head />"
+      description="Daohaus Docs: Learnin' and burnin'"
     >
       <div className="Home">
         <div className="HomeHero">
@@ -69,7 +69,7 @@ export default function Home() {
             </p>
             <div className="Social">
               <a
-                href="https://discord.gg/DVDekf8F"
+                href="https://discord.gg/daohaus"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -389,7 +389,7 @@ export default function Home() {
                   <strong>Collaborative composability ftw.</strong> If you’re
                   building something useful for DAOs, hit us up in our{" "}
                   <a
-                    href="https://discord.gg/NPEJysW"
+                    href="https://discord.gg/daohaus"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="SocialIcon"

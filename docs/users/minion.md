@@ -1,7 +1,7 @@
 ---
 id: minion
 title: Deploy a Minion
-sidebar_label: Minions
+sidebar_label: Minion
 slug: /minion
 ---
 

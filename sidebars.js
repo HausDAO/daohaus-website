@@ -2,6 +2,9 @@ module.exports = {
   mainSidebar: {
     Moloch: ["devs/contracts", "devs/subgraphs"],
     Client: [
+      {"Code Legos": [
+        'devs/legos/overview','devs/legos/tx','devs/legos/inputs', 'devs/legos/formbuilder' 
+      ]},
       "devs/dev-proposals",
       "devs/activities",
       "devs/bank",

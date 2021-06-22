@@ -1,182 +1,35 @@
 ---
-id: tx
+id: tx-api
 title: Transaction Legos
-sidebar_label: Transactions
+sidebar_label: Transaction API
 ---
+Reference guide for the tx lego API
 
-
-## Background: 
-
-Transactions are one of the most ubiquitous and bulky blocks of JS in the app. Since the 90% of the time, the UI syncs to the graph, the app needed a way to make sure that what they user was seeing was not only what was on the contract, but also represented what the subgraph had indexed. 
-
-This resulted in a complex pattern of Services(Higher order functions for directing contract interaction), polls(checking new graph data after the user fires the transaction), and tests (confirming that the graph data had synced). 
-
-While the system was perhaps more reliable and readable than what preceded it, it was bulky. 
-
-**[Here's an example of what a transaction looked like before](https://gist.github.com/jordanlesich/2e5ba8b503b9531daedb9e601a1d4a94)**. 
-
-And here's an example of what that same transaction looks like expressed as a JS lego:
-
-```js
-// code from src/data/contractTX.js
-TX: {
-    ...
-GUILDKICK_PROPOSAL: {
-    contract: 'Moloch',
-    name: 'submitGuildKickProposal',
-    poll: 'subgraph',
-    onTxHash: ACTIONS.PROPOSAL,
-    display: 'Submit GuildKick Proposal',
-    errMsg: 'Error submitting proposal',
-    successMsg: 'Guild Kick Proposal submitted!',
-    detailsJSON: DETAILS.STANDARD_PROPOSAL,
-    createDiscourse: true,
-    gatherArgs: ['applicant', 'detailsToJSON'],
-  },
-}
-```
-And placed into a form lego like this: 
-
-```js
-PROPOSAL_FORMS: {
-  GUILDKICK: {
-    ...
-      tx: TX.GUILDKICK_PROPOSAL,
-    ...
-    },
-}
-```
-
-Becuase the Form lego composes the tx lego, the dev never has to introduce the transaction to a react component at all. 
-
-With JS Legos, devs are able to create their transactions as clean, static data. This will allow core devs to store, compose, and organize the applications functionality as they please, while allowing community devs a flexible yet concise interface for boost development. 
-
-**NOTE**: TX legos are currently only available with a DAO context. App wide txs will be available on the next update. 
-
-
-
-
-
-## Tutorial 
-
-In many cases however, transactions will need to placed in a React component, say, when the user hits a button. Let's go through an example. Let's say we want to wire up a button to sponsor a proposal when the user clicks it. 
-
-First we would have to write out our TX as a lego. We would start by finding the ``src/data/contractTX.js`` and creating a new field on the TX object. 
-
-**We use all caps to let other devs know that this value is constant**
-
-```js
-TX:{
-  export const TX = {
-    SPONSOR_PROPOSAL: {
-      
-  },
-}
-```
-
-Then we want to direct this transaction by telling it which contract ABI to interact with and what function to call. For this transaction, we're calling the DAO's Moloch contract. So we'll use the string 'Moloch' under the field `contract` 
-
-- We have a Contract Service to interact with this ABI already.
-- So all we need to do is travel to MolochService.js in src/services and find the function that we want to hit. In this case, the name is ``sponsorProposal``
-- Let's add these to the Lego: 
-
-```js
-TX:{
-  SPONSOR_PROPOSAL: {
-    contract: 'Moloch',
-    name: 'sponsorProposal',
-  },
-}
-```
-
-Note: *At the moment, TXlegos only interact with local ABIs through contract services. In the future, we will dynamically fetch network ABIs from block explorers. Services will also be phased out to ensure a single source of truth*
-
-Next we'll need to tell the app what to poll to ensure that UI only updates once all the backend data has been updated. We're interacting with the DAOhaus subgraph, so all we need to add is 'subgraph' to the `poll` field. 
-
-
-```js
-TX:{
-  SPONSOR_PROPOSAL: {
-    contract: 'Moloch',
-    name: 'sponsorProposal',
-    poll: 'subgraph'
-  },
-}
-```
-Many transactions require a UI change when a transaction hash is created. In this situation, all we need is the TxModal to appear. Becuase onTxHash is looking for a list of instructions (in order). it's always looking for an array. We could add ['openTxModal'], but we have a constant for basic actions saved in contractTX.js, so we can use that instead. 
-
-TX:{
-  SPONSOR_PROPOSAL: {
-    contract: 'Moloch',
-    name: 'sponsorProposal',
-    poll: 'subgraph',
-    onTxHash: ACTIONS.BASIC,
-  },
-}
-
-Using the constant ensures that the UX for basic contract interactions remains the same if any changes are made. 
-
-Finally, we need to tell the transaction what to display in the UI. ``display`` controls what is displayed in the TxModal and Txlist (in future updates), while errMsg and successMsg control what is displayed once the transaction resolves. Let's add these as well. 
-```js
-TX:{
-  SPONSOR_PROPOSAL: {
-    contract: 'Moloch',
-    name: 'sponsorProposal',
-    poll: 'subgraph',
-    onTxHash: ACTIONS.BASIC,
-    display: 'Sponsor Proposal',
-    errMsg: 'Error sponsoring proposal',
-    successMsg: 'Proposal Sponsored!',
-  },
-}
-```
-
-Becuase we'll be adding the function arguments inside the transaction itself, this lego is finished. All we need to do is hook it up. 
-
-```js
-//  in src/components/proposalActions.js
-
-  const sponsorProposal = async id => {
-    setLoading(true);
-    await submitTransaction({
-      tx: TX.SPONSOR_PROPOSAL,
-      args: [id],
-    });
-    setLoading(false);
-  };
-```
-That's it. 
-
-There's a lot more to this pattern. Be sure to read more about it the API below. 
-
-## API
-
-### contract:
+#### contract:
 
 (STRING)
 
+Name of the contract service we'll be interacting with. The current choices are ``Moloch``, ``Minion``, and ``Token``. 
 
-Name of the contract service we'll be interacting with. The current choices are ``Moloch``, ``Minion``, and ``Token``. For this tutorial, we'll be using ``Token``
-
-If you would like to add another contract transaction: 
+If you would like to add another contract to interact with: 
 
 - head to ``txHelpers.js`` and import a service and convert into it's own type of transaction. 
 - Then add the transaction function to the txMapObject inside of the ``Transaction()`` function. 
 - Follow the pattern existing Transaction functions use in the same doc.    
 
-### name 
+#### tx.name 
 
 (STRING)
 
 Name of the service or abi function the txLego will use. This can be found in the Contract Service. In future version, this will use the name of the function in the ABI. 
 
-### poll 
+#### tx.poll 
 
 (STRING) 
 
 For simple poll types. Currently the only option is `subgraph`. This can be used for the main DAOhaus subgraph. In the next update there will be options for other DAOhaus subgraphs and contract entities.
 
-### specialPoll 
+#### tx.specialPoll 
 
 (STRING)
 
@@ -199,7 +52,7 @@ Until then, we can use ``specialPoll`` to interact with the many customPolls in 
 Or ensuring that the argument name matches the name  that's' implicitly passed into the ``values`` object, as in the case of PROPOSAL_FORMS. 
 Do this by changing the named arguments passed into PollService and adapt it to the values currently passed in. 
 
-### onTxHash ([]STRING)
+#### tx.onTxHash ([]STRING)
 
 onTxHash is a lifecycle method that is used so commonly in functions that it has it's own field, keyword strings, and constants. 
 
@@ -208,30 +61,30 @@ onTxHash always takes an array of strings. It's looking for keywords that contro
 - `'openTxModal'`
 - `'closeProposalModal'`
 
-If you would like to add an event: 
+If you would like to add an action: 
 - Go to txHelpers.js 
 - Go to the CreateActions() fn
 - You'll see an object ``actions`` that interacts with an object called uiControl. This object has many of the global UI functions that the app uses to handle events. To see the map in detail, see ``uiControl`` inside of TXContext.js 
 
-### display 
+#### tx.display 
 
 (STRING)
 
 String for displaying the current transaction to users. Will be used in txList and txModal in the next update. 
 
-### successMsg 
+#### tx.successMsg 
 
 (STRING)
 
 String that is displayed in the success toast when the transaction completes
 
-### errMsg 
+#### tx.errMsg 
 
 (STRING)
 
 String that is displayed in the err toast when the transaction completes
 
-### detailsToJSON 
+#### tx.detailsToJSON 
 
 (Array of Strings)
 
@@ -244,7 +97,6 @@ This field:
 - searches the `values` object for fields with the same name as those strings. 
 - copies those fields into a new object
 - stringifies that object and turns and passes it to the argument slot as directed by the gatherArgs field. 
-
 
 Also: 
 - To keep the shape of detailsToJSON strings consistent, there is a DETAILS constant inside of ``contractTX.js``. 
@@ -266,13 +118,13 @@ export const DETAILS = {
 ```
 In the above example, before WHITELIST_TOKEN_PROPOSAL passes, it's going to search the ``values`` object  for the array of strings in STANDARD_PROPOSAL. It will copy those key/value pairs to a new object. Then it will stringify that object and place it as the **second item** of that array. 
 
-### gatherArgs 
+#### tx.gatherArgs 
 
 (Array of string or objects)
 
 Search API for finding function arguments within the application. There are many ways to use gatherArgs. Takes an array that handles strings or objects (search params). 
 
-#### Shallow Search (values)
+##### Shallow Search (values)
 
 Searches the ``values`` object for string keywords. Used by default if the search param is a string. 
 ex. 
@@ -280,7 +132,7 @@ ex.
    gatherArgs: ['tokenAddress', 'tokenValue']
 ```
 
-#### Deep Search (application-wide)
+##### Deep Search (application-wide)
 
 Uses it's own search notation to find application state for within the React Context stores. 
 - Exists in a search param object
@@ -297,7 +149,7 @@ ex.
      ]
 
 ```
-#### Static values
+##### Static values
 For hardcoded static values. 
 - Exists in a search param object
 - Initiated by using the keyword 'static' in the field `type`
@@ -308,12 +160,14 @@ ex.
 
 ```
 
-#### detailsToJSON
+##### detailsToJSON
 
-String keyword that turns anything in the detailsJSON array into a JSON object where each field. Read more about how this works in detailsJSON.
+String keyword that turns anything in the detailsJSON array into a JSON object. 
+
+Read more about how this works in tx.detailsJSON.
 
 
-#### Mix'n Match Approach
+##### Mix'n Match Approach
 
 - Args don't need to be of one type
 - They can use any combination of search types 
@@ -326,50 +180,52 @@ gatherArgs: [
      ]
 ```
 
-### argsFromCallback
+#### tx.argsFromCallback
 
 (Boolean)
 
 Indicates that args will not be gathered from either the React Component or using the ``gatherArgs`` field. 
 
 
-Instead, this transaction will use a callback function that in declared inside of the ``argBuilderCallback`` function inside of ``txHelpers.js``. 
+Instead, this transaction will use a callback function that is declared inside of ``argBuilderCallback{}``inside of ``txHelpers.js``. 
 
 
 - Each field in this object is a callback function
 - The name of the callback function must be the same as the name of the transaction
-- Each callback has access to ``values``, ``tx``(tx lego data), ``formData (form lego data)``, a ``hash``--each as named arguments. 
+- Each callback has access to ``values``, ``tx``(tx lego data), contextData(application State) ``formData (form lego data)``, a ``hash``--each as named arguments. 
 
 Becuase these callbacks are non-composable, their uses are limited to: 
-- Fast protoyping (magesmith team only)
-- last resort (for everyone else)
+- Fast protoyping (temporary; not pushed to prod)
+- last resort (no other option)
 
-In every case, a TXs arg from callback will need to be refactored into static data. 
+In every case, a TXs arg from callback will eventually need to be refactored into static data--either through refactoring a fast protoype or improving the txLego system. 
 
-### createDiscourse
+#### createDiscourse
 
 (Boolean)
 
 Used mostly for proposals. Will create a discourse onPollSuccess. 
 
-### args
+#### args
 
 A way to pass contract arguments directly into the tx at the component level (see tutorial). 
 
-### values
+#### values
 
 In cases where a form isn't creating it's own values object from ``react-hook-form``, values can be passed into the transaction manually at the component level. 
 
 This can be useful in cases where a transaction is using a customPoll. 
 
-### lifecycleFns
+#### lifecycleFns
 
-Lifecycle functions that execute functions at different stages in a transaction's execution. This is for special situation where a custom, non-standard UI event needs to be triggered at a certian stage. 
+Lifecycle functions that execute functions at different stages in a transaction's execution. This is for special situations where a custom, non-standard UI event needs to be triggered at a certian stage. 
 
 There are five lifecycle functions in total. 
 
 ```js
 await submitTransaction({
+      tx: TX.SAMPLE_TX.
+      args: ['example],
       lifeCycleFns: {
         beforeTx: () => doThis
         onTxHash: () => doThat

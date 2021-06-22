@@ -1,0 +1,62 @@
+---
+id: field-lego-api
+title: Field Lego 
+sidebar_label: Field Lego
+---
+
+#### Field.type
+
+(String)
+
+This value tells the factory component which UI to render. This includes generic and standardized inputs. 
+
+#### Field.label
+
+(String)
+
+This value tells the factory component what to render as the input's label. 
+
+#### Field.name
+
+(String)
+
+This is the 'key' or 'id' for the data enterred into the input. This value: 
+
+- Must be different than any other ``name`` values on the form
+- Stores data in the ``values`` object under the key enterred as ``name``
+- Which means that this is the reference to the data the user provides in the input
+- It's used inside the TX data to get form data into the transaction
+- It's what the Form.required checks for 
+- can be referenced throughout the transaction process by the name enterred here. 
+
+#### Field.htmlFor
+
+(String)
+
+Links the input's name with it's label. For accessibility purposes. If falsy, the htmlFor will default to the input's name. 
+
+#### Field.placeholder
+
+(String)
+
+Placeholder text for the input. 
+
+#### Field.info
+
+(String)
+
+if a field lego recieves a ``field.info`` value, the component's wrapper will display an info icon, with a hoverable tooltip that displays the string value enterred in the ``info`` field. 
+
+If field.info is falsy or not included in the lego, an info tooltip does not render. 
+
+#### Field.expectType
+
+(String)
+
+This tells the form validation what type of string this input is expecting. Becuase all incoming data from inputs are strings, **expectType does not check for JS types, instead it looks for different types of strings**. 
+
+For example, if we had an input that was only expecting numbers, both integers and numbers with decimals, Field.expectType would equal ``number``. The validation would then look at the string the input recieves and check if all the characters in the string are all numbers. 
+
+It will return errors to the form if it does not receive the type of string that it is expecting. Like Form.required, the errors will be distributed throughout the form and displayed at the bottom of the inputs that have invalid information. 
+
+

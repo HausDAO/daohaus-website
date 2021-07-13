@@ -57,8 +57,6 @@ module.exports = {
   },
    FAQ: [
       "users/proposals-faq",
-      "users/bank-faq",
-      "users/members-faq",
     ],
 };
 ``

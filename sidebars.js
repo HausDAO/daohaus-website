@@ -56,6 +56,15 @@ module.exports = {
     UberHaus: ["users/uberhaus-governance", "users/cco", "users/uber-actions"],
     FAQ: [
       "users/proposals-faq",
+      "users/bank-faq",
+      "users/members-faq",
+      "users/settings-faq",
+      "users/apps-faq",
+      "users/allies-faq",
+      "users/profile-faq",
+      "users/uberhaus-faq",
+      "users/minion-faq",
+      "users/other-networks-faq",
     ],
   },
    

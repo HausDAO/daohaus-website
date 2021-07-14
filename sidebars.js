@@ -52,6 +52,7 @@ module.exports = {
       "users/withdraw-internal",
       "users/weth",
       "users/networks",
+      "users/test"
     ],
     UberHaus: ["users/uberhaus-governance", "users/cco", "users/uber-actions"],
     FAQ: [

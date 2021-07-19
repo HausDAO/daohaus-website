@@ -30,8 +30,7 @@ A: When a proposal is processed, the sponsor will receive his initial deposit mi
   
  <p>&nbsp;</p>
   
-A: After the voting period has ended, when a proposal is ready to be processed, you will see whether or not the proposal passed/failed.  If no one voted on the proposal, it will automatically fail.
-  
+A: After the voting period has ended, when a proposal is ready to be processed, you will see whether or not the proposal passed/failed.  If no one voted on the proposal, it will automatically fail. It will also fail if the action outlined in the proposal cannot be executed, such as sending 500 wxDAI from your DAO to an Externally Owned Account (EOA), when your DAO doesn't actually hold 500 wxDAI.
   </details></h4>
   
   <h4><details>
@@ -51,6 +50,19 @@ A: It costs gas, but it should only require 1 yes vote if there is soft consensu
 A: It's around ~$100 (That said, this is context and time dependent during the time of this Q&A).
   
   </details></h4>
+  
+   <h4><details>
+<summary>Q: If a prospective member submits a member proposal with tribute, gets it approved, proposal enters the grace period, and the prospect Rage Quits before the grace period ends, what will happen to their tribute?</summary>
+  
+<p>&nbsp;</p>
+  
+A: If their shares are more than the dilution bound setting (e.g. 1/3), the proposal would fail when they rage quit. 
+
+When a member submits a membership proposal, their tribute goes into the escrow and goes into the treasury only when the proposal is passed and processed. 
+
+If the member rage quits before the processing, they can only take their current fair share of the treasury.
+  
+</details></h4>
   
 ---
 

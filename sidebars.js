@@ -49,6 +49,7 @@ module.exports = {
       "users/add-member",
       "users/minion",
       "users/request-funding",
+      "users/request-funding-faq",
       "users/withdraw-internal",
       "users/weth",
       "users/networks",
@@ -56,7 +57,6 @@ module.exports = {
     UberHaus: ["users/uberhaus-governance", "users/cco", "users/uber-actions"],
     FAQ: [
       "users/proposals-faq",
-      "users/request-funding-faq",
       "users/bank-faq",
       "users/members-faq",
       "users/settings-faq",

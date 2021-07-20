@@ -1,0 +1,82 @@
+---
+id: bank-faq
+title: Bank FAQ
+sidebar_label: Bank
+---
+
+<h4><details>
+  <summary>Q: What type of tokens can my DAO bank receive?</summary>
+  
+<p>&nbsp;</p>
+  
+A: Your DAOs bank can receive ERC-20 tokens, where minions can accept both ERC-20s and ERC-721 NFTs.
+  
+  </details></h4>
+  
+  <h4><details>
+  <summary>Q: Can I send xDAI to the DAO?</summary>
+  
+<p>&nbsp;</p>
+  
+A: The DAO cannot accept xDAI and it should normally revert the transaction when you are sending it. 
+
+   Please do not send xDAI to your DAO.
+  
+  </details></h4>
+  
+   <h4><details>
+  <summary>Q: I want to whitelist HAUS for my bank. What is the token address?</summary>
+  
+<p>&nbsp;</p>
+  
+A: 0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb
+  
+  </details></h4>
+  
+<h4><details>
+  <summary>Q: How should I send and store ERC20 tokens in my DAO contract?</summary>
+  
+<p>&nbsp;</p>
+  
+A: You should whitelist the tokens via a Whitelist proposal and click on "Sync" on the treasury page. After that when you send the tokens to your DAO address, the 
+   tokens should appear in the bank.
+  
+  </details></h4>
+  
+  <h4><details>
+  <summary>Q: What happens if I send tokens to the DAO address, but have not whitelisted the token?</summary>
+  
+<p>&nbsp;</p>
+  
+A: The token will be owned by the contract, but not show up on your treasury.
+  
+  </details></h4>
+ 
+ <h4><details>
+  <summary>Q: I am redploying my DAO and need to transfer funds from one DAO to the other. How should I do it?</summary>
+  
+<p>&nbsp;</p>
+  
+A: Do not send the funds directly to the DAO address. 
+
+  The first approach is to claim the balances from the old DAO and provide tribute in the new DAO to deposit the funds. 
+
+  The second approach is to transfer funds to a Minion and use the Minion to send the funds. 
+
+  Do not send funds to your new DAO address via a funding proposal as the contract is merely updating the internal balances, which members or minions should ideally withdraw later on. Your funds will be lost.
+  
+  </details></h4>
+  
+   <h4><details>
+  <summary>Q: The amount of tokens / funds on chain is different from the amount in the bank on in my hub. Why is this?</summary>
+  
+<p>&nbsp;</p>
+  
+A: As the contract holds different internal balances and proposal escrows, the amounts showing up on the bank and contract may differ. 
+  
+  </details></h4>
+  
+
+Our FAQs section are work-in-progress. Want to contribute? 
+
+Head to the [DAOhaus Discord](https://discord.gg/bUd7HqMx), indicate your role as "Contributor" and reach out! 

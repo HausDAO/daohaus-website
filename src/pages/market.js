@@ -7,6 +7,8 @@ import GraphicCommunities from "@site/static/img/bauhaus_communities.png";
 import HausToken from "@site/static/img/haus_market.png";
 
 import RaidAvatar from "@site/static/img/raidguild__avatar.png";
+import YapAvatar from "@site/static/img/yap_avatar.jpg";
+import LexAvatar from "@site/static/img/lex_avatar.jpg";
 
 import "../css/global.scss";
 import "../css/token.scss";
@@ -25,16 +27,18 @@ const Market = () => {
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--50">
-                <h1>The HAUS Marketplace is coming soon™️</h1>
+                <h1>
+                  The HAUS Marketplace is coming <i>soon™️</i>
+                </h1>
                 <p className="BigP daoColor" style={{ maxWidth: "500px" }}>
                   With so many DAOs popping up as collectives that provide
-                  services togethere, we're gonna need a marketplace to find
-                  each other.
+                  services together, we're gonna need a marketplace to find each
+                  other.
                 </p>
                 <div className="HeroButtonGroup">
                   <a
                     href="https://forms.clickup.com/f/83fyz-1328/HVGD4PGGSGBOYUYR2U"
-                    className="Button Outlined"
+                    className="Button Secondary"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -82,7 +86,7 @@ const Market = () => {
             <div className="Row Farms">
               <div className="Column--50 DaoCard">
                 <h3>
-                  <img className="Avatar" src={RaidAvatar} /> YAP DAO
+                  <img className="Avatar" src={YapAvatar} /> YAP DAO
                 </h3>
                 <p>
                   Decentralized collective of crypto-native PR experts with
@@ -93,7 +97,9 @@ const Market = () => {
                 </p>
                 <a
                   href="https://daohaus.club/docs/uber_actions"
-                  className="Button Secondary Outlined"
+                  className="Button Secondary"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Engage
                 </a>
@@ -126,15 +132,23 @@ const Market = () => {
               </div>
               <div className="Column--50 DaoCard">
                 <h3>
-                  <img className="Avatar" src={RaidAvatar} /> LEX DAO
+                  <img className="Avatar" src={LexAvatar} /> LEX DAO
                 </h3>
-                <p>short description</p>
+                <p>The Decentralized Legal Engineering Guild</p>
                 <p>
-                  <a>Visit DAO</a>
+                  <a
+                    href="https://app.daohaus.club/dao/0x64/0x58234d4bf7a83693dc0815d97189ed7d188f6981/proposals"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Visit DAO
+                  </a>
                 </p>
                 <a
-                  href="https://hireus.raidguild.org/"
-                  className="Button Secondary Outlined"
+                  href="https://lexdao.coop"
+                  className="Button Secondary"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Engage
                 </a>
@@ -145,7 +159,13 @@ const Market = () => {
                 </h3>
                 <p>We make badass Video Explainers</p>
                 <p>
-                  <a>Visit DAO</a>
+                  <a
+                    href="https://lexdao.coop"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Visit DAO
+                  </a>
                 </p>
                 <a
                   href="https://daohaus.club/docs/uber_actions"

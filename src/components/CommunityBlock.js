@@ -16,7 +16,7 @@ const CommunityBlock = () => {
             <img src={HausHugeType} alt="" />
             <h3 className="whiteColor" style={{ margin: "75px 0px 25px" }}>
               Our mission is to foster a diverse, open economy of transparent
-              collaboration.
+              cooperation.
             </h3>
             <p className="BigP">
               DAOhaus is built and run by the community using DAOs to

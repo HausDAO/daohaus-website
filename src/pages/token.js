@@ -3,7 +3,7 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import CommunityBlock from "../components/CommunityBlock";
 
-import GraphicCommunities from "@site/static/img/bauhaus_communities.png";
+import GraphicCommunities from "@site/static/img/haus_genesis-council.png";
 import HausToken from "@site/static/img/haus__icon.png";
 
 import IconA from "@site/static/img/ico-grants.png";
@@ -49,7 +49,7 @@ const Token = () => {
                     Read the Launch Article
                   </a>
                   <a
-                    href="https://app.honeyswap.org/#/swap"
+                    href="https://swapr.eth.link/#/swap?outputCurrency=0xb0c5f3100a4d9d9532a4cfd68c55f1ae8da987eb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="Button Big Secondary"
@@ -79,58 +79,65 @@ const Token = () => {
             <div className="Row">
               <div className="Column--50">
                 <h2 style={{ textDecoration: "strikethrough" }}>
-                  The FarmHaus is open
+                  DXdao x DAOhaus
                 </h2>
                 <p className="BigP">
-                  The farms are live on xDAI and there are three staking
-                  opportunities to yield more HAUS, with rewards increasing
-                  based on effort and value to the network.
+                  <a
+                    href="https://dxdao.eth.link/#/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    DXdao
+                  </a>{" "}
+                  has teamed up with HAUS to offer DXD and wETH rewards in their
+                  HAUS/wETH pool on Swapr.
                 </p>
-                <p>
-                  1. Get HAUS on{" "}
-                  <a href="https://app.honeyswap.org/#/swap">Honeyswap</a>
-                </p>
-                <p>
-                  2. Stake into one of the farms at the{" "}
-                  <a href="https://farm.daohaus.club">FarmHaus</a>
-                </p>
-                <p>3. Earn more HAUS</p>
+                <a
+                  href="https://swapr.eth.link/#/swap?outputCurrency=0xb0c5f3100a4d9d9532a4cfd68c55f1ae8da987eb"
+                  className="Button Secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get HAUS on Swapr
+                </a>
               </div>
               <div className="Column--50"></div>
             </div>
             <div className="Row Farms">
               <div className="Column--33">
-                <h2>Ronin</h2>
-                <p>Stake HAUS alone for 1x rewards</p>
+                <h2>1. Become an LP</h2>
+                <p>Provide liquidity on the HAUS/wETH pool on Swapr</p>
                 <p>
                   <i>Signal governance with Snapshot</i>
                 </p>
                 <a
-                  href="https://farm.daohaus.club"
+                  href="https://swapr.eth.link/#/pools/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb/0xB145FBA04C22CA35c2Dca96E6CBa2Ec2d7a71Ec8"
                   className="Button Secondary Outlined"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Farm
+                  Add Liquidity
                 </a>
               </div>
               <div className="Column--33">
-                <h3>Shogun</h3>
-                <p>Stake HAUS/xDAI LP tokens and earn 2x rewards</p>
+                <h3>2. Stake on Swapr</h3>
+                <p>
+                  Stake your LP tokens to earn both DXD and WETH as rewards.
+                </p>
                 <p>
                   <i>Signal governance with Snapshot</i>
                 </p>
                 <a
-                  href="https://farm.daohaus.club"
+                  href="https://swapr.eth.link/#/pools/0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1/0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb/0xB145FBA04C22CA35c2Dca96E6CBa2Ec2d7a71Ec8"
                   className="Button Secondary Outlined"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Farm
+                  Staking Rewards
                 </a>
               </div>
               <div className="Column--33">
-                <h3>Clan</h3>
+                <h3>3. Clan</h3>
                 <p>Stake HAUS as a DAO into UberHaus and earn 3x rewards</p>
                 <p>
                   <i>Direct governance through UberHaus</i>
@@ -254,22 +261,13 @@ const Token = () => {
                 </p>
                 <div className="ButtonGroup">
                   <a
-                    href="https://daohaus.club/uberhaus-governance"
+                    href="http://localhost:3000/docs/users/uberhaus-governance"
                     className="Button Outlined"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     More about UberHaus
                   </a>
-                  {/* 
-                <a
-                  href="https://app.daohaus.club/explore"
-                  className="Button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit UberHaus
-                </a> */}
                 </div>
               </div>
               <div className="Column--50">

@@ -49,7 +49,7 @@ export default function Home() {
           <div className="SummonHero">
             <h1>
               Unlock the next tier <br />
-              in community coordination
+              in community cooperation
             </h1>
             <p className="BigP daoColor" style={{ maxWidth: "500px" }}>
               DAOs give direct <strong>power to the people</strong>. Join us in

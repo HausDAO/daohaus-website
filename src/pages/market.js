@@ -47,15 +47,9 @@ const Market = () => {
                 </div>
               </div>
               <div className="Column--50">
-                <a
-                  href="https://www.coingecko.com/en/coins/daohaus"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <div style={{ textAlign: "center" }}>
-                    <img style={{ margin: "0 auto" }} src={HausToken} alt="" />
-                  </div>
-                </a>
+                <div style={{ textAlign: "center" }}>
+                  <img style={{ margin: "0 auto" }} src={HausToken} alt="" />
+                </div>
               </div>
             </div>
           </div>
@@ -72,14 +66,6 @@ const Market = () => {
                   Here are a few active Service DAOs, often referred to as
                   Guilds.
                 </p>
-                {/* <a
-                  href="https://swapr.eth.link/#/swap?outputCurrency=0xb0c5f3100a4d9d9532a4cfd68c55f1ae8da987eb"
-                  className="Button Secondary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit the Market
-                </a> */}
               </div>
               <div className="Column--50"></div>
             </div>
@@ -160,7 +146,7 @@ const Market = () => {
                 <p>We make badass Video Explainers</p>
                 <p>
                   <a
-                    href="https://lexdao.coop"
+                    href="https://app.daohaus.club/dao/0x64/0xad80fbdb9c9652b5238dbd1dc4b4c7f7c364dba7"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -169,7 +155,7 @@ const Market = () => {
                 </p>
                 <a
                   href="https://daohaus.club/docs/uber_actions"
-                  className="Button Secondary Outlined"
+                  className="Button Secondary"
                 >
                   Engage
                 </a>

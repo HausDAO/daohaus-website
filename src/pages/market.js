@@ -9,6 +9,7 @@ import HausToken from "@site/static/img/haus_market.png";
 import RaidAvatar from "@site/static/img/raidguild__avatar.png";
 import YapAvatar from "@site/static/img/yap_avatar.jpg";
 import LexAvatar from "@site/static/img/lex_avatar.jpg";
+import KolektivoAvatar from "@site/static/img/kolektivo_avatar.png";
 
 import "../css/global.scss";
 import "../css/token.scss";
@@ -75,11 +76,18 @@ const Market = () => {
                   <img className="Avatar" src={YapAvatar} /> YAP DAO
                 </h3>
                 <p>
-                  Decentralized collective of crypto-native PR experts with
-                  worlds of experience in DeFi.
+                  YAP DAO provides essential and supportive services to help
+                  other DAOs tell their stories, and communicate their message
+                  on a global scale.
                 </p>
                 <p>
-                  <a>Visit DAO</a>
+                  <a
+                    href="https://app.daohaus.club/dao/0x64/0xf2d551a980b44a8f965252d109190343bf92ed77"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Visit DAO
+                  </a>
                 </p>
                 <a
                   href="https://daohaus.club/docs/uber_actions"
@@ -108,7 +116,7 @@ const Market = () => {
                   </a>
                 </p>
                 <a
-                  href="https://hireus.raidguild.org/"
+                  href="https://raidguild.org/"
                   className="Button Secondary"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -123,7 +131,7 @@ const Market = () => {
                 <p>The Decentralized Legal Engineering Guild</p>
                 <p>
                   <a
-                    href="https://app.daohaus.club/dao/0x64/0x58234d4bf7a83693dc0815d97189ed7d188f6981/proposals"
+                    href="https://app.daohaus.club/dao/0x64/0x58234d4bf7a83693dc0815d97189ed7d188f6981"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -141,12 +149,16 @@ const Market = () => {
               </div>
               <div className="Column--50 DaoCard">
                 <h3>
-                  <img className="Avatar" src={RaidAvatar} /> Splainer DAO
+                  <img className="Avatar" src={KolektivoAvatar} /> Kolektivo
+                  Labs
                 </h3>
-                <p>We make badass Video Explainers</p>
+                <p>
+                  Kolektivo Labs leverages the latest web3 technologies to shape
+                  a world where human coordination pivots radical change.
+                </p>
                 <p>
                   <a
-                    href="https://app.daohaus.club/dao/0x64/0xad80fbdb9c9652b5238dbd1dc4b4c7f7c364dba7"
+                    href="https://app.daohaus.club/dao/0x64/0x5a87ef0b720fcad805cf5502d061d50177b213c3"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -154,7 +166,7 @@ const Market = () => {
                   </a>
                 </p>
                 <a
-                  href="https://daohaus.club/docs/uber_actions"
+                  href="https://www.kolektivolabs.co/"
                   className="Button Secondary"
                 >
                   Engage

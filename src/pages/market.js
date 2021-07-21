@@ -90,7 +90,7 @@ const Market = () => {
                   </a>
                 </p>
                 <a
-                  href="https://daohaus.club/docs/uber_actions"
+                  href="https://www.yapdao.xyz/"
                   className="Button Secondary"
                   rel="noopener noreferrer"
                   target="_blank"

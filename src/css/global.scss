@@ -738,6 +738,25 @@ label.Select {
   }
 }
 
+// Avatar
+
+.Avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -6px;
+}
+
+.DaoCard {
+  border-radius: 5px;
+  border: 1px solid $secondary;
+  padding: 15px;
+  margin-bottom: 25px;
+  min-height: 280px;
+}
+
 // Breakpoint Utils
 
 .HideMobile {

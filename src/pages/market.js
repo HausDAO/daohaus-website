@@ -168,6 +168,8 @@ const Market = () => {
                 <a
                   href="https://www.kolektivolabs.co/"
                   className="Button Secondary"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Engage
                 </a>

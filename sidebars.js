@@ -65,6 +65,7 @@ module.exports = {
       "users/uberhaus-faq",
       "users/minion-faq",
       "users/other-networks-faq",
+      "users/discord-faq"
     ],
   },
    

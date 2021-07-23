@@ -2,9 +2,15 @@ module.exports = {
   mainSidebar: {
     Moloch: ["devs/contracts", "devs/subgraphs"],
     Client: [
-      {"Code Legos": [
-        'devs/legos/overview','devs/legos/tx-tut', 'devs/legos/tx-api',   'devs/legos/field-lego-api', 'devs/legos/form-lego-api',
-      ]},
+      {
+        "Code Legos": [
+          "devs/legos/overview",
+          "devs/legos/tx-tut",
+          "devs/legos/tx-api",
+          "devs/legos/field-lego-api",
+          "devs/legos/form-lego-api",
+        ],
+      },
       "devs/dev-proposals",
       "devs/activities",
       "devs/bank",
@@ -65,9 +71,8 @@ module.exports = {
       "users/uberhaus-faq",
       "users/minion-faq",
       "users/other-networks-faq",
-      "users/discord-faq"
+      // "users/discord-faq"
     ],
   },
-   
 };
-``
+``;

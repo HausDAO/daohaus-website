@@ -34,7 +34,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 
 ## 📅 Adding Shared Calendar to Google
-1. Go to Calendar
+1. Go to Calendar 
 2. Under Other calendars heading on left click +
 3. Click From URL
 4. Paste the following URL of calendar: https://sesh.fyi/calendar/jFrYhCrXkZ3hF1YCwTTD7D.ics

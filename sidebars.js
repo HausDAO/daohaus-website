@@ -64,6 +64,7 @@ module.exports = {
       "users/proposals-faq",
       "users/bank-faq",
       "users/members-faq",
+      "users/summoner-faq",
       "users/settings-faq",
       "users/apps-faq",
       "users/allies-faq",

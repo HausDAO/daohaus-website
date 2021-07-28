@@ -98,11 +98,6 @@ module.exports = {
       "handbook/summoners/summoners-get-started",
       "handbook/summoners/summoners-faq",
       "handbook/summoners/summoners-howto-sample",
-    ], 
-    Members: [
-      "handbook/members/members-get-started",
-      "handbook/members/members-faq",
-      "handbook/members/members-howto-sample",
     ],
     Contributors: [
        "handbook/contributors/contributors-get-started",

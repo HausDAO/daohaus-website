@@ -87,12 +87,28 @@ module.exports = {
     ],
     Discord: [
       "handbook/getting-started",
-      "handbook/level-up",
+      //"handbook/level-up",
       "handbook/scholar",
       "handbook/supporter",
       "handbook/contributor",
       "handbook/summoner",
-      "handboook/bots"
+      //"handbook/bots"
+    ],
+    Summoners: [
+      "handbook/summoners/summoners-get-started",
+      "handbook/summoners/summoners-faq",
+      "handbook/summoners/summoners-howto-sample",
+    ], 
+    Members: [
+      "handbook/members/members-get-started",
+      "handbook/members/members-faq",
+      "handbook/members/members-howto-sample",
+    ],
+    Contributors: [
+       "handbook/contributors/contributors-get-started",
+       "handbook/contributors/contributors-faq",
+       "handbook/contributors/contributors-howto-contribute-to-docs",
+       "handbook/contributors/contributors-docs-style-guide",
     ],
     Circles: [
       "handbook/overview",

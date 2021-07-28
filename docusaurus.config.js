@@ -69,6 +69,10 @@ module.exports = {
               label: "Developers",
               to: "/docs/devs",
             },
+            {
+              label: "Handbook",
+              to: "/docs/handbook",
+            }
           ],
         },
         {
@@ -102,6 +106,10 @@ module.exports = {
               to: "/docs/devs",
               label: "Developer Docs",
             },
+            {
+              to: "/docs/handbook",
+              label: "Handbook",
+            }
           ],
         },
         {

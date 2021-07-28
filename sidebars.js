@@ -59,7 +59,11 @@ module.exports = {
       "users/weth",
       "users/networks",
     ],
-    UberHaus: ["users/uberhaus-governance", "users/cco", "users/uber-actions"],
+    UberHaus: [
+      "users/uberhaus-governance", 
+      "users/cco", 
+      "users/uber-actions"
+    ],
     FAQ: [
       "users/proposals-faq",
       "users/bank-faq",
@@ -73,6 +77,30 @@ module.exports = {
       "users/minion-faq",
       "users/other-networks-faq",
       "users/discord-and-community-faq"
+    ],
+  },
+  whoSidebar: {
+    Community:[
+      "handbook/who-we-are",
+      "handbook/meeting-schedule",
+      "handbook/resources"
+    ],
+    Discord: [
+      "handbook/getting-started",
+      "handbook/level-up",
+      "handbook/scholar",
+      "handbook/supporter",
+      "handbook/contributor",
+      "handbook/summoner",
+      "handboook/bots"
+    ],
+    Circles: [
+      "handbook/overview",
+      "handbook/alchemists",
+      "handbook/magesmiths",
+      "handbook/paladins",
+      "handbook/rangers",
+      "handbook/uberpaladins"
     ],
   },
 };

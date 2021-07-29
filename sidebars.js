@@ -41,7 +41,8 @@ module.exports = {
       "users/intro-moloch",
       "users/glossary",
     ],
-    Basics: [
+    Features: [
+      "users/hub",
       "users/bank",
       "users/membership",
       "users/proposals-intro",
@@ -49,7 +50,6 @@ module.exports = {
     ],
     HowTo: [
       "users/navigation",
-      "users/hub",
       "users/summon",
       "users/boost",
       "users/add-member",
@@ -58,11 +58,6 @@ module.exports = {
       "users/withdraw-internal",
       "users/weth",
       "users/networks",
-    ],
-    UberHaus: [
-      "users/uberhaus-governance", 
-      "users/cco", 
-      "users/uber-actions"
     ],
     FAQ: [
       "users/proposals-faq",
@@ -73,10 +68,8 @@ module.exports = {
       "users/apps-faq",
       "users/allies-faq",
       "users/profile-faq",
-      "users/uberhaus-faq",
       "users/minion-faq",
       "users/other-networks-faq",
-      "users/discord-and-community-faq"
     ],
   },
   whoSidebar: {
@@ -98,11 +91,9 @@ module.exports = {
       "handbook/summoners/summoners-get-started",
       "handbook/summoners/summoners-faq",
       "handbook/summoners/summoners-howto-sample",
-    ], 
-    Members: [
-      "handbook/members/members-get-started",
-      "handbook/members/members-faq",
-      "handbook/members/members-howto-sample",
+      "handbook/summoners/uberhaus-governance", 
+      "handbook/summoners/cco", 
+      "handbook/summoners/uber-actions",
     ],
     Contributors: [
        "handbook/contributors/contributors-get-started",

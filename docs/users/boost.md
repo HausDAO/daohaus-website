@@ -1,7 +1,7 @@
 ---
 id: boost
-title: Boost Your DAO
-sidebar_label: Boost
+title: How to Add Mintgate Boost to your DAO
+sidebar_label: Add Mintgate Boost
 slug: /boost
 ---
 

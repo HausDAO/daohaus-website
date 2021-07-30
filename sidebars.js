@@ -98,7 +98,7 @@ module.exports = {
     Contributors: [
        "handbook/contributors/contributors-get-started",
        "handbook/contributors/contributors-faq",
-       "handbook/contributors/contributors-howto-contribute-to-docs",
+       "handbook/contributors/contributors-docs",
        "handbook/contributors/contributors-docs-style-guide",
     ],
     Circles: [

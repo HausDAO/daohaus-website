@@ -76,7 +76,7 @@ module.exports = {
     Community:[
       "handbook/who-we-are",
       "handbook/meeting-schedule",
-      "handbook/resources"
+      "handbook/resources", 
     ],
     Discord: [
       "handbook/getting-started",
@@ -85,6 +85,7 @@ module.exports = {
       "handbook/supporter",
       "handbook/contributor",
       "handbook/summoner",
+      "handbook/discord-faq"
       //"handbook/bots"
     ],
     Summoners: [

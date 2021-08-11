@@ -48,7 +48,7 @@ module.exports = {
       "users/proposals-intro",
       "users/profile",
     ],
-    HowTo: [
+    Tutorials: [
       "users/navigation",
       "users/summon",
       "users/boost",
@@ -98,9 +98,9 @@ module.exports = {
     ],
     Contributors: [
        "handbook/contributors/contributors-get-started",
-       "handbook/contributors/contributors-faq",
        "handbook/contributors/contributors-docs",
        "handbook/contributors/contributors-docs-style-guide",
+       "handbook/contributors/contributors-faq",
     ],
     Circles: [
       "handbook/overview",

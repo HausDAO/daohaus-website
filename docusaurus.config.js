@@ -1,7 +1,7 @@
 module.exports = {
   title: "DAOhaus",
   tagline: "A place for all your DAOs",
-  url: "https://daohaus.club/docs",
+  url: "https://daohaus.club",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -147,11 +147,11 @@ module.exports = {
         docs: {
           routeBasePath: "/docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/HausDAO/daohaus-docs/edit/prod/",
+          editUrl: "https://github.com/HausDAO/daohaus-website/edit/staging",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/HausDAO/daohaus-docs/edit/prod/",
+          editUrl: "https://github.com/HausDAO/daohaus-website/edit/staging/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

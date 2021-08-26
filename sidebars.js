@@ -53,6 +53,7 @@ module.exports = {
       "users/summon",
       "users/boost",
       "users/add-member",
+      "users/rage-quit",
       "users/minion",
       "users/request-funding",
       "users/withdraw-internal",

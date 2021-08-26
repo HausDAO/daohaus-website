@@ -4,9 +4,28 @@ title: Bank FAQ
 sidebar_label: Bank
 ---
 
-### Whitelisting Tokens 
-
 <h4><details>
+  <summary>Q: What type of tokens can my DAO bank receive?</summary>
+  
+<p>&nbsp;</p>
+  
+A: Your DAOs bank can receive ERC-20 tokens, where minions can accept both ERC-20s and ERC-721 NFTs.
+  
+  </details></h4>
+  
+  <h4><details>
+  <summary>Q: Can I send xDAI to the DAO?</summary>
+  
+<p>&nbsp;</p>
+  
+A: The DAO cannot accept xDAI and it should normally revert the transaction when you are sending it. 
+Please do not send xDAI to your DAO. 
+
+You should either wrap your xDAI on wrapeth.com or enable the Wrap N Zap boost for your DAO. 
+  
+  </details></h4>
+  
+   <h4><details>
   <summary>Q: I want to whitelist HAUS for my bank. What is the token address?</summary>
   
 <p>&nbsp;</p>
@@ -33,30 +52,6 @@ A: You should whitelist the tokens via a Whitelist proposal and click on "Sync" 
 A: The token will be owned by the contract, but not show up on your treasury.
   
   </details></h4>
-
-### Sending, Receiving & Managing Funds
-
-<h4><details>
-  <summary>Q: What type of tokens can my DAO bank receive?</summary>
-  
-<p>&nbsp;</p>
-  
-A: Your DAOs bank can receive ERC-20 tokens, where minions can accept both ERC-20s and ERC-721 NFTs.
-  
-  </details></h4>
-  
-  <h4><details>
-  <summary>Q: Can I send native tokens such as xDAI, ETH, MATIC to the DAO?</summary>
-  
-<p>&nbsp;</p>
-  
-A: The DAO Treasury cannot accept native tokens such as xDAI, ETH and MATIC. It only accepts ERC-20 tokens, so you will have to wrap your XDAI on wrapeth.com or enable the Wrap N Zap boost for your DAO. 
-
-If you send native tokens to the DAO Treasury directly, the funds will be stuck there, so please refrain from doing so. 
-
-If you need to hold native tokens, another way to do it is to create a Minion and send the native tokens to the Minion instead.   
-  </details></h4>
-  
  
  <h4><details>
   <summary>Q: I am redeploying my DAO and need to transfer funds from one DAO to the other. How should I do it?</summary>
@@ -72,18 +67,6 @@ A: Do not send the funds directly to the DAO address.
   Do not send funds to your new DAO address via a funding proposal as the contract is merely updating the internal balances, which members or minions should ideally withdraw later on. Your funds will be lost.
   
   </details></h4>
-
-  <h4>
-    <details>
-      <summary>Q:  Can I withdraw funds from the Bank without waiting for the grace period to pass?</summary>
-  
-      <p>&nbsp;</p>
-  
-        A: No, funds can only be withdrawn after the grace period has passed.
-  
-    </details>
-  </h4>
-
   
    <h4><details>
   <summary>Q: The amount of tokens / funds on chain is different from the amount in the bank on in my hub. Why is this?</summary>
@@ -93,10 +76,6 @@ A: Do not send the funds directly to the DAO address.
 A: As the contract holds different internal balances and proposal escrows, the amounts showing up on the bank and contract may differ. 
   
   </details></h4>
-
-
-### Safes & Cross-chain Treasuries
-
   <h4>
     <details>
       <summary>Q: Can a DAO on xDAI manage assets & funds on mainnet?</summary>
@@ -109,6 +88,16 @@ A: As the contract holds different internal balances and proposal escrows, the a
   </h4>
   
 
+  <h4>
+    <details>
+      <summary>Q:  Can I withdraw funds from the Bank without waiting for the grace period to pass?</summary>
+  
+      <p>&nbsp;</p>
+  
+        A: No, funds can only be withdrawn after the grace period has passed.
+  
+    </details>
+  </h4>
 
   <h4>
     <details>

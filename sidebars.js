@@ -33,7 +33,6 @@ module.exports = {
       "devs/react-jsx",
       "devs/react-layout",
     ],
-    API: ["devs/meta-api"],
   },
   howSidebar: {
     Intro: [

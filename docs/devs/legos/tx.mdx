@@ -76,27 +76,27 @@ String for displaying the current transaction to users. Will be used in txList a
 
 (STRING)
 
-String that is displayed in the success toast when the transaction completes
+String that is displayed in the success toast when the transaction completes.
 
 #### tx.errMsg 
 
 (STRING)
 
-String that is displayed in the err toast when the transaction completes
+String that is displayed in the err toast when the transaction completes.
 
 #### tx.detailsToJSON 
 
 (Array of Strings)
 
-PROPOSAL_FORMS (and likely other transactions) require a `details` field to hold arbitrary JSON data. However, the app relies on this field to deliver consistent UI to the app. Becuase the data in this field is immutable, there are considerable consequences for passing data in here the wrong way. 
+PROPOSAL_FORMS (and likely other transactions) require a `details` field to hold arbitrary JSON data. However, the app relies on this field to deliver consistent UI to the app. Because the data in this field is immutable, there are considerable consequences for passing data in here the wrong way. 
 
-The solution is have a premade API handle it. So now each transaction that has a details JSON string as an argument will use the detailsJSON field on its TX object. 
+The solution is to have a premade API to handle it. So now each transaction that has a details JSON string as an argument will use the detailsJSON field on its TX object. 
 
 This field: 
-- Takes an array of strings
-- searches the `values` object for fields with the same name as those strings. 
-- copies those fields into a new object
-- stringifies that object and turns and passes it to the argument slot as directed by the gatherArgs field. 
+- Takes an array of strings.
+- Searches the `values` object for fields with the same name as those strings. 
+- Copies those fields into a new object.
+- Stringifies that object and turns and passes it to the argument slot as directed by the gatherArgs field. 
 
 Also: 
 - To keep the shape of detailsToJSON strings consistent, there is a DETAILS constant inside of ``contractTX.js``. 
@@ -135,11 +135,11 @@ ex.
 ##### Deep Search (application-wide)
 
 Uses it's own search notation to find application state for within the React Context stores. 
-- Exists in a search param object
+- Exists in a search param object.
 - Initiated by using 'search' in the `type` field. 
-- depth of the search is controlled by an array that looks for nested fields with a matching name (can also do numerical array values)
-- Requires a strong understanding of the application data structure
-- To be used in the most tricky situations 
+- Depth of the search is controlled by an array that looks for nested fields with a matching name (can also do numerical array values).
+- Requires a strong understanding of the application data structure.
+- To be used in the most tricky situations. 
 
 ex. 
 ```
@@ -151,8 +151,8 @@ ex.
 ```
 ##### Static values
 For hardcoded static values. 
-- Exists in a search param object
-- Initiated by using the keyword 'static' in the field `type`
+- Exists in a search param object.
+- Initiated by using the keyword 'static' in the field `type`.
 
 ex. 
 ```
@@ -169,8 +169,8 @@ Read more about how this works in tx.detailsJSON.
 
 ##### Mix'n Match Approach
 
-- Args don't need to be of one type
-- They can use any combination of search types 
+- Args don't need to be of one type.
+- They can use any combination of search types.
 ```
 gatherArgs: [
      {type: 'search', fields: ['contextData', 'daoOverview', 'depositToken']}, 
@@ -190,15 +190,15 @@ Indicates that args will not be gathered from either the React Component or usin
 Instead, this transaction will use a callback function that is declared inside of ``argBuilderCallback{}``inside of ``txHelpers.js``. 
 
 
-- Each field in this object is a callback function
-- The name of the callback function must be the same as the name of the transaction
-- Each callback has access to ``values``, ``tx``(tx lego data), contextData(application State) ``formData (form lego data)``, a ``hash``--each as named arguments. 
+- Each field in this object is a callback function.
+- The name of the callback function must be the same as the name of the transaction.
+- Each callback has access to ``values``, ``tx`` (tx lego data), ``contextData`` (application State) ``formData`` (form lego data), a ``hash``, each as named arguments. 
 
-Becuase these callbacks are non-composable, their uses are limited to: 
-- Fast protoyping (temporary; not pushed to prod)
-- last resort (no other option)
+Because these callbacks are non-composable, their uses are limited to: 
+- Fast protoyping (temporary; not pushed to prod).
+- last resort (no other option).
 
-In every case, a TXs arg from callback will eventually need to be refactored into static data--either through refactoring a fast protoype or improving the txLego system. 
+In every case, a TXs arg from callback will eventually need to be refactored into static data, either through refactoring a fast protoype or improving the txLego system. 
 
 #### createDiscourse
 

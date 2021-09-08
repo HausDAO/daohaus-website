@@ -45,7 +45,7 @@ The Moloch Summoner follows the general proxy conventions while the v2.1 summone
 
 Minion is a contract that allows execution of arbitrary calls voted on by members of a Moloch DAO. Minion actions are submitted as new proposals and can be executed upon successful passing of the proposal.
 
-- [RaidGuild Minion](https://github.com/raid-guild/moloch-minion)
+- [RaidGuild Minion](httpsoeu://github.com/raid-guild/moloch-minion)
 
 ### Minion Summoner Factory
 

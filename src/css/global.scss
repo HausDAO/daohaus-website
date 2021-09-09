@@ -276,7 +276,7 @@ button:not(.hamburger):not([role="switch"]),
       font-size: 1.35em;
     }
     @media (max-width: $grid) {
-      max-width: calc(100% - 100px);
+      max-width: calc(100% - 50px);
     }
   }
   &.Primary {

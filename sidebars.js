@@ -47,17 +47,21 @@ module.exports = {
       'users/membership',
       'users/proposals-intro',
       'users/profile',
+      'users/boosts-intro',
+
+
     ],
     Tutorials: [
       'users/navigation',
       'users/summon',
-      'users/boost',
+      'users/add-mintgate-boost',
       'users/add-member',
       'users/minion',
       'users/request-funding',
       'users/withdraw-internal',
       'users/weth',
       'users/networks',
+      'users/manage-proposal-playlists',
     ],
     FAQ: [
       'users/proposals-faq',

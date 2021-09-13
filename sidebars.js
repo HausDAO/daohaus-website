@@ -49,7 +49,6 @@ module.exports = {
       'users/profile',
       'users/boosts-intro',
 
-
     ],
     Tutorials: [
       'users/navigation',
@@ -69,7 +68,7 @@ module.exports = {
       'users/members-faq',
       'users/summoner-faq',
       'users/settings-faq',
-      'users/apps-faq',
+      'users/boosts-faq',
       'users/allies-faq',
       'users/profile-faq',
       'users/minion-faq',

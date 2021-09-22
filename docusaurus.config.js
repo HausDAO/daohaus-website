@@ -8,6 +8,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "hausdao", // Usually your GitHub org/user name.
   projectName: "daohaus-docs", // Usually your repo name.
+    scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'daohaus.club'}],
   themeConfig: {
     image: "https://daohaus.club/images/daohaus-main.jpg",
     metadatas: [

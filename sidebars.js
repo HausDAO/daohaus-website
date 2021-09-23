@@ -92,12 +92,19 @@ module.exports = {
       //"handbook/bots"
     ],
     Summoners: [
-      'handbook/summoners/summoners-get-started',
+      'handbook/summoners/why-daos-summoners',
+      {
+        type: 'category',
+        label: 'Features',
+        items: ['handbook/summoners/summoners-daohaus-features','handbook/summoners/uberhaus-governance','handbook/summoners/cco',]
+      },
+      {
+        type: 'category',
+        label: 'Tutorials',
+        items: ['handbook/summoners/summoners-get-started','handbook/summoners/summon-dao-gnosis','handbook/summoners/uber-actions',]
+      },
+      'handbook/summoners/summoners-best-practices',
       'handbook/summoners/summoners-faq',
-      'handbook/summoners/summoners-howto-sample',
-      'handbook/summoners/uberhaus-governance',
-      'handbook/summoners/cco',
-      'handbook/summoners/uber-actions',
     ],
     Contributors: [
       'handbook/contributors/contributors-get-started',

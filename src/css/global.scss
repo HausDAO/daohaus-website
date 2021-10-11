@@ -87,6 +87,19 @@ a {
   }
 }
 
+.navbar__item.dropdown:hover a {
+  cursor: pointer;
+  color: $primary-hover;
+}
+
+.navbar__item.dropdown a:last-child{
+  background-color:#050a1b !important;
+  color:#0e99c4;
+  &:hover {
+    color: $primary-hover;
+  } 
+}
+
 img {
   max-width: 100%;
   display: inline-block;

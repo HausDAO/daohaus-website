@@ -48,7 +48,6 @@ module.exports = {
       'users/proposals-intro',
       'users/profile',
       'users/boosts-intro',
-
     ],
     Tutorials: [
       'users/navigation',
@@ -96,12 +95,20 @@ module.exports = {
       {
         type: 'category',
         label: 'Features',
-        items: ['handbook/summoners/summoners-daohaus-features','handbook/summoners/uberhaus-governance','handbook/summoners/cco',]
+        items: [
+          'handbook/summoners/summoners-daohaus-features',
+          'handbook/summoners/uberhaus-governance',
+          'handbook/summoners/cco',
+        ],
       },
       {
         type: 'category',
         label: 'Tutorials',
-        items: ['handbook/summoners/summoners-get-started','handbook/summoners/summon-dao-gnosis','handbook/summoners/uber-actions',]
+        items: [
+          'handbook/summoners/summoners-get-started',
+          'handbook/summoners/summon-dao-gnosis',
+          'handbook/summoners/uber-actions',
+        ],
       },
       'handbook/summoners/summoners-best-practices',
       'handbook/summoners/summoners-faq',
@@ -111,6 +118,7 @@ module.exports = {
       'handbook/contributors/contributors-docs',
       'handbook/contributors/contributors-docs-style-guide',
       'handbook/contributors/contributors-get-paid',
+      'handbook/contributors/contributors-get-power',
       'handbook/contributors/contributors-faq',
     ],
     Circles: [

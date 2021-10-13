@@ -5,11 +5,11 @@ sidebar_label: Proposals
 slug: /proposals
 ---
 
-## Introduction to Proposals
-
 Proposals can be used for all types of decision-making in the DAO. Add/remove members, allocate Shares and Loot, distribute funds, and even interact with other applications and communities.
 
 ### Standard Proposal Types
+
+These are the standard proposal types used within the governance in most DAOs. 
 
 -   **Membership** - Tributing capital and Requesting new shares to join the DAO
 -   **Funding** - Tributing Spoils or Requesting funds from the DAO to work on internal projects and improvements
@@ -18,11 +18,34 @@ Proposals can be used for all types of decision-making in the DAO. Add/remove me
 -   **GuildKick** - Request to forcibly remove a malicious member through a vote
 -   **Minion** - A contract that allows execution of arbitrary calls i.e swapping assets in the DAO bank
 
+With additional Minions and Boosts, there will be more proposal types available for your DAO (e.g. "Superfluid" for Superfluid Minion, etc.)
+
+### Proposal Playlists 
+
+Proposal playlists are custom folders for you to group relevant proposals together, minimizing the information overload for DAO members when submitting proposals. 
+
+More specifically, Proposal Playlists enable DAOs to: 
+* **Group proposals together in a playlist** to streamline for a specific persona (e.g. "New Joiners") or use case (e.g. "DeFi/NFTs")
+* **Edit proposal titles and description** to optimise the language used for your DAO members' persona 
+
+The default proposal playlists are: 
+1. **Favorites**: Commonly used proposals to help you kickstart your DAO's favourite proposals
+2. **The Classics**: Classic proposal types if you are more familiar with the previous Proposals flow 
+
+To learn how to create, edit and manage Proposal Playlists, refer to [How To Manage Proposal Playlists](manage-proposal-playlists.md). 
+
+
 ### Proposal Process
 
 To submit a proposal, navigate to your [DAOhaus DAO](https://app.daohaus.club/explore) and select “View Proposals” followed by New Proposal.
 
-Select the Proposal Type (described above) and fill in all fields. Here are some of the things you’ll want to keep in mind when filling out a proposal.
+Select the Proposal Type (described above) and fill in the relevant information. 
+
+![](https://i.imgur.com/MCHcVzJ.png)
+
+> The default Proposal Type shown will be the "Favorites" proposals. If you cannot find your proposals in "Favorites", try toggling to another Proposal Playlist. 
+
+Here are some of the things you’ll want to keep in mind when filling out a proposal.
 
 -   **TITLE:** Enter a description of the proposal. Example: New Member - Jane Doe
 -   **DESCRIPTION:** Anything you believe is relevant to your proposal. The shorter the description the better, and the important piece here is the _WHAT_ you are asking for and _WHY_.

@@ -4,12 +4,14 @@ title: Bank FAQ
 sidebar_label: Bank
 ---
 
+## Sending & Receiving Tokens
+
 <h4><details>
-  <summary>Q: What type of tokens can my DAO bank receive?</summary>
+  <summary>Q: What type of tokens can my DAO Bank & Minion receive respectively?</summary>
   
 <p>&nbsp;</p>
   
-A: Your DAOs bank can receive ERC-20 tokens, where minions can accept both ERC-20s and ERC-721 NFTs.
+A: Your DAO's Bank can receive ERC-20 tokens, where minions can accept both ERC-20s, Native tokens (e.g. ETH, MATIC, xDAI respectively) and ERC-721 NFTs.
   
   </details></h4>
   
@@ -19,8 +21,9 @@ A: Your DAOs bank can receive ERC-20 tokens, where minions can accept both ERC-2
 <p>&nbsp;</p>
   
 A: The DAO cannot accept xDAI and it should normally revert the transaction when you are sending it. 
+Please do not send xDAI to your DAO. 
 
-   Please do not send xDAI to your DAO.
+You should either wrap your xDAI on wrapeth.com or enable the Wrap N Zap boost for your DAO. 
   
   </details></h4>
   
@@ -38,8 +41,7 @@ A: 0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb
   
 <p>&nbsp;</p>
   
-A: You should whitelist the tokens via a Whitelist proposal and click on "Sync" on the treasury page. After that when you send the tokens to your DAO address, the 
-   tokens should appear in the bank.
+A: If the token is already whitelisted, you can send the tokens to the DAO address, or submit a Funding Proposal with Tribute. 
   
   </details></h4>
   
@@ -52,8 +54,11 @@ A: The token will be owned by the contract, but not show up on your treasury.
   
   </details></h4>
  
+
+## Managing the DAO Bank
+
  <h4><details>
-  <summary>Q: I am redploying my DAO and need to transfer funds from one DAO to the other. How should I do it?</summary>
+  <summary>Q: I am redeploying my DAO and need to transfer funds from one DAO to the other. How should I do it?</summary>
   
 <p>&nbsp;</p>
   
@@ -75,7 +80,40 @@ A: Do not send the funds directly to the DAO address.
 A: As the contract holds different internal balances and proposal escrows, the amounts showing up on the bank and contract may differ. 
   
   </details></h4>
+  <h4>
+    <details>
+      <summary>Q: Can a DAO on xDAI manage assets & funds on mainnet?</summary>
   
+      <p>&nbsp;</p>
+  
+        A: Currently, no. However, there is a Gnosis Safe boost coming up that will enable a DAO on xDAI to control a safe on mainnet.  
+  
+    </details>
+  </h4>
+  
+
+  <h4>
+    <details>
+      <summary>Q:  Can I withdraw funds from the Bank without waiting for the grace period to pass?</summary>
+  
+      <p>&nbsp;</p>
+  
+        A: No, funds can only be withdrawn after the grace period has passed.
+  
+    </details>
+  </h4>
+
+  <h4>
+    <details>
+      <summary>Q: Are the Gnosis Safes on xDAI compatible with DAOhaus DAOs on xDAI?</summary>
+  
+      <p>&nbsp;</p>
+  
+        A: Yes, they are compatible.
+  
+    </details>
+  </h4>
+
 
 Our FAQs section are work-in-progress. Want to contribute? 
 

@@ -7,7 +7,7 @@ slug: /devs/subgraphs
 
 ## What is TheGraph?
 
-The Graph is an indexing protocol that the incentivzes and coordinates indexing of public blockchain data.  The Graph provides queryable data using GraphQL for your API to plug into. By indexing Moloch contracts with The Graph any user with access to TheGraph can find data on all compatible DAOs instantly.
+The Graph is an indexing protocol that the incentivizes and coordinates indexing of public blockchain data. The Graph provides queryable data using GraphQL for your API to plug into. By indexing Moloch contracts with The Graph any user with an access to TheGraph can find data on all compatible DAOs instantly.
 
 ## Subgraphs
 
@@ -217,7 +217,7 @@ The primary DAOhaus subgraph tracks the primary entities of v1 and v2/2.1 DAOs: 
 
 ### Stats Subgraph
 
-The DAOhaus Stats Subgraph provides aggregated stats and metrics for users and communities across the platform.
+The DAOhaus Stats Subgraph provides aggregated statistics and metrics for users and communities across the platform.
 
 #### Moloches Stats
 

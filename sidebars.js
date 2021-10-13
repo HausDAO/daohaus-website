@@ -118,7 +118,7 @@ module.exports = {
       'handbook/contributors/contributors-docs',
       'handbook/contributors/contributors-docs-style-guide',
       'handbook/contributors/contributors-get-paid',
-      'handbook/contributors/contributors-get-power',
+      'handbook/contributors/contributors-earn-power',
       'handbook/contributors/contributors-faq',
     ],
     Circles: [

@@ -47,7 +47,8 @@ module.exports = {
       'users/membership',
       'users/proposals-intro',
       'users/profile',
-      'users/boosts-intro',
+      'users/minion',
+      'users/boosts',
 
     ],
     Tutorials: [
@@ -55,7 +56,7 @@ module.exports = {
       'users/summon',
       'users/add-mintgate-boost',
       'users/add-member',
-      'users/minion',
+      'users/deploy-minion',
       'users/request-funding',
       'users/withdraw-internal',
       'users/weth',

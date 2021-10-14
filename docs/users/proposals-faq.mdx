@@ -4,20 +4,35 @@ title: Proposals FAQ
 sidebar_label: Proposals
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ## Proposals
 
 <h4>
   <details>
     <summary>
-      Q: Who can submit proposals?
+      Q: I want to sponsor a proposal, but I'm unable to do so. Why is the
+      button is greyed out?
     </summary>
     <p>&nbsp;</p>
-    A: Anyone can submit a proposal, but only share holders in the DAO can sponsor proposals into voting and vote.
+    A: Check to make sure you have enough wxDAI to sponsor the proposal.
+    <summary>Q: Who can submit proposals?</summary>
+    <p>&nbsp;</p>
+    A: Anyone can submit a proposal, but only share holders in the DAO can sponsor
+    proposals into voting and vote.
   </details>
 </h4>
 
 <h4>
   <details>
+    <summary>
+      Q: When sponsoring a proposal, the deposit amount on Metamask shows '0'.
+      Why is this happening?
+    </summary>
+    <p>&nbsp;</p>
+    A: The amount will be sent in WETH, not ETH so it will not show in the
+    wallet transaction window.
+    <img alt='metamask-zero' src={useBaseUrl('img/metamask-0.png')} />
     <summary>
       Q: I want to sponsor a proposal, but I'm unable to do so as the button is
       greyed out
@@ -29,7 +44,7 @@ sidebar_label: Proposals
 
 <h4>
   <details>
-   <summary>Q: Are all members required to sponsor a proposal?</summary>
+    <summary>Q: Are all members required to sponsor a proposal?</summary>
     <p>&nbsp;</p>
     A: No, only 1 member is required to sponsor a proposal.
   </details>
@@ -59,13 +74,19 @@ sidebar_label: Proposals
 
 <h4>
   <details>
-    <summary>Q: Why do proposal stages in different DAOs have different time intervals (e.g. 10 minutes vs 1 hour)? </summary>
+    <summary>
+      Q: Why do proposal stages in different DAOs have different time intervals
+      (e.g. 10 minutes vs 1 hour)?{' '}
+    </summary>
     <p>&nbsp;</p>
-    A: This depends on the period duration that was set up during the summoning of the DAO. If an interval of 1 hour was chosen, a sponsored proposal will go into the queue and go for voting in the period of 1 hour.
+    A: This depends on the period duration that was set up during the summoning
+    of the DAO. If an interval of 1 hour was chosen, a sponsored proposal will
+    go into the queue and go for voting in the period of 1 hour.
   </details>
-</h4> 
+</h4>{' '}
 
 ## Voting & Passing Proposals
+
 <h4>
   <details>
     <summary>
@@ -131,7 +152,6 @@ sidebar_label: Proposals
   </details>
 </h4>
 
-
 <h4>
   <details>
     <summary>
@@ -161,7 +181,18 @@ sidebar_label: Proposals
   </details>
 </h4>
 
-
+<h4>
+  <details>
+    <summary>
+      Q: If a proposal has passed, is there any way to reverse or change the
+      vote?
+    </summary>
+    <p>&nbsp;</p>
+    A: If the proposal has been passed by majority of votes, there is no way to
+    reverse the proposal. However, if the proposal is in "Voting", you can
+    persuade other members to vote "No" to prevent the proposal from passing.
+  </details>
+</h4>
 
 ## Funding Proposals
 
@@ -172,9 +203,8 @@ sidebar_label: Proposals
     A: Yes you can, when filling out the details of the proposal, enter the
     address you want funds sent to in the field `applicant address`.
   </details>
-</h4> 
----
+</h4>
 
 Our FAQs section are work-in-progress. Want to contribute?
 
-Head to the [DAOhaus Discord](https://discord.gg/bUd7HqMx), indicate your role as "Contributor" and reach out!
+Head to the [DAOhaus Discord](https://discord.gg/daohaus), indicate your role as "Contributor" and reach out!

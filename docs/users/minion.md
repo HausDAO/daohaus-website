@@ -1,41 +1,47 @@
 ---
 id: minion
-title: How To Deploy a Minion
-sidebar_label: Deploy a Minion
-slug: /minion
+title: Minions
+sidebar_label: Minions
 ---
 
-1. Navigate to your DAO
-2. Go to your Apps (denoted by the rocket symbol on the left sidebar)
-3. Click 'Add this App' under Minion 
-4. Name it something everyone in your DAO can identify (Payroll) 
-5. When the transaction completes, your minion will be ready to use
+## What are Minions? 
+Minions enable your DAO to make calls and interact with external smart contracts, empowering your DAO to do everything you want with a smart contract. When you submit, vote and pass a Minion Proposal, the Minion will execute your smart contract calls the way it was created to. 
 
+This opens up possibilities for DAOs to access any smart contracts out there, from providing liquidity positions, doing swaps or even purchasing NFTs.
 
-### Request Funds from Another DAO
+## Minion Types 
 
-1. Go to your DAO settings and copy the address for your minion (Payroll)
-2. Go to the DAO you want to request funds from
-3. Go to the settings in that DAO
-4. Open the Vault
-5. Click 'Send' by the token you want to request 
+**Basic Minion**
 
-    - Enter Amount 
-    - Destination (Payroll)
-    - Short Description for why you are requesting the funds
+Want a simple way to execute smart contract calls automatically based on the outcome of your proposals?
+Also known as a vanilla minion, it is a basic upgrade to your DAO proposals, enabling one-time interactions with other smart contracts once your proposals are passed.
+This way, you can upgrade your DAO experience by seamlessly go from voting to execution without any coordination lags.
 
-6. Click 'Propose Transfer'
-7. At this point, you can sponsor the proposal and it will progress as usual 
+**Advanced Minion**
 
-Once funds have been received by the minion, members of your DAO will be able to request funds directly from the minion to any address of their choosing through a funding proposal.  To do this, go through the following steps:
+The Advanced Minion is similar to the Basic Minion, but has the added ability to set quorum levels so that transactions can be executed earlier once quorum requirements are met
+Also know as a Nifty Minion
 
-1. Go to your DAO
-2. Go to 'Settings' and your ('your minion name') minion
-3. Click 'Send' by the Token you want to request
+**Safe Minion**
 
-    - Enter Amount 
-    - Destination (address you want funds sent to)
-    - Short Description for why you are requesting the funds
+Deploying a Minion and a Gnosis Safe, this Minion stores and manage funds in a Gnosis Safe, as well as supports complex multi-call transactions.
+This Boost is perfect for advanced DAOs looking to trade NFTs, manage LP positions in AMMs or do other arbitrary transactions
+To increase proposal velocity for less critical proposals, the ability to set quorum levels enable early execution when a minimum quorum is met.
 
-6. Click 'Propose Transfer'
-7. At this point, you can sponsor the proposal and it will progress as usual 
+**Superfluid Minion**
+
+The SuperFluid Minion helps automate ongoing streams of payments via the SuperFluid Protocol to vendors, other DAOs and any addresses
+Set it up once, and your payments will be streamed in real-time automatically as long as your minion vault has sufficient funds.
+
+## Using Minions 
+
+For basic use cases, there should be a DAOhaus Boost available in the Boosts Marketplace. Following the installation steps in the Boost Marketplace will get your Minions and Boosts set up quickly. 
+Check out [this link](boosts) for more information on Boosts. 
+
+However, if you want to do custom calls not supported in any DAOhaus Marketplace Boosts, you will need to install a Minion Suite first by clicking 'Install' on a Minion Suite in the Boosts page. 
+
+![](https://i.imgur.com/rAq4tch.png)
+
+Once the Minion suite is installed, you can create Minion Proposals and start crafting your smart contract calls. 
+
+![](https://i.imgur.com/aTtjhfD.png)

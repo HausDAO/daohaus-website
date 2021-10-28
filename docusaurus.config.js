@@ -1,13 +1,14 @@
 module.exports = {
   title: "DAOhaus",
   tagline: "A place for all your DAOs",
-  url: "https://daohaus.club/docs",
+  url: "https://daohaus.club",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "hausdao", // Usually your GitHub org/user name.
   projectName: "daohaus-docs", // Usually your repo name.
+    scripts: [{src: 'https://plausible.io/js/plausible.js', async: true, defer: true, 'data-domain': 'daohaus.club'}],
   themeConfig: {
     image: "https://daohaus.club/images/daohaus-main.jpg",
     metadatas: [
@@ -147,11 +148,11 @@ module.exports = {
         docs: {
           routeBasePath: "/docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/HausDAO/daohaus-docs/edit/prod/",
+          editUrl: "https://github.com/HausDAO/daohaus-website/edit/staging",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/HausDAO/daohaus-docs/edit/prod/",
+          editUrl: "https://github.com/HausDAO/daohaus-website/edit/staging/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

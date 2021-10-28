@@ -1,0 +1,51 @@
+---
+id: summoners-best-practices
+title: Best Practices
+sidebar_label: Best Practices
+slug: /handbook/summoners/summoners-best-practices
+--- 
+
+Still feeling lost? Here are some best practices and policies we've observed from DAOs, so that you can learn from and use apply them in your DAO where possible.
+
+Firstly, what kind of DAO do you want to create? 
+* 🛠🎨 Service DAOs: A community of builders, artists, creators looking to form a collective and provide services 
+* 💰 Collector / Investment DAOs: A community of collectors and investors looking to collect assets or fund investments 
+* 🚀 Existing Token Project: A project with an existing ERC-20 token looking to become a DAO
+
+From here, you can jump to the respective sections for Best Practices from DAOs. 
+
+## 🛠🎨 Service DAOs 
+If you are a community of builders, artists and creators looking to form a collective and provide services, this would fit the profile of a Service DAO. Some leading Service DAOs are: 
+* [Raid Guild](http://raidguild.org/)
+* [LexDAO](https://www.lexdao.coop/) 
+* [YAPDAO](https://www.yapdao.xyz/)
+
+From the above, 
+* **DAO Parameters**: The Guild configuration should work nicely for a Service DAO (12 proposals a day, 5-day voting period and 3-day grace period).
+* **Membership**: Members are generally community members who can provide services to external clients or do internal operations work for your DAO. In exchange for work or revenue earned, Members can earn Shares or Loot.  
+* **Shares & Loot**: To start, it's good to begin with a low number of votes equally distributed (e.g. 1 Share for eveyryone) and redistribute Shares as more work is done. 
+* **Bank**: Revenue for services typically form the bulk of the Treasury. Most Service DAOs have a certain percentage of Revenue (e.g. 10%) tributed to the DAO, which can be used to fund internal projects and operations. 
+* **Minion**: The most common Minion used will be the Vanilla Minion to provide Payroll to DAO members. 
+
+
+## 💰 Collector / Investment DAOs 
+If you are a community of NFT collectors and investors crowdsourcing funds to invest collectively, then the followng DAOs would be good references for you: 
+* [MetaCartel Ventures](ttps://app.daohaus.club/dao/0x1/0x4570b4faf71e23942b8b9f934b47ccedf7540162)
+
+Examples: 
+* **DAO Parameters**: The Venture configuration should work nicely (1 proposal a day, 7-day voting period and 7-day grace period). Depending on the nature of your investments, you may want to increase the proposal velocity and voting periods for greater speed. 
+* **Membership**: Members are generally collectors who can provide NFTs / assets or investors providing funds to be invested. In exchange for the NFTs or funds provided, Members can earn Shares or Loot.  
+* **Shares & Loot**: If the DAO wants an equal voting power regardless of contribution, each Member should have a set number of Shares, with the rest in Loot. Otherwise, Shares can be provided based on the relative fund / asset contribution. 
+* **Bank**: 
+  * The Bank typically contains funds contributed and waiting to be invested. If you want to prevent Members from RageQuitting more funds that they have committed, you can transfer funds to a Minion (which are not redeemable from RageQuit)
+  * For NFT DAOs, the NFTs will not be RageQuit-able and the DAO might want to prepare some additional funds in anticipation of RageQuits. 
+* **Minion**: Depending on how complex the investment strategies are, the DAO might use Minions to interact with the relevant smart contracts. 
+
+## 🚀 Project with existing ERC-20 Tokens
+If you are a project with an existing ERC-20 Token, DAOhaus can be a way to formalize your DAOs and evolve beyond Snapshot-based voting 
+
+* **DAO Parameters**: Depending on the nature of your project's decision-making (i.e. proposal speed, depth of decisions), you will need to decide on the parameters. To ensure more tokenholders can participate in voting, a longer proposal period (i.e. Ventures configuration) might work better. 
+* **Membership**: Currently, there is no way to directly convert ERC-20 tokens 
+* **Shares & Loot**: Currently, there is no way to directly convert ERC-20 tokens to Shares or Loot in the DAO. Members should submit a Membership Proposal to request for Shares and/or Loot with their ERC-20 tokens as tribute, or some proof of token ownership. 
+* **Bank**: If you have an existing Gnosis Safe for your project, you can summon your DAO via Gnosis (through the DAOhaus app on Gnosis)
+* **Minion**: Depending on the nature of decision-making and actions taken from the decisions made, Minions may be required (especially if smart contract interactions are required)

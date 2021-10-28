@@ -7,11 +7,11 @@ slug: /devs/services
 
 ## Overview
 
-DAOhaus uses higher-order functions to make calls on contracts instead of JS classes. The goal of this pattern is to minimize state within the app as managing state between the contract, React's contexts, and JS classes (previously used for contract interaction) was challenging and sometimes difficult to follow.
+DAOhaus uses higher-order functions to make calls on contracts instead of JS classes. The goal of this pattern is to minimize the state within the app as managing the state between the contract, React's contexts, and JS classes (previously used for contract interaction) was challenging and sometimes difficult to follow.
 
-Each contract will usually curry three function calls from a service.
+Each contract will usually carry three function calls from a service.
 
-1. Instantion of a web3.js contract object
+1. Instantiation of a web3.js contract object.
 
 ```js
 await MolochService({
@@ -22,7 +22,7 @@ await MolochService({
 });
 ```
 
-2. Selection of service (function) on contract
+2. Selection of service (function) on contract.
 
 ```js
 await MolochService({

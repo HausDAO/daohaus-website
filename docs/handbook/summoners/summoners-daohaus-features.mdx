@@ -1,0 +1,81 @@
+---
+id: summoners-daohaus-features
+title: Feature Overview
+sidebar_label: Feature Overview
+slug: /handbook/summoners/summoners-daohaus-features
+--- 
+
+DAOhaus is currently available on Mainnet, xDAI, Polygon and Aribtrum. As a DAO summoner, here are the DAOhaus features that should matter to you. 
+
+> For more detailed explanations on various DAOhaus features, you can check out our Features explainers in our [user docs here](https://daohaus.club/docs/users/membership). 
+
+## Members, Shares and Loot 
+
+DAOhaus helps you manage stakeholders within your DAOs (i.e. **Members**). **Members** are people or organisations that own **Shares** and **Loot** in your DAO. **Members** can own both **Shares** and/or **Loot**. 
+
+![](/img/ua_memberview.png)
+
+> When a **Member** owns **Shares**, they have an economic share of the funds in the DAO's **Bank**, as well as voting rights in the DAO's **Proposals**. 
+
+> When a **Member** owns only **Loot**, they only have an economic share of the funds in the DAO's **Bank**, but not voting rights in the DAO's **Proposals**.
+
+Non-members can join the DAO by requesting for Shares / Loot via a Membership **Proposal**. **Members** can leave the DAO through a **RageQuit** proposal, thereby withdrawing their pro-rated ownership of the **Bank**'s funds. 
+
+For more information on Membership, please refer to the [Members Explainer here](https://daohaus.club/docs/users/membership). 
+
+## Proposals & Voting 
+
+Decison making is done via **Proposals**, which will need to be voted on by **Members** (based on their respective Share counts)
+
+![](/img/how__proposals.png)
+
+
+Common types of **Proposals** are: 
+* Membership - Tributing capital and Requesting new shares to join the DAO
+* Funding - Tributing or Requesting funds from the DAO to work on internal projects and improvements
+* Whitelist - Request to add support for a new ERC20 token
+* GuildKick - Request to forcibly remove a malicious member through a vote
+* Minion - A contract that allows execution of arbitrary calls i.e swapping assets in the DAO bank
+
+The stages for **Proposals** are: 
+* Submit Proposal 
+* Sponsor Proposal 
+* In Queue
+* Voting Period
+* Grace Period 
+* Ready for Processing 
+* Completed
+
+For more information on Proposals, please refer to the [Proposals explainer here](https://daohaus.club/docs/proposals).
+
+## Bank & Token 
+
+The **Bank** holds all the DAO funds, which include ERC-20 (excluding native tokens such as ETH, xDAI, MATIC on the respective chains) and ERC-721 NFTs. 
+
+
+![](/img/bank_screenshot.png)
+
+> Native tokens must be wrapped first before being sent to the Bank. Alternatively, DAOs can set up a Minion that allows the holding of native tokens. 
+
+For an ERC-20 token to show up in the Bank's balance, the DAO must whitelist the token via a Whitelist Proposal (Tutorial here) 
+
+For more information on the Bank, please refer to the [Bank explainer here](https://daohaus.club/docs/users/bank).
+
+## Minion & Boosts 
+Beyond the core functions of managing membership, proposals and funds, DAOhaus has **Minions** and **Boosts** that help to add extra functionality to your DAO (you can think of them like apps)
+
+**Boosts**, in general, give you extra functionality to your DAO (e.g. adding a Discord bot to your DAO).
+
+If you need to interact with smart contracts (e.g. swapping tokens, managing LP positions, etc.), **Minion** help you with making arbitrary calls to smart contracts. 
+
+For more information on Boosts, please refer to the [Boosts explainer here](https://daohaus.club/docs/boosts). 
+
+
+## Next Steps 
+
+Ready to summon your DAO? There are a few ways you can summon your DAO with DAOhaus. 
+
+* If you are setting up your DAO from scratch, you can summon your DAO in DAOhaus. [Start here](/docs/handbook/summoners/get-started)
+* If you currently have a Gnosis safe and would like to create a DAO from the Safe, you can summon your DAO via Gnosis Apps. [Start here](/docs/handbook/summoners/summon-dao-gnosis)
+
+If you want to learn more about Best Practices from other DAOs, you can check out the [Best Practices](/docs/handbook/summoners/summoners-best-practices)

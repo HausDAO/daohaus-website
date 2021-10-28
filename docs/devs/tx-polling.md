@@ -21,7 +21,7 @@ Polls are used in the DAOhaus client to check and see if transactions are comple
 const poll = createPoll({ action: "submitProposal", cachePoll });
 ```
 
-It's important to note that PollServices are curried together the same way the ContractServices are. In the first pass, we're passing in a cachingFunction served from UserContext (TXs are saved in the users TX data). There are some optional arguments that can be passed in as well. These optional params control the interval and speed of the poll.
+It's important to note that PollServices are carried together the same way the ContractServices are. In the first pass, we're passing in a cachingFunction served from UserContext (TXs are saved in the users TX data). There are some optional arguments that can be passed in as well. These optional params control the interval and speed of the poll.
 
 Ex.
 

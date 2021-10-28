@@ -12,11 +12,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <details>
     <summary>
 
-      Q: I want to sponsor a proposal, but I'm unable to do so. Why is the
-      button is greyed out?
+      Q: I want to sponsor a proposal, but I'm unable to do so as the button is
+      greyed out
     </summary>
     <p>&nbsp;</p>
     A: Check to make sure you have enough wxDAI to sponsor the proposal.
+  </details>
+</h4>
+
+<h4>
+  <details>
     <summary>Q: Who can submit proposals?</summary>
     <p>&nbsp;</p>
     A: Anyone can submit a proposal, but only share holders in the DAO can sponsor
@@ -27,6 +32,34 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 <h4>
   <details>
     <summary>
+
+      Q: Are proposals passed according to number of members or shares voted for
+      the proposal?
+    </summary>
+    <p>&nbsp;</p>
+    A: The proposal will pass as long as majority of votes go to either "Yes" or
+    "No". The number of members voting for a proposal is usually secondary and
+    triggered only in extreme cases.
+  </details>
+</h4>
+
+<h4>
+  <details>
+    <summary>
+      Q: The majority of the DAO has voted to pass a proposal. Why do I have to
+      wait?
+    </summary>
+    <p>&nbsp;</p>
+    A: After a proposal has passed from voting, the DAO has to wait for the
+    voting and grace period to pass before processing the proposal. The
+    durations for these are set when you summon your DAO. You can also set a
+    "Quorum Threshold" so that the voting period is shortened with consensus.
+</details>
+</h4>
+    
+<h4>
+  <details>
+    <summary>
       Q: When sponsoring a proposal, the deposit amount on Metamask shows '0'.
       Why is this happening?
     </summary>
@@ -34,13 +67,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     A: The amount will be sent in WETH, not ETH so it will not show in the
     wallet transaction window.
     <img alt='metamask-zero' src={useBaseUrl('img/metamask-0.png')} />
-    <summary>
-
-      Q: I want to sponsor a proposal, but I'm unable to do so as the button is
-      greyed out
-    </summary>
-    <p>&nbsp;</p>
-    A: Check to make sure you have enough wxDAI to sponsor the proposal.
   </details>
 </h4>
 
@@ -54,7 +80,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <h4>
   <details>
-
     <summary>
       Q: What are the rewards for Sponsors vs. Processors of a proposal?
     </summary>
@@ -150,6 +175,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <h4>
   <details>
+
     <summary>
       Q: My proposal has failed. Does this mean that it was not processed?
     </summary>
@@ -264,7 +290,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     proposal, their tribute goes into the escrow and goes into the treasury only
     when the proposal is passed and processed. If the member rage quits before
     the processing, they can only take their current fair share of the treasury.
+  </details>
+</h4>
 
+<h4>
+  <details>
+    
     <summary>Q: Can I make a Funding Proposal for a non-member?</summary>
     <p>&nbsp;</p>
     A: Yes you can, when filling out the details of the proposal, enter the
@@ -287,11 +318,67 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   </details>
 </h4>
 
-## Funding Proposals
+<h4>
+  <details>
+    <summary>
+      Q: Does voting on proposals cost gas, or is it just signing?
+    </summary>
+    <p>&nbsp;</p>
+    A: It costs gas, but it should only require 1 yes vote if there is soft
+    consensus achieved before voting.
+  </details>
+</h4>
 
 <h4>
   <details>
     <summary>
+      Q: What is the rough cost of submitting, approving, processing a proposal
+      on Mainnet??
+    </summary>
+    <p>&nbsp;</p>
+    A: It's around ~$100 (That said, this is context and time dependent during
+    the time of this Q&A).
+  </details>
+</h4>
+
+<h4>
+  <details>
+    <summary>
+
+      Q: If a prospective member submits a member proposal with tribute, gets it
+      approved, proposal enters the grace period, and the prospect Rage Quits
+      before the grace period ends, what will happen to their tribute?
+    </summary>
+    <p>&nbsp;</p>
+    A: If their shares are more than the dilution bound setting (e.g. 1/3), the
+    proposal would fail when they rage quit. When a member submits a membership
+    proposal, their tribute goes into the escrow and goes into the treasury only
+    when the proposal is passed and processed. If the member rage quits before
+    the processing, they can only take their current fair share of the treasury.
+  </details>
+</h4>
+
+<h4>
+  <details>
+    <summary>
+      Q: If a proposal has passed, is there any way to reverse or change the
+      vote?
+    </summary>
+    <p>&nbsp;</p>
+    A: If the proposal has been passed by majority of votes, there is no way to
+    reverse the proposal. However, if the proposal is in "Voting", you can
+    persuade other members to vote "No" to prevent the proposal from passing.
+  </details>
+</h4>
+
+## Funding Proposals
+
+<h4>
+  <details>
+    <summary>Q: Can a DAO member request loot?</summary>
+    <p>&nbsp;</p>
+    A: Yes, under your funding proposal, you can add a field "Loot Requested" to
+    request loot.
       Q: I tried cancelling a funding proposal but I did not receive my funds.
       Where do I access my funds?
     </summary>
@@ -306,6 +393,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
  <summary>Q: What is Loot Ratio in the Loot Grab Proposals? </summary>
     <p>&nbsp;</p>
     A: THe DAO Ratio is a ratio for DAO members to follow when requesting loot for their tributes (e.g. 100 WXDAI = 10 Loot).
+
   </details>
 </h4>
 
@@ -315,4 +403,4 @@ Our FAQs section are work-in-progress. Want to contribute?
 
 Head to the [DAOhaus Discord](https://discord.gg/bUd7HqMx), indicate your role as "Contributor" and reach out!
 
-  
+ 

@@ -23,7 +23,7 @@ To explore the Boosts Marketplace, click on the Boosts icon (🚀) on the left N
 
 ### How do Boosts & Minions work together? 
 
-On the 'Installed tab', you can view your installed Boosts and Minions. Boosts that require smart contract interactions will require a [Minion](minion) to be summoned. 
+On the 'Installed tab', you can view your installed Boosts and Minions. Boosts that require smart contract interactions will require a [Minion](../minion) to be summoned. 
 
 > For a recap, Minions enable your DAO to call arbitrary contracts, enabling you to do many things such as manage ENS, collect NFTs, manage treasury in DeFi, etc.
 

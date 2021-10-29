@@ -36,7 +36,7 @@ Set it up once, and your payments will be streamed in real-time automatically as
 ## Using Minions 
 
 For basic use cases, there should be a DAOhaus Boost available in the Boosts Marketplace. Following the installation steps in the Boost Marketplace will get your Minions and Boosts set up quickly. 
-Check out [this link](boosts) for more information on Boosts. 
+Check out [this link](boosts/boosts) for more information on Boosts. 
 
 However, if you want to do custom calls not supported in any DAOhaus Marketplace Boosts, you will need to install a Minion Suite first by clicking 'Install' on a Minion Suite in the Boosts page. 
 

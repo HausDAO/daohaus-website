@@ -47,12 +47,23 @@ A: If the token is already whitelisted, you can send the tokens to the DAO addre
   
   <h4><details>
   <summary>Q: What happens if I send tokens to the DAO address, but have not whitelisted the token?</summary>
-  
+
 <p>&nbsp;</p>
   
 A: The token will be owned by the contract, but not show up on your treasury.
   
   </details></h4>
+
+<h4>
+  <details>
+  <summary>Q: How do I create a safe for a sub-group / whitelist of members in the DAO?</summary>
+
+<p>&nbsp;</p>
+  
+A: You can create a Gnosis safe with the whitelisted members as the owners of the safe.
+  
+  </details>
+</h4> 
  
 
 ## Managing the DAO Bank
@@ -62,14 +73,14 @@ A: The token will be owned by the contract, but not show up on your treasury.
   
 <p>&nbsp;</p>
   
-A: Do not send the funds directly to the DAO address. 
+A: Do not send the funds directly to the DAO address.
 
-  The first approach is to claim the balances from the old DAO and provide tribute in the new DAO to deposit the funds. 
+The first approach is to claim the balances from the old DAO and provide tribute in the new DAO to deposit the funds.
 
-  The second approach is to transfer funds to a Minion and use the Minion to send the funds. 
+The second approach is to transfer funds to a Minion and use the Minion to send the funds.
 
-  Do not send funds to your new DAO address via a funding proposal as the contract is merely updating the internal balances, which members or minions should ideally withdraw later on. Your funds will be lost.
-  
+Do not send funds to your new DAO address via a funding proposal as the contract is merely updating the internal balances, which members or minions should ideally withdraw later on. Your funds will be lost.
+
   </details></h4>
   
    <h4><details>
@@ -80,14 +91,12 @@ A: Do not send the funds directly to the DAO address.
 A: As the contract holds different internal balances and proposal escrows, the amounts on the Bank UI and Explorer may be different. For example, the Explorer amount includes new members' tributes that are still being processed, or funds payable to Members that are unclaimed. In these scenarios, the amount on the Explorer will exceed the amount on the Bank UI. 
   
   </details></h4>
+
   <h4>
     <details>
       <summary>Q: Can a DAO on xDAI manage assets & funds on mainnet?</summary>
-  
       <p>&nbsp;</p>
-  
         A: Currently, no. However, there is a Gnosis Safe boost coming up that will enable a DAO on xDAI to control a safe on mainnet.  
-  
     </details>
   </h4>
   
@@ -95,26 +104,21 @@ A: As the contract holds different internal balances and proposal escrows, the a
   <h4>
     <details>
       <summary>Q:  Can I withdraw funds from the Bank without waiting for the grace period to pass?</summary>
-  
       <p>&nbsp;</p>
-  
         A: No, funds can only be withdrawn after the grace period has passed.
-  
     </details>
   </h4>
 
   <h4>
     <details>
       <summary>Q: Are the Gnosis Safes on xDAI compatible with DAOhaus DAOs on xDAI?</summary>
-  
       <p>&nbsp;</p>
-  
         A: Yes, they are compatible.
-  
     </details>
   </h4>
 
+---
 
-Our FAQs section are work-in-progress. Want to contribute? 
+Our FAQs section are work-in-progress. Want to contribute?
 
-Head to the [DAOhaus Discord](https://discord.gg/bUd7HqMx), indicate your role as "Contributor" and reach out! 
+Head to the [DAOhaus Discord](https://discord.gg/bUd7HqMx), indicate your role as "Contributor" and reach out!

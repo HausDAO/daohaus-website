@@ -44,14 +44,14 @@ export default function Home() {
       title={siteConfig.title}
       description="Daohaus Docs: Learnin' and burnin'"
     >
-      <div className="Home">
-        <div className="HomeHero">
-          <div className="SummonHero">
+      <div className='Home'>
+        <div className='HomeHero'>
+          <div className='SummonHero'>
             <h1>
               Unlock the next tier <br />
               in community cooperation
             </h1>
-            <p className="BigP daoColor" style={{ maxWidth: "500px" }}>
+            <p className='BigP daoColor' style={{ maxWidth: "500px" }}>
               DAOs give direct <strong>power to the people</strong>. Join us in
               pioneering a future where magic internet communities unlock the
               power of human-centric coordination.
@@ -59,86 +59,86 @@ export default function Home() {
             <p>
               Secured by the{" "}
               <a
-                href="https://ethereum.org"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://ethereum.org'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 Ethereum
               </a>{" "}
               blockchain ❤️
             </p>
-            <div className="Social">
+            <div className='Social'>
               <a
-                href="https://discord.gg/daohaus"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://discord.gg/daohaus'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <DiscordSvg />
               </a>
               <a
-                href="https://daohaus.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://daohaus.substack.com'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <SubstackSvg />
               </a>
               <a
-                href="https://github.com/HausDAO/pokemol-web"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://github.com/HausDAO/pokemol-web'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <DiGithubAlt />
               </a>
               <a
-                href="https://twitter.com/nowdaoit"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://twitter.com/nowdaoit'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <ImTwitter />
               </a>
             </div>
-            <div className="HeroButtonGroup">
+            <div className='HeroButtonGroup'>
               <a
-                href="https://daohaus.club/docs"
-                className="Button Big Secondary Outlined"
+                href='https://daohaus.club/docs'
+                className='Button Big Secondary Outlined'
               >
                 DAO Basics
               </a>
               <a
-                href="https://app.daohaus.club/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="Button Big"
+                href='https://app.daohaus.club/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='Button Big'
               >
                 Open the App
               </a>
             </div>
           </div>
-          <div className="Carousel">
+          <div className='Carousel'>
             <Carousel
               autoplay={true}
               dots={false}
-              effect="fade"
+              effect='fade'
               autoplaySpeed={5000}
             >
               {heroSlides.map((slide) => {
                 return (
-                  <div key={slide.id} className="Carousel__Slide">
-                    <div className="Content">
+                  <div key={slide.id} className='Carousel__Slide'>
+                    <div className='Content'>
                       <p>{slide.content}</p>
                       <h4>{slide.heading}</h4>
                     </div>
                     <div
-                      className="SlideBg"
+                      className='SlideBg'
                       style={{
                         backgroundImage: "url(" + slide.image + ")",
                       }}
                     />
-                    <div className="Overlay">
+                    <div className='Overlay'>
                       <img
                         src={DaohausHugeType}
-                        alt="daohaus type illustration"
-                        width="50%"
+                        alt='daohaus type illustration'
+                        width='50%'
                         style={{ position: "absolute", bottom: 25, right: 25 }}
                       />
                     </div>
@@ -148,38 +148,66 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
+        <div>
+          <div className='Block Video PrimaryDark'>
+            <div className='Block__Contents'>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h2 style={{ textAlign: "left" }}>DAOhaus - What is a DAO?</h2>
+                <iframe
+                  className='VideoSize'
+                  src='https://www.youtube.com/embed/7MaucjMwEUA'
+                  frameborder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowfullscreen
+                ></iframe>
+                <p style={{ marginTop: "15px" }}>
+                  A DAO explainer built by a DAO for DAOs funded by a DAO.
+                  That's what DAOhaus is all about. The DAO 2 DAO economy and an
+                  actual social network for the Metaverse.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div className="Block PrimaryBg">
-          <div className="Block__Contents">
-            <div className="Row">
-              <div className="Column--50">
+        <div className='Block PrimaryBg'>
+          <div className='Block__Contents'>
+            <div className='Row'>
+              <div className='Column--50'>
                 <img
                   src={InfographicTrad}
-                  alt="infographic trad"
-                  width="240px"
+                  alt='infographic trad'
+                  width='240px'
                   style={{ marginBottom: 25 }}
                 />
-                <h5 className="tradColor">Traditional Organization</h5>
+                <h5 className='tradColor'>Traditional Organization</h5>
                 <h2 style={{ textDecoration: "strikethrough" }}>
                   Power held by few at the top
                 </h2>
                 <p>
-                  <span className="tradColor">
+                  <span className='tradColor'>
                     Rigid, Competition, Inequality, Opaque
                   </span>
                 </p>
               </div>
-              <div className="Column--50">
+              <div className='Column--50'>
                 <img
                   src={InfographicDAO}
-                  alt="infographic dao"
-                  width="240px"
+                  alt='infographic dao'
+                  width='240px'
                   style={{ marginBottom: 25 }}
                 />
-                <h5 className="daoColor">DAO</h5>
+                <h5 className='daoColor'>DAO</h5>
                 <h2>Power shared by all</h2>
                 <p>
-                  <span className="daoColor">
+                  <span className='daoColor'>
                     Agile, Collaboration, Diversity, Transparent
                   </span>
                 </p>
@@ -187,16 +215,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="Usecases Block">
-          <div className="Block__Contents">
+        <div className='Usecases Block'>
+          <div className='Block__Contents'>
             <h3>How is it Used?</h3>
             <p>
               How communities use DAOhaus{" "}
-              <span className="daoColor">TODAY</span>
+              <span className='daoColor'>TODAY</span>
             </p>
-            <div className="Row">
-              <div className="Column--50">
-                <img src={IconA} alt="" width="80px" />
+            <div className='Row'>
+              <div className='Column--50'>
+                <img src={IconA} alt='' width='80px' />
                 <h5>Grants & Investments</h5>
                 <p>
                   The first major use of DAOs has been through community grants!
@@ -204,16 +232,16 @@ export default function Home() {
                   of this technology.
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={IconB} alt="" width="80px" />
+              <div className='Column--50'>
+                <img src={IconB} alt='' width='80px' />
                 <h5>Ventures</h5>
                 <p>
                   The DAOhaus project is a prime example of a project based DAO.
                   Every community initiative can now become a funded reality.
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={IconC} alt="" width="80px" />
+              <div className='Column--50'>
+                <img src={IconC} alt='' width='80px' />
                 <h5>Guilds & Services</h5>
                 <p>
                   Freelancers rejoice! Guilds have re-emerged as a powerful
@@ -221,8 +249,8 @@ export default function Home() {
                   jobs to work for a DAO.
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={IconD} alt="" width="80px" />
+              <div className='Column--50'>
+                <img src={IconD} alt='' width='80px' />
                 <h5>Social</h5>
                 <p>
                   Get your friends together and put your money where your mouth
@@ -233,15 +261,15 @@ export default function Home() {
             </div>
             <p style={{ marginTop: 75 }}>
               How communities will use DAOs{" "}
-              <span className="yellowColor">TOMORROW</span>
+              <span className='yellowColor'>TOMORROW</span>
             </p>
-            <div className="Row">
-              <div className="Column--33">
-                <div className="Row AlignCenter JustifyStart">
+            <div className='Row'>
+              <div className='Column--33'>
+                <div className='Row AlignCenter JustifyStart'>
                   <img
                     src={IconFA}
-                    alt=""
-                    width="40px"
+                    alt=''
+                    width='40px'
                     style={{ marginRight: "10px" }}
                   />
                   <p>
@@ -251,12 +279,12 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="Column--33">
-                <div className="Row AlignCenter JustifyStart">
+              <div className='Column--33'>
+                <div className='Row AlignCenter JustifyStart'>
                   <img
                     src={IconFB}
-                    alt=""
-                    width="40px"
+                    alt=''
+                    width='40px'
                     style={{ marginRight: "10px" }}
                   />
                   <p>
@@ -266,12 +294,12 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="Column--33">
-                <div className="Row AlignCenter JustifyStart">
+              <div className='Column--33'>
+                <div className='Row AlignCenter JustifyStart'>
                   <img
                     src={IconFC}
-                    alt=""
-                    width="40px"
+                    alt=''
+                    width='40px'
                     style={{ marginRight: "10px" }}
                   />
                   <p>
@@ -284,68 +312,68 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="Block Communities">
-          <div className="Block__Contents">
-            <div className="Row">
-              <div className="Column--50">
+        <div className='Block Communities'>
+          <div className='Block__Contents'>
+            <div className='Row'>
+              <div className='Column--50'>
                 <h3>
                   We{" "}
-                  <span role="img" aria-label="Love">
+                  <span role='img' aria-label='Love'>
                     ❤️
                   </span>{" "}
                   Communities
                 </h3>
-                <p className="BigP">
+                <p className='BigP'>
                   DAOhaus communities have raised over $50M collectively and
                   distributed almost $20M throughout the ecosystem to support
                   their various goals.{" "}
                 </p>
                 <a
-                  href="https://app.daohaus.club/explore"
-                  className="Button Outlined"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href='https://app.daohaus.club/explore'
+                  className='Button Outlined'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   Explore DAOs
                 </a>
               </div>
-              <div className="Column--50">
-                <img src={GraphicCommunities} alt="dao communities" />
+              <div className='Column--50'>
+                <img src={GraphicCommunities} alt='dao communities' />
               </div>
             </div>
           </div>
         </div>
-        <div className="How Block">
-          <div className="Block__Contents">
+        <div className='How Block'>
+          <div className='Block__Contents'>
             <h3>How a DAO works</h3>
             <p>Just the basics.</p>
-            <p className="TinyP">
+            <p className='TinyP'>
               Learn more in our{" "}
               <a
-                href="https://daohaus.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://daohaus.substack.com'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 help documentation
               </a>
               .
             </p>
-            <div className="Row AlignCenter">
-              <div className="Column--50">
-                <img src={IconHA} alt="" width="40px" />
+            <div className='Row AlignCenter'>
+              <div className='Column--50'>
+                <img src={IconHA} alt='' width='40px' />
                 <h5>Shared Treasury</h5>
                 <p>
                   Community funds are held by the DAO itself and distributed
                   through Proposals.
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={HowTreasury} alt="app screenshot of treasury" />
+              <div className='Column--50'>
+                <img src={HowTreasury} alt='app screenshot of treasury' />
               </div>
             </div>
-            <div className="Row AlignCenter">
-              <div className="Column--50">
-                <img src={IconHB} alt="" width="40px" />
+            <div className='Row AlignCenter'>
+              <div className='Column--50'>
+                <img src={IconHB} alt='' width='40px' />
                 <h5>Voting & Proposals</h5>
                 <p>
                   Proposals can be used for all types of decisions like
@@ -353,35 +381,35 @@ export default function Home() {
                   with other applications and communities.
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={HowProposals} alt="app screenshot of proposals" />
+              <div className='Column--50'>
+                <img src={HowProposals} alt='app screenshot of proposals' />
               </div>
             </div>
-            <div className="Row AlignCenter">
-              <div className="Column--50">
-                <img src={IconHC} alt="" width="40px" />
+            <div className='Row AlignCenter'>
+              <div className='Column--50'>
+                <img src={IconHC} alt='' width='40px' />
                 <h5>Fluid Membership</h5>
                 <p>
                   Members are added and removed through proposals and may leave
                   at any time. Shares allow for truly distributed ownership.
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={HowMembers} alt="app screenshot of members" />
+              <div className='Column--50'>
+                <img src={HowMembers} alt='app screenshot of members' />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="Block Communities">
-          <div className="Block__Contents">
-            <div className="Row">
-              <div className="Column--50">
+        <div className='Block Communities'>
+          <div className='Block__Contents'>
+            <div className='Row'>
+              <div className='Column--50'>
                 <h3>
                   Interact with the entire Ethereum ecosystem of decentralized
                   apps.
                 </h3>
-                <p className="BigP" style={{ margin: "25px 0px" }}>
+                <p className='BigP' style={{ margin: "25px 0px" }}>
                   Swap tokens on Uniswap... spin up a Gnosis Safe... govern your
                   own protocol... all as a community.
                 </p>
@@ -389,17 +417,17 @@ export default function Home() {
                   <strong>Collaborative composability ftw.</strong> If you’re
                   building something useful for DAOs, hit us up in our{" "}
                   <a
-                    href="https://discord.gg/daohaus"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="SocialIcon"
+                    href='https://discord.gg/daohaus'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='SocialIcon'
                   >
                     Discord ->
                   </a>
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={DaohausBauhaus} alt="ethereum ecosystem of dapps" />
+              <div className='Column--50'>
+                <img src={DaohausBauhaus} alt='ethereum ecosystem of dapps' />
               </div>
             </div>
           </div>

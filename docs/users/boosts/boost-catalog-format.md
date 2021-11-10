@@ -23,6 +23,8 @@ Insert your description here
 2. Add Proposals Playlist
 3. Sign the transaction & your Boost is installed! 
 
+### Tutorials 
+
 ### Support 
 
 For support, please contact `Email` or go to our Discord at `Discord Link`

@@ -67,6 +67,7 @@ module.exports = {
         type: 'category',
         label: 'Boosts Catalog',
         items: [
+          'users/boosts/boost-rarible',
           'users/boosts/boost-dao-books',
           'users/boosts/boost-superfluid',
           'users/boosts/boost-wrap-n-zap',

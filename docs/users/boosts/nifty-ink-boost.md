@@ -1,5 +1,5 @@
 ---
-id: boost-nifty-ink
+id: nifty-ink-boost
 title: Nifty Ink
 sidebar_label: Nifty Ink
 ---

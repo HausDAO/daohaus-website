@@ -1,5 +1,5 @@
 ---
-id: boost-wrap-n-zap
+id: wrap-n-zap-boost
 title: Wrap N Zap
 sidebar_label: Wrap N Zap
 ---

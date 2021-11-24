@@ -1,5 +1,5 @@
 ---
-id: boost-mintgate
+id: mintgate-boost
 title: Mintgate
 sidebar_label: Mintgate
 ---

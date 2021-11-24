@@ -1,5 +1,5 @@
 ---
-id: boost-bank-buyout
+id: bank-buyout-boost
 title: Bank Buyout
 sidebar_label: Bank Buyout
 ---

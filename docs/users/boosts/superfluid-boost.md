@@ -1,5 +1,5 @@
 ---
-id: boost-superfluid
+id: superfluid-boost
 title: Superfluid
 sidebar_label: Superfluid
 ---

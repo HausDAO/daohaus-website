@@ -1,5 +1,5 @@
 ---
-id: boost-dao-books
+id: dao-books-boost
 title: DAO Books
 sidebar_label: DAO Books
 ---

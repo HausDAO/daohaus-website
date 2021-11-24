@@ -1,5 +1,5 @@
 ---
-id: boost-rarible
+id: rarible-boost
 title: Rarible
 sidebar_label: Rarible
 ---

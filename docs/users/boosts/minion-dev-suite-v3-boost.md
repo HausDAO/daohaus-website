@@ -1,5 +1,5 @@
 ---
-id: boost-minion-dev-suite-v3
+id: minion-dev-suite-v3-boost
 title: Minion DEV Suite V3 (Safe Minion)
 sidebar_label: Minion DEV Suite V3
 ---

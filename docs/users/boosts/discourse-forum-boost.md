@@ -1,5 +1,5 @@
 ---
-id: boost-discourse-forum
+id: discourse-forum-boost
 title: Discourse Forum
 sidebar_label: Discourse Forum
 ---

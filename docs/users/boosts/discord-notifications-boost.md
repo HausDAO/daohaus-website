@@ -1,5 +1,5 @@
 ---
-id: boost-discord-notifications
+id: discord-notifications-boost
 title: Discord Notifications
 sidebar_label: Discord Notifications
 ---

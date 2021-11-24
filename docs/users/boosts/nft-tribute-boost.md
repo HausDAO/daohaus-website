@@ -1,5 +1,5 @@
 ---
-id: boost-nft-tribute
+id: nft-tribute-boost
 title: NFT Tribute
 sidebar_label: NFT Tribute
 ---

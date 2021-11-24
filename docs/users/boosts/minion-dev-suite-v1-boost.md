@@ -1,5 +1,5 @@
 ---
-id: boost-minion-dev-suite-v1
+id: minion-dev-suite-v1-boost
 title: Minion DEV Suite V1 (Vanilla Minion)
 sidebar_label: Minion DEV Suite V1 
 ---

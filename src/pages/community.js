@@ -27,11 +27,12 @@ const Community = () => {
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--50">
-                <h1>This HAUS doesn't build itself</h1>
-                <p className="BigP daoColor" style={{ maxWidth: "500px" }}>
-                  It takes a community, and HausDAO is the community of
-                  contributors working together directly to design, build, and
-                  communicate the actual product.
+                <h1>DAOs with artistic and activist flavour</h1>
+                <p className="BigP daoColor" style={{ maxwidth: "500px" }}>
+                <strong style={{ color: "white" }}>st</strong>
+              <strong style={{ color: "yellow" }}>.</strong>
+              <strong style={{ color: "red" }}>art </strong>
+              extends Decentralised Autonomous Organisations for artistic and activist movements in cities.
                 </p>
               </div>
               <div className="Column--50">

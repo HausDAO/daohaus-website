@@ -1,5 +1,5 @@
 module.exports = {
-  title: "DAOhaus",
+  title: "st.art",
   tagline: "A place for all your DAOs",
   url: "https://daohaus.club",
   baseUrl: "/",
@@ -15,12 +15,12 @@ module.exports = {
       { name: "og:type", content: "website" },
       {
         name: "og:description",
-        content: "DAOhaus is a no code platform for Moloch DAOs.",
+        content: "Stateful is an .",
       },
-      { name: "og:site_name", content: "DAOhaus" },
+      { name: "og:site_name", content: "stateful.art" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@nowdaoit" },
-      { name: "twitter:title", content: "DAOhaus" },
+      { name: "twitter:title", content: "stateful.art" },
       {
         name: "twitter:description",
         content: "DAOhaus is a no code platform for Moloch DAOs.",
@@ -35,23 +35,58 @@ module.exports = {
     },
     navbar: {
       logo: {
-        alt: "DAOhaus Logo",
-        src: "img/logo.png",
-        srcDark: "img/logoDark.png",
+        alt: "stateful_art_textual_logo",
+        src: "img/logo_textual.png",
+        srcDark: "img/logo_textual.png",
       },
       items: [
         {
           to: "/community",
           activeBasePath: "community",
-          label: "Community",
+          label: "DAAO",
           position: "right",
         },
+
         {
-          to: "/token",
-          activeBasePath: "token",
-          label: "Token",
+          label: "token fams",
           position: "right",
+          items: [
+            {
+              label: "$GENRE",
+              to: "/docs",
+            },
+            {
+              label: "$CAUSE",
+              to: "/docs/devs",
+            },
+            {
+              label: "$NEED",
+              to: "/docs/handbook",
+            },
+            {
+              label: "$SKILL",
+              to: "/docs/handbook",
+            },
+            {
+              label: "Handbook",
+              to: "/docs/handbook",
+            }
+          ],
         },
+
+
+        // {
+        //   to: "/token",
+        //   activeBasePath: "token",
+        //   label: "$GENRE",
+        //   position: "right",
+        // },
+        // {
+        //   to: "/token", 
+        //   activeBasePath: "token",
+        //   label: "$IMPACT",
+        //   position: "right",
+        // },
         {
           to: "/market",
           activeBasePath: "market",
@@ -59,11 +94,11 @@ module.exports = {
           position: "right",
         },
         {
-          label: "Docs",
+          label: "Links",
           position: "right",
           items: [
             {
-              label: "Users",
+              label: "design principles",
               to: "/docs",
             },
             {
@@ -84,61 +119,61 @@ module.exports = {
       ],
     },
     footer: {
-      links: [
-        {
-          items: [
-            {
-              label: "Launch the App",
-              href: "https://app.daohaus.club",
-            },
-            {
-              label: "Explore DAOs",
-              href: "https://app.daohaus.club/explore",
-            },
-            {
-              label: "Summon a DAO",
-              href: "https://app.daohaus.club/summon",
-            },
-            {
-              to: "/docs",
-              label: "User Docs",
-            },
-            {
-              to: "/docs/devs",
-              label: "Developer Docs",
-            },
-            {
-              to: "/docs/handbook",
-              label: "Handbook",
-            }
-          ],
-        },
-        {
-          items: [
-            {
-              label: "Twitter",
-              href: "https://twitter.com/nowdaoit",
-            },
-            {
-              label: "Discord",
-              href: "https://discord.gg/daohaus",
-            },
-            {
-              label: "Substack",
-              href: "https://daohaus.substack.com/",
-            },
-            {
-              label: "Github",
-              href: "https://github.com/HausDAO/pokemol-web",
-            },
-          ],
-        },
-      ],
+      // links: [
+      //   {
+      //     items: [
+      //       {
+      //         label: "Launch the App",
+      //         href: "https://app.daohaus.club",
+      //       },
+      //       {
+      //         label: "Explore DAOs",
+      //         href: "https://app.daohaus.club/explore",
+      //       },
+      //       {
+      //         label: "Summon a DAO",
+      //         href: "https://app.daohaus.club/summon",
+      //       },
+      //       {
+      //         to: "/docs",
+      //         label: "User Docs",
+      //       },
+      //       {
+      //         to: "/docs/devs",
+      //         label: "Developer Docs",
+      //       },
+      //       {
+      //         to: "/docs/handbook",
+      //         label: "Handbook",
+      //       }
+      //     ],
+      //   },
+      //   {
+      //     items: [
+      //       {
+      //         label: "Twitter",
+      //         href: "https://twitter.com/nowdaoit",
+      //       },
+      //       {
+      //         label: "Discord",
+      //         href: "https://discord.gg/daohaus",
+      //       },
+      //       {
+      //         label: "Substack",
+      //         href: "https://daohaus.substack.com/",
+      //       },
+      //       {
+      //         label: "Github",
+      //         href: "https://github.com/HausDAO/pokemol-web",
+      //       },
+      //     ],
+      //   },
+      // ],
       logo: {
         alt: "HAUS logo",
         src: "img/logo.png",
       },
-      copyright: `Built by the community via HausDAO.`,
+      copyright: `built by hearts and minds, that minds.`,
     },
   },
   presets: [

@@ -1,4 +1,7 @@
 import HeroMGD from "@site/static/img/Hero__MGD--1.jpeg";
+import BridgingCities from "@site/static/img/bridging_cities_with_arts_and_rights.png";
+import StartLOGO from "@site/static/img/logo.png";
+import GenreClusters from "@site/static/img/genre_clusters_map.jpeg";
 import HeroOrochi from "@site/static/img/orochi__hero.jpeg";
 import HeroMetaCartel from "@site/static/img/metacartel__hero.jpg";
 import AvatarMetaCartel from "@site/static/img/metacartel__avatar.jpg";
@@ -10,27 +13,36 @@ import IconA from "@site/static/img/Icon__A.png";
 import IconB from "@site/static/img/Icon__B.png";
 import IconD from "@site/static/img/Icon__D.png";
 
+export const designPrinciples = [
+  {
+    id: 0,
+    title: '',
+    description: '',
+
+  },
+]
+
 export const heroSlides = [
   {
     id: 1,
-    heading: "Juliana, Summoner of Meta Gamma Delta",
+    heading: "bridging cities with arts, rights and hopes",
     content:
-      "Before having a DAO, I was already seeding and flourishing a chat group of blockchain developers. Even though there is a lot of engagement in the chat channel, in a DAO things get more serious. The sense of commitment is much more developed.",
-    image: HeroMGD,
+      "it's gonna be awesome!",
+    image: BridgingCities,
   },
   {
     id: 2,
-    heading: "Peter, Summoner of MetaCartel",
+    heading: "cities in $GENREs:",
     content:
-      "It’s a great way to bring people together who want to get shit done. The process of building a DAO community is an experience that you will never regret.",
-    image: HeroMetaCartel,
+      "stateful.art uses abstraction to reflect real life. Hence, proposes $GENRE phenomenon to create a point for scaling in free space for initiative taking and building capacity for unique and sovereign communities that are empowering each other, without limiting to borders or mindsets.",
+    image: GenreClusters,
   },
   {
     id: 3,
     heading: "Makoto, Summoner of Orochi DAO",
     content:
       "By summoning a DAO, I learned in and out of how a Moloch works and I can say that I turn from DAO noob to expert to the point that I was able to present at a meetup.",
-    image: HeroOrochi,
+    image: StartLOGO,
   },
 ];
 

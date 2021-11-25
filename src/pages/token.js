@@ -35,7 +35,7 @@ const Token = () => {
             <div className="Row">
               <div className="Column--50">
                 <h1>The HAUS token aligns all DAOs on the platform</h1>
-                <p className="BigP daoColor" style={{ maxWidth: "500px" }}>
+                <p className="BigP daoColor" style={{ maxwidth: "500px" }}>
                   As we create more value together, that value flows back to the
                   HAUS token, shared by all communities on the platform.
                 </p>

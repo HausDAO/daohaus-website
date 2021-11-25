@@ -31,7 +31,7 @@ const Market = () => {
                 <h1>
                   The HAUS Marketplace is coming <i>soon™️</i>
                 </h1>
-                <p className="BigP daoColor" style={{ maxWidth: "500px" }}>
+                <p className="BigP daoColor" style={{ maxwidth: "500px" }}>
                   With so many DAOs popping up as collectives that provide
                   services together, we're gonna need a marketplace to find each
                   other.

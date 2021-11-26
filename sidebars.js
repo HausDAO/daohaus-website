@@ -40,6 +40,7 @@ module.exports = {
       'users/intro-dao',
       'users/intro-moloch',
       'users/glossary',
+      'users/haus-token',
     ],
     Features: [
       'users/hub',
@@ -68,6 +69,7 @@ module.exports = {
         type: 'category',
         label: 'Boosts Catalog',
         items: [
+          'users/boosts/disperse-boost',
           'users/boosts/rarible-boost',
           'users/boosts/dao-books-boost',
           'users/boosts/superfluid-boost',

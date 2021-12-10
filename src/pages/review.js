@@ -15,13 +15,27 @@ import HausCommProduct from "@site/static/img/haus_communityproduct.png";
 import EthCC from "@site/static/img/EthCC.jpg";
 
 import LogoUberHaus from "@site/static/img/review/logo_uberhaus.png";
+import Warcamp from "@site/static/img/review/warcamp.png";
+import HPPoaps from "@site/static/img/review/hausparty_poaps.png";
+import PoolHaus from "@site/static/img/review/poolhaus-genesis-poap.png";
+import Foundations from "@site/static/img/review/foundations.png";
+
+import HeroCommunity from "@site/static/img/review/hero_community.png";
+import HeroProduct from "@site/static/img/review/hero_product.png";
+import HeroNumbers from "@site/static/img/review/hero_numbers.png";
 
 import Integrations from "@site/static/img/review/haus_integrations.png";
 
 import ChartDaos from "@site/static/img/review/chart_daos-summoned.png";
+import ChartDaosNetwork from "@site/static/img/review/chart_daos-network.png";
+import ChartDaosMembers from "@site/static/img/review/chart_daos-members.png";
+import ChartDaosProposals from "@site/static/img/review/chart_daos-proposals.png";
+import ChartFlow from "@site/static/img/review/chart_flow.png";
+import ChartMonthly from "@site/static/img/review/chart_monthly-outflows.png";
 
 import "../css/global.scss";
 import "../css/community.scss";
+import "../css/review.scss";
 
 const Review = () => {
   const context = useDocusaurusContext();
@@ -32,15 +46,16 @@ const Review = () => {
       title={siteConfig.title}
       description="Daohaus Docs: Learnin' and burnin'"
     >
-      <div className="Home">
+      <div className="Review">
         <div
-          className="Block PrimaryDark"
+          className="Block PrimaryDark HeroReview"
           style={{ backgroundImage: "url(" + HeroReview + ")" }}
         >
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--50">
-                <h1>DAOHAUS in 2021</h1>
+                <h1>DAOHAUS</h1>
+                <h2>2021 Year End Review</h2>
               </div>
               <div className="Column--50">
                 <p> </p>
@@ -59,31 +74,40 @@ const Review = () => {
                   tremendous growth in community engagement, ecosystem activity
                   & product functionality. As we look toward 2022, we’d like to
                   recount everything that happened in 2021 and re-introduce
-                  DAOhaus to our community (new and old). At its core, the
-                  DAOhaus platform is the easiest way for individuals to start a
-                  DAO and help their communities coordinate to achieve shared
-                  goals. While creating good software is what we do, what makes
-                  DAOhaus special is the tight-knit community that uses, builds
-                  and advocates DAOhaus & the values we live by.
+                  DAOhaus to our community (new and old).
                 </p>
-                <p className="yellowColor">
-                  <a href="#community">Community First</a>
+                <p className="BigP">
+                  At its core, the DAOhaus platform is the easiest way for
+                  individuals to start a DAO and help their communities
+                  coordinate to achieve shared goals.
                 </p>
-                <p className="yellowColor">
-                  <a href="#product">Product Updates</a>
-                </p>
-                <p className="yellowColor">
-                  <a href="#numbers">By the Numbers</a>
+                <p className="BigP">
+                  While creating good software is what we do, what makes DAOhaus
+                  special is the tight-knit community that uses, builds and
+                  advocates DAOhaus & the values we live by.
                 </p>
               </div>
               <div className="Column--50">
                 <img src={HausCommProduct} alt="" />
+                <p className="yellowColor BigP" style={{ textAlign: "center" }}>
+                  <a href="#community">1. Community First</a>
+                </p>
+                <p className="yellowColor BigP" style={{ textAlign: "center" }}>
+                  <a href="#product">2. Product Updates</a>
+                </p>
+                <p className="yellowColor BigP" style={{ textAlign: "center" }}>
+                  <a href="#numbers">3. By the Numbers</a>
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="Block PrimaryBg">
+        <div
+          className="Block PrimaryBg SubHero"
+          style={{ backgroundImage: "url(" + HeroCommunity + ")" }}
+          id="community"
+        >
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--50">
@@ -93,14 +117,19 @@ const Review = () => {
                   true magic is not in the app screens, code or smart contracts.
                   Given Web3’s open-source and composable nature, another Dev
                   team could replicate and create products to help people start
-                  and manage DAOs. If that’s the case, then what makes DAOhaus
-                  special? To us, the magic lies in the purpose-driven
-                  communities and the interactions between these communities.
-                  When you use DAOhaus, you don’t just get software with great
-                  features. You get access to an ecosystem of grants, service
-                  providers, partners and investors. You find your tribe of
-                  people to experiment and solve the same issues together. You
-                  can own, build and govern DAOhaus with the rest of us.
+                  and manage DAOs.
+                </p>
+                <p>
+                  If that’s the case, then what makes DAOhaus special? To us,
+                  the magic lies in the purpose-driven communities and the
+                  interactions between these communities. When you use DAOhaus,
+                  you don’t just get software with great features. You get
+                  access to an ecosystem of grants, service providers, partners
+                  and investors. You find your tribe of people to experiment and
+                  solve the same issues together.{" "}
+                  <strong>
+                    You can own, build and govern DAOhaus with the rest of us.
+                  </strong>
                 </p>
               </div>
               <div className="Column--50"></div>
@@ -161,7 +190,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={LogoUberHaus} />
+                <img src={Warcamp} className="reviewImg" />
               </div>
             </div>
 
@@ -180,7 +209,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={LogoUberHaus} />
+                <img src={PoolHaus} />
               </div>
             </div>
 
@@ -197,7 +226,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={LogoUberHaus} />
+                <img src={HPPoaps} className="reviewImg" />
               </div>
             </div>
 
@@ -214,7 +243,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={LogoUberHaus} />
+                <img src={Foundations} className="reviewImg" />
               </div>
             </div>
 
@@ -240,12 +269,16 @@ const Review = () => {
           </div>
         </div>
 
-        <div className="Block PrimaryBg">
+        <div
+          className="Block PrimaryBg SubHero"
+          style={{ backgroundImage: "url(" + HeroProduct + ")" }}
+          id="product"
+        >
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--50">
                 <h2>Product</h2>
-                <p>
+                <p className="BigP">
                   DAOhaus offers an infinitely expansive ecosystem for folks to
                   come build products, experiment, and join in participatory
                   ownership over shared resources. Our gift is our community,
@@ -258,7 +291,7 @@ const Review = () => {
             <div className="Row PadRow">
               <img
                 src={Integrations}
-                style={{ maxWidth: 800, margin: "0 auto" }}
+                style={{ maxWidth: "100%", margin: "0 auto" }}
               />
             </div>
           </div>
@@ -345,15 +378,19 @@ const Review = () => {
                 <h5>Disperse</h5>
                 <p>
                   Using the Disperse smart contracts, the Disperse Boost helps
-                  you disperse tokens in a Minion vault to a list of addresses,
-                  facilitating airdrops or splitting of funds.
+                  you disperse tokens to a list of addresses, facilitating
+                  airdrops or splitting of funds.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="Block PrimaryDark">
+        <div
+          className="Block PrimaryDark SubHero"
+          style={{ backgroundImage: "url(" + HeroNumbers + ")" }}
+          id="numbers"
+        >
           <div className="Block__Contents">
             <div className="Row">
               <h2>By the Numbers</h2>
@@ -381,7 +418,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={ChartDaos} />
+                <img src={ChartDaosNetwork} />
               </div>
             </div>
 
@@ -394,7 +431,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={ChartDaos} />
+                <img src={ChartDaosMembers} />
               </div>
             </div>
 
@@ -407,7 +444,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={ChartDaos} />
+                <img src={ChartDaosProposals} />
               </div>
             </div>
           </div>
@@ -430,7 +467,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={ChartDaos} />
+                <img src={ChartFlow} />
               </div>
             </div>
 
@@ -444,7 +481,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={ChartDaos} />
+                <img src={ChartMonthly} />
               </div>
             </div>
 
@@ -460,9 +497,7 @@ const Review = () => {
                   excited to reveal this to you very soon.
                 </p>
               </div>
-              <div className="Column--50">
-                <img src={ChartDaos} />
-              </div>
+              <div className="Column--50"></div>
             </div>
           </div>
         </div>
@@ -471,14 +506,7 @@ const Review = () => {
           <div className="Block__Contents">
             <div className="Row PadRow">
               <div className="Column--50">
-                <h2>Thank you for a great 2021! What’s next?</h2>
-                <p>
-                  If you’ve been a part of our amazing 2021, we thank you for
-                  making 2021 such an eventful year and we are really excited
-                  about what we’ll do together as a community in 2022. If all
-                  these are new to you, we invite you to join us in our
-                  community today!
-                </p>
+                <h2>Thanks for a great 2021! What’s next?</h2>
                 <p>
                   Looking forward, we want to bring the HAUS token to Ethereum
                   Mainnet, so the wider Ethereum ecosystem can join us in our
@@ -493,20 +521,23 @@ const Review = () => {
                   put up the final touches to our Roadmap too.
                 </p>
                 <p>
-                  Last but not least, if you’re not already part of the DAOhaus
-                  family, we’d like you to join us!
+                  If you’ve been a part of our amazing 2021, we thank you for
+                  making 2021 such an eventful year and we're beyond excited
+                  about what we’ll do together as a community in 2022. If all
+                  these are new to you, we invite you to join us in our
+                  community today!
                 </p>
               </div>
               <div className="Column--50">
-                <p>Looking for a Community that resonates with you?</p>
+                <h4>Looking for a Community that resonates with you?</h4>
                 <p>
                   <a href="https://app.daohaus.club/explore">Explore DAOs</a>
                 </p>
-                <p>Already have a community?</p>
+                <h4>Already have a community?</h4>
                 <p>
                   <a href="https://app.daohaus.club/summon">Summon a DAO</a>
                 </p>
-                <p>Looking to contribute or just hang out?</p>
+                <h4>Looking to contribute or just hang out?</h4>
                 <p>
                   <a href="https://discord.gg/daohaus">Hop in our Discord</a>
                 </p>

@@ -112,6 +112,11 @@ img {
   align-items: center !important;
 }
 
+.reviewImg {
+  max-height: 300px;
+  max-width: 300px;
+}
+
 // Typography Utils
 .Data {
   font-family: "Roboto Mono", monospace;

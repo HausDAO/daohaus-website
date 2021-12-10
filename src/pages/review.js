@@ -25,7 +25,7 @@ import HeroProduct from "@site/static/img/review/hero_product.png";
 import HeroNumbers from "@site/static/img/review/hero_numbers.png";
 
 import Integrations from "@site/static/img/review/haus_integrations.png";
-
+import ChartMinions from "@site/static/img/review/chart_minions.png";
 import ChartDaos from "@site/static/img/review/chart_daos-summoned.png";
 import ChartDaosNetwork from "@site/static/img/review/chart_daos-network.png";
 import ChartDaosMembers from "@site/static/img/review/chart_daos-members.png";
@@ -326,7 +326,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={LogoUberHaus} />
+                <img src={ChartMinions} />
               </div>
             </div>
 
@@ -352,7 +352,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={LogoUberHaus} />
+                <img src={ChartMinions} />
               </div>
             </div>
 

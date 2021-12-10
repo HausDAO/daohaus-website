@@ -506,7 +506,7 @@ const Review = () => {
                 <p>
                   <a href="https://app.daohaus.club/summon">Summon a DAO</a>
                 </p>
-                <p>ILooking to contribute or just hang out?</p>
+                <p>Looking to contribute or just hang out?</p>
                 <p>
                   <a href="https://discord.gg/daohaus">Hop in our Discord</a>
                 </p>

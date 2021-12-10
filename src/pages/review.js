@@ -4,12 +4,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import CommunityBlock from "../components/CommunityBlock";
 
-import HausPartyPoap from "@site/static/img/HausParty__POAP--attendee.png";
-import IconA from "@site/static/img/ico-grants.png";
-import IconB from "@site/static/img/ico-protocols.png";
-import IconC from "@site/static/img/ico-guilds.png";
-import IconD from "@site/static/img/ico-clubs.png";
-
 import HeroReview from "@site/static/img/hero_review.jpg";
 import HausCommProduct from "@site/static/img/haus_communityproduct.png";
 import EthCC from "@site/static/img/EthCC.jpg";

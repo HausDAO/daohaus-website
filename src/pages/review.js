@@ -64,21 +64,17 @@ const Review = () => {
               <div className="Column--50">
                 <h2>DAOHAUS</h2>
                 <p className="BigP">
-                  2021 has been an amazing year for DAOhaus where we saw
-                  tremendous growth in community engagement, ecosystem activity
-                  & product functionality. As we look toward 2022, we’d like to
-                  recount everything that happened in 2021 and re-introduce
-                  DAOhaus to our community (new and old).
+                2021 has been amazing for DAOhaus where we saw tremendous growth 
+                in our community, ecosystem & product. As we look towards 2022, 
+                we’d like to recount what happened in 2021 and 
+                re-introduce DAOhaus to our community (new and old). 
                 </p>
                 <p className="BigP">
-                  At its core, the DAOhaus platform is the easiest way for
-                  individuals to start a DAO and help their communities
-                  coordinate to achieve shared goals.
+                At its core, the DAOhaus platform is the easiest way for individuals to start a DAO 
+                and help their communities coordinate to achieve shared goals. 
                 </p>
                 <p className="BigP">
-                  While creating good software is what we do, what makes DAOhaus
-                  special is the tight-knit community that uses, builds and
-                  advocates DAOhaus & the values we live by.
+                However, what makes us special is the tight-knit community that uses, builds and advocates DAOhaus & the values we live by. 
                 </p>
               </div>
               <div className="Column--50">
@@ -104,26 +100,27 @@ const Review = () => {
         >
           <div className="Block__Contents">
             <div className="Row">
-              <div className="Column--50">
+              <div className="Column">
                 <h2>Community First</h2>
-                <p>
+                <p className="BigP">
                   While creating good software is what we do at DAOhaus, the
                   true magic is not in the app screens, code or smart contracts.
                   Given Web3’s open-source and composable nature, another Dev
                   team could replicate and create products to help people start
                   and manage DAOs.
                 </p>
-                <p>
+                <p className="BigP">
                   If that’s the case, then what makes DAOhaus special? To us,
                   the magic lies in the purpose-driven communities and the
-                  interactions between these communities. When you use DAOhaus,
+                  interactions between these communities.
+                </p>
+                <p className="BigP">
+                  When you use DAOhaus,
                   you don’t just get software with great features. You get
                   access to an ecosystem of grants, service providers, partners
                   and investors. You find your tribe of people to experiment and
                   solve the same issues together.{" "}
-                  <strong>
-                    You can own, build and govern DAOhaus with the rest of us.
-                  </strong>
+                  <strong>You can own, build and govern DAOhaus with the rest of us.</strong>
                 </p>
               </div>
               <div className="Column--50"></div>
@@ -270,8 +267,8 @@ const Review = () => {
         >
           <div className="Block__Contents">
             <div className="Row">
-              <div className="Column--50">
-                <h2>Product</h2>
+              <div className="Column">
+                <h2>Product Updates</h2>
                 <p className="BigP">
                   DAOhaus offers an infinitely expansive ecosystem for folks to
                   come build products, experiment, and join in participatory
@@ -298,25 +295,20 @@ const Review = () => {
                 <h3>Minions</h3>
                 <p>
                   Minions enable DAOs to execute arbitrary actions with smart
-                  contracts on behalf of its members, so now you can trade NFTs,
+                  contracts on behalf of its members, so you can trade NFTs,
                   provide liquidity, and do DeFi farming within your proposals.
                 </p>
                 <p>
                   We’ve launched Minions V2 and V3 this year, enabling quorum
-                  voting and early execution. Partnering with Gnosis, we’ve also
-                  launched the Safe Minion, storing your funds safely in a
-                  Gnosis Safe while giving your DAO the same ability to interact
-                  with smart contracts.
+                  voting and early execution. 
+                  Partnering with Gnosis, we’ve also launched the Safe Minion
+                  so your funds are stored safely in a Gnosis Safe. 
                 </p>
                 <p>
-                  In 2021, we saw 900 Minions being installed and used by DAOs.
-                  Among those installed, the Safe Minion is the fastest growing
-                  Minion with 206 installs, despite only being 3 months old.
+                In 2021, we saw 900 Minions being installed by DAOs with the Vanilla Minion having the most installations. 
                 </p>
                 <p>
-                  The Safe Minion is only second to the Vanilla Minion, which is
-                  our oldest Minion that has been around since the start of
-                  2021.
+                  The fastest growing Minion is the Safe Minion, hitting 206 installations despite being only 3 months old. 
                 </p>
               </div>
               <div className="Column--50">
@@ -328,21 +320,16 @@ const Review = () => {
               <div className="Column--50">
                 <h3>Boosts</h3>
                 <p>
-                  The Boosts Marketplace for DAOs went live in 2021. Similar to
-                  iOS/Android apps, Boosts help run your DAO more effectively
-                  and efficiently.
+                  In 2021, we launched the Boosts Marketplace, featuring Boosts to help 
+                  run your DAO more effectively and efficiently. 
+                  Today we have 15 Boosts built by the Magesmiths and Boost Foundry.  
+
                 </p>
                 <p>
-                  Today we have 15 Boosts on the Marketplace that are built by
-                  the Magesmiths as well as Boost Foundry. 30% of all DAOhaus
-                  DAOs have installed at least 1 Boost.
+                 30% of all DAOhaus DAOs have installed at least 1 Boost. 
                 </p>
                 <p>
-                  Among the Boosts, the Discord Notifications Boost had the
-                  highest installations, helping DAOs send proposal
-                  notifications to their Discord members. Following that, the
-                  Wrap N Zap Boost and Discourse Forum Boost came in second and
-                  third place respectively.
+                Among the Boosts, the Discord Notifications Boost had the highest installations, followed by the Wrap N Zap Boost and Discourse Forum Boost in 2nd and 3rd place.
                 </p>
               </div>
               <div className="Column--50">
@@ -350,14 +337,13 @@ const Review = () => {
               </div>
             </div>
 
-            <div className="Row PadRow">
+            <div className="Row BoostPadRow">
               <div className="Column--33">
                 <h5>DAO Books</h5>
                 <p>
-                  The DAOBooks Boost helps you break down your Vaults &
-                  Treasury, so you can better understand the inflows, outflows
-                  and transactions of your DAOs. This was a community-initiated
-                  Boost built by Midge & Xivanc1 from Boost Foundry.
+                The DAOBooks Boost helps you break down your Vaults, 
+                so you can understand your DAO's inflows, outflows and transactions.
+                This was built by Midge & Xivanc1 from Boost Foundry.
                 </p>
               </div>
               <div className="Column--33">
@@ -499,7 +485,7 @@ const Review = () => {
         <div className="Block">
           <div className="Block__Contents">
             <div className="Row PadRow">
-              <div className="Column--50">
+              <div className="Column">
                 <h2>Thanks for a great 2021! What’s next?</h2>
                 <p>
                   Looking forward, we want to bring the HAUS token to Ethereum
@@ -522,7 +508,7 @@ const Review = () => {
                   community today!
                 </p>
               </div>
-              <div className="Column--50">
+              <div className="Column">
                 <h4>Looking for a Community that resonates with you?</h4>
                 <p>
                   <a href="https://app.daohaus.club/explore">Explore DAOs</a>

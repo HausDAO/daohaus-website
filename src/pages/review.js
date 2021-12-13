@@ -485,7 +485,7 @@ const Review = () => {
         <div className="Block">
           <div className="Block__Contents">
             <div className="Row PadRow">
-              <div className="Column">
+              <div className="Column--50">
                 <h2>Thanks for a great 2021! What’s next?</h2>
                 <p>
                   Looking forward, we want to bring the HAUS token to Ethereum
@@ -508,7 +508,7 @@ const Review = () => {
                   community today!
                 </p>
               </div>
-              <div className="Column">
+              <div className="Column--50">
                 <h4>Looking for a Community that resonates with you?</h4>
                 <p>
                   <a href="https://app.daohaus.club/explore">Explore DAOs</a>

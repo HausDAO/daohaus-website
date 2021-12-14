@@ -6,13 +6,16 @@ import CommunityBlock from "../components/CommunityBlock";
 
 import HeroReview from "@site/static/img/hero_review.jpg";
 import HausCommProduct from "@site/static/img/haus_communityproduct.png";
-import EthCC from "@site/static/img/EthCC.jpg";
+import EthCC from "@site/static/img/review/irl_paris.jpg";
+import MCON from "@site/static/img/review/irl_mcon.png";
+import NFTNYC from "@site/static/img/review/irl_nftnyc.png";
 
 import LogoUberHaus from "@site/static/img/review/logo_uberhaus.png";
 import Warcamp from "@site/static/img/review/warcamp.png";
 import HPPoaps from "@site/static/img/review/hausparty_poaps.png";
 import PoolHaus from "@site/static/img/review/poolhaus-genesis-poap.png";
 import Foundations from "@site/static/img/review/foundations.png";
+import Wargames from "@site/static/img/review/wargames.png";
 
 import HeroCommunity from "@site/static/img/review/hero_community.png";
 import HeroProduct from "@site/static/img/review/hero_product.png";
@@ -20,12 +23,17 @@ import HeroNumbers from "@site/static/img/review/hero_numbers.png";
 
 import Integrations from "@site/static/img/review/haus_integrations.png";
 import ChartMinions from "@site/static/img/review/chart_minions.png";
+import ChartBoosts from "@site/static/img/review/chart_boosts.png";
 import ChartDaos from "@site/static/img/review/chart_daos-summoned.png";
 import ChartDaosNetwork from "@site/static/img/review/chart_daos-network.png";
 import ChartDaosMembers from "@site/static/img/review/chart_daos-members.png";
 import ChartDaosProposals from "@site/static/img/review/chart_daos-proposals.png";
 import ChartFlow from "@site/static/img/review/chart_flow.png";
 import ChartMonthly from "@site/static/img/review/chart_monthly-outflows.png";
+
+import LogoDAOBooks from "@site/static/img/review/logo_daobooks.png";
+import LogoRarible from "@site/static/img/review/logo_rarible.png";
+import LogoDisperse from "@site/static/img/review/logo_disperse.png";
 
 import "../css/global.scss";
 import "../css/community.scss";
@@ -48,7 +56,9 @@ const Review = () => {
           <div className="Block__Contents">
             <div className="Row">
               <div className="Column--50">
-                <h1>DAOHAUS</h1>
+                <h1>
+                  <strong>DAOHAUS</strong>
+                </h1>
                 <h2>2021 Year End Review</h2>
               </div>
               <div className="Column--50">
@@ -64,17 +74,20 @@ const Review = () => {
               <div className="Column--50">
                 <h2>DAOHAUS</h2>
                 <p className="BigP">
-                2021 has been amazing for DAOhaus where we saw tremendous growth 
-                in our community, ecosystem & product. As we look towards 2022, 
-                we’d like to recount what happened in 2021 and 
-                re-introduce DAOhaus to our community (new and old). 
+                  2021 has been amazing for DAOhaus where we saw tremendous
+                  growth in our community, ecosystem & product. As we look
+                  towards 2022, we’d like to recount what happened in 2021 and
+                  re-introduce DAOhaus to our community (new and old).
                 </p>
                 <p className="BigP">
-                At its core, the DAOhaus platform is the easiest way for individuals to start a DAO 
-                and help their communities coordinate to achieve shared goals. 
+                  At its core, the DAOhaus platform is the easiest way for
+                  individuals to start a DAO and help their communities
+                  coordinate to achieve shared goals.
                 </p>
                 <p className="BigP">
-                However, what makes us special is the tight-knit community that uses, builds and advocates DAOhaus & the values we live by. 
+                  However, what makes us special is the tight-knit community
+                  that uses, builds and advocates DAOhaus & the values we live
+                  by.
                 </p>
               </div>
               <div className="Column--50">
@@ -115,12 +128,13 @@ const Review = () => {
                   interactions between these communities.
                 </p>
                 <p className="BigP">
-                  When you use DAOhaus,
-                  you don’t just get software with great features. You get
-                  access to an ecosystem of grants, service providers, partners
-                  and investors. You find your tribe of people to experiment and
-                  solve the same issues together.{" "}
-                  <strong>You can own, build and govern DAOhaus with the rest of us.</strong>
+                  When you use DAOhaus, you don’t just get software with great
+                  features. You get access to an ecosystem of grants, service
+                  providers, partners and investors. You find your tribe of
+                  people to experiment and solve the same issues together.{" "}
+                  <strong>
+                    You can own, build and govern DAOhaus with the rest of us.
+                  </strong>
                 </p>
               </div>
               <div className="Column--50"></div>
@@ -142,12 +156,12 @@ const Review = () => {
               <div className="Column--33">
                 <h4>MCON</h4>
                 <h6>DAO Circle in Denver</h6>
-                <img src={EthCC} />
+                <img src={MCON} />
               </div>
               <div className="Column--33">
                 <h4>NFT.NYC</h4>
                 <h6>NYC</h6>
-                <img src={EthCC} />
+                <img src={NFTNYC} />
               </div>
             </div>
 
@@ -254,7 +268,7 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <img src={LogoUberHaus} />
+                <img src={Wargames} className="reviewImg" />
               </div>
             </div>
           </div>
@@ -300,15 +314,17 @@ const Review = () => {
                 </p>
                 <p>
                   We’ve launched Minions V2 and V3 this year, enabling quorum
-                  voting and early execution. 
-                  Partnering with Gnosis, we’ve also launched the Safe Minion
-                  so your funds are stored safely in a Gnosis Safe. 
+                  voting and early execution. Partnering with Gnosis, we’ve also
+                  launched the Safe Minion so your funds are stored safely in a
+                  Gnosis Safe.
                 </p>
                 <p>
-                In 2021, we saw 900 Minions being installed by DAOs with the Vanilla Minion having the most installations. 
+                  In 2021, we saw 900 Minions being installed by DAOs with the
+                  Vanilla Minion having the most installations.
                 </p>
                 <p>
-                  The fastest growing Minion is the Safe Minion, hitting 206 installations despite being only 3 months old. 
+                  The fastest growing Minion is the Safe Minion, hitting 206
+                  installations despite being only 3 months old.
                 </p>
               </div>
               <div className="Column--50">
@@ -320,33 +336,42 @@ const Review = () => {
               <div className="Column--50">
                 <h3>Boosts</h3>
                 <p>
-                  In 2021, we launched the Boosts Marketplace, featuring Boosts to help 
-                  run your DAO more effectively and efficiently. 
-                  Today we have 15 Boosts built by the Magesmiths and Boost Foundry.  
-
+                  In 2021, we launched the Boosts Marketplace, featuring Boosts
+                  to help run your DAO more effectively and efficiently. Today
+                  we have 15 Boosts built by the Magesmiths and Boost Foundry.
                 </p>
+                <p>30% of all DAOhaus DAOs have installed at least 1 Boost.</p>
                 <p>
-                 30% of all DAOhaus DAOs have installed at least 1 Boost. 
-                </p>
-                <p>
-                Among the Boosts, the Discord Notifications Boost had the highest installations, followed by the Wrap N Zap Boost and Discourse Forum Boost in 2nd and 3rd place.
+                  Among the Boosts, the Discord Notifications Boost had the
+                  highest installations, followed by the Wrap N Zap Boost and
+                  Discourse Forum Boost in 2nd and 3rd place.
                 </p>
               </div>
               <div className="Column--50">
-                <img src={ChartMinions} />
+                <img src={ChartBoosts} />
               </div>
             </div>
 
             <div className="Row BoostPadRow">
               <div className="Column--33">
+                <img
+                  src={LogoDAOBooks}
+                  style={{ maxHeight: "40px" }}
+                  alt="dao books"
+                />
                 <h5>DAO Books</h5>
                 <p>
-                The DAOBooks Boost helps you break down your Vaults, 
-                so you can understand your DAO's inflows, outflows and transactions.
-                This was built by Midge & Xivanc1 from Boost Foundry.
+                  The DAOBooks Boost helps you break down your Vaults, so you
+                  can understand your DAO's inflows, outflows and transactions.
+                  This was built by Midge & Xivanc1 from Boost Foundry.
                 </p>
               </div>
               <div className="Column--33">
+                <img
+                  src={LogoRarible}
+                  style={{ maxHeight: "40px" }}
+                  alt="rarible"
+                />
                 <h5>Rarible</h5>
                 <p>
                   The Rarible Boost helps you buy and sell NFTs in your DAO
@@ -355,6 +380,11 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--33">
+                <img
+                  src={LogoDisperse}
+                  style={{ maxHeight: "40px" }}
+                  alt="disperse"
+                />
                 <h5>Disperse</h5>
                 <p>
                   Using the Disperse smart contracts, the Disperse Boost helps
@@ -373,7 +403,12 @@ const Review = () => {
         >
           <div className="Block__Contents">
             <div className="Row">
-              <h2>By the Numbers</h2>
+              <div>
+                <h2>By the Numbers</h2>
+                <p>
+                  * All charts show data from Dec 2020 until the end of Nov 2021
+                </p>
+              </div>
             </div>
             <div className="Row PadRow">
               <div className="Column--50">
@@ -482,7 +517,7 @@ const Review = () => {
           </div>
         </div>
 
-        <div className="Block">
+        <div className="Block PrimaryDark">
           <div className="Block__Contents">
             <div className="Row PadRow">
               <div className="Column--50">
@@ -525,8 +560,6 @@ const Review = () => {
             </div>
           </div>
         </div>
-
-        <CommunityBlock />
       </div>
     </Layout>
   );

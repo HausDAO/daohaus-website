@@ -158,7 +158,9 @@ const Review = () => {
               </div>
               <div className="Column--33">
                 <h4>NFT.NYC</h4>
-                <h6>NYC</h6>
+                <h6>
+                  <i>DAOhaus Ad</i> in MetaFactory Newspaper
+                </h6>
                 <img src={NFTNYC} />
               </div>
             </div>

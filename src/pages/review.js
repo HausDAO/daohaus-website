@@ -2,8 +2,6 @@ import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import CommunityBlock from "../components/CommunityBlock";
-
 import HeroReview from "@site/static/img/hero_review.jpg";
 import HausCommProduct from "@site/static/img/haus_communityproduct.png";
 import EthCC from "@site/static/img/review/irl_paris.jpg";

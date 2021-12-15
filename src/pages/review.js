@@ -621,16 +621,20 @@ const Review = () => {
                 </p>
               </div>
               <div className="Column--50">
-                <h4>Looking for a Community that resonates with you?</h4>
-                <p>
+                <h4 style={{ marginBottom: 0 }}>
+                  Looking for a Community that resonates with you?
+                </h4>
+                <p className="BigP" style={{ marginTop: 0 }}>
                   <a href="https://app.daohaus.club/explore">Explore DAOs</a>
                 </p>
-                <h4>Already have a community?</h4>
-                <p>
+                <h4 style={{ marginBottom: 0 }}>Already have a community?</h4>
+                <p className="BigP" style={{ marginTop: 0 }}>
                   <a href="https://app.daohaus.club/summon">Summon a DAO</a>
                 </p>
-                <h4>Looking to contribute or just hang out?</h4>
-                <p>
+                <h4 style={{ marginBottom: 0 }}>
+                  Looking to contribute or just hang out with fellow daoists?
+                </h4>
+                <p className="BigP" style={{ marginTop: 0 }}>
                   <a href="https://discord.gg/daohaus">Hop in our Discord</a>
                 </p>
               </div>

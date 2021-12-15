@@ -57,7 +57,7 @@ const Review = () => {
                 <h1>
                   <strong>DAOHAUS</strong>
                 </h1>
-                <h2>2021 Year End Review</h2>
+                <h2>2021 Year in Review</h2>
               </div>
               <div className="Column--50">
                 <p> </p>
@@ -72,20 +72,17 @@ const Review = () => {
               <div className="Column--50">
                 <h2>DAOHAUS</h2>
                 <p className="BigP">
-                  2021 has been amazing for DAOhaus where we saw tremendous
-                  growth in our community, ecosystem & product. As we look
-                  towards 2022, we’d like to recount what happened in 2021 and
-                  re-introduce DAOhaus to our community (new and old).
+                  2021 has been amazing for DAOhaus We saw tremendous growth in
+                  our community, ecosystem & product. As we look towards 2022,
+                  we’d like to recount what happened in 2021 and re-introduce
+                  DAOhaus to our community (new and old).
                 </p>
                 <p className="BigP">
                   At its core, the DAOhaus platform is the easiest way for
                   individuals to start a DAO and help their communities
-                  coordinate to achieve shared goals.
-                </p>
-                <p className="BigP">
-                  However, what makes us special is the tight-knit community
-                  that uses, builds and advocates DAOhaus & the values we live
-                  by.
+                  coordinate to achieve shared goals. However, what makes us
+                  special is the mission-driven communities that use, build and
+                  advocates DAOhaus & the values we live by.
                 </p>
               </div>
               <div className="Column--50">
@@ -114,22 +111,16 @@ const Review = () => {
               <div className="Column">
                 <h2>Community First</h2>
                 <p className="BigP">
-                  While creating good software is what we do at DAOhaus, the
+                  While creating great software is what we do at DAOhaus, the
                   true magic is not in the app screens, code or smart contracts.
-                  Given Web3’s open-source and composable nature, another Dev
-                  team could replicate and create products to help people start
-                  and manage DAOs.
-                </p>
-                <p className="BigP">
-                  If that’s the case, then what makes DAOhaus special? To us,
-                  the magic lies in the purpose-driven communities and the
-                  interactions between these communities.
+                  It's in the purpose-driven communities and the interactions
+                  between these communities.
                 </p>
                 <p className="BigP">
                   When you use DAOhaus, you don’t just get software with great
-                  features. You get access to an ecosystem of grants, service
-                  providers, partners and investors. You find your tribe of
-                  people to experiment and solve the same issues together.{" "}
+                  features. You get access to an ecosystem of partners, service
+                  providers, grants and investors. You find your tribe of people
+                  to experiment and solve the same issues with.{" "}
                   <strong>
                     You can own, build and govern DAOhaus with the rest of us.
                   </strong>
@@ -170,12 +161,13 @@ const Review = () => {
                 <h3>UberHaus</h3>
                 <p>
                   UberHaus is the DAO of 70+ DAOs that governs the DAOhaus
-                  platform and the remaining supply of $HAUS. Instead of
-                  centralized core teams, inner circles, and opaque decision
-                  making processes, we are truly community-owned and governed.
+                  platform and a treasury of $HAUS, the native token of the
+                  DAOhaus ecosystem. Instead of centralized core teams, inner
+                  circles, and opaque decision making processes,{" "}
+                  <strong>we are truly community-owned and governed</strong>.
                   Working together, UberHaus aims to build more tooling,
                   strengthen DAO2DAO interactions and further the adoption of
-                  decentralized and digital coordination.
+                  decentralized and digital coordination practices.
                 </p>
               </div>
               <div className="Column--50">
@@ -187,11 +179,14 @@ const Review = () => {
               <div className="Column--50">
                 <h3>Warcamp</h3>
                 <p>
-                  The DAOhaus platform is managed by Warcamp DAO, a team of 20
-                  (and growing) core contributors with different skill sets,
-                  time zones, and bandwidth availability. Each contributor is a
-                  member of one or more Circles, or functional working groups,
-                  underneath the Warcamp umbrella.
+                  On behalf of UberHaus,{" "}
+                  <strong>
+                    the DAOhaus platform is managed by Warcamp DAO
+                  </strong>
+                  , a team of 40+ (and growing) core contributors with different
+                  skill sets, time zones, and bandwidth availability. Each
+                  contributor is a member of one or more Circles, or functional
+                  working groups, underneath the Warcamp umbrella.
                 </p>
               </div>
               <div className="Column--50">
@@ -203,13 +198,19 @@ const Review = () => {
               <div className="Column--50">
                 <h3>PoolHaus</h3>
                 <p>
-                  PoolHAUS is our on-going experiment to create sustainable &
+                  PoolHAUS is our on-going experiment to promote sustainable &
                   incentives-aligned $HAUS liquidity through a DAO made up of
-                  Liquidity Providers. Our goal was to reach $500K in liquidity
-                  on xDAI, but we doubled that with $1M in liquidity. In our
-                  next evolution, we are bringing PoolHAUS to Ethereum Mainnet
-                  soon with the aim of $3M in liquidity. Currently, PoolHAUS is
-                  55 members strong, and we welcome any HAUS holders to come
+                  liquidity providers.{" "}
+                  <strong>
+                    Our first iteration doubled our initial goal of $500k and
+                    created $1M in liquidity on xDAI
+                  </strong>
+                  . In our next evolution,{" "}
+                  <strong>
+                    we will soon bring PoolHAUS to Ethereum Mainnet
+                  </strong>
+                  with the aim of $3M+ in liquidity. Currently, PoolHAUS is 55
+                  members strong, and we welcome any $HAUS holders to come
                   before the launch of our next liquidity raise.
                 </p>
               </div>
@@ -225,30 +226,16 @@ const Review = () => {
                   HAUS Party is where we hang out every week on Discord to
                   listen to community stewards, builders and Web 3 experts share
                   their stories and learnings. With Felipe taking over as the
-                  HAUS Party host from Kerp, we have had more than 30 authentic
-                  and insightful sharings this year. Here’s a snapshot of all
-                  the POAPs given out during the HAUS Parties in 2021.
+                  HAUS Party host from Kerp, we have had{" "}
+                  <strong>
+                    more than 30 authentic and insightful sessions this year
+                  </strong>
+                  . Here’s a snapshot of all the POAPs given out during the HAUS
+                  Parties in 2021.
                 </p>
               </div>
               <div className="Column--50">
                 <img src={HPPoaps} className="reviewImg" />
-              </div>
-            </div>
-
-            <div className="Row PadRow">
-              <div className="Column--50">
-                <h3>Foundations DAO</h3>
-                <p>
-                  Onboarding into a DAO should be fun, so we created Foundations
-                  to help people new to the DAO space learn about DAOs through
-                  taking action. In collaboration with Rabbithole, we onboarded
-                  3,000 members on FoundationsDAO in 2 months. In the history of
-                  DAOhaus, this is the most viral introduction of a DAO to
-                  newcomers, creating one of the largest DAOs on DAOhaus.
-                </p>
-              </div>
-              <div className="Column--50">
-                <img src={Foundations} className="reviewImg" />
               </div>
             </div>
 
@@ -271,6 +258,31 @@ const Review = () => {
                 <img src={Wargames} className="reviewImg" />
               </div>
             </div>
+
+            <div className="Row PadRow">
+              <div className="Column--50">
+                <h3>Foundations DAO</h3>
+                <p>
+                  Onboarding into a DAO should be fun, so we created Foundations
+                  to help people learn about DAOs through taking action. In
+                  collaboration with{" "}
+                  <a
+                    href="https://app.rabbithole.gg/quests/daohaus"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Rabbithole
+                  </a>
+                  , we onboarded 3,000 members on FoundationsDAO in 2 months.
+                  This was one of the most viral introductions of a DAO to
+                  newcomers in the history of DAOhaus, and created one of the
+                  largest DAOs on DAOhaus.
+                </p>
+              </div>
+              <div className="Column--50">
+                <img src={Foundations} className="reviewImg" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -284,11 +296,9 @@ const Review = () => {
               <div className="Column">
                 <h2>Product Updates</h2>
                 <p className="BigP">
-                  DAOhaus offers an infinitely expansive ecosystem for folks to
-                  come build products, experiment, and join in participatory
-                  ownership over shared resources. Our gift is our community,
-                  the successes we have achieved in the DAOhaus product could
-                  not have been achieved without you!
+                  DAOhaus offers an expansive ecosystem for folks to come build
+                  products, experiment, and join in participatory ownership over
+                  shared resources.
                 </p>
               </div>
               <div className="Column--50"></div>
@@ -308,19 +318,23 @@ const Review = () => {
               <div className="Column--50">
                 <h3>Minions</h3>
                 <p>
-                  Minions enable DAOs to execute arbitrary actions with smart
-                  contracts on behalf of its members, so you can trade NFTs,
-                  provide liquidity, and do DeFi farming within your proposals.
+                  <strong>
+                    Minions enable DAOs to interact with external smart
+                    contracts and protocols
+                  </strong>{" "}
+                  like NFTs, DeFi, or even other DAOs.
                 </p>
                 <p>
-                  We’ve launched Minions V2 and V3 this year, enabling quorum
-                  voting and early execution. Partnering with Gnosis, we’ve also
-                  launched the Safe Minion so your funds are stored safely in a
-                  Gnosis Safe.
+                  We’ve launched Minions V2 and V3 this year, enabling a bunch
+                  of powerful new features like quorum voting, early execution,
+                  and fund forwarding. Partnering with Gnosis, we’ve also
+                  launched the Safe Minion, so your Minion funds are stored
+                  safely in a Gnosis Safe.
                 </p>
                 <p>
-                  In 2021, we saw 900 Minions being installed by DAOs with the
-                  Vanilla Minion having the most installations.
+                  In 2021,{" "}
+                  <strong>DAOs installed a total of 900 Minions</strong>, most
+                  of which were the Vanilla Minion.
                 </p>
                 <p>
                   The fastest growing Minion is the Safe Minion, hitting 206
@@ -336,15 +350,15 @@ const Review = () => {
               <div className="Column--50">
                 <h3>Boosts</h3>
                 <p>
-                  In 2021, we launched the Boosts Marketplace, featuring Boosts
-                  to help run your DAO more effectively and efficiently. Today
-                  we have 15 Boosts built by the Magesmiths and Boost Foundry.
+                  <strong>
+                    In 2021, we launched the Boost Marketplace, the best place
+                    to find Boosts to help your DAO run more effectively.
+                  </strong>{" "}
+                  30% of all DAOhaus DAOs have installed at least 1 Boost.
                 </p>
-                <p>30% of all DAOhaus DAOs have installed at least 1 Boost.</p>
                 <p>
-                  Among the Boosts, the Discord Notifications Boost had the
-                  highest installations, followed by the Wrap N Zap Boost and
-                  Discourse Forum Boost in 2nd and 3rd place.
+                  Discord Notifications Boost is the most installed, followed by
+                  Wrap N Zap and the Discourse Forum Boost.
                 </p>
               </div>
               <div className="Column--50">
@@ -361,9 +375,33 @@ const Review = () => {
                 />
                 <h5>DAO Books</h5>
                 <p>
-                  The DAOBooks Boost helps you break down your Vaults, so you
-                  can understand your DAO's inflows, outflows and transactions.
-                  This was built by Midge & Xivanc1 from Boost Foundry.
+                  The{" "}
+                  <a
+                    href="https://books.daohaus.club/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    DAOBooks
+                  </a>{" "}
+                  Boost helps you break down your Vaults, so you can understand
+                  your DAO's inflows, outflows and transactions. This was built
+                  by{" "}
+                  <a
+                    href="https://twitter.com/midgerate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Midge
+                  </a>{" "}
+                  &{" "}
+                  <a
+                    href="https://twitter.com/xivanc01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Xivanc1
+                  </a>{" "}
+                  from Boost Foundry.
                 </p>
               </div>
               <div className="Column--33">
@@ -374,9 +412,17 @@ const Review = () => {
                 />
                 <h5>Rarible</h5>
                 <p>
-                  The Rarible Boost helps you buy and sell NFTs in your DAO
-                  treasury through the Rarible platform, empowering NFT
-                  collector DAOs of the future.
+                  The{" "}
+                  <a
+                    href="https://daohaus.club/docs/users/boosts/rarible-boost"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Rarible Boost
+                  </a>{" "}
+                  enables a DAO to buy and sell NFTs y through the Rarible
+                  protocol, empowering both collector and creator DAOs of the
+                  future.
                 </p>
               </div>
               <div className="Column--33">
@@ -387,9 +433,17 @@ const Review = () => {
                 />
                 <h5>Disperse</h5>
                 <p>
-                  Using the Disperse smart contracts, the Disperse Boost helps
-                  you disperse tokens to a list of addresses, facilitating
-                  airdrops or splitting of funds.
+                  The{" "}
+                  <a
+                    href="https://daohaus.club/docs/users/boosts/disperse-boost"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Disperse Boost
+                  </a>{" "}
+                  allows a DAO to transfer tokens from a Minion vault in bulk to
+                  a list of addresses, facilitating airdrops or simpler payment
+                  to multiple contributors.
                 </p>
               </div>
             </div>
@@ -406,7 +460,10 @@ const Review = () => {
               <div>
                 <h2>By the Numbers</h2>
                 <p>
-                  * All charts show data from Dec 2020 until the end of Nov 2021
+                  <i>
+                    Let’s take a look at our growth for the past 12 months from
+                    December 2020 to November 2021.
+                  </i>
                 </p>
               </div>
             </div>
@@ -414,9 +471,10 @@ const Review = () => {
               <div className="Column--50">
                 <h4>DAOs Summoned</h4>
                 <p>
-                  In 2021, we saw a 7x year-on-year increase in summoned DAOs,
-                  reaching nearly 2000 DAOs today. Every month, around 250 new
-                  DAOs are summoned.
+                  In 2021, we saw a{" "}
+                  <strong>7x year-on-year increase in DAOs summoned</strong>,
+                  reaching a total of nearly 2000 DAOs today. That’s nearly 150
+                  DAOs summoned each month!
                 </p>
               </div>
               <div className="Column--50">
@@ -441,8 +499,9 @@ const Review = () => {
               <div className="Column--50">
                 <h4>DAO Members</h4>
                 <p>
-                  In 2021, we now have 10,000 unique DAO members on DAOhaus,
-                  with around 2000 new unique DAO members joining every month.
+                  There are now have <strong>10,000 unique DAO members</strong>{" "}
+                  (addresses) on DAOhaus, with around 2000 new unique DAO
+                  members joining every month.
                 </p>
               </div>
               <div className="Column--50">
@@ -454,8 +513,9 @@ const Review = () => {
               <div className="Column--50">
                 <h4>DAO Proposals</h4>
                 <p>
-                  In 2021, around 2500 proposals were submitted every month,
-                  seeing a 4x increase since the beginning of 2021.
+                  In 2021, around{" "}
+                  <strong>2500 proposals were submitted every month</strong>, a
+                  4x increase since the beginning of 2021.
                 </p>
               </div>
               <div className="Column--50">
@@ -469,16 +529,19 @@ const Review = () => {
           <div className="Block__Contents">
             <div className="Row PadRow">
               <div className="Column--50">
-                <h4>Finance & Value Flow</h4>
+                <h4>2021 TVL & Value Flows</h4>
                 <p>
-                  On a 12-month rolling basis, the total fund inflows into and
-                  outflows from DAOs totalled $416M, with $258M inflows and
-                  $168M in outflows. The total value locked in DAOhaus DAOs is
-                  at $80M.
+                  In 2021 ,{" "}
+                  <strong>
+                    the cumulative value flowing in and out of DAOhaus DAOs
+                    totalled $416M
+                  </strong>
+                  , with $258M inflows and $168M in outflows. The total value of
+                  assets currently controlled by DAOhaus DAOs is $80M.
                 </p>
                 <p>
-                  The fund inflows, outflows and value locked in DAOs have all
-                  seen an approximate 2x increase from the beginning of 2021.
+                  In terms of November 2021 prices, these are all approximately
+                  2x increases from the beginning of 2021.
                 </p>
               </div>
               <div className="Column--50">
@@ -488,7 +551,7 @@ const Review = () => {
 
             <div className="Row PadRow">
               <div className="Column--50">
-                <h4>Monthly Outflows</h4>
+                <h4>Monthly Flows</h4>
                 <p>
                   On a monthly basis, the total value flowing into and out of
                   DAOs has reached $13M and $10M respectively. This is also
@@ -504,12 +567,15 @@ const Review = () => {
               <div className="Column--50">
                 <h4>Gross DAOmestic Product</h4>
                 <p>
-                  As DAO2DAO interactions start to grow, we are really excited
-                  by the potential of this economy that we’ve created together.
-                  To track and nurture this economy further, we are creating a
-                  way to measure economic activity & growth from DAOs - Gross
-                  DAOmestic Product. This is still a work in progress and we’re
-                  excited to reveal this to you very soon.
+                  As DAO2DAO interactions continue to grow, we are really
+                  excited by the potential of this economy that we’re created
+                  together. To track and nurture this economy further, we are
+                  creating a way to measure economic activity & growth from DAOs
+                  - <strong>Gross DAOmestic Product</strong>.
+                </p>
+                <p>
+                  This is still a work in progress and we’re excited to share it
+                  soon.
                 </p>
               </div>
               <div className="Column--50"></div>
@@ -523,24 +589,35 @@ const Review = () => {
               <div className="Column--50">
                 <h2>Thanks for a great 2021! What’s next?</h2>
                 <p>
-                  Looking forward, we want to bring the HAUS token to Ethereum
-                  Mainnet, so the wider Ethereum ecosystem can join us in our
+                  If you’ve been a part of our amazing 2021, we thank you for
+                  making 2021 such an eventful year and we are excited about
+                  what we’ll do together as a community in 2022. If this is all
+                  new to you, we invite you to join us in our community today!
+                </p>
+                <p>
+                  Looking forward, we want to bring the $HAUS token to Ethereum
+                  Mainnet so the wider Ethereum ecosystem can join us in our
                   journey towards greater human coordination. We will be doing
                   so through our very own PoolHAUS initiative, so do look out
                   for more updates in the coming weeks! #HAUSComesHome
                 </p>
                 <p>
-                  As we prepare for 2022 as the Year of the DAO, we are really
-                  excited about our 2022 Product Roadmap supporting Moloch V3
-                  (aka Baal) and DAOhaus V3. We’ll be sharing more updates as we
-                  put up the final touches to our Roadmap too.
+                  As we prepare for 2022 as the Year of the DAO, we are excited
+                  about our{" "}
+                  <strong>
+                    2022 Product Roadmap supporting Moloch V3 (aka Baal) and
+                    DAOhaus V3
+                  </strong>
+                  . We’ll be sharing more updates as we put up the final touches
+                  to our Roadmap too.
                 </p>
                 <p>
-                  If you’ve been a part of our amazing 2021, we thank you for
-                  making 2021 such an eventful year and we're beyond excited
-                  about what we’ll do together as a community in 2022. If all
-                  these are new to you, we invite you to join us in our
-                  community today!
+                  Last but not least, if you’re not already part of the DAOhaus
+                  family, we’d like you to join us!
+                </p>
+                <p>
+                  We look forward to seeing you on Discord and hopefully IRL
+                  during ETH Denver! Meanwhile, party on & happy coordinating!
                 </p>
               </div>
               <div className="Column--50">

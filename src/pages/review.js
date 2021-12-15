@@ -612,10 +612,6 @@ const Review = () => {
                   to our Roadmap too.
                 </p>
                 <p>
-                  Last but not least, if you’re not already part of the DAOhaus
-                  family, we’d like you to join us!
-                </p>
-                <p>
                   We look forward to seeing you on Discord and hopefully IRL
                   during ETH Denver! Meanwhile, party on & happy coordinating!
                 </p>

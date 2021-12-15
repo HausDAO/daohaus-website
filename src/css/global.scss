@@ -124,7 +124,7 @@ img {
 }
 
 // UI Elements
-button:not(.hamburger):not([role="switch"]),
+button:not(.navbar__toggle):not([role="switch"]),
 .Button {
   &:hover {
     background-color: $primary-hover;

@@ -382,6 +382,7 @@ button:not(.navbar__toggle):not([role="switch"]),
     width: 30%;
     @media (max-width: $mobile) {
       width: 100%;
+      margin-bottom: 20%;
     }
   }
   &--50 {

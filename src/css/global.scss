@@ -793,3 +793,9 @@ label.Select {
     display: none;
   }
 }
+
+.ShowMobile {
+  @media (min-width: $mobile + 1px) {
+    display: none;
+  }
+}

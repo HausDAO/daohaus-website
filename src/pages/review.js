@@ -20,6 +20,8 @@ import HeroProduct from "@site/static/img/review/hero_product.png";
 import HeroNumbers from "@site/static/img/review/hero_numbers.png";
 
 import Integrations from "@site/static/img/review/haus_integrations.png";
+import IntegrationsOnly from "@site/static/img/review/integrations_only.png";
+import NetworksOnly from "@site/static/img/review/networks_only.png";
 import ChartMinions from "@site/static/img/review/chart_minions.png";
 import ChartBoosts from "@site/static/img/review/chart_boosts.png";
 import ChartDaos from "@site/static/img/review/chart_daos-summoned.png";
@@ -303,10 +305,22 @@ const Review = () => {
               </div>
               <div className="Column--50"></div>
             </div>
-            <div className="Row PadRow">
+            <div className="Row PadRow HideMobile">
               <img
                 src={Integrations}
                 style={{ maxWidth: "100%", margin: "0 auto" }}
+              />
+            </div>
+            <div className="Row PadRow ShowMobile">
+              <img
+                src={IntegrationsOnly}
+                style={{ width: "100%", maxWidth: "300px", margin: "0 auto" }}
+              />
+            </div>
+            <div className="Row PadRow ShowMobile">
+              <img
+                src={NetworksOnly}
+                style={{ width: "100%", maxWidth: "300px", margin: "0 auto" }}
               />
             </div>
           </div>

@@ -12,14 +12,12 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.70",
-    "@docusaurus/preset-classic": "2.0.0-alpha.70",
+    "@docusaurus/core": "^2.0.0-beta.ff31de0ff",
+    "@docusaurus/preset-classic": "^2.0.0-beta.ff31de0ff",
     "@mdx-js/react": "^1.6.21",
     "antd": "^4.15.1",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.1.12",
-    "node": "^16.4.1",
-    "npm": "^7.19.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-icons": "^4.2.0"

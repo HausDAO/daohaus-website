@@ -105,6 +105,18 @@ img {
   display: inline-block;
 }
 
+// Spacers
+
+.PadRow {
+  padding-top: 75px;
+  align-items: center !important;
+}
+
+.reviewImg {
+  max-height: 300px;
+  max-width: 300px;
+}
+
 // Typography Utils
 .Data {
   font-family: "Roboto Mono", monospace;
@@ -112,7 +124,7 @@ img {
 }
 
 // UI Elements
-button:not(.hamburger):not([role="switch"]),
+button:not(.navbar__toggle):not([role="switch"]),
 .Button {
   &:hover {
     background-color: $primary-hover;
@@ -370,6 +382,7 @@ button:not(.hamburger):not([role="switch"]),
     width: 30%;
     @media (max-width: $mobile) {
       width: 100%;
+      margin-bottom: 20%;
     }
   }
   &--50 {
@@ -777,6 +790,12 @@ label.Select {
 
 .HideMobile {
   @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.ShowMobile {
+  @media (min-width: $mobile + 1px) {
     display: none;
   }
 }

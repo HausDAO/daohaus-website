@@ -142,19 +142,23 @@ module.exports = {
     ],
     Contributors: [
       'handbook/contributors/contributors-get-started',
-      'handbook/contributors/contributors-docs',
-      'handbook/contributors/contributors-docs-style-guide',
+      {
+        type: 'category',
+        label: 'Rangers',
+        items: [
+          'handbook/contributors/contributors-docs',
+          'handbook/contributors/contributors-docs-style-guide',
+        ],
+      },
+      {
+        type: 'category',
+        label: 'Magesmiths',
+        items: [
+        ],
+      },
       'handbook/contributors/contributors-get-paid',
       'handbook/contributors/contributors-earn-power',
       'handbook/contributors/contributors-faq',
-    ],
-    Circles: [
-      'handbook/overview',
-      'handbook/alchemists',
-      'handbook/magesmiths',
-      'handbook/paladins',
-      'handbook/rangers',
-      'handbook/uberpaladins',
     ],
   },
 };

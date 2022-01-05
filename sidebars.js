@@ -154,6 +154,7 @@ module.exports = {
         type: 'category',
         label: 'Magesmiths',
         items: [
+          'handbook/contributors/magesmiths-roadmap',
         ],
       },
       'handbook/contributors/contributors-get-paid',

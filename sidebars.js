@@ -157,8 +157,16 @@ module.exports = {
           'handbook/contributors/magesmiths-roadmap',
         ],
       },
+      {
+        type: 'category',
+        label: 'Compensation',
+        items: [
+          'handbook/contributors/contributors-comp-overview',
       'handbook/contributors/contributors-get-paid',
-      'handbook/contributors/contributors-earn-power',
+          'handbook/contributors/contributors-earn-power',
+        ],
+      },
+      
       'handbook/contributors/contributors-faq',
     ],
   },

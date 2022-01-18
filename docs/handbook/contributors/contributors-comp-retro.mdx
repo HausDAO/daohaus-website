@@ -1,0 +1,86 @@
+---
+id: contributors-comp-retro
+title: Retroactive Track
+sidebar_label: Retroactive Track
+slug: /handbook/contributors/compensation/retroactive
+---
+
+If you are on the [Retroactive Compensation Track](overview#retroactive-track), follow these steps each month to receive your base compensation.
+
+## How to get your Retroactive base compensation
+
+As the name suggestion, contributors on the Retroactive Compensation Track are paid retroactively for their contributions each month. In practice, that means compensation requests and payment happens during the month *following* the month during which contributions were made.
+
+In this guide, we'll refer to the contribution month as Month A and the payment month as Month B.
+
+#### 1. Make request(s) to Circle(s)
+_Timing_: first week of Month B, i.e., **1st through 7th day of Month B**. The sooner you can do this, the sooner the Circle facilitator can request the appropriate budget from the Warcamp DAO, and the sooner you can receive your payment.
+
+For each Circle to which you contributed in Month A, make a compensation request by [filling out this form](https://forms.clickup.com/f/83fyz-1190/INJ726Y5345KRRZ0S8). You'll need the following items:
+- Your `name`: however you are known within the DAOhaus community
+- Your `circle`: if you contributed to multiple circles, fill out the form multiple times
+- The `Distribution Period`: the name of Month A
+- `Description / Proof of Work`: a list of your contributions to this Circle during Month A. The more evidence you can provide &mdash; such as links to documents written, code commits / PRs, etc &mdash; the more likely your Circle is to accept your request.
+- `DAI Requested`: the amount you are requesting as compensation
+
+##### FAQ: How much DAI should I request?
+This is not an easy question to answer, since the correct amount depends heavily on many factors, including the quality of your work, how impactful it is to DAOhaus, how challenging it was to complete, and more. However, Retroactive Track contributors can refer to the [Commitment Track payment schedule](commitment) for a rough idea of how DAOhaus values contributions.
+
+If you're uncertain, we recommend asking your fellow contributors for input. And remember, do not undervalue yourself!
+
+#### 2. Circle facilitators request budget from Warcamp DAO
+_Timing_: **8th day of Month B** (or earlier, if possible)
+
+Once all Retroactive Track contributors for a given Circle have submitted their request forms, the Circle reviews the requests. Unless one or more requests look out of order, a Circle facilitator will sum up the requests into a total budget and make a proposal to the Warcamp DAO to move that amount into the Circle's [minion vault](/docs/users/bank#minion-vaults).
+
+If there is an issue, the Circle members discuss and iterate until all requests are satisfactory.
+
+Since Warcamp's proposal period is 7 days (4 day voting period + 3 day grace period), the Circle's budget will likely be available in the minion vault by the 15th day of Month B.
+
+#### 3. Make funding proposal Circle minion vault
+_Timing_: **15th day until end of Month B**. To facilitate clean accounting, contributors have until the end of Month B to make their requests.
+
+Once the Circle's budget has arrive in its minion vault, you can make your proposal to get paid. Follow this guide:
+
+3a) Go to the Bank page of your Circle's DAO, and then open the vault associated with contributor compensation. Here are the vaults currently in use for this purpose:
+- Magesmiths: [Tester](https://app.daohaus.club/dao/0x64/0xc8e0d7fd13eb3cbc19eb293d0e00b8386cc1b6f2/vaults/minion/0xfb3d6b83e51a08ca89dcfe853e7ccbf5ee6ffbf4)
+- Rangers: [Payroll](https://app.daohaus.club/dao/0x64/0x55eafe832507e652c48b25a957bd3a15420aa805/vaults/minion/0xf884a060fa160055c54794375f7d2f1b86054541)
+- Paladins: [Payroll](https://app.daohaus.club/dao/0x64/0x8d2ec7025957d09cfb0a8197f9aacd0dcc08b21a/vaults/minion/0x7713e37076ae80cdace585c2c2aa218c85c41122)
+- Alchemists: _see below_
+
+3b) On the rightmost end of the WXDAI token row, click the `Transfer` button. That will bring up a Minion ERC20 Token Transfer Proposal form. Enter the following info:
+- `Minion Payment`: the amount you're requesting to be paid (should match the amount you requested from the original form)
+- `Recipient`: your xDAI wallet address
+- `Description`: "[Your Name] Retroactive Distribution for [Month A]"
+
+3c) Then click `Submit` to initiate a transaction. Review and sign the transaction in your wallet (i.e., Metamask or your mobile wallet if using WalletConnect)
+
+3d) Once your proposal submission transaction has been confirmed on-chain, your proposal needs to be sponsored before it can enter the voting period. If you are a member of your Circle DAO, you can sponsor it yourself by clicking `Sponsor` in the proposal details (note that you may need some WXDAI for a deposit, depending on which Circle you're working in). If you are not yet a member of your Circle DAO, ask a fellow contributor to sponsor it for you.
+
+3e) Once your proposal has been sponsored and has entered the voting period, vote Yes by clicking the `👍` button. If you are not a member of your Circle DAO, ask a fellow contributor to review and vote Yes on it.
+
+> ❓ 
+> 
+> Q: Should I be sponsoring and voting on my own compensation proposals? 
+> 
+> A: YES! It is the responsibility of other members of your Circle to verify that you have made a valid proposal and to vote No if not &mdash; likewise, it is your responsibility to verify their proposals as well. But the optimistic nature of Moloch DAO proposals means that others do not have to vote Yes, so it is your responsibility to make sure your proposal passes.
+
+3f) Once your proposal has passed and the grace period is over, it needs to be processed in order to execute the payment. In the proposal detail view, click `Process` to initiate the transaction.
+
+3g) Once your proposal has been processed, the minion proposal now needs to be executed. If you're a member of your circle DAO, click `Execute` to initiate the transaction. If not, ask a fellow contributor to execute it for you. Once the transaction is confirmed on-chain, you'll have your compensation in your wallet.
+
+###### Alchemists Alternate Steps
+The Alchemists Circle currently uses its [DAO treasury](https://app.daohaus.club/dao/0x64/0xd1924dc661a3e0563defe8e8028485211799e2b0/vaults/treasury) for Retroactive compensation. It should probably migrate to using a minion vault, but in the meantime the proposal process is slightly different.
+
+3a) Go to the Alchemist DAO [proposal page](https://app.daohaus.club/dao/0x64/0xd1924dc661a3e0563defe8e8028485211799e2b0/proposals) and click `New Proposal`. 
+
+3b) In the modal, select `Funding Proposal`. Enter the following info:
+- `Title`: "[Your Name] Reotractive Distribution for [Month A]"
+- `Description`: same as title (though feel free to add some personality 😘)
+- `Recipient`: your xDAI wallet address
+- `Payment Requested`: the amount you're requesting to be paid (should match the amount you requested from the original form)
+
+3c - 3f) Same as for other Circles
+
+3g) Once your proposal has been processed, your payment is now in your [internal balance](/docs/users/glossary). To withdraw your balance, click the `🏆` option in the left navigation to view your DAO profile &mdash; if you're not a member of the DAO, you can find your DAO profile by visiting `https://app.daohaus.club/dao/0x64/0xd1924dc661a3e0563defe8e8028485211799e2b0/profile`+`[your_address]`. Then click `Withdraw` to initiate the withdrawal transaction.
+

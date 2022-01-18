@@ -164,6 +164,7 @@ module.exports = {
           'handbook/contributors/contributors-comp-overview',
           'handbook/contributors/contributors-comp-retro',
           'handbook/contributors/contributors-earn-power',
+          'handbook/contributors/contributors-comp-calendar',
         ],
       },
       

@@ -1,62 +1,60 @@
 ---
 id: field-lego-api
-title: Field Lego 
+title: Field Lego
 sidebar_label: Field Lego
 ---
 
-#### Field.type
+#### type
 
-(String)
+(STRING)
 
-This value tells the factory component which UI to render. This includes generic and standardized inputs. 
+This value tells the factory component which UI to render. This includes generic and standardized inputs.
 
-#### Field.label
+#### label
 
-(String)
+(STRING)
 
-This value tells the factory component what to render as the input's label. 
+This value tells the factory component what to render as the input's label.
 
-#### Field.name
+#### name
 
-(String)
+(STRING)
 
-This is the 'key' or 'id' for the data enterred into the input. This value: 
+This is the 'key' or 'id' for the data enterred into the input. This value:
 
-- Must be different than any other ``name`` values on the form.
-- Stores data in the ``values`` object under the key enterred as ``name``.
+- Must be different than any other `name` values on the form.
+- Stores data in the `values` object under the key enterred as `name`.
 - Which means that this is the reference to the data the user provides in the input.
 - It's used inside the TX data to get form data into the transaction.
-- It's what the Form.required checks for. 
-- Can be referenced throughout the transaction process by the name entered here. 
+- It's what the Form.required checks for.
+- Can be referenced throughout the transaction process by the name entered here.
 
-#### Field.htmlFor
+#### htmlFor
 
-(String)
+(STRING)
 
-Links the input's name with its label for accessibility purposes. If falsy, the htmlFor will default to the input's name. 
+Links the input's name with its label for accessibility purposes. If falsy, the htmlFor will default to the input's name.
 
-#### Field.placeholder
+#### placeholder
 
-(String)
+(STRING)
 
-Placeholder text for the input. 
+Placeholder text for the input.
 
-#### Field.info
+#### info
 
-(String)
+(STRING)
 
-If a field lego recieves a ``field.info`` value, the component's wrapper will display an info icon, with a hoverable tooltip that displays the string value enterred in the ``info`` field. 
+If a field lego recieves a `field.info` value, the component's wrapper will display an info icon, with a hoverable tooltip that displays the string value enterred in the `info` field.
 
-If field.info is falsy or not included in the lego, an info tooltip does not render. 
+If field.info is falsy or not included in the lego, an info tooltip does not render.
 
-#### Field.expectType
+#### expectType
 
-(String)
+(STRING)
 
-This tells the form validation what type of string this input is expecting. Because all incoming data from inputs are strings, **expectType does not check for JS types, instead it looks for different types of strings**. 
+This tells the form validation what type of string this input is expecting. Because all incoming data from inputs are strings, **expectType does not check for JS types, instead it looks for different types of strings**.
 
-For example, if we had an input that was only expecting numbers, both integers and numbers with decimals, Field.expectType would equal ``number``. The validation would then look at the string the input recieves and check if all the characters in the string are all numbers. 
+For example, if we had an input that was only expecting numbers, both integers and numbers with decimals, Field.expectType would equal `number`. The validation would then look at the string the input recieves and check if all the characters in the string are all numbers.
 
-It will return errors to the form if it does not receive the type of string that it is expecting. Like Form.required, the errors will be distributed throughout the form and displayed at the bottom of the inputs that have invalid information. 
-
-
+It will return errors to the form if it does not receive the type of string that it is expecting. Like Form.required, the errors will be distributed throughout the form and displayed at the bottom of the inputs that have invalid information.

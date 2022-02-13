@@ -1,6 +1,6 @@
 ---
 id: form-lego-api
-title: Form Lego 
+title: Form Lego
 sidebar_label: Form Lego
 ---
 
@@ -10,89 +10,151 @@ Form Legos compose txLegos and fieldLegos.
 
 #### Form Example
 
-```js 
- MEMBER: {
-    title: 'Membership',
-    subtitle: 'Request Shares and/or Loot',
+```js
+  MEMBER: {
+    id: 'MEMBER',
+    title: 'Membership Proposal',
+    description: 'Proposal for DAO membership',
     type: PROPOSAL_TYPES.MEMBER,
     required: ['title', 'sharesRequested'], // Use name key from proposal type object
     tx: TX.SUBMIT_PROPOSAL,
     fields: [
-      FIELD.TITLE,
-      FIELD.SHARES_REQUEST,
-      FIELD.DESCRIPTION,
-      FIELD.TRIBUTE,
-      FIELD.LINK,
+      [FIELD.TITLE, FIELD.DESCRIPTION, FIELD.LINK],
+      [FIELD.SHARES_REQUEST, FIELD.TRIBUTE],
     ],
     additionalOptions: [
-      FIELD.APPLICANT,
+      {
+        ...FIELD.APPLICANT,
+        label: 'Applicant',
+      },
       FIELD.LOOT_REQUEST,
       FIELD.PAYMENT_REQUEST,
     ],
+    customValidations: ['nonDaoApplicant'],
   }
 ```
 
 This blueprint does a few things:
 
 - It handles some basic data about the form.
-- It takes in a ``txlego`` to handle contract execution when the form submits.
-- It handles validation for what fields are required. 
-- It also orchestrates the fields that appear on the form, in order. 
+- It takes in a `txlego` to handle contract execution when the form submits.
+- It handles validation for what fields are required.
+- It also orchestrates the fields that appear on the form, in order.
 
+#### id
 
-## Form API 
+(STRING)
 
-#### Form.title
+Unique identifier for the form lego.
 
-(String)
+#### title
 
-Sets the title that appears at the top of the form. Also will set the title that appears in the New Proposal selection page (NewProposal.js)
+(STRING)
 
-#### Form.subtitle
+Sets the title that appears at the top of the form.
 
-(String)
+#### subtitle
 
-Will be responsible for setting the subtitle in the new update. 
+(STRING)
 
-#### form.type
+Sets the subtitle that appears at the top of the form.
 
-(String)
+#### description
 
-Will be incorporated into the detailsToJSON data. Creates an easy way of discorvering what type of proposal is being passed to the app later on. 
+(STRING)
 
-#### form.required
+Displays on the form to describe the purpose of the form.
 
-(Array of Strings)
+#### type
 
-Takes an array of field.name(s). 
+(STRING)
 
-Before the proposal submits, it will iterate over this array and search for all the keys in the ``values`` object. If any of these values are falsy, it will stop the transaction and return an error for each required field where the conditions have not been met.
+Will be incorporated into the detailsToJSON data. Creates an easy way of discorvering what type of proposal is being passed to the app later on.
 
-**Important:** Make sure to use the value that is found in the field's ``name`` key. Otherwise the form will not submit. 
+#### required
 
-#### form.tx
+(ARRAY OF STRINGS)
 
-(TX Lego)
+Takes an array of field.name(s).
 
-Recieves a TX lego. This is the transaction that will be fired when the form submits.  
+Before the proposal submits, it will iterate over this array and search for all the keys in the `values` object. If any of these values are falsy, it will stop the transaction and return an error for each required field where the conditions have not been met.
 
-If tx is empty, the form will throw an exception on submit. 
+**Important:** Make sure to use the value that is found in the field's `name` key. Otherwise the form will not submit.
 
-#### form.fields
+#### tx
 
-(Array of Field Legos) 
+(TX LEGO)
 
-Takes in an array of Field data and the factory component renders these in order. Throws an exception if it doesn't find a field component for each field.type. 
+Recieves a TX lego. This is the transaction that will be fired when the form submits.
 
-#### form.additionalOptions
+If tx is empty, the form will throw an exception on submit.
 
-(Array of Field Legos) 
+#### fields
 
-An array of field legos that can be selected on the 'Additional Options' dropdown on the form. 
+(ARRAY OF FIELD LEGOS)
 
-#### form.minionType
+Takes in an array of Field data and the factory component renders these in order. Throws an exception if it doesn't find a field component for each field.type.
 
-(String)
+#### additionalOptions
 
-For minion proposals. Adds minionType to the detailsToJSON field. 
+(ARRAY OF FIELD LEGOS)
 
+An array of field legos that can be selected on the 'Additional Options' dropdown on the
+
+#### minionType
+
+(STRING)
+
+For minion proposals. Adds minionType to the detailsToJSON field.
+
+#### origin
+
+(STRING)
+
+#### customValidations
+
+(ARRAY OF STRINGS)
+
+#### ctaText
+
+(STRING)
+
+#### blurText
+
+(STRING)
+
+#### formConditions
+
+(ARRAY OF STRINGS)
+
+#### isTx
+
+(BOOLEAN)
+
+#### isTxBuilder
+
+(BOOLEAN)
+
+#### footer
+
+(STRING)
+
+#### collapse
+
+(STRING)
+
+#### customWidth
+
+(STRING)
+
+#### forms
+
+(ARRAY OF FORMS)
+
+#### logValues
+
+(BOOLEAN)
+
+#### warningMsg
+
+(STRING)

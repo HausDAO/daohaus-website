@@ -7,6 +7,7 @@ module.exports = {
           "devs/legos/overview",
           "devs/legos/tx-lego-api",
           "devs/legos/field-lego-api",
+          "devs/legos/contract-lego-api",
           "devs/legos/form-lego-api",
         ],
       },

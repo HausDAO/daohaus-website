@@ -107,54 +107,38 @@ An array of field legos that can be selected on the 'Additional Options' dropdow
 
 For minion proposals. Adds minionType to the detailsToJSON field.
 
-#### origin
-
-(STRING)
-
 #### customValidations
 
 (ARRAY OF STRINGS)
+
+Can check anything inside of the application. If you want to add a custom validation head to `src/utils/validation.js`
 
 #### ctaText
 
 (STRING)
 
+Call To Action text. Or the name of the submit button on the form.
+
 #### blurText
 
 (STRING)
+
+If valdation isn't fulfulled this the is the text on the blur.
 
 #### formConditions
 
 (ARRAY OF STRINGS)
 
-#### isTx
-
-(BOOLEAN)
-
-#### isTxBuilder
-
-(BOOLEAN)
-
-#### footer
-
-(STRING)
-
-#### collapse
-
-(STRING)
+Can change state of form based on specified condition.
 
 #### customWidth
 
 (STRING)
 
-#### forms
-
-(ARRAY OF FORMS)
+Specifies width of form modal (800px - example).
 
 #### logValues
 
 (BOOLEAN)
 
-#### warningMsg
-
-(STRING)
+To log values of values of subject. Set to true debug.

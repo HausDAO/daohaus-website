@@ -32,6 +32,8 @@ import IconHA from "@site/static/img/ico__how--a.png";
 import IconHB from "@site/static/img/ico__how--b.png";
 import IconHC from "@site/static/img/ico__how--c.png";
 
+import HeroReview from "@site/static/img/hero_review.jpg";
+
 import "../css/global.scss";
 import "../css/home.scss";
 import { heroSlides } from "../components/homeContent";
@@ -146,6 +148,48 @@ export default function Home() {
                 );
               })}
             </Carousel>
+          </div>
+        </div>
+        <div
+          className="Block PrimaryBg"
+          style={{
+            backgroundImage: "url(" + HeroReview + ")",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center left",
+          }}
+        >
+          <div className="Block__Contents">
+            <h2>2021 was quite the year for DAOs.</h2>
+            <h4>
+              Check out our <a href="/review">2021 Year in Review</a>
+            </h4>
+          </div>
+        </div>
+        <div className="Block Video PrimaryDark">
+          <div className="Block__Contents">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <h2 style={{ textAlign: "left" }}>DAOhaus - What is a DAO?</h2>
+              <iframe
+                className="VideoSize"
+                src="https://www.youtube.com/embed/7MaucjMwEUA"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <p style={{ marginTop: "15px" }}>
+                A DAO explainer built by a DAO for DAOs funded by a DAO. That's
+                what DAOhaus is all about. The DAO 2 DAO economy and an actual
+                social network for the Metaverse.
+              </p>
+            </div>
           </div>
         </div>
 

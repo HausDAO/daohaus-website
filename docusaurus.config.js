@@ -8,26 +8,13 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "hausdao", // Usually your GitHub org/user name.
   projectName: "daohaus-docs", // Usually your repo name.
+    scripts: [{src: 'https://plausible.io/js/plausible.outbound-links.js', async: true, defer: true, 'data-domain': 'daohaus.club'}],
   themeConfig: {
-    image: "https://daohaus.club/images/daohaus-main.jpg",
+    image: "img/haus__icon.png",
     metadatas: [
       { name: "og:type", content: "website" },
-      {
-        name: "og:description",
-        content: "DAOhaus is a no code platform for Moloch DAOs.",
-      },
       { name: "og:site_name", content: "DAOhaus" },
-      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@nowdaoit" },
-      { name: "twitter:title", content: "DAOhaus" },
-      {
-        name: "twitter:description",
-        content: "DAOhaus is a no code platform for Moloch DAOs.",
-      },
-      {
-        name: "twitter:image",
-        content: "https://daohaus.club/images/daohaus-main.jpg",
-      },
     ],
     colorMode: {
       disableSwitch: true,

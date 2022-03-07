@@ -4,9 +4,6 @@ title: Summoner FAQ
 sidebar_label: Summoner
 ---
 
-## Pre-summoning Basics
-
-
 <h4>
   <details>
     <summary>Q: Is there a test / staging area for creating DAOs?</summary>
@@ -15,16 +12,6 @@ sidebar_label: Summoner
     xDAI.
   </details>
 </h4>
-
-<h4>
-  <details>
-    <summary>Q: How much does it cost to summon a DAO?</summary>
-    <p>&nbsp;</p>
-    A: On ETH mainnet, it depends on the gas prices. On a side chain like xDAI
-    or Polygon, it is almost free at around USD0.01
-  </details>
-</h4>
-
 
 <h4>
   <details>
@@ -40,10 +27,37 @@ sidebar_label: Summoner
 
 <h4>
   <details>
+    <summary>
+      Q: What is "Dilution Bound" in Hard Mode settings when summoning a DAO?
+    </summary>
+    <p>&nbsp;</p>
+    A: Dilution bound is a mechanism to handle edge cases where many members
+    RageQuit, increasing the dilution of non-ragequit members. This hasn't been
+    used before, but 3 is usually good.
+  </details>
+</h4>
+
+<h4>
+  <details>
     <summary>Q: What is "Processing Reward"?</summary>
     <p>&nbsp;</p>
     A: The processing reward is a mechanism to incentivize members to actively
     process proposals and keep the proposal funnel clear.
+  </details>
+</h4>
+
+<h4>
+  <details>
+    <summary>
+      Q: There is no explicit setting for proposal velocity in Hard Mode. Where
+      is it?
+    </summary>
+    <p>&nbsp;</p>
+    A: In Hard Mode, the voting period is equal to the proposal velocity. So, at
+    a default of 7200 seconds, it is 2 hours. If mutiple proposals are submitted
+    at the same time, one proposal will enter into voting every 2 hours (first
+    in, first out). Therefore, with a shorter voting period you raise the upper
+    limit for proposal velocity in your DAO.
   </details>
 </h4>
 
@@ -56,6 +70,15 @@ sidebar_label: Summoner
     <p>&nbsp;</p>
     A: Unfortunately, no. The alternative would be to upgrade your DAO, clone
     the members / shares and transfer the balances over to the new DAO.
+  </details>
+</h4>
+
+<h4>
+  <details>
+    <summary>Q: Can I customise the font and colours of my DAO theme?</summary>
+    <p>&nbsp;</p>
+    A: Yes, you can customise the font and colours of your DAO theme through the
+    "Custom Theme" app
   </details>
 </h4>
 
@@ -76,39 +99,6 @@ sidebar_label: Summoner
   </details>
 </h4>
 
-### Summoning in Hard Mode
-
-
-<h4>
-  <details>
-    <summary>
-      Q: What is "Dilution Bound" in Hard Mode settings when summoning a DAO?
-    </summary>
-    <p>&nbsp;</p>
-    A: Dilution bound is a mechanism to handle edge cases where many members
-    RageQuit, increasing the dilution of non-ragequit members. This hasn't been
-    used before, but 3 is usually good.
-  </details>
-</h4>
-
-
-
-<h4>
-  <details>
-    <summary>
-      Q: There is no explicit setting for proposal velocity in Hard Mode. Where
-      is it?
-    </summary>
-    <p>&nbsp;</p>
-    A: In Hard Mode, the voting period is equal to the proposal velocity. So, at
-    a default of 7200 seconds, it is 2 hours. If mutiple proposals are submitted
-    at the same time, one proposal will enter into voting every 2 hours (first
-    in, first out). Therefore, with a shorter voting period you raise the upper
-    limit for proposal velocity in your DAO.
-  </details>
-</h4>
-
-
 <h4>
   <details>
     <summary>
@@ -121,10 +111,6 @@ sidebar_label: Summoner
   </details>
 </h4>
 
-
-## Post-Summoning Needs
-
-
 <h4>
   <details>
     <summary>Q: Who can change the metadata of the DAO?</summary>
@@ -133,22 +119,12 @@ sidebar_label: Summoner
   </details>
 </h4>
 
-
 <h4>
   <details>
-    <summary>Q: Can I customise the font and colours of my DAO theme?</summary>
+    <summary>Q: How much does it cost to summon a DAO?</summary>
     <p>&nbsp;</p>
-    A: Yes, you can customise the font and colours of your DAO theme through the
-    "Custom Theme" app
-  </details>
-</h4>
-
-<h4>
-  <details>
-    <summary>Q: Is there a way to get notified of my DAO's activities and proposals through Discord?</summary>
-    <p>&nbsp;</p>
-    A: Yes, you can enable the Discord Notifications Boost in your DAO page. On the left Navbar, go to "Apps" and you can follow the steps to install the Boost.
-
+    A: On ETH mainnet, it depends on the gas prices. On a side chain like xDAI
+    or Polygon, it is almost free at around USD0.01
   </details>
 </h4>
 
@@ -171,6 +147,43 @@ sidebar_label: Summoner
     the list of members' addresses from the bank.
   </details>
 </h4>
+
+<h4>
+  <details>
+    <summary>Q: How do I export my DAO transactions for taxation purposes?</summary>
+    <p>&nbsp;</p>
+    A: All DAO transactions are on-chain and you can export the transactions via contract address. Alternatively, you can use Dune Analytics to extract the information. 
+  </details>
+</h4>
+
+<h4>
+  <details>
+    <summary>Q: My DAO is new and has no proposals. I want to ragequit but cannot do so as I'm faced with an error. How do I fix this? </summary>
+    <p>&nbsp;</p>
+    A: You are not able to ragequit because there are no proposals in the DAO yet. An easy way to rage quit will be to submit a proposal (such as Signal Proposal) and you'll be able to ragequit after. 
+  </details>
+</h4>
+
+## Registering DAOs in Wyoming
+
+<h4>
+  <details>
+    <summary>Q: I'm registering my DAO in Wyoming and I'm asked for a "Publicly available identifier" for my DAO. What should I fill in here?</summary>
+    <p>&nbsp;</p>
+    A: You can fill in the DAO contract address.
+  </details>
+</h4>
+
+
+<h4>
+  <details>
+    <summary>Q: I am forming a WY DAO LLC. Where can I find more information on this?</summary>
+    <p>&nbsp;</p>
+    A: You can refer to LexDAO's thoughts [here](https://lexdao.substack.com/p/wyoming-built-a-home-for-daos-but) or hop into our Discord to brainstorm and crowdsource ideas with the community. 
+  </details>
+</h4>
+
+---
 
 Our FAQs section are work-in-progress. Want to contribute?
 

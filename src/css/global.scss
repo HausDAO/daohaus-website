@@ -87,9 +87,34 @@ a {
   }
 }
 
+.navbar__item.dropdown:hover a {
+  cursor: pointer;
+  color: $primary-hover;
+}
+
+.navbar__item.dropdown a:last-child {
+  background-color: #050a1b !important;
+  color: #0e99c4;
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
 img {
   max-width: 100%;
   display: inline-block;
+}
+
+// Spacers
+
+.PadRow {
+  padding-top: 75px;
+  align-items: center !important;
+}
+
+.reviewImg {
+  max-height: 300px;
+  max-width: 300px;
 }
 
 // Typography Utils
@@ -99,7 +124,7 @@ img {
 }
 
 // UI Elements
-button:not(.hamburger):not([role="switch"]),
+button:not(.navbar__toggle):not([role="switch"]),
 .Button {
   &:hover {
     background-color: $primary-hover;
@@ -276,7 +301,7 @@ button:not(.hamburger):not([role="switch"]),
       font-size: 1.35em;
     }
     @media (max-width: $grid) {
-      max-width: calc(100% - 100px);
+      max-width: calc(100% - 50px);
     }
   }
   &.Primary {
@@ -329,6 +354,9 @@ button:not(.hamburger):not([role="switch"]),
       color: white;
     }
   }
+  &.Video {
+    flex-direction: column;
+  }
 }
 
 .Row {
@@ -354,6 +382,7 @@ button:not(.hamburger):not([role="switch"]),
     width: 30%;
     @media (max-width: $mobile) {
       width: 100%;
+      margin-bottom: 20%;
     }
   }
   &--50 {
@@ -761,6 +790,12 @@ label.Select {
 
 .HideMobile {
   @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.ShowMobile {
+  @media (min-width: $mobile + 1px) {
     display: none;
   }
 }

@@ -46,7 +46,7 @@ PROPOSAL_FORMS: {
 }
 ```
 
-Becuase the Form lego composes the tx lego, and it has its own way of firing off transactions, the dev never has to introduce the transaction to a react component at all. 
+Because the Form lego composes the tx lego, and it has its own way of firing off transactions, the dev never has to introduce the transaction to a react component at all. 
 
 With JS Legos, devs are able to create their transactions as clean, static data. This will allow core devs to store, compose, and organize the applications functionality as they please, while allowing community devs a flexible yet concise interface for boost development. 
 
@@ -58,7 +58,7 @@ With JS Legos, devs are able to create their transactions as clean, static data.
 
 ## Tutorial 
 
-However, there are many cases where transactions will still need to placed in a React component. 
+However, there are many cases where transactions will still need to be placed in a React component. 
 
 Let's go through an example. Let's say we want to wire up a button to sponsor a proposal when the user clicks it. 
 
@@ -75,10 +75,10 @@ TX:{
 }
 ```
 
-Then we want to direct this transaction by telling it which contract ABI to interact with and what function to call. For this transaction, we're calling the DAO's Moloch contract. So we'll use the string 'Moloch' under the field `contract` 
+Then we want to direct this transaction by telling it which contract ABI to interact with and what function to call. For this transaction, we're calling the DAO's Moloch contract. So we'll use the string 'Moloch' under the field `contract`.
 
 - We have a Contract Service to interact with this ABI already.
-- So all we need to do is travel to MolochService.js in src/services and find the function that we want to hit. In this case, the name is ``sponsorProposal``
+- So all we need to do is travel to MolochService.js in `src/services` and find the function that we want to hit. In this case, the name is ``sponsorProposal``
 - Let's add these to the Lego: 
 
 ```js
@@ -90,7 +90,7 @@ TX:{
 }
 ```
 
-Note: *At the moment, TXlegos only interact with local ABIs through contract services. In the future, we will dynamically fetch network ABIs from block explorers. Services will also be phased out to ensure a single source of truth*
+Note: *At the moment, TXlegos only interact with local ABIs through contract services. In the future, we will dynamically fetch network ABIs from block explorers. Services will also be phased out to ensure a single source of truth*.
 
 Next we'll need to tell the app what to poll to ensure that UI only updates once all the backend data has been updated. We're interacting with the DAOhaus subgraph, so all we need to add is 'subgraph' to the `poll` field. 
 
@@ -142,7 +142,7 @@ TX:{
 }
 ```
 
-Becuase we'll be adding the function arguments inside the transaction itself, this lego is finished. All we need to do is hook it up. 
+Because we'll be adding the function arguments inside the transaction itself, this lego is finished. All we need to do is hook it up. 
 
 ```js
 //  in src/components/proposalActions.js

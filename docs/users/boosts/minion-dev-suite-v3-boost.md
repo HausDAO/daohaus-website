@@ -6,7 +6,7 @@ sidebar_label: Minion DEV Suite V3
 
 * **Category**: `Dev Tools`
 * **Publisher**: [DAOhaus](https://app.daohaus.club/dao/0x64/0xef3d8c4fbb1860fceab16595db7e650cd5ad51c1)
-* **Available Networks**: `Ethereum Mainnet`, `Polygon`, `xDai`
+* **Available Networks**: `Ethereum Mainnet`, `Polygon`, `Gnosis Chain`
 * **Github**: https://github.com/HausDAO/MinionSummonerV2
 
 :::info

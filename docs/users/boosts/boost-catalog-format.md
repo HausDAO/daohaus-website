@@ -6,7 +6,7 @@ sidebar_label: Boost Catalog Format
 
 * **Category**: `Category`
 * **Publisher**: `Publisher Name`
-* **Available Networks**: `Ethereum Mainnet`, `xDai`, `Polygon`, `Arbitrum`
+* **Available Networks**: `Ethereum Mainnet`, `Gnosis Chain`, `Polygon`, `Arbitrum`
 * **Github**: `Github Link`
 
 :::info

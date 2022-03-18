@@ -28,9 +28,17 @@ Circulating Supply: 387,000 HAUS
 ![](https://miro.medium.com/max/700/1*yXGqzJskZmrWWM46ewtx1Q.png)
 
 ## Official Links & Addresses
-The HAUS token is currently available only on xDai. 
+The HAUS token is currently available on Gnosis Chain and Mainnet. 
 
-* Contract Address: 0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb
+**Ethereum Mainnet**
+* Ethereum Mainnet Contract Address: 0xf2051511B9b121394FA75B8F7d4E7424337af687
+* Etherscan Link: https://etherscan.io/token/0xf2051511B9b121394FA75B8F7d4E7424337af687 
+* Balancer Link: https://app.balancer.fi/#/pool/0x17ddd9646a69c9445cd8a9f921d4cd93bf50d108000200000000000000000159/
+
+**Gnosis Chain** 
+* Gnosis Chain Contract Address: 0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb
 * Explorer Link: https://blockscout.com/xdai/mainnet/token/0xb0C5f3100A4d9d9532a4CfD68c55F1AE8da987Eb
+
+**Listing Sites**
 * Coinmarketcap Link: https://coinmarketcap.com/currencies/daohaus/
 * Coingecko Link: https://www.coingecko.com/en/coins/daohaus

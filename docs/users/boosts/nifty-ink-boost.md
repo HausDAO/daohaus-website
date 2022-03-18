@@ -6,13 +6,13 @@ sidebar_label: Nifty Ink
 
 * **Category**: `NFTs`
 * **Publisher**: [DAOhaus](https://app.daohaus.club/dao/0x64/0xef3d8c4fbb1860fceab16595db7e650cd5ad51c1)
-* **Available Networks**: `Ethereum Mainnet`, `xDai`
+* **Available Networks**: `Ethereum Mainnet`, `Gnosis Chain`
 * **Github**: https://github.com/HausDAO/NiftyMInionSummoner
 
 
 ### Description 
 
-This NFT boost allows the DAO to interact with Nifty Ink on xDAI.
+This NFT boost allows the DAO to interact with Nifty Ink on Gnosis Chain.
 
 Buy and Sell Nifty Ink NFTs as a DAO using proposals
 

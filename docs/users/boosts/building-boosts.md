@@ -4,4 +4,4 @@ title: Building Boosts
 sidebar_label: Building Boosts
 ---
 
-We are working on instructions on Building Boosts. Please stay tuned for more information. 
+If you are a community developer interested in building boosts, do check out our [tutorial](/docs/devs/new-boosts) in our Developer docs section

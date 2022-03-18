@@ -1,4 +1,10 @@
-# DEX Guide
+---
+id: swap-tokens
+title: How to Swap Tokens on DEXes
+sidebar_label: Swap Tokens on DExes
+---
+
+# How to Swap Tokens on DEXes
 
 ## Allowances
 

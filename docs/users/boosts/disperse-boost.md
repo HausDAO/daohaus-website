@@ -6,7 +6,7 @@ sidebar_label: Disperse
 
 * **Category**: `Payments`
 * **Publisher**: `Boost Foundry`
-* **Available Networks**: `Ethereum Mainnet`, `xDai`, `Polygon`, `Arbitrum`
+* **Available Networks**: `Ethereum Mainnet`, `Gnosis Chain`, `Polygon`, `Arbitrum`
 * **Github**: `Github Link`
 
 :::info

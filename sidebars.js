@@ -61,6 +61,7 @@ module.exports = {
       "users/networks",
       "users/manage-proposal-playlists",
       "users/rage-quit",
+      "users/swap-tokens",
     ],
     Boosts: [
       "users/boosts/boosts",
@@ -81,6 +82,7 @@ module.exports = {
           "users/boosts/bank-buyout-boost",
           "users/boosts/nft-tribute-boost",
           "users/boosts/boost-catalog-format",
+          "users/boosts/minion-dev-suite-v4-boost",
           "users/boosts/minion-dev-suite-v3-boost",
           "users/boosts/minion-dev-suite-v2-boost",
           "users/boosts/minion-dev-suite-v1-boost",

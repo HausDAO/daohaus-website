@@ -1,160 +1,167 @@
 ---
-id: tx-api
-title: Transaction Legos
-sidebar_label: Transaction API
+id: tx-lego-api
+title: Transaction Lego
+sidebar_label: Transaction Lego
 ---
-Reference guide for the tx lego API
 
-#### contract:
+### contract
+(OBJECT)
 
-(STRING)
+Name of the contract service we'll be interacting with.
 
-Name of the contract service we'll be interacting with. The current choices are ``Moloch``, ``Minion``, and ``Token``. 
+If you would like to add another contract to interact with, head to `src/data/contracts.js` and add a new Contract Lego
 
-If you would like to add another contract to interact with: 
-
-- head to ``txHelpers.js`` and import a service and convert into it's own type of transaction. 
-- Then add the transaction function to the txMapObject inside of the ``Transaction()`` function. 
-- Follow the pattern existing Transaction functions use in the same doc.    
-
-#### tx.name 
+### name
 
 (STRING)
 
-Name of the service or abi function the txLego will use. This can be found in the Contract Service. In future version, this will use the name of the function in the ABI. 
+Name of the service or abi function the txLego will use. This can be found in the Contract Service. In future version, this will use the name of the function in the ABI.
 
-#### tx.poll 
+#### poll
 
-(STRING) 
+(STRING)
 
 For simple poll types. Currently the only option is `subgraph`. This can be used for the main DAOhaus subgraph. In the next update there will be options for other DAOhaus subgraphs and contract entities.
 
-#### tx.specialPoll 
+#### specialPoll
 
 (STRING)
 
-Until then, we can use ``specialPoll`` to interact with the many customPolls in PollService.js. Just add the name of the poll to this field. 
+Until then, we can use `specialPoll` to interact with the many customPolls in PollService.js. Just add the name of the poll to this field.
 
-**Note:** Many custom polls require arguments that are not implicit to the usual transaction flow. You can solve this by: 
+**Note:** Many custom polls require arguments that are not implicit to the usual transaction flow. You can solve this by:
 
-- Adding the required values directly to the values object. 
+- Adding the required values directly to the values object.
+
 ```js
- const unlock = async token => {
-    const unlockAmount = MaxUint256.toString();
-    await submitTransaction({
-      args: [daoid, unlockAmount],
-      tx: TX.UNLOCK_TOKEN,
-      values: { tokenAddress: token, unlockAmount },
-    });
-  };
-  ```
+const unlock = async (token) => {
+  const unlockAmount = MaxUint256.toString();
+  await submitTransaction({
+    args: [daoid, unlockAmount],
+    tx: TX.UNLOCK_TOKEN,
+    values: { tokenAddress: token, unlockAmount },
+  });
+};
+```
 
-Or ensuring that the argument name matches the name  that's' implicitly passed into the ``values`` object, as in the case of PROPOSAL_FORMS. 
-Do this by changing the named arguments passed into PollService and adapt it to the values currently passed in. 
+Or ensuring that the argument name matches the name that's' implicitly passed into the `values` object, as in the case of PROPOSAL_FORMS.
+Do this by changing the named arguments passed into PollService and adapt it to the values currently passed in.
 
-#### tx.onTxHash ([]STRING)
+#### onTxHash
 
-onTxHash is a lifecycle method that is used so commonly in functions that it has it's own field, keyword strings, and constants. 
+(ARRAY OF STRINGS)
 
-onTxHash always takes an array of strings. It's looking for keywords that control the UI when the transaction is fired. Current UI events are 
+onTxHash is a lifecycle method that is used so commonly in functions that it has it's own field, keyword strings, and constants.
+
+onTxHash always takes an array of strings. It's looking for keywords that control the UI when the transaction is fired. Current UI events are
 
 - `'openTxModal'`
 - `'closeProposalModal'`
 
-If you would like to add an action: 
-- Go to txHelpers.js 
-- Go to the CreateActions() fn
-- You'll see an object ``actions`` that interacts with an object called uiControl. This object has many of the global UI functions that the app uses to handle events. To see the map in detail, see ``uiControl`` inside of TXContext.js 
+If you would like to add an action:
 
-#### tx.display 
+- Go to `src/data/onTxHashActions.js`
+
+#### display
 
 (STRING)
 
-String for displaying the current transaction to users. Will be used in txList and txModal in the next update. 
+String for displaying the current transaction to users. Will be used in txList and txModal in the next update.
 
-#### tx.successMsg 
+#### successMsg
 
 (STRING)
 
 String that is displayed in the success toast when the transaction completes.
 
-#### tx.errMsg 
+#### errMsg
 
 (STRING)
 
-String that is displayed in the err toast when the transaction completes.
+String that is displayed in the error toast when the transaction completes.
 
-#### tx.detailsToJSON 
+#### detailsToJSON
 
-(Array of Strings)
+(ARRAY OF STRINGS)
 
-PROPOSAL_FORMS (and likely other transactions) require a `details` field to hold arbitrary JSON data. However, the app relies on this field to deliver consistent UI to the app. Because the data in this field is immutable, there are considerable consequences for passing data in here the wrong way. 
+PROPOSAL_FORMS (and likely other transactions) require a `details` field to hold arbitrary JSON data. However, the app relies on this field to deliver consistent UI to the app. Because the data in this field is immutable, there are considerable consequences for passing data in here the wrong way.
 
-The solution is to have a premade API to handle it. So now each transaction that has a details JSON string as an argument will use the detailsJSON field on its TX object. 
+The solution is to have a premade API to handle it. So now each transaction that has a details JSON string as an argument will use the detailsJSON field on its TX object.
 
-This field: 
+This field:
+
 - Takes an array of strings.
-- Searches the `values` object for fields with the same name as those strings. 
+- Searches the `values` object for fields with the same name as those strings.
 - Copies those fields into a new object.
-- Stringifies that object and turns and passes it to the argument slot as directed by the gatherArgs field. 
+- Stringifies that object and turns and passes it to the argument slot as directed by the gatherArgs field.
 
-Also: 
-- To keep the shape of detailsToJSON strings consistent, there is a DETAILS constant inside of ``contractTX.js``. 
+Also:
 
-Here's an example: 
+- To keep the shape of detailsToJSON strings consistent, there is a DETAILS constant inside of `src/data/details.js`.
+
+Here's an example:
 
 ```js
 export const DETAILS = {
-  STANDARD_PROPOSAL: ['title', 'description', 'hash', 'link'],
-  ...
-};
-
-  WHITELIST_TOKEN_PROPOSAL: {
-    ...
-    detailsJSON: DETAILS.STANDARD_PROPOSAL,
-    ...
-    gatherArgs: ['tokenAddress', 'detailsToJSON'],
+  STANDARD_PROPOSAL: {
+    title: `.values.title`,
+    description: `.values.description || ${HASH.EMPTY_FIELD}`,
+    link: `.values.link || ${HASH.EMPTY_FIELD}`,
+    proposalType: '.formData.type',
+  },
+  MINION_PROPOSAL: {
+    title: `.values.title`,
+    description: `.values.description || ${HASH.EMPTY_FIELD}`,
+    link: `.values.link || ${HASH.EMPTY_FIELD}`,
+    proposalType: '.formData.type',
+    minionType: '.formData.minionType',
   },
 ```
-In the above example, before WHITELIST_TOKEN_PROPOSAL passes, it's going to search the ``values`` object  for the array of strings in STANDARD_PROPOSAL. It will copy those key/value pairs to a new object. Then it will stringify that object and place it as the **second item** of that array. 
 
-#### tx.gatherArgs 
+#### gatherArgs
 
-(Array of string or objects)
+(ARRAY OF STRINGS OR OBJECTS)
 
-Search API for finding function arguments within the application. There are many ways to use gatherArgs. Takes an array that handles strings or objects (search params). 
+Search API for finding function arguments within the application. There are many ways to use gatherArgs. Takes an array that handles strings or objects (search params).
 
 ##### Shallow Search (values)
 
-Searches the ``values`` object for string keywords. Used by default if the search param is a string. 
-ex. 
+Searches the `values` object for string keywords. Used by default if the search param is a string.
+ex.
+
 ```
    gatherArgs: ['tokenAddress', 'tokenValue']
 ```
 
 ##### Deep Search (application-wide)
 
-Uses it's own search notation to find application state for within the React Context stores. 
+Uses it's own search notation to find application state for within the React Context stores.
+
 - Exists in a search param object.
-- Initiated by using 'search' in the `type` field. 
+- Initiated by using 'search' in the `type` field.
 - Depth of the search is controlled by an array that looks for nested fields with a matching name (can also do numerical array values).
 - Requires a strong understanding of the application data structure.
-- To be used in the most tricky situations. 
+- To be used in the most tricky situations.
 
-ex. 
+ex.
+
 ```
    gatherArgs: [
-     {type: 'search', fields: ['contextData', 'daoOverview', 'depositToken']}, 
+     {type: 'search', fields: ['contextData', 'daoOverview', 'depositToken']},
      {type: 'search', fields: ['values', 'nestedObject', 'nestedArray', '0']},
      ]
 
 ```
+
 ##### Static values
-For hardcoded static values. 
+
+For hardcoded static values.
+
 - Exists in a search param object.
 - Initiated by using the keyword 'static' in the field `type`.
 
-ex. 
+ex.
+
 ```
      gatherArgs: [{type: 'static' value: 42}],
 
@@ -162,65 +169,68 @@ ex.
 
 ##### detailsToJSON
 
-String keyword that turns anything in the detailsJSON array into a JSON object. 
+String keyword that turns anything in the detailsJSON array into a JSON object.
 
 Read more about how this works in tx.detailsJSON.
-
 
 ##### Mix'n Match Approach
 
 - Args don't need to be of one type.
 - They can use any combination of search types.
+
 ```
 gatherArgs: [
-     {type: 'search', fields: ['contextData', 'daoOverview', 'depositToken']}, 
-     'tokenValue', 
-     {type: 'static' value: 42}, 
+     {type: 'search', fields: ['contextData', 'daoOverview', 'depositToken']},
+     'tokenValue',
+     {type: 'static' value: 42},
      'detailsToJSON'
      ]
 ```
 
-#### tx.argsFromCallback
+#### argsFromCallback
 
-(Boolean)
+(BOOLEAN)
 
-Indicates that args will not be gathered from either the React Component or using the ``gatherArgs`` field. 
+Indicates that args will not be gathered from either the React Component or using the `gatherArgs` field.
 
-
-Instead, this transaction will use a callback function that is declared inside of ``argBuilderCallback{}``inside of ``txHelpers.js``. 
-
+Instead, this transaction will use a callback function that is declared inside of `argBuilderCallback{}`inside of `txHelpers.js`.
 
 - Each field in this object is a callback function.
 - The name of the callback function must be the same as the name of the transaction.
-- Each callback has access to ``values``, ``tx`` (tx lego data), ``contextData`` (application State) ``formData`` (form lego data), a ``hash``, each as named arguments. 
+- Each callback has access to `values`, `tx` (tx lego data), `contextData` (application State) `formData` (form lego data), a `hash`, each as named arguments.
 
-Because these callbacks are non-composable, their uses are limited to: 
+Because these callbacks are non-composable, their uses are limited to:
+
 - Fast protoyping (temporary; not pushed to prod).
 - last resort (no other option).
 
-In every case, a TXs arg from callback will eventually need to be refactored into static data, either through refactoring a fast protoype or improving the txLego system. 
+In every case, a TXs arg from callback will eventually need to be refactored into static data, either through refactoring a fast protoype or improving the txLego system.
 
 #### createDiscourse
 
-(Boolean)
+(BOOLEAN)
 
-Used mostly for proposals. Will create a discourse onPollSuccess. 
+Used mostly for proposals. Will create a discourse onPollSuccess.
 
 #### args
 
-A way to pass contract arguments directly into the tx at the component level (see tutorial). 
+(STRING OR ARRAY OF STRINGS)
+
+A way to pass contract arguments directly into the tx at the component level (see tutorial).
 
 #### values
 
-In cases where a form isn't creating it's own values object from ``react-hook-form``, values can be passed into the transaction manually at the component level. 
+(STRING OR ARRAY OF STRINGS)
 
-This can be useful in cases where a transaction is using a customPoll. 
+In cases where a form isn't creating it's own values object from `react-hook-form`, values can be passed into the transaction manually at the component level.
+
+This can be useful in cases where a transaction is using a customPoll.
 
 #### lifecycleFns
 
-Lifecycle functions that execute functions at different stages in a transaction's execution. This is for special situations where a custom, non-standard UI event needs to be triggered at a certian stage. 
+Lifecycle functions that execute functions at different stages in a transaction's execution. This is for special situations where a custom, non-standard UI event needs to be triggered at a certian stage.
 
-There are five lifecycle functions in total. 
+There are five lifecycle functions in total.
 
 ```js
 await submitTransaction({
@@ -234,4 +244,3 @@ await submitTransaction({
         onCatch: () => If fail, do this
     });
 ```
-

@@ -6,7 +6,7 @@ sidebar_label: DAO Books
 
 * **Category**: `Finance`
 * **Publisher**: [Boost Foundry](https://app.daohaus.club/dao/0x64/0xbceaa243b78912e55cbf1a3a5ff74d5713ea435)
-* **Available Networks**: `Ethereum Mainnet`,  `Polygon`, `Arbitrum`, `Gnosis Chain`
+* **Available Networks**: `Ethereum Mainnet`,  `Polygon`, `Arbitrum`, `Optimism`, `Gnosis Chain`
 * **Github**: -
 
 :::info

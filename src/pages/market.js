@@ -37,14 +37,14 @@ const Market = () => {
                   other.
                 </p>
                 <div className="HeroButtonGroup">
-                  <a
+                  {/* <a
                     href="https://forms.clickup.com/f/83fyz-1328/HVGD4PGGSGBOYUYR2U"
                     className="Button Secondary"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Tell us about your Service DAO
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <div className="Column--50">

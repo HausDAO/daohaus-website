@@ -162,6 +162,7 @@ module.exports = {
         label: "Compensation",
         items: [
           "handbook/contributors/contributors-comp-overview",
+          "handbook/contributors/contributors-coordinape-overview",
           "handbook/contributors/contributors-comp-retro",
           "handbook/contributors/contributors-comp-commit",
           "handbook/contributors/contributors-earn-power",

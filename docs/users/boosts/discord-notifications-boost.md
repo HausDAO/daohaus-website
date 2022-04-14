@@ -6,7 +6,7 @@ sidebar_label: Discord Notifications
 
 * **Category**: `Community`
 * **Publisher**: [DAOhaus](https://app.daohaus.club/dao/0x64/0xef3d8c4fbb1860fceab16595db7e650cd5ad51c1)
-* **Available Networks**: `Ethereum Mainnet`, `Polygon`, `Gnosis Chain`, `Arbitrum`
+* **Available Networks**: `Ethereum Mainnet`,  `Polygon`, `Arbitrum`, `Optimism`, `Gnosis Chain`
 * **Github**: https://github.com/HausDAO/Minion-Factory
 
 :::info

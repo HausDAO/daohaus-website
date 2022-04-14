@@ -34,6 +34,10 @@ __Arbitrum__
 - Swapr
 - Uniswap
 
+<!-- TODO __Optimism__ -->
+
+<!-- TODO __Polygon__  -->
+
 Uniswap forks rely on the UniswapV2Router contract to navigate pairs and handle the liquidity provision and swapping. Check out [UniswapV2Router02.sol](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol) for the full contract.
 
 > Look into the AutoRouter that leverages both v2 and v3 liquidity.

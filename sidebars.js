@@ -144,6 +144,7 @@ module.exports = {
     ],
     Contributors: [
       "handbook/contributors/contributors-get-started",
+      "handbook/contributors/contributors-join-warcamp",
       {
         type: "category",
         label: "Rangers",

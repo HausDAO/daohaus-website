@@ -38,4 +38,6 @@ For Boosts that require a Minon, the installation steps will bring you through s
 
 ## Who can build Boosts? 
 
-Boosts in the DAOhaus Ecosystem can be built by any community developers. We will be releasing more tutorials, documentation & grants soon, so stay tuned here! 
+Boosts in the DAOhaus Ecosystem can be built by any community developers. 
+
+To learn more visit our developer documenation: [How to build a Boost](../../devs/new-boosts.mdx)

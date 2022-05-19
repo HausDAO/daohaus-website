@@ -38,9 +38,10 @@ module.exports = {
     Intro: [
       "users/intro",
       "users/intro-dao",
+      "users/intro-why",
       "users/intro-moloch",
-      "users/glossary",
       "users/haus-token",
+      "users/glossary",
     ],
     Features: [
       "users/hub",

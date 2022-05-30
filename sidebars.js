@@ -98,7 +98,6 @@ module.exports = {
       "users/summoner-faq",
       "users/settings-faq",
       "users/boosts-faq",
-      "users/allies-faq",
       "users/profile-faq",
       "users/minion-faq",
       "users/other-networks-faq",

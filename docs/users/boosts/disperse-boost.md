@@ -7,7 +7,7 @@ sidebar_label: Disperse
 * **Category**: `Payments`
 * **Publisher**: `Boost Foundry`
 * **Available Networks**: `Ethereum Mainnet`,  `Polygon`, `Arbitrum`, `Optimism`, `Gnosis Chain`
-* **Github**: `Github Link`
+* **Github**: -
 
 :::info
 Editors' note: Built with disperse.app's smart contracts, this Boost helps distribute tokens to multiple addresses, regardless whether they are DAO members or not. This is perfect for distributing token airdrops, farming rewards or even compensation payouts. 

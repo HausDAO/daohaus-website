@@ -5,6 +5,9 @@ sidebar_label: Subgraphs
 slug: /devs/subgraphs
 ---
 
+
+```TODO: Add in new copy```
+
 ## What is TheGraph?
 
 The Graph is an indexing protocol that the incentivizes and coordinates indexing of public blockchain data. The Graph provides queryable data using GraphQL for your API to plug into. By indexing Moloch contracts with The Graph any user with an access to TheGraph can find data on all compatible DAOs instantly.

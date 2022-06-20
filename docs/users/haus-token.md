@@ -47,4 +47,4 @@ The HAUS token is currently available on Gnosis Chain and Mainnet.
 
 
 ---
-> #### **Up Next, learn the lingo at the [Glossary](glossary)**
+> #### **Up Next, learn the lingo at the [Glossary](/docs/users/glossary)**

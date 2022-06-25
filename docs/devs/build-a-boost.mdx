@@ -1,0 +1,585 @@
+---
+id: build-a-boost
+sidebar_label: Build a Boost
+slug: /devs/build-a-boost
+---
+
+# How to Build a Boost (Mint a Million)
+Creating a DAOhaus Boost is a way to add functionality to the [DAOhaus Interface](https://app.daohaus.club). 
+
+ This tutorial will show you how to create a **Contract Boost**. Contract Boosts enable your DAO to initiate an interaction with an external smart contract. 
+
+This "Mint a Million" Contract Boost will allow a DAO to create an ERC-20 token with 1 million supply using a [Factory Contract](https://rinkeby.etherscan.io/address/0xe4E893AffD33dDED43ECdf8bBC550639c84485e5#code) we have supplied for you. The token will be managed by a Minion and Safe in your DAO. 
+
+>Learn more about the [DAOhaus Proposal Process](../users/proposals)
+
+> Learn more about [Minions & Safes](../users/bank) 
+
+# Contract Boost Overview 
+To build a Contract Boost, there are 3 primary components you'll need to create: 
+1. **Form:** The form used to collect data from the proposer that is needed to execute the external contract interaction.
+2. **Contract:** The contract address and the Applicaton Binary Interface (ABI) provided by the contract.
+3. **Transaction Schema:** The data to send to the contract when the proposal passes.
+
+> Learn more about Boosts at the [Boosts Overview page here](../users/boosts/boosts)
+
+Resources: 
+* [Youtube Video Walkthrough](https://youtu.be/Xk1nETEvuJw)
+* [Completed Tutorial Code](https://github.com/HausDAO/daohaus-app/pull/1819/files)
+
+>  Throughout this tutorial, we have annotated video timings in the format of (XX:XX), so you can refer to the video for more details
+
+---
+
+# Getting Started
+
+> This tutorial was created using Terminal on MacOS.  If you are using a different OS, you may have to change some of these commands, but the process will be the same.
+
+**Clone and configure your local git repo:**
+
+Follow these steps to clone the [daohaus-app github repo](https://github.com/HausDAO/daohaus-app) and create a branch with the format ```mint_a_million_<yourdiscordhandle>```. 
+
+>Remember to replace ```<yourdiscordhandle>``` with your Discord handle. This helps us when providing support.
+
+  * ```git clone https://github.com/HausDAO/daohaus-app.git```
+  * ```cd daohaus-app```
+  * ```git branch mint_a_million_<yourdiscordhandle>```
+  * ```git checkout mint_a_million_<yourdiscordhandle>```
+  * ```touch .env```
+* Open the `.env` file you just created with ```touch``` in your root directory and add the following:
+``` g
+GENERATE_SOURCEMAP=false
+REACT_APP_DEV=true
+
+REACT_APP_RPC_URI=`Your URI here` 
+REACT_APP_INFURA_PROJECT_ID= `Your Infura Project ID here` 
+```
+>If you don't have an RPC_URI or INFURA_PROJECT_ID, you can delete those lines. You can complete this tutorial without them, but you won't be able to initiate contract transactions from your local machine. 
+
+
+**Install dependencies and launch:**
+
+From the root of your application: 
+* Run `yarn install` to install dependencies
+* Run `yarn start` to launch the DAOhaus app
+
+> For guidelines on contributing to DAOhaus repositories, refer to the [Contribution Guidelines](./goals-and-ideals)
+
+---
+
+# 1. Build your Form ([31:52](https://youtu.be/Xk1nETEvuJw?t=1912))
+In this step, we will set up your Contract Boost's proposal form and fields that are required to create the proposal and execute the external contract call.
+
+### 1.1 Create **[mintAMillionForms.js](https://github.com/HausDAO/daohaus-app/pull/1819/files#diff-b7c92f30157b49e73f304e34c7c3d54cdd30d0908029a0b0b7fe1be85e476c3d)** in `src/data/formLegos/` for your Boost 
+
+Create a new file in directory ```daohaus-app/src/data/formLegos``` named ```mintAMillionForms.js```
+
+Add the following code to mintAMillionForms.js: 
+
+```jsx title="/src/data/formLegos/mintaMillionForms.js"
+import { MINION_TYPES, PROPOSAL_TYPES } from '../../utils/proposalUtils';
+import { FIELD } from '../fields';
+import { TX } from '../txLegos/contractTX';
+
+export const MILLION_FORMS = {
+  SUMMON_TOKEN: {
+    id: 'SUMMON_TOKEN',
+    title: 'Mint A Million',
+    description: 'Mint a million of a new token!',
+    type: PROPOSAL_TYPES.MINT_A_MILLION,    // Custom proposal types that allow you to render custom proposal UIs ??
+    minionType: MINION_TYPES.SAFE,    // Selects only the "Safe Minion"
+    dev: true, // Shows the Proposal on your DEV Test List for testing
+    logValues: true, // Logs form values in the console  
+    tx: null, // Will build this in step 2
+    required: [], // Specifies required fields from the below fields
+    fields: [], // Specifies fields to be shown on the form
+  },
+};
+
+```
+
+This file will export a single React object that will be used to generate a form for your Boost in the DAOhaus App. It is possible to create multiple forms in a file, but we will just be creating 1 form here called `SUMMON_TOKEN`
+
+
+### 1.2 Import and add `MILLION_FORMS` object to `src/data/formLegos/forms.js`
+
+`src/data/formLegos/forms.js` is the central directory for all forms available in the DAOhaus app. This step imports and stores the `MILLION_FORMS` object (i.e. Mint a Million form formats) in the central directory.
+
+**Import and add the form:**
+
+* Add `import { MILLION_FORMS } from './mintAMillionForms';` to the list of imports in ```forms.js```
+* Next add `...MILLION_FORMS` to the `FORM` object. 
+
+
+
+```jsx title="src/data/formLegos/forms.js"
+import { CLASSIC_FORMS } from './classics';
+
+    ...
+
+import { POSTER_FORMS } from './posterForms';
+// highlight-next-line
+import { MILLION_FORMS } from './mintAMillionForms'; //ADD THIS
+
+export const FORM = {
+  ...CLASSIC_FORMS,
+    
+    ...
+    
+  ...POSTER_FORMS,
+  // highlight-next-line
+  ...MILLION_FORMS, //AND THIS
+};
+```
+### 1.3 Preview your Form
+The `dev: true` flag from step 1.1 will let you see your form in the 'DEV Test List' playlist - a special playlist used for testing. It will be visible only because you added ```REACT_APP_DEV=true``` to your ```.env``` file above. This allows you to access and test the proposal before it is complete. 
+
+
+> *Playlists* are groupings of Boosts that are related to one another. DEV Test List playlist is a special playlist specifically for the development environment.  
+
+
+To preview your form in the Proposal Playlist, you will need to have an existing DAO locally. If you have not already summoned a DAO, you can summon one at localhost:3000/summon
+
+> Learn more about [Summoning DAOs](/docs/users/summon)
+
+**Preview your form:**
+* First, ```yarn start``` and Load the app at [http://localhost:3000](http://localhost:3000).
+* Navigate to your DAO and click on **View Proposals** then **New Proposal** to open the Proposal Playlist modal. 
+* Click the **Manage** gear icon to reveal the DEV Test List playlist.
+
+![](https://i.imgur.com/HDK5vOx.png)
+
+You should now be able to see a Playlist called "DEV Test List" with the "Mint a Million" Proposal type. ([51:32](https://youtu.be/Xk1nETEvuJw?t=3093))
+
+![](https://i.imgur.com/p7bkwV5.png)
+
+![](/img/mint_a_million_form.png)
+
+
+Good job! You've created and previewed your Boost form.  Obviously, the form does not have any fields yet. 
+We will add those in the following steps, but first we'll do some configuration that allows the form to initiate a proposal. 
+
+## 1.4 Add a new Proposal Type in `src/utils/proposalUtils.jsx`
+
+Add `MINT_A_MILLION: 'Mint a Million',` to the `PROPOSAL_TYPES` object in `src/utils/proposalUtils.jsx`.
+
+`proposalsUtils.js` is the central directory for all proposal utilities available in the DAOhaus app. This step signals to the DAOhaus App that it should consider your boost proposal as a valid proposal type.
+
+```jsx=31 title="/src/utils/proposalUtils.jsx"
+...
+export const PROPOSAL_TYPES = {
+  CORE: 'Core',
+  MEMBER: 'Member Proposal',
+  SIGNAL: 'Signal Proposal',
+
+    ...
+    
+  SWAPR_STAKING: 'Swapr Staking Proposal',
+  POSTER_RATIFY: 'Ratify Content',
+  POSTER_RATIFY_DOC: 'Ratify DAO DOC',
+  // highlight-next-line
+  MINT_A_MILLION: 'Mint a Million',
+};
+...
+```
+## 1.5 Adding Fields 
+When creating the form, we need to create fields to collect data (in this case: Supply, Name, Symbol, Receiver) from users to initiate the contract call.
+
+> View the contract we'll be calling on Etherscan: [Summon Token Contract](https://rinkeby.etherscan.io/address/0xe4E893AffD33dDED43ECdf8bBC550639c84485e5#writeContract). 
+
+In this form, we will include:
+1. A `Select a Minion` field to indicate which minion will own the newly minted ERC-20 tokens (aka the Receiver)
+2. A `Token Name` field for the token's name (e.g `My Cool Token`)
+3. A `Token Symbol` field for the token's symbol (e.g. `MCT`) 
+
+> We will not be asking for token supply because we are hardcoding it to 1,000,000 (hence the name 'Mint a Million')
+
+#### 1.5.1 Add `FIELD.MINION.SELECT` as the first field ([49:58](https://youtu.be/Xk1nETEvuJw?t=2998))
+
+In `mintAMillionForms.js` add a minion select field to your fields array:
+```jsx
+...
+    fields: [
+      // Specifies fields to be shown on the form
+      [FIELD.MINION_SELECT],
+    ],
+...
+```
+
+`FIELD.MINION_SELECT` is a prebuilt form field provided for you by the DAOhaus app. It will create a dropdown with all of the DAO's minions. This field will give us access to the Safe Minion address, which we will need to construct our transaction in Step 3.
+
+> Note that ```[FIELD.MINION_SELECT]``` is an array inside of the ```fields[]``` array.  Nested arrays are used to create columns in DAOhaus forms. 
+
+#### 1.5.2 Create a custom field for Token Name and Symbol
+
+
+Modify `mintAMillionForms.js` to add these custom fields to your fields array:
+
+
+``` jsx
+...
+fields: [
+      //left column
+      [
+        // Specifies fields to be shown on the form
+        [FIELD.MINION_SELECT],
+      ],
+      //right column
+      [
+        {
+          type: 'input', // Standard HTML input
+          label: 'Token Name', // Renders this as form title
+          name: 'tokenName', // This is how the field will be referenced across files
+          htmlFor: 'tokenName',
+          placeholder: 'Token Name', // Placeholder text
+          expectType: 'any', // Type check (e.g. 'number')
+        },
+        {
+          type: 'input',
+          label: 'Token Symbol',
+          name: 'tokenSymbol',
+          htmlFor: 'tokenSymbol',
+          placeholder: 'Token Symbol',
+          expectType: 'any',
+        },
+      ],
+    ],
+...
+```
+There are many field types in the DAOhaus App that you can reuse for your form. In this case, we will create custom form fields to collect the token name and the token symbol. 
+
+> For more information on Form Legos, refer to [Form Legos](./legos/form-lego-api)
+
+> **A Note on Form Columns:** The `fields` array includes a subarray that holds the form fields.  If your form requires multiple field columns, create subarrays (one for each column) within the `fields` array. Form elements in these separate subarrays will appear in separate columns.
+
+
+
+Your form should look like this: 
+
+![](/img/mint_a_million_form2.png)
+
+> Remember to preview your own form in the DEV Test Playlistafter each step by repeating step 1.3 above
+
+#### 1.5.3 Make all fields required 
+For this form, we need DAO members to fill in all three fields (i.e. Select a Minion, Token Name & Token Symbol). 
+
+Add the `name` property of each field into the `required` array. Required means if the user does not provide these fields, the form will not submit. 
+
+Your completed `mintAMillionForms.js` file should look like this: 
+
+```jsx title="/src/data/formLegos/mintaMillionForms.js"
+import { MINION_TYPES, PROPOSAL_TYPES } from '../../utils/proposalUtils';
+import { FIELD } from '../fields';
+import { TX } from '../txLegos/contractTX';
+
+export const MILLION_FORMS = {
+  SUMMON_TOKEN: {
+    id: 'SUMMON_TOKEN',
+    title: 'Mint A Million',
+    description: 'Mint a million of a new token!',
+    type: PROPOSAL_TYPES.MINT_A_MILLION,
+    minionType: MINION_TYPES.SAFE,
+    dev: true,
+    logValues: true,
+    tx: TX.SUMMON_TOKEN,
+    // highlight-next-line
+    required: ['tokenName', 'tokenSymbol', 'selectedMinion'],
+    fields: [
+      [
+        FIELD.MINION_SELECT,
+        {
+          type: 'input',
+          label: 'Token Name',
+          name: 'tokenName',
+          htmlFor: 'tokenName',
+          placeholder: 'Token name',
+          expectType: 'any',
+        },
+        {
+          type: 'input',
+          label: 'Token Symbol',
+          name: 'tokenSymbol',
+          htmlFor: 'tokenSymbol',
+          placeholder: 'Token Symbol',
+          expectType: 'any',
+        },
+      ],
+    ],
+  },
+};
+
+```
+Your completed form, with asterixes indicating required fields, should look like this:
+![](/img/mint_a_million_form3.png)
+
+Preview your form one more time in the DEV Test Playlist to make sure your form matches the above. 
+
+>Bonus: Try modifying the array structure in your form to show all of the fields in one column
+
+# 2. Import your Contract
+Now that your proposal form is ready, let's set up the contracts that your Boost will be interacting with. 
+
+## Step 2.1: Add your contract address in `src/utils/chain.js`
+The `chain.js` file stores all the contract addresses that the application needs to have access to. Contract addresses are separated by network chains (e.g. Ethereum Mainnet, Rinkeby, etc.)
+
+Our contract exists on Rinkeby, so we will add the contract address to the Rinkeby object. The Mint a Million Contract address is `0xe4E893AffD33dDED43ECdf8bBC550639c84485e5`
+
+Add `erc20_summon:'0xe4E893AffD33dDED43ECdf8bBC550639c84485e5',`  to the `'0x4'` (i.e. Rinkeby) object. Your field can technically be added anywhere in the object, but let's add it after the `moloch_factor_addr` in `chain.js` field to keep things organized:
+
+
+
+``` jsx title='src/utils/chain.js'
+'0x4': {
+   name: 'Ethereum Rinkeby',
+    short_name: 'rinkeby',
+    shortNamePrefix: 'rin',
+    nativeCurrency: 'ETH',
+    network: 'rinkeby',
+    network_id: 4,
+    chain_id: '0x4',
+    
+        ...
+    
+    minion_factory_addr: '0x313F02A44089150C9ff7011D4e87b52404A914A9',
+    moloch_factory_addr: '0xC33a4EfecB11D2cAD8E7d8d2a6b5E7FEacCC521d',
+    //highlight-next-line
+    erc20_summon: '0xe4E893AffD33dDED43ECdf8bBC550639c84485e5', // Our contract address
+        
+        ...
+}
+```
+
+## 2.2 Create a new object in `src/data/contracts.js`
+
+Open `src/data/contracts.js` and add the following `ERC_20_SUMMON` object to the CONTRACTS object:
+
+``` jsx title='src/data/contracts.js'
+export const CONTRACTS = {
+
+    ...
+  //highlight-next-line
+  ERC_20_SUMMON: {
+    //highlight-next-line
+    location: 'local',
+    //highlight-next-line
+    abiName: 'ERC_20_SUMMON',
+    //highlight-next-line
+    contractAddress: '.contextData.chainConfig.erc20_summon',
+  //highlight-next-line
+  },
+    
+    ...
+}
+```
+
+> The DAOhaus app uses a `.` search notation to point to data / properties within objects in the codebase. For instance, the `contractAddress: '.contextData.chainConfig.erc20_summon',` will point to the `erc20_summon` property within the `chainConfig` object that you added in Step 2.1 above
+
+
+## 2.3 Add contract ABIs to `erc20Summon.json`
+
+First create a new file ```erc20Summon.json``` in `src/contracts` ([1:07:33](https://youtu.be/Xk1nETEvuJw?t=4053))
+
+Next, navigate to the [Mint a Million contract](https://rinkeby.etherscan.io/address/0xe4E893AffD33dDED43ECdf8bBC550639c84485e5#code) on Etherscan. 
+
+Then, copy and paste the ABIs for this contract by clicking the 'Copy All to clipboard' button in the Contract ABI section. Paste the Contract ABI into erc20Summon.json
+
+![](https://i.imgur.com/Znp7wuA.png)
+
+These ABIs will be used by the DAOhaus app when creating a transaction and interacting with the smart contract's available functions. 
+
+You can see a completed example in the Mint a Million example repo: [erc20Summon.json](https://github.com/HausDAO/daohaus-app/pull/1819/files#diff-f2074041d89d84186ebb17c25d819247a85a04a7cce7cfefde67b9f4700e3eee)
+
+## 2.4 Import the contract ABIs into `src/utils/abi.js` ([1:08:10](https://youtu.be/Xk1nETEvuJw?t=4090))
+
+The `abi.json` file is a central directory of all contract ABIs which the DAOhaus app will interact with. This step imports and stores the `ERC_20_SUMMON` object (i.e. Mint a Million Factory contract ABIs) into the central directory.
+
+Open `src/utils/abi.js` and add the following 2 lines:
+
+`import ERC_20_SUMMON from '../contracts/erc20Summon.json'`
+
+`ERC_20_SUMMON,`
+
+The resulting file should look something like this: 
+``` jsx title='src/utils/abi.js'
+import { encodeMultiSend } from '@gnosis.pm/safe-contracts';
+import Web3 from 'web3';
+import { Contract, BigNumber } from 'ethers';
+    ...
+import MOLOCH_TOKEN_FACTORY from '../contracts/molochTokenFactory.json';
+//highlight-next-line
+import ERC_20_SUMMON from '../contracts/erc20Summon.json' // ADD THIS
+    ...
+    
+export const LOCAL_ABI = Object.freeze({
+  MOLOCH_V2,
+  ERC_20,
+  VANILLA_MINION,
+    ...
+  MOLOCH_TOKEN_FACTORY,
+  //highlight-next-line
+  ERC_20_SUMMON,  // AND THIS
+    ...
+```
+
+Verify that the `ERC_20_SUMMON` property matches in both `src/utils/abi.js` and `src/data/contracts.js`
+
+## 2.5 Create a new Proposal Type in `src/data/details.js`
+
+Add the following code to the `DETAILS` object
+
+``` jsx title='src/data/details.js'
+  MILLION: {
+    title: `Mint a Million!!!`,
+    proposalType: '.formData.type',
+  },
+```
+
+The `title` object will determine the Proposal title on the Proposal Card within the DAOhaus app. 
+
+The `proposalType` object will reference the proposal type, which appears in different places in the DAOhaus UI. `.formData.type` references the fields you added to `src/utils/proposalUtils.jsx` earlier in the tutorial.  
+
+![](https://i.imgur.com/c176gwk.png)
+
+
+At the end of this step, you have done the necessary set up for your contracts within the DAOhaus app. The next step will be to build and test your transaction!
+
+
+# 3. Build your Transaction 
+
+## 3.1 Create `millionTx.js` in `src/data/txLegos` ([1:11:45](https://youtu.be/Xk1nETEvuJw?t=4305))
+
+First, create a new file called `millionTx.js` in `src/data/txLegos`
+
+Next, add the following code to the file to export the ```MILLION_TX``` object.
+
+Note that the ```SUMMON_TOKEN``` property matches the property we added to ```mintAMillionForms.js```
+This detail will be important when you create your own custom boost. 
+
+```jsx title='src/data/txLegos'
+import { buildMultiTxAction } from '../../utils/legos';
+import { CONTRACTS } from '../contracts';
+
+export const MILLION_TX = {
+  SUMMON_TOKEN: buildMultiTxAction({
+    actions: [
+      {
+        targetContract: '.contextData.chainConfig.erc20_summon', // Location for Contract Address (Added in the previous step)
+        abi: CONTRACTS.ERC_20_SUMMON, // Contract ABI (Added in the previous step)
+        fnName: 'summonToken', // Function name in ABI
+        args: [],
+      },
+    ],
+  }),
+};
+
+```
+
+## 3.2 Add your transaction arguments 
+
+Recall that we pasted these fields into the `erc20Summon.json` file after copying them from the Contract ABI section on Etherscan:
+```json title='src/contracts/erc20Summon.json'
+"inputs": [
+  { "internalType": "uint256", "name": "supply", "type": "uint256" },
+  { "internalType": "string", "name": "name", "type": "string" },
+  { "internalType": "string", "name": "symbol", "type": "string" },
+  { "internalType": "address", "name": "receiver", "type": "address" }
+```
+
+
+In our new file `millionTx.js` we need to specify the arguments for the transaction in the same order as they are defined by the Contract ABI. 
+
+Add the following arguments to the `args` property in `millionTx.js`:
+
+```jsx title='src/data/txLegos/millionTX.js'
+args: [
+  '1000000000000000000000000', // Supply (Hardcoded to 1 million in Gwei)
+  '.values.tokenName', // Token Name
+  '.values.tokenSymbol', // Token Symbol
+  '.values.selectedSafeAddress', // Safe Address as the owner
+],
+```
+
+The first argument above is a hardcoded value of 1000000000000000000000000  (i.e. 1,000,000 in Gwei) to automatically mint a million tokens. 
+
+The remaining arguments will be provided by the user through form inputs. The DAOhaus app uses React Hooks in its forms, returning form inputs in an object called `values`. 
+
+In the example above, we used dot notation to extract the values provided by the users of the form for the next three arguments (i.e.tokenName, tokenSymbol & selectedSafeAddress). Selected Safe Address is made available by the MINION_SELECT form field we specified in step 1.5.1
+
+When building the transaction, the above values will be submitted as a part of the transaction. This will mint 1,000,000 tokens with `tokenName` and `tokenSymbol` specified by the user, specificing the Minion Safe `selectedSafeAddress` as the owner.
+
+## 3.3 Add the proposal's `detailstoJSON` reference
+
+Import the `DETAILS` object into `millionTX.js`:
+
+```jsx
+import { DETAILS } from '../details';
+```
+
+Add the following property to the `SUMMON_TOKEN` object:
+
+``` jsx 
+detailstoJSON: DETAILS.MILLION,
+```
+
+The detailstoJSON property refers to the object added to `details.js` (Step 2.6) which contains all proposal details required for rendering proposals (e.g. title, description, etc.)
+
+At the end of this step, your code in `millionTX.js` should look like this
+
+``` jsx title='src/data/txLegos/millionTX.js'
+import { buildMultiTxAction } from '../../utils/legos';
+import { CONTRACTS } from '../contracts';
+// highlight-next-line
+import { DETAILS } from '../details';
+
+export const MILLION_TX = {
+  SUMMON_TOKEN: buildMultiTxAction({
+    actions: [
+      {
+        targetContract: '.contextData.chainConfig.erc20_summon',
+        abi: CONTRACTS.ERC_20_SUMMON,
+        fnName: 'summonToken',
+        // highlight-start
+        args: [
+          '1000000000000000000000000',
+          '.values.tokenName',
+          '.values.tokenSymbol',
+          '.values.selectedSafeAddress',
+        ],
+        // highlight-end
+      },
+    ],
+    // highlight-next-line
+    detailsToJSON: DETAILS.MILLION,
+  }),
+};
+```
+
+## 3.4 Import the MILLION_TX object into `src/txLegos/contractTX.js`
+
+First, add the following code to import the `MILLION_TX` object. 
+```jsx
+import { MILLION_TX } from './millionTX';
+```
+
+Next, add 
+```jsx
+...MILLION_TX,
+``` 
+to the `TX` object in `src/txLegos/contractTX.js`. 
+
+Once this step is complete, you are ready to test your transaction to mint a million tokens.
+
+Navigate to your Proposals and submit a Mint a Million Proposal to test your Boost!
+
+
+# 4. Submit a PR to the [daohaus-app repository]((https://github.com/HausDAO/daohaus-app))
+
+When you've completed your Mint a Million Boost, submit a [Github Pull Request](https://github.com/HausDAO/daohaus-app/pulls) with your own branch ```mint_a_million_<yourdiscordhandle>```. 
+
+We'd love to check out what you've built and reach out for support or feedback. 
+
+You are now ready to create a Boost to interact with any external smart contracts - just swap out the contracts and fields you used above! What will you create next?
+
+If you are building a custom boost, please reach out to `@arentweall` + `@ui369` on the [DAOhaus Discord server](https://discord.com/invite/daohaus) and let us know! We'd love to provide developer support for your Boost! 
+
+---

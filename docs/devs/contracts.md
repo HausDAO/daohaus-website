@@ -5,6 +5,8 @@ sidebar_label: Contracts
 slug: /devs
 ---
 
+```TODO: Add in new copy```
+
 ## Moloch Version 2
 
 > Moloch v2 is designed to extend MolochDAO's operations from purely single-token public goods grants-making to acquiring and spending (or investing in) an unlimited portfolio of assets.

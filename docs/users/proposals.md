@@ -1,8 +1,7 @@
 ---
-id: proposals-intro
+id: proposals
 title: Proposals
 sidebar_label: Proposals
-slug: /proposals
 ---
 
 Proposals can be used for all types of decision-making in the DAO. Add/remove members, allocate Shares and Loot, distribute funds, and even interact with other applications and communities.

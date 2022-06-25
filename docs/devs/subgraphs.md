@@ -5,6 +5,9 @@ sidebar_label: Subgraphs
 slug: /devs/subgraphs
 ---
 
+
+```TODO: Add in new copy```
+
 ## What is TheGraph?
 
 The Graph is an indexing protocol that the incentivizes and coordinates indexing of public blockchain data. The Graph provides queryable data using GraphQL for your API to plug into. By indexing Moloch contracts with The Graph any user with an access to TheGraph can find data on all compatible DAOs instantly.
@@ -16,8 +19,7 @@ The primary DAOhaus Subgraph tracks the primary entities of DAOs: members, propo
 ### DAOhaus Subgraph Explorers
 
 - [Mainnet](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus)
-- [Kovan](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-kovan)
-- [Rinkeby](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-rinkeby)
+- [Göerli](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-goerli)
 - [Gnosis Chain](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-xdai)
 - [Polygon](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-matic)
 - [Optimism](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-optimism)
@@ -29,8 +31,7 @@ The primary DAOhaus Subgraph tracks the primary entities of DAOs: members, propo
 The DAOhaus Stats Subgraph provides aggregated statistics and metrics for users and communities across the platform.
 
 - [Mainnet](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats)
-- [Kovan](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-kovan)
-- [Rinkeby](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-rinkeby)
+- [Göerli](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-goerli)
 - [Gnosis Chain](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-xdai)
 - [Polygon](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-matic)
 - [Optimism](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-optimism)
@@ -42,8 +43,7 @@ The DAOhaus Stats Subgraph provides aggregated statistics and metrics for users 
 The DAOhaus Boosts Subgraph provides aggregated statistics and metrics for boosts across the platform.
 
 - [Mainnet](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts)
-- [Kovan](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-kovan)
-- [Rinkeby](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-rinkeby)
+- [Göerli](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-goerli)
 - [Gnosis Chain](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-xdai)
 - [Polygon](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-matic)
 - [Optimism](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-optimism)

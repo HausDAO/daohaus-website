@@ -1,10 +1,10 @@
 module.exports = {
   mainSidebar: {
-    Moloch: ["devs/contracts", "devs/subgraphs"],
-    Client: [
+    Concepts: ["devs/contracts", "devs/subgraphs"],
+    "DAOhaus App": [
+      "devs/overview",
       {
         "Code Legos": [
-          "devs/legos/overview",
           "devs/legos/tx-lego-api",
           "devs/legos/field-lego-api",
           "devs/legos/contract-lego-api",
@@ -14,14 +14,18 @@ module.exports = {
       "devs/dev-proposals",
       "devs/activities",
       "devs/bank",
+      "devs/default-boosts",
       "devs/contexts",
       "devs/services",
       "devs/tx-polling",
       "devs/summoning",
       "devs/utilities",
     ],
-    Boosts: ["devs/default-boosts", "devs/new-boosts"],
-    "JS Code Review": [
+    Tutorials: 
+    [
+      "devs/build-a-boost",
+    ],
+    "Contributing Guidelines": [
       "devs/goals-and-ideals",
       "devs/review-process",
       "devs/javascript",
@@ -47,7 +51,7 @@ module.exports = {
       "users/hub",
       "users/bank",
       "users/membership",
-      "users/proposals-intro",
+      "users/proposals",
       "users/profile",
       "users/minion",
     ],
@@ -71,6 +75,7 @@ module.exports = {
         type: "category",
         label: "Boosts Catalog",
         items: [
+          "users/boosts/boost-catalog-format",
           "users/boosts/disperse-boost",
           "users/boosts/rarible-boost",
           "users/boosts/dao-books-boost",
@@ -82,11 +87,11 @@ module.exports = {
           "users/boosts/nifty-ink-boost",
           "users/boosts/bank-buyout-boost",
           "users/boosts/nft-tribute-boost",
-          "users/boosts/boost-catalog-format",
           "users/boosts/minion-dev-suite-v4-boost",
           "users/boosts/minion-dev-suite-v3-boost",
           "users/boosts/minion-dev-suite-v2-boost",
           "users/boosts/minion-dev-suite-v1-boost",
+          "users/boosts/walletconnect-boost",
         ],
       },
       "users/boosts/building-boosts",

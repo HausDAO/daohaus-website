@@ -1,29 +1,29 @@
 ---
-id: bank
-title: Bank
-sidebar_label: Bank
+id: treasury
+title: Treasury
+sidebar_label: Treasury
 ---
 
-## Bank Overview 
+## Treasury Overview 
 
-The Bank is your DAO's bank account, which supports ERC-20 tokens and ERC-721 NFTs. 
+The Treasury is your DAO's treasury account, which supports ERC-20 tokens and ERC-721 NFTs. 
 
 ![](https://i.imgur.com/KwISu59.jpg)
 
-If your Bank Vault holds NFTs, there will be a gallery to view all your DAO's NFTs. 
+If your Treasury Vault holds NFTs, there will be a gallery to view all your DAO's NFTs. 
 
 ![](https://i.imgur.com/NbqzU7U.jpg)
 
-The Bank Vault only supports ERC-20 tokens, so if you are going to be receiving native tokens such as ETH, MATIC and XDAI on the respective networks, you will need to: 
+The Treasury Vault only supports ERC-20 tokens, so if you are going to be receiving native tokens such as ETH, MATIC and XDAI on the respective networks, you will need to: 
 * Get senders to wrap the tokens before sending (e.g. WETH, WXDAI, WMATIC)
 * Install our Wrap N Zap Boost which automatically wraps tokens for you 
 * Hold native tokens in a Minion 
 
 ## How Ownership Works
 
-All members share direct ownership of the bank based on their Shares and/or Loot in relation to one another. Shares grant **voting power** as well as a claim to the Bank funds, whereas Loot only grants you rights to the funds in the Bank. 
+All members share direct ownership of the treasury based on their Shares and/or Loot in relation to one another. Shares grant **voting power** as well as a claim to the Treasury funds, whereas Loot only grants you rights to the funds in the Treasury. 
 
-To help you visualise, here is an example of a simple DAO with 600 DAI in the Bank.
+To help you visualise, here is an example of a simple DAO with 600 DAI in the Treasury.
 
 | Member | Shares | Loot | Voting Power | Exit Value |
 | ------ | ------ | ---- | ------------ | ---------- |
@@ -33,9 +33,9 @@ To help you visualise, here is an example of a simple DAO with 600 DAI in the Ba
 | Dani   | 0      | 10   | 0%           | 100 DAI    |
 | Total  | 40     | 20   | 100%         | 600 DAI    |
 
-In the above example, as Bob has 10 / 40 shares, he has 25% of voting power. If he wants to withdraw from the bank, he can claim 33% of the funds (200 DAI) because the sum total of his Shares + Loot take up 33% of the total. 
+In the above example, as Bob has 10 / 40 shares, he has 25% of voting power. If he wants to withdraw from the treasury, he can claim 33% of the funds (200 DAI) because the sum total of his Shares + Loot take up 33% of the total. 
 
-As Dani has no Shares, she has no voting power. If she wants to withdraw from the Bank, her 10 loot grants her 16% of the Bank funds (96 DAI)
+As Dani has no Shares, she has no voting power. If she wants to withdraw from the Treasury, her 10 loot grants her 16% of the Treasury funds (96 DAI)
 
 When members RageQuit or are Guild Kick-ed, this is how their Exit Amounts are calculated
 
@@ -46,21 +46,21 @@ Another way to hold funds is through Minions. Minions enable your DAO to call ar
 
 For more information on Minion, please refer to the [docs here](minion).
 
-As the Minion balance is separate from the Bank's balance, the Exit Amount during RageQuits do not take into account Minion Balances. The DAO will need to calculate the Member's fair share of the Bank + Minion Balances to ensure accuracy in Exit Amounts.
+As the Minion balance is separate from the Treasury's balance, the Exit Amount during RageQuits do not take into account Minion Balances. The DAO will need to calculate the Member's fair share of the Treasury + Minion Balances to ensure accuracy in Exit Amounts.
 
 
-## Common Bank Use Cases 
+## Common Treasury Use Cases 
 
 **Adding & Whitelisting ERC-20 Tokens**
 
-The Bank Vault can support valid ERC-20 tokens, but for it to show on the Bank Vault UI, you will need to submit and pass a Proposal to whitelist the token. Once the token is whitelisted, the Bank should show the ERC-20 tokens. 
+The Treasury Vault can support valid ERC-20 tokens, but for it to show on the Treasury Vault UI, you will need to submit and pass a Proposal to whitelist the token. Once the token is whitelisted, the Treasury should show the ERC-20 tokens. 
 
 **Adding Tributes to join a DAO**
 
 When new members would like to add tributes to join, you will need to submit a Membership Proposal and indicate your tributes provided and shares requested. Currently, only ERC-20 tributes are available, but ERC-721 NFT tributes are coming soon.  
 
-**Requesting Funding from the Bank**
+**Requesting Funding from the Treasury**
 
-If you'd like to request funding from the Bank, submit a Funding Proposal and indicate the funds owed to you. 
+If you'd like to request funding from the Treasury, submit a Funding Proposal and indicate the funds owed to you. 
  
 

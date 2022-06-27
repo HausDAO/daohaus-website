@@ -1,29 +1,83 @@
 ---
 id: overview
-title: What is a Code Lego?
-sidebar_label: Overview
+title: The DAOhaus Stack
+sidebar_label: The DAOhaus Stack
+slug: /devs
 ---
 
-```TODO: Add in new copy```
+The DAOhaus app empowers any community to 
+* **Summon** and add members to a Moloch DAO
+* **Coordinate** through DAO proposals with a human-friendly interface 
 
-Code legos are small packets of static data written in Javascript. Essentially, they are sets of instructions for the app to either render UI or call contract transactions.
+The three following components enable the DAOhaus app to function smoothly: 
+* **Smart Contracts (Moloch)**: DAOhaus uses Moloch DAO's smart contracts to facilitate on-chain DAO functionalities (e.g. permissioned membership via loot/share, proposals, treasury & minions, ragequit, etc.) 
+* **Subgraphs:** DAOhaus uses subgraphs from The Graph to ensure that on-chain data is indexed and available for querying. 
+* **Client:** The DAOhaus app is built on React.
 
-## Why Code Legos
+When a user interacts with DAOhaus, they are using a client that references on-chain data from Subgraphs, as well as on-chain functionality from Moloch smart contracts. 
 
-- Speed up and simplify the flow of boost development.
-- Drastically reduce the amount of code the application needs to store.
-- Create building blocks that are composable with others.
-- Make the app more interopable with potential backend architecture (ex. DAOhaus Marketplace, DAOhaus API, Boost APIs).
-- Remove the need for community developers to alter the core application architecture.
-- Maintain consistent patterns and types across the app that can be easily tested and maintained.
-- Better tools for DAO devs so they can create better tools for DAO communities.
+Today, DAOhaus is largely [open source on Github](https://github.com/HausDAO/daohaus-app). There are some services (e.g. data middleware) that are managed by the DAOhaus core team. We are currently exploring more open source and decentralized alternatives. 
 
-## Where can this pattern be found:
+## Smart Contracts (Moloch, Baal) 
 
-- Proposal Forms
-- Form fields
-- Contract Interactions (TXs)
+As a no-code platform for Moloch DAOs, the DAOhaus app interfaces with Moloch contracts for all on-chain actions and features. 
 
-## Questions or Suggestions?
+Currently, the DAOhaus app supports Moloch v2 DAOs using the following contracts: 
+* [**Moloch v2.1**](https://github.com/HausDAO/Molochv2.1) : All Moloch v2 functions with multi-summoner capabilities, plus register function for metadata & EIP-1167 proxy pattern to reduce gas costs during summoning
+* [**Moloch 2.5**](https://github.com/HausDAO/Moloch2.5): All Moloch v2.1 functions with Shamans support
+* [**Minion**](https://github.com/HausDAO/MinionSummonerV2): All Minion functions with the ability for the DAO to intract with smart contracts while keeping funds safe in a Gnosis Safe
 
-Head in to the DAOhaus discord, to the support or boost-dev channels, and leave a **detailed** message. If some time goes on without a response, feel free to tag me `@jord`.
+Moving forward, the DAOhaus app will be using Moloch v3 (Baal). For more information on Moloch V3 (Baal), refer to the [official Baal documentation here ](https://baal-docs.vercel.app/)
+
+
+## Subgraphs
+
+DAOhaus uses [The Graph](https://thegraph.com/en/).  - an indexing protocol that incentivizes and coordinates indexing of public blockchain data. The Graph provides queryable data using GraphQL for your API to plug into. 
+
+By indexing Moloch contracts with The Graph, query writers can find data on all compatible DAOs instantly.
+
+The primary DAOhaus Subgraph tracks the primary entities of DAOs: members, proposals, votes, and tokens.
+
+#### DAOhaus Subgraph Explorers
+
+-   [Mainnet](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus)
+-   [Kovan](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-kovan)
+-   [Rinkeby](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-rinkeby)
+-   [Gnosis Chain](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-xdai)
+-   [Polygon](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-matic)
+-   [Optimism](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-optimism)
+-   [Arbitrum](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-arbitrum)
+-   [Celo](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-celo)
+
+#### Stats Subgraph Explorers
+
+The DAOhaus Stats Subgraph provides aggregated statistics and metrics for users and communities across the platform.
+
+-   [Mainnet](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats)
+-   [Kovan](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-kovan)
+-   [Rinkeby](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-rinkeby)
+-   [Gnosis Chain](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-xdai)
+-   [Polygon](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-matic)
+-   [Optimism](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-optimism)
+-   [Arbitrum](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-arbitrum)
+-   [Celo](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-celo)
+
+#### Boosts Subgraph Explorers
+
+The DAOhaus Boosts Subgraph provides aggregated statistics and metrics for boosts across the platform.
+
+-   [Mainnet](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts)
+-   [Kovan](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-kovan)
+-   [Rinkeby](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-rinkeby)
+-   [Gnosis Chain](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-xdai)
+-   [Polygon](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-matic)
+-   [Optimism](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-optimism)
+-   [Arbitrum](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-arbitrum)
+-   [Celo](https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-celo)
+
+
+## Client
+
+The DAOhaus frontend is built using React. For greater ease of development, we will be releasing component libraries shortly. 
+
+For more information on the DAOhaus Client, please refer to documentation on [DAOhaus app](./devs/app-overview)

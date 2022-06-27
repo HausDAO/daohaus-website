@@ -5,121 +5,36 @@ sidebar_label: Proposals
 slug: /devs/proposals
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
+As a no-code platform for Moloch DAOs, most of DAOhaus' concepts and functionality originate from the functionalities of a Moloch DAO. If you are new to Moloch DAOs, refer to this [Mirror article](https://daohaus.mirror.xyz/U_JQtheSzdpRFqQwf9Ow3LgLNG0WMZ6ibAyrjWDu_fc) for an introduction to Moloch DAOs.
 
-## Proposal Types
+## Proposals
+> If you are new to Proposals in Moloch DAOs, refer to [Introduction to Proposals](https://daohaus.club/docs/proposals).
 
-### Generic Proposal (Member, Funding, Trade)
+Proposals are the mechanism which all Moloch DAOs use to take any action, from issuing shares to members to sending funds to addresses or interacting with smart contracts. Before a proposal can be executed, it has to go through the 6 lifecycle stages: Submission, Sponsorship, Voting Period, Grace Period, Processing, Execution
 
-The generic proposal function `submitProposal` is used for most proposal types and are modified on the frontend to accommodate different user facing proposal configurations based on the subset of inputs.
+![](https://i.imgur.com/arVqE4x.png)
 
-#### General Proposal Fields
+**Default Proposal Types**
 
-Fields can be configured to match the desired proposal type inputs.
+Every DAO comes with default proposal types which enable the core functions of Moloch DAOs such as Membership, Funding, GuildKick, etc. These proposal types come with field inputs that are necessary for their respective functions. 
 
-- Details (Title, Description, & Link)
-- Recipient/Applicant
-- Shares Requested
-- Loot Requested
-- Tribute Offered
-- Payment Requested
+For instance, a **New Member Proposal** is a proposal that allows new members to join a DAO by requesting shares and providing tribute.  This Proposal Type contains the default fields ("Title", "Description" & "Link") as well as custom fields like "Shares Requested" and "Token Tribute".
 
-#### Pre-made proposal configurations
+![Member Proposal Fields](https://daohaus.club/img/member_proposal.png)
 
-### Member Proposal
+Another example is **Funding Proposal** that allows members to request funds from the DAO. Apart from default fields ("Title", "Description" & "Link"), the Proposal has fields such as "Applicant" and "Payment Requested".
 
-The member proposal is a simple way to join a DAO with tribute.
+![Funding Proposal Fields](https://daohaus.club/img/funding_proposal.png)
 
-<img alt="Member Proposal Fields" src={useBaseUrl("img/member_proposal.png")} />
+These are the standard proposal types used within the governance in most DAOs.
+* Membership - Tributing capital and Requesting new shares to join the DAO
+* Funding - Tributing Spoils or Requesting funds from the DAO to work on internal projects and improvements
+* Token - Request to add support for a new ERC20 token
+* Trade - Request the DAO to swap one asset for another within the War Chest
+* GuildKick - Request to forcibly remove a malicious member through a vote
+* Minion - A contract that allows execution of arbitrary calls i.e swapping assets in the DAO bank
 
-Fields:
 
-- Details
-- Shares Requested
-- Token Tribute
+**Custom Proposals (Boosts)**
 
-### Funding Proposal
-
-The funding proposal is a straight forward way to request or grant funds from the DAO.
-
-<img
-  alt="Funding Proposal Fields"
-  src={useBaseUrl("img/funding_proposal.png")}
-/>
-
-Fields:
-
-- Details
-- Applicant
-- Payment Requested
-
-### Loot Grab Proposal
-
-The loot grab proposal is a proposal where members provide tribute for non-voting shares in the DAO.
-
-<img
-  alt="Loot Grad Proposal Fields"
-  src={useBaseUrl("img/funding_proposal.png")}
-/>
-
-Fields:
-
-- Details
-- Applicant
-- Payment Requested
-- Loot Requested 
-- Tribute Offered
-
-### Trade Proposal
-
-The trade proposal is a simple swap between the proposer and the DAO at a proposed price.
-
-<img alt="Trade Proposal Fields" src={useBaseUrl("img/trade_proposal.png")} />
-
-Fields:
-
-- Details
-- Token Tribute
-- Trade for Payment Requested
-
-### Whitelist Proposal
-
-The whitelist proposal function `submitWhitelistProposal` is used to approve tokens for usage within the DAO. Any tokens sent to the DAO without being whitelisted will be irretrievable without a whitelist proposal from the DAO.
-
-<img
-  alt="Whitelist Proposal Fields"
-  src={useBaseUrl("img/whitelist_proposal.png")}
-/>
-
-#### Whitelist Proposal Fields
-
-- Details
-- Token Address
-
-### GuildKick Proposal
-
-The guild kick proposal function `submitGuildkickProposal` is used to prepare a vote to `jail` a member.
-
-<img
-  alt="GuildKick Proposal Fields"
-  src={useBaseUrl("img/guildkick_proposal.png")}
-/>
-
-#### GuildKick Proposal Fields
-
-- Details
-- Member Address
-
-## Things to Remember About Proposal Fields
-
-### Applicant
-
-- supports ENS, member select, 0x
-
-### Tribute Input
-
-- must be unlocked and less than balance
-
-### Shares & Loot
-
-- must be integers
+DAOHaus is designed to be extended by external developers. By working with our proposal "code legos" developers can create "Boosts" to extend DAOhaus functionality. A Boost can include custom fields, inputs and layouts to build new proposal types.  For more information about Boosts, refer to documentation on [Boosts on the DAOhaus platform](./boosts).

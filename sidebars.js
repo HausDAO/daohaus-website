@@ -1,8 +1,13 @@
 module.exports = {
   mainSidebar: {
-    Concepts: ["devs/contracts", "devs/subgraphs"],
+    Overview: ["devs/overview"],
+    Concepts: [
+      "devs/dev-proposals",
+      "devs/treasury",
+      "devs/dev-boosts",
+    ],
     "DAOhaus App": [
-      "devs/overview",
+      "devs/app-overview",
       {
         "Code Legos": [
           "devs/legos/tx-lego-api",
@@ -10,11 +15,8 @@ module.exports = {
           "devs/legos/contract-lego-api",
           "devs/legos/form-lego-api",
         ],
-      },
-      "devs/dev-proposals",
+      },      
       "devs/activities",
-      "devs/bank",
-      "devs/default-boosts",
       "devs/contexts",
       "devs/services",
       "devs/tx-polling",
@@ -24,6 +26,7 @@ module.exports = {
     Tutorials: 
     [
       "devs/build-a-boost",
+      "devs/publish-your-boost",
     ],
     "Contributing Guidelines": [
       "devs/goals-and-ideals",
@@ -49,7 +52,7 @@ module.exports = {
     ],
     Features: [
       "users/hub",
-      "users/bank",
+      "users/treasury",
       "users/membership",
       "users/proposals",
       "users/profile",
@@ -98,7 +101,7 @@ module.exports = {
     ],
     FAQ: [
       "users/proposals-faq",
-      "users/bank-faq",
+      "users/treasury-faq",
       "users/members-faq",
       "users/summoner-faq",
       "users/settings-faq",

@@ -6,20 +6,22 @@ slug: /devs/treasury
 
 # Treasury, Minions & Safes 
 
-**Treasury** 
+#### **Treasury** 
+
 A Moloch DAO is able to hold ERC-20 and ERC-721 assets. Members of a DAO can withdraw their their proportional ownership of the treasury using the ragequit feature. 
 
 > If you are new to Treasury in Moloch DAOs, refer to  [Treasury Introduction](https://daohaus.club/docs/users/bank). 
 
-The DAOhaus app displays token balances and prices from the DAO treasury. ERC-20 token prices are fetched from Coingecko's price APIs, whereas the token icons are fetched from TrustWallet's repository.
-**Minions**
+The DAOhaus app displays token balances and prices from the DAO treasury. ERC-20 token prices are fetched from Coingecko's price APIs and the token icons are fetched from TrustWallet's repository.
+
+#### **Minions**
 A minion is a smart contract that enables the DAO to make arbitrary calls to external smart contracts. A minion is also able to hold ERC-20 and ERC-721 tokens within the internal balance, but these funds are not ragequittable by DAO members. 
 
 When a Minion Proposal is submitted, voted on and passed, the Minion will execute the instructions contained in the Minion Proposal, enabling trustless voting and execution.
 
 > If you are new to Minions in Moloch DAOs, refer to  [Minions Introduction](https://daohaus.club/docs/users/minion).
 
-**Safe Minions**
+#### **Safe Minions**
 DAOhaus has integrated with the Gnosis Zodiac framework to create the Safe Minion, where a DAO can store funds in a Gnosis Safe but use the Minion to control the Safe through proposals. 
 
 The Minion inherits the `Module.sol` contract from the Zodiac library. When a Minion Propsal is passed and executed, the Minion uses the Module’s `exec` function to execute arbitrary external calls on behalf of the Safe.

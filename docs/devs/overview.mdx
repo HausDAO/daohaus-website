@@ -5,32 +5,36 @@ sidebar_label: The DAOhaus Stack
 slug: /devs
 ---
 
-Today, the DAOhaus app empowers any community to summon a Moloch DAO and coordinate with a human-friendly interface. 
+The DAOhaus app empowers any community to 
+* **Summon** and add members to a Moloch DAO
+* **Coordinate** through DAO proposals with a human-friendly interface 
 
-The three following components enable the DAOhaus app to function smoothly. 
+The three following components enable the DAOhaus app to function smoothly: 
 * **Smart Contracts (Moloch)**: DAOhaus uses Moloch DAO's smart contracts to facilitate on-chain DAO functionalities (e.g. permissioned membership via loot/share, proposals, treasury & minions, ragequit, etc.) 
 * **Subgraphs:** DAOhaus uses subgraphs from The Graph to ensure that on-chain data is indexed and available for querying. 
 * **Client:** The DAOhaus app is built on React.
 
-When a user interacts with DAOhaus, he/she is using a client that references on-chain data from Subgraphs, as well as on-chain functionality from Moloch smart contracts. 
+When a user interacts with DAOhaus, they are using a client that references on-chain data from Subgraphs, as well as on-chain functionality from Moloch smart contracts. 
 
-Today, DAOhaus is largely open source on Github. There are some services (e.g. data middleware) that are managed by the DAOhaus core team. We are currently exploring more open source and decentralized alternatives. 
+Today, DAOhaus is largely [open source on Github](https://github.com/HausDAO/daohaus-app). There are some services (e.g. data middleware) that are managed by the DAOhaus core team. We are currently exploring more open source and decentralized alternatives. 
 
 ## Smart Contracts (Moloch, Baal) 
 
 As a no-code platform for Moloch DAOs, the DAOhaus app interfaces with Moloch contracts for all on-chain actions and features. 
 
 Currently, the DAOhaus app supports Moloch v2 DAOs using the following contracts: 
-* Moloch v2.1 (see repository [here](https://github.com/HausDAO/Molochv2.1)): All Moloch v2 functions with multi-summoner capabilities, plus register function for metadata & EIP-1167 proxy pattern to reduce gas costs during summoning
-* Moloch 2.5 (see repository [here](https://github.com/HausDAO/Moloch2.5)): All Moloch v2.1 functions with Shamans support
-* Minion (see repository [here](https://github.com/HausDAO/MinionSummonerV2)): All Minion functions with the ability for the DAO to intract with smart contracts while keeping funds safe in a Gnosis Safe
+* [**Moloch v2.1**](https://github.com/HausDAO/Molochv2.1) : All Moloch v2 functions with multi-summoner capabilities, plus register function for metadata & EIP-1167 proxy pattern to reduce gas costs during summoning
+* [**Moloch 2.5**](https://github.com/HausDAO/Moloch2.5): All Moloch v2.1 functions with Shamans support
+* [**Minion**](https://github.com/HausDAO/MinionSummonerV2): All Minion functions with the ability for the DAO to intract with smart contracts while keeping funds safe in a Gnosis Safe
 
 Moving forward, the DAOhaus app will be using Moloch v3 (Baal). For more information on Moloch V3 (Baal), refer to the [official Baal documentation here ](https://baal-docs.vercel.app/)
 
 
 ## Subgraphs
 
-DAOhaus uses TheGraph, which is an indexing protocol that incentivizes and coordinates indexing of public blockchain data. The Graph provides queryable data using GraphQL for your API to plug into. By indexing Moloch contracts with The Graph any user with an access to TheGraph can find data on all compatible DAOs instantly.
+DAOhaus uses [The Graph](https://thegraph.com/en/).  - an indexing protocol that incentivizes and coordinates indexing of public blockchain data. The Graph provides queryable data using GraphQL for your API to plug into. 
+
+By indexing Moloch contracts with The Graph, query writers can find data on all compatible DAOs instantly.
 
 The primary DAOhaus Subgraph tracks the primary entities of DAOs: members, proposals, votes, and tokens.
 

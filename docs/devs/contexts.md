@@ -42,7 +42,7 @@ const { daoOverview, daoProposals } = useDao();
 
 Nested inside of the DaoPage, the DaoContext is a high-order context that houses MetaDataContext, TokenContext, DaoMemberContext, and TXContext. DaoContext is responsible for a large call to the subgraphs where it retrieves current information about proposals, activities, members, and overview -- each in relation to the dao and chain data found in the URL (daochain and daoid from useParams).
 
-All ontract transactions that are made on the DAO being viewed will usually call refetch() once the TX poll has passed. This will fetch all DAO data again to ensure the DAO's data is up to date. It is **important** to note that each fetch made in DAOContext, and the contexts nested inside, use a useRef() to prevent unnecessary fetches. These will need to be reset explicitly (TXContext does this for us).
+All contract transactions that are made on the DAO being viewed will usually call refetch() once the TX poll has passed. This will fetch all DAO data again to ensure the DAO's data is up to date. It is **important** to note that each fetch made in DAOContext, and the contexts nested inside, use a useRef() to prevent unnecessary fetches. These will need to be reset explicitly (TXContext does this for us).
 
 - `daoProposals` - Array of DAO proposals.
 - `daoActivities` - Array of DAO activities from proposals history.

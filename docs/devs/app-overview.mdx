@@ -1,29 +1,53 @@
 ---
 id: app-overview
-title: What is a Code Lego?
+title: DAOhaus App Overview
 sidebar_label: Overview
 ---
 
-```TODO: Add in new copy```
+The DAOhaus client app is built using the React Framework and Javascript to create "Code Legos".  
 
-Code legos are small packets of static data written in Javascript. Essentially, they are sets of instructions for the app to either render UI or call contract transactions.
+Code Legos are static objects that contain metadata used by the application.  The metadata is used to render UI elements, create transactions and interact with external smart contracts.
 
-## Why Code Legos
+Code Legos help to make Boost development as easy as assembling the appropriate Legos from existing components to fit your use case.
 
-- Speed up and simplify the flow of boost development.
-- Drastically reduce the amount of code the application needs to store.
-- Create building blocks that are composable with others.
-- Make the app more interopable with potential backend architecture (ex. DAOhaus Marketplace, DAOhaus API, Boost APIs).
-- Remove the need for community developers to alter the core application architecture.
-- Maintain consistent patterns and types across the app that can be easily tested and maintained.
-- Better tools for DAO devs so they can create better tools for DAO communities.
+**Why Code Legos**
+-  Speed up and simplify the flow of boost development
+-  Reduce the amount of code in the application
+-  Create reusable building blocks
+-  Simpler tools for DAO devs so they can create better tools for DAO communities
 
-## Where can this pattern be found:
+## Types of Code Legos
 
-- Proposal Forms
-- Form fields
-- Contract Interactions (TXs)
+* **[Form Legos](./legos/form-lego-api):** Instruct the app to render modal forms.
+* **[Field Legos](./legos/field-lego-api):** Instruct the app to render fields where they are needed - typically inside forms.
+* **[Transaction Legos](./legos/tx-lego-api):** Provide the transaction schemas & prepare arguments for external smart contract calls.
+* **[Contract Legos](./legos/contract-lego-api):** Provide the contract addresses and Application Binary Interfaces (ABIs) required for external smart contract calls.
 
-## Questions or Suggestions?
+For more information about each type of Code Lego, refer to their individual pages in the next section.
 
-Head in to the DAOhaus discord, to the support or boost-dev channels, and leave a **detailed** message. If some time goes on without a response, feel free to tag me `@jord`.
+## Code Legos in Action 
+
+**Rendering the User Interface**
+To render a Funding Proposal Form on the DAOhaus app, we will need to create a **Form Lego** composed of the **Field Legos** that provide the appropriate functionality for the proposal. 
+
+Once the Form Lego is created and registered in the appropriate way, The DAOhaus App will then add the form to the ReactDOM (document object model) to be rendered. 
+
+The following image visualizes how these pieces fit together.
+
+<img src="https://i.imgur.com/YsiRhDQ.png" alt="code-legos-ui" width="480"/>
+
+**Making External Contract Calls**
+Let's consider the [Disperse Boost](../users/boosts/disperse-boost). This boost interacts with a [contract](https://etherscan.io/address/0xD152f549545093347A162Dce210e7293f1452150#code) from [disperse.app](https://disperse.app) to distribute tokens to a list of addresses.
+
+When a Disperse proposal is voted on and passes, the app will prepare to create a transaction and execute a function from the Disperse contract. 
+
+The app will get the transaction schema from **Transaction Legos** and prepare the transaction arguments following the schema. Next, the app will make the smart contract call to the contract address specified in the **Contract Lego**.
+
+<img src="https://i.imgur.com/bm02ba1.png" alt="code-legos-ui" width="480"/>
+
+By understanding Code Legos, you are now ready to build Boosts (i.e. custom proposals) and interact with external smart contracts. 
+
+## Advanced Features
+
+Beyond Code Legos, the latter part of the developer documentation provides context on the architecture of the application, such as Contexts, Contract Services, Transaction Polling Service and Utilities & Patterns. This section is for context only and not required for developers building Boosts. 
+

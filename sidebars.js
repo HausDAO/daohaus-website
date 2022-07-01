@@ -15,13 +15,15 @@ module.exports = {
           "devs/legos/contract-lego-api",
           "devs/legos/form-lego-api",
         ],
-      },      
-      "devs/activities",
-      "devs/contexts",
-      "devs/services",
-      "devs/tx-polling",
-      "devs/summoning",
-      "devs/utilities",
+      },
+      {
+      "Advanced": [
+        "devs/contexts",
+        "devs/services",
+        "devs/tx-polling",
+        "devs/utilities",
+      ]
+      },     
     ],
     Tutorials: 
     [

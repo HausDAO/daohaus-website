@@ -4,11 +4,11 @@ title: Form Lego
 sidebar_label: Form Lego
 ---
 
-## How it all comes together
+Form Legos are composed of Transaction Legos and Field Legos. Once complete, a form can collect information from the user and trigger a transaction to a smart contract. 
 
-Form Legos compose txLegos and fieldLegos.
+> See an example [Form Lego](https://github.com/HausDAO/daohaus-app/pull/1819/files#diff-70d9ba3ecba1f7489b1daf832fca1769464202bc653493a0c509eb2d3e43779d) in the [Mint a Million Tutorial](/docs/devs/build-a-boost)
 
-#### Form Example
+#### Form Blueprint
 
 ```js
   MEMBER: {
@@ -34,15 +34,18 @@ Form Legos compose txLegos and fieldLegos.
   }
 ```
 
-This blueprint does a few things:
+This blueprint shows a few of the Form Lego features:
 
-- It handles some basic data about the form.
-- It takes in a `txlego` to handle contract execution when the form submits.
-- It handles validation for what fields are required.
-- It also orchestrates the fields that appear on the form, in order.
+- It specifies some basic info needed to render the form: `id` `title` `description`
+- It specifies the Proposal Type, which will impact how the resulting proposal renders in the app
+- It takes in a TransactionLego `TX.SUBMIT_PROPOSAL` to handle contract execution when the form submits.
+- It arranges the fields that appear on the form
+- It handles validation for which fields are `required`.
+- It specifies an entry in `customValidations`
 
 
-## Parameters
+
+## Form Lego Parameters
 
 
 | Parameter         | Data Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                            |

@@ -81,6 +81,7 @@ module.exports = {
         label: "Boosts Catalog",
         items: [
           "users/boosts/boost-catalog-format",
+          "users/boosts/hedgey-boost",
           "users/boosts/disperse-boost",
           "users/boosts/rarible-boost",
           "users/boosts/dao-books-boost",

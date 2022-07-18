@@ -63,6 +63,12 @@ module.exports = {
           ],
         },
         {
+          to: "/docs/devs",
+          activeBasePath: "docs/devs",
+          label: "Developers",
+          position: "right",
+        },
+        {
           href: "https://app.daohaus.club",
           label: "Open App",
           position: "right",

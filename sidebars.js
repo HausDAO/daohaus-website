@@ -26,6 +26,7 @@ module.exports = {
     ],
     Tutorials: 
     [
+      "devs/dev-quickstart",
       "devs/build-a-boost",
       "devs/publish-your-boost",
     ],

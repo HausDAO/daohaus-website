@@ -4,7 +4,6 @@ module.exports = {
     Concepts: [
       "devs/dev-proposals",
       "devs/treasury",
-      "devs/dev-boosts",
     ],
     "DAOhaus App": [
       "devs/app-overview",

@@ -21,7 +21,7 @@ If a proposal reaches the Execution stage (meaning the proposal passed), the app
 
 ![](https://i.imgur.com/arVqE4x.png)
 
-**Default Proposal Types**
+### Default Proposal Types
 
 When you launch a new Moloch DAO through DAOhaus, you have access to many default proposal types. These proposals enable the core functions of your DAO. 
 
@@ -44,8 +44,16 @@ These are the standard proposal types used for governance of most DAOs.
 * **Minion** - Execute an external contract function e.g. swapping assets in the DAO bank
 
 
-**Custom Proposals (Boosts)**
+### Custom Proposals (Boosts)
 
-DAOHaus is designed to be extended by external developers. By working with our proposal "code legos" developers can create "Boosts" to extend DAOhaus functionality with custom proposal types. 
+DAOHaus is designed to be extended by external developers. By working with our proposal "code legos", developers can create "Boosts" to extend DAOhaus functionality  such as custom field inputs, form layouts and transaction payloads. 
 
-For more information about Boosts, refer to documentation on [Boosts on the DAOhaus platform](./boosts).
+Boosts can interact with external smart contracts (via Minions) or off-chain APIs, allowing for a wide range of use cases to be built.
+
+Developers are able to publish these Boosts on the [Boosts Marketplace](https://daohaus.club/docs/users/boosts/installing-boosts) for DAOs to install and access new functionality. 
+
+When you activate a Boost for your DAO, members will be able to create, vote and execute a new custom proposal type. 
+
+> If you are new to Boosts, please refer to the [Boosts 101](/docs/users/boosts/boosts)
+
+> If you would like to build a boost, visit our [Boost Builder Tutorial](/docs/devs/build-a-boost)

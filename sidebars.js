@@ -15,6 +15,7 @@ module.exports = {
           "devs/legos/form-lego-api",
         ],
       },
+      "devs/dev-boosts",
       {
       "Advanced": [
         "devs/contexts",

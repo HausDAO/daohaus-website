@@ -11,7 +11,7 @@ module.exports = {
     scripts: [{src: 'https://plausible.io/js/plausible.outbound-links.js', async: true, defer: true, 'data-domain': 'daohaus.club'}],
   themeConfig: {
     image: "img/haus__icon.png",
-    metadatas: [
+    metadata: [
       { name: "og:type", content: "website" },
       { name: "og:site_name", content: "DAOhaus" },
       { name: "twitter:site", content: "@nowdaoit" },

@@ -54,6 +54,6 @@ Developers are able to publish these Boosts on the [Boosts Marketplace](https://
 
 When you activate a Boost for your DAO, members will be able to create, vote and execute a new custom proposal type. 
 
-> If you are new to Boosts, please refer to the [Boosts 101](/docs/users/boosts/boosts)
+> If you are new to Boosts, please refer to the [Boosts 101](/docs/users/boosts)
 
 > If you would like to build a boost, visit our [Boost Builder Tutorial](/docs/devs/build-a-boost)

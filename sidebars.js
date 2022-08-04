@@ -1,12 +1,10 @@
 module.exports = {
   mainSidebar: {
     Overview: ["devs/overview"],
-    Concepts: [
-      "devs/dev-proposals",
-      "devs/treasury",
-    ],
+    Concepts: ["devs/dev-proposals", "devs/treasury"],
     "DAOhaus App": [
       "devs/app-overview",
+      "devs/dev-boosts",
       {
         "Code Legos": [
           "devs/legos/tx-lego-api",
@@ -15,18 +13,17 @@ module.exports = {
           "devs/legos/form-lego-api",
         ],
       },
-      "devs/dev-boosts",
+
       {
-      "Advanced": [
-        "devs/contexts",
-        "devs/services",
-        "devs/tx-polling",
-        "devs/utilities",
-      ]
-      },     
+        Advanced: [
+          "devs/contexts",
+          "devs/services",
+          "devs/tx-polling",
+          "devs/utilities",
+        ],
+      },
     ],
-    Tutorials: 
-    [
+    Tutorials: [
       "devs/dev-quickstart",
       "devs/build-a-boost",
       "devs/publish-your-boost",

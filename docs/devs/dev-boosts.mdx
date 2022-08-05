@@ -1,31 +1,39 @@
 ---
 id: dev-boosts
 title: Boosts Developer Overview
-sidebar_label: Boosts
+sidebar_label: Boosts Overview
 slug: /devs/boosts
 ---
 
-As a recap, Boosts are custom proposal types that enable Moloch DAOs to interact with external smart contracts (via Minions) or off-chain APIs. Developers can work with "code legos" such as custom field inputs, form layouts and transaction payloads to create these Boosts
+Boost developers add functionality to the DAOhaus app by adding modular feature sets called "Boosts."
 
-If you are a developer thinking of building a Boost, you will need to assemble the following 3 categories of code legos
-1. **Playlists, forms and fields**: This renders the proposal forms and fields for proposal submission.  
-2. **Contracts and ABIs**: This stores the contracts and ABI calls that power your use cases. 
+> To get started right away, see the [Quick Start Boost Development Tutorial](/docs/devs/quickstart/) 
+
+As a recap, Boosts create custom *proposal types* that enable Moloch DAOs to interact with external smart contracts (via [Minions](/docs/devs/treasury/)) or off-chain APIs. 
+
+Developers can work with "Code Legos" such as custom field inputs, form layouts and transaction payloads to create these Boosts
+
+If you are a developer thinking of building a Boost, you will need to assemble the following 3 categories of Code Legos
+1. **Forms, Fields and Playlists**: These render the proposal forms and fields for proposal submission.  
+2. **Contracts and ABIs**: This stores the contracts and ABI (Application Binary Interface) calls that power your use cases. 
 3. **Transactions**: This prepares the transaction schemas that are required for the smart contract calls.
 
-The following sections will cover the essential code legos fpr the above 3 areas. For a more in-depth tutorial, please refer to link [here](https://daohaus.club/docs/devs/build-a-boost)
+The following sections will cover the essential Code Legos fpr the above 3 areas. For a more in-depth tutorial, please refer to link [here](https://daohaus.club/docs/devs/build-a-boost)
 
-## Playlists, Forms and Fields 
+## Forms, Fields and Playlists 
 > In this section, we will observe how `playlists.js`, `forms.js`, `fields.js`, `details.js`, `publishers.js`, `proposalUtils.jsx` and your custom Form JS file work together to render forms and fields for DAOhaus users to create, fill in and submit proposals. 
 
 [**playlists.js**](https://github.com/HausDAO/daohaus-app/blob/bf28463c835d69ad0a85bde432d0d873622ac314/src/data/playlists.js)
 
-Playlists are folders or groups of related or similar Boosts (i.e. custom proposal forms). This is managed by `playlists.js`- a central directory of all Boost Playlists. 
+**Playlists** are folders or groups of related or similar Boosts (i.e. custom proposal forms). This is managed by `playlists.js`- a central directory of all Boost Playlists. 
 
 Within the `BOOST_PLAYLISTS` object, there is an object for each Boost Playlist with `name`, `id`, and `forms` (for each proposal in the playlist).
 
 **Your custom Form JS file** 
 
-To create your custom proposal form, you are required to create a JS file which builds the form for your specific proposal. A sample would be the [mintAMillionForms.js](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/data/formLegos/mintAMillionForms.js). 
+To create your custom proposal form, you are required to create a JS file which builds the form for your specific proposal. 
+
+> An example transaction file [mintAMillionForms.js](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/data/formLegos/mintAMillionForms.js) is available from the [Mint a Million tutorial](/docs/devs/build-a-boost/)
 
 Your JS file will import existing and reusable fields from `fields.js`, while adding in custom fields required for your contract.
 
@@ -56,7 +64,9 @@ Your JS file will import existing and reusable fields from `fields.js`, while ad
 
 **Your custom contract JSON**
 
-You will need to create a custom JSON file that contains the ABIs for your contract. This will be used when making calls to your smart contract. A sample would be [erc20Summon.json](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/contracts/erc20Summon.json)
+You will need to create a custom JSON file that contains the ABIs for your contract. This will be used when making calls to your smart contract. 
+
+> An example transaction file [erc20Summon.json](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/contracts/erc20Summon.json) is available from the [Mint a Million tutorial](/docs/devs/build-a-boost/)
 
 `contracts.js` is a central directory of all contract addresses, including properties such as `location`, `abiName` and `contractAddress`. This tells the app where to locate contract-related information when making a smart contract call. You will need to import and add your object into `contracts.js` file.
 
@@ -74,7 +84,8 @@ You will need to create a custom JSON file that contains the ABIs for your contr
 
 **Your custom TX js** 
 
-You will need to create a custom TX file that contains the actions and arguments required to build the transaction and contract call. A sample would be [millionTx.js](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/data/txLegos/millionTX.js)
+You will need to create a custom TX file that contains the actions and arguments required to build the transaction and contract call. 
+> An example transaction file [millionTx.js](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/data/txLegos/millionTX.js) is available from the [Mint a Million tutorial](/docs/devs/build-a-boost/)
 
 [**contractTX.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/txLegos/contractTX.js) 
 

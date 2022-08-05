@@ -10,7 +10,7 @@ If you're building Boosts on DAOhaus, you will be working with the DAOhaus app. 
 ## Set up your local environment 
 This tutorial was created using Terminal on MacOS.  If you are using a different OS, you may have to change some of these commands, but the process will be the same.
 
-**1. Clone the daohaus-app repo**
+#### **1. Clone the daohaus-app repo**
 
   ```javascript
   git clone https://github.com/HausDAO/daohaus-app.git
@@ -21,7 +21,7 @@ This tutorial was created using Terminal on MacOS.  If you are using a different
   ```
 >Replacing ```<yourdiscordhandle>``` with your Discord handle helps us when providing support.
 
-**2. Configure your local environment**
+#### **2. Configure your local environment**
 
 Open the `.env` file you just created with ```touch``` in your root directory and add the following:
 ``` g
@@ -33,7 +33,7 @@ REACT_APP_INFURA_PROJECT_ID= `Your Infura Project ID here`
 ```
 >If you don't have an RPC_URI or INFURA_PROJECT_ID, you can delete those lines. You can get started without them, but you won't be able to initiate contract transactions from your local machine. 
 
-**2. Install dependencies and launch**
+#### **3. Install dependencies and launch**
 
   ```javascript
   yarn install  // install dependencies
@@ -44,27 +44,32 @@ REACT_APP_INFURA_PROJECT_ID= `Your Infura Project ID here`
 You will require a test DAO on the Rinkeby network before you can test and simulate transactions in your local environment.
 > Before you begin, please ensure that your wallet address contains Rinkeby ETH. Or else, you can request Rinkeby ETH from [rinkebyfaucet.com](https://www.rinkebyfaucet.com)
 
-**1. Switch to Rinkeby network and visit app.daohaus.club/summon**
+#### **1. Switch to Rinkeby network** and visit [app.daohaus.club/summon](https://app.daohaus.club/summon)
 
-**2. Click on Hard Mode**
+#### **2. Click the Hard Mode button** in the upper right of the UI
+Entering "Hard Mode" allows you to manually configure your DAO.
+<img src="/img/click_hardmode.png" alt="click-hardmode" />
 
-**3. Configure your test DAO's parameters**
-For more efficient testing, we recommend setting shorter time periods and lower deposit amounts. You may use the following parameters to start. 
+
+#### **3. Configure** your test DAO's parameters
+For more efficient testing, we recommend setting shorter time periods and lower deposit amounts. You may use the following parameters to start: 
 * **How many seconds per period?** Enter `60` seconds
 * **How many periods will the voting period last?** Enter `1` period
 * **How many periods will the grace period last?** Enter `1` period 
 * **What will be the dilution bound?** Leave the default at `3`
-* **How much is the proposal deposit (needs to be in wei - 18 decimals)?** Enter `500000000000000000` 
-* **How much is the processing reward?** Enter `2000000000000000000`
+* **How much is the proposal deposit (needs to be in wei - 18 decimals)?** Enter `5000000000000000` 
+* **How much is the processing reward?** Enter `2000000000000000`
 * **Summoners & Starting Shares**
     * Enter your wallet address followed by `1` (e.g. 0x64f372ef18b423ed61719ba0c730cf84640551a6 1)
     * For additional team members, enter their address and amount of shares on another line. Separate address and amount with a space. 
 
-<img src="https://i.imgur.com/05YAVYq.png" alt="code-legos-ui" width="600"/>
+<img src="/img/quickstart_summon.png" alt="quickstart-summon" width="600"/>
 
 
-**4. Click SUMMON and your test DAO is ready!**
+#### **4. Click SUMMON** 
+Confirm the transaction, pay the Rinkeby ETH transaction fee and your test DAO is ready!
 
+<img src="/img/dao_summoned.png" alt="dao-summoned" width="600"/>
 
 
 

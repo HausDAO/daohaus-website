@@ -4,7 +4,6 @@ module.exports = {
     Concepts: [
       "devs/dev-proposals",
       "devs/treasury",
-      "devs/dev-boosts",
     ],
     "DAOhaus App": [
       "devs/app-overview",
@@ -16,6 +15,7 @@ module.exports = {
           "devs/legos/form-lego-api",
         ],
       },
+      "devs/dev-boosts",
       {
       "Advanced": [
         "devs/contexts",
@@ -27,6 +27,7 @@ module.exports = {
     ],
     Tutorials: 
     [
+      "devs/dev-quickstart",
       "devs/build-a-boost",
       "devs/publish-your-boost",
     ],

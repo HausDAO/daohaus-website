@@ -1,6 +1,6 @@
 module.exports = {
   mainSidebar: {
-    Overview: ["devs/overview"],
+    "Developer Overview": ["devs/overview"],
     Concepts: ["devs/dev-proposals", "devs/treasury"],
     "DAOhaus App": [
       "devs/app-overview",
@@ -42,7 +42,7 @@ module.exports = {
     ],
   },
   howSidebar: {
-    Intro: [
+    "User Docs Intro": [
       "users/intro",
       "users/intro-dao",
       "users/intro-why",
@@ -113,7 +113,7 @@ module.exports = {
     ],
   },
   whoSidebar: {
-    Community: [
+    "Handbook Intro": [
       "handbook/who-we-are",
       "handbook/meeting-schedule",
       "handbook/resources",

@@ -8,7 +8,14 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "hausdao", // Usually your GitHub org/user name.
   projectName: "daohaus-docs", // Usually your repo name.
-    scripts: [{src: 'https://plausible.io/js/plausible.outbound-links.js', async: true, defer: true, 'data-domain': 'daohaus.club'}],
+  scripts: [
+    {
+      src: "https://plausible.io/js/plausible.outbound-links.js",
+      async: true,
+      defer: true,
+      "data-domain": "daohaus.club",
+    },
+  ],
   themeConfig: {
     image: "img/haus__icon.png",
     metadata: [
@@ -55,7 +62,11 @@ module.exports = {
             {
               label: "Handbook",
               to: "/docs/handbook",
-            }
+            },
+            {
+              label: "Developers",
+              to: "/docs/devs",
+            },
           ],
         },
         {
@@ -98,7 +109,7 @@ module.exports = {
             {
               to: "/docs/handbook",
               label: "Handbook",
-            }
+            },
           ],
         },
         {
@@ -146,7 +157,7 @@ module.exports = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         googleAnalytics: {
-          trackingID: 'UA-224312623-1',
+          trackingID: "UA-224312623-1",
           anonymizeIP: true,
         },
       },

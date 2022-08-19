@@ -1,0 +1,43 @@
+---
+id: dev-boosts-forms
+title: Forms, Proposals & Playlists
+sidebar_label: Forms, Proposals & Playlists
+slug: /devs/boosts-forms
+---
+
+> In this section, we will observe how `playlists.js`, `forms.js`, `fields.js`, `details.js`, `publishers.js`, `proposalUtils.jsx` and your custom Form JS file work together to render forms and fields for DAOhaus users to create, fill in and submit proposals. 
+
+[**playlists.js**](https://github.com/HausDAO/daohaus-app/blob/bf28463c835d69ad0a85bde432d0d873622ac314/src/data/playlists.js)
+
+**Playlists** are folders or groups of related or similar Boosts (i.e. custom proposal forms). This is managed by `playlists.js`- a central directory of all Boost Playlists. 
+
+Within the `BOOST_PLAYLISTS` object, there is an object for each Boost Playlist with `name`, `id`, and `forms` (for each proposal in the playlist).
+
+**Your custom Form JS file** 
+
+To create your custom proposal form, you are required to create a JS file which builds the form for your specific proposal. 
+
+> An example transaction file [mintAMillionForms.js](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/data/formLegos/mintAMillionForms.js) is available from the [Mint a Million tutorial](/docs/devs/build-a-boost/)
+
+Your JS file will import existing and reusable fields from `fields.js`, while adding in custom fields required for your contract.
+
+[**forms.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/formLegos/forms.js)
+
+`forms.js` is a central directory of all forms in the DAOhaus app. You will need to import the object from your custom Form JS file into `forms.js` 
+
+[**fields.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/fields.js)
+
+`fields.js` is a central directory of common fields created for the DAOhaus app, such as Proposal Title, Minion Select, etc. These are meant to be re-usable within the DAOhaus app, when creating new forms. Most developers will import these reusable fields when assembling your custom Forms JS file. 
+
+[**details.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/details.js)
+
+`details.js` is a central directory of proposal details for all proposal types in the DAOhaus app, such as Proposal Title, Description, Link, Proposal Type, etc. 
+
+[**publishers.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/publishers.js)
+
+`publishers.js` is a central directory of all Boost publishers in the DAOhaus ecosystem. This will be used in the `boosts.js` file. You will only need to add yourself to the list, when you are building your first boost. 
+
+[**proposalUtils.jsx**](https://github.com/HausDAO/daohaus-app/blob/develop/src/utils/proposalUtils.jsx) 
+
+`proposalUtils.js` is a central directory of all proposal utilities, such as Proposal Types. These proposal utilities are imported to empower Proposal functionalities throughout the DAOhaus app. 
+

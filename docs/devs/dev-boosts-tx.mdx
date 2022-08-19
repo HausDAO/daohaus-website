@@ -1,0 +1,17 @@
+---
+id: dev-boosts-tx
+title: Transactions
+sidebar_label: Transactions
+slug: /devs/boosts-tx
+---
+
+> In this section, we will observe how `contractTX.js` and your custom TX JS file work together to build a transaction for smart contract calls. 
+
+**Your custom TX js** 
+
+You will need to create a custom TX file that contains the actions and arguments required to build the transaction and contract call. 
+> An example transaction file [millionTx.js](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/data/txLegos/millionTX.js) is available from the [Mint a Million tutorial](/docs/devs/build-a-boost/)
+
+[**contractTX.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/txLegos/contractTX.js) 
+
+`contractTX.js` is a central directory of all tranasction types, which the DAOhaus transaction builder will build for. You will need to import the object from your custom TX js file here.

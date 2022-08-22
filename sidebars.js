@@ -1,10 +1,17 @@
 module.exports = {
   mainSidebar: {
-    "Developer Overview": ["devs/overview"],
+    "Developer Overview": ["devs/get-started", "devs/overview"],
     Concepts: ["devs/dev-proposals", "devs/treasury"],
     "DAOhaus App": [
       "devs/app-overview",
-      "devs/dev-boosts",
+      {
+        Boosts: [
+          "devs/dev-boosts",
+          "devs/dev-boosts-forms",
+          "devs/dev-boosts-contracts",
+          "devs/dev-boosts-tx",
+        ],
+      },
       {
         "Code Legos": [
           "devs/legos/tx-lego-api",

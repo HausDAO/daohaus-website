@@ -1,0 +1,71 @@
+---
+id: dev-boosts-forms
+title: Forms, Proposals & Playlists
+sidebar_label: Forms, Proposals & Playlists
+slug: /devs/boosts-forms
+---
+
+> In this section, we will observe how `playlists.js`, `forms.js`, `fields.js`, `details.js`, `publishers.js`, `proposalUtils.jsx` and your custom Form JS files work together to render forms and fields for DAOhaus users to create, fill in and submit proposals.
+
+## Creating your Proposal Playlist
+
+**Playlists** are folders or groups of related or similar Boosts (i.e. custom proposal forms). For instance, the **Safe Minion Classics** Playlist groups the **Buyout**, **Minion** and **Safe Minion TX Builder Proposals** together.
+
+<img src="https://i.imgur.com/7qZZRy9.png" alt="code-legos-ui" width="480" />
+
+#### [**playlists.js**](https://github.com/HausDAO/daohaus-app/blob/bf28463c835d69ad0a85bde432d0d873622ac314/src/data/playlists.js)
+
+`playlists.js`is a central directory of all Boost Playlists. Within the `BOOST_PLAYLISTS` object, there is an object for each Boost Playlist with `name`, `id`, and `forms` (for each proposal in the playlist).
+
+## Creating your Proposal Form
+
+**Proposal forms** are the forms that contains input fields for users to enter inputs for your custom functionality. For instance, the Minion Proposal contains some standard fields such as **Title**, **Contract Function, Minion Select, Contract Address, Value, Forward Funds** and **Description**.
+
+<img src="https://i.imgur.com/NB7KNyH.png" alt="code-legos-ui" width="480" />
+
+#### **Your custom Form JS file**
+
+To create your custom proposal form, you are required to create a JS file which builds the form for your specific proposal.
+
+> An example transaction file [mintAMillionForms.js](https://github.com/HausDAO/daohaus-app/blob/9698ba8a9535f7b85f84553aa6defb9181604f44/src/data/formLegos/mintAMillionForms.js) is available from the [Mint a Million tutorial](/docs/devs/build-a-boost/)
+
+Your JS file will import existing and reusable fields from `fields.js`, while adding in custom fields required for your contract.
+
+#### [**forms.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/formLegos/forms.js)
+
+`forms.js` is a central directory of all forms in the DAOhaus app. You will need to import the object from your custom Form JS file into `forms.js`
+
+#### [**fields.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/fields.js)
+
+`fields.js` is a central directory of common fields created for the DAOhaus app, such as Proposal Title, Minion Select, etc. These are meant to be re-usable within the DAOhaus app, when creating new forms. Most developers will import these reusable fields when assembling your custom Forms JS file.
+
+#### [**details.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/details.js)
+
+`details.js` is a central directory of proposal details for all proposal types in the DAOhaus app, such as Proposal Title, Description, Link, Proposal Type, etc.
+
+#### [**publishers.js**](https://github.com/HausDAO/daohaus-app/blob/develop/src/data/publishers.js)
+
+`publishers.js` is a central directory of all Boost publishers in the DAOhaus ecosystem. This will be used in the `boosts.js` file. You will only need to add yourself to the list, when you are building your first boost.
+
+#### [**proposalUtils.jsx**](https://github.com/HausDAO/daohaus-app/blob/develop/src/utils/proposalUtils.jsx)
+
+`proposalUtils.js` is a central directory of all proposal utilities, such as Proposal Types. These proposal utilities are imported to empower Proposal functionalities throughout the DAOhaus app.
+
+## Customizing Proposal Cards
+
+**Proposal cards** appear on the DAO's home page, giving DAO members a quick preview about the proposal and easy access to voting. You can customize the copy on proposal cards for your custom functionality. For instance, this is an example of a proposal card for **Minion Proposals**.
+
+![](https://i.imgur.com/9C7ExY8.png)
+
+#### Your custom JSX file for proposal card
+
+To customize the copy on proposal cards for your Boost, you will need to create a custom JSX file which provides the data and copy for your proposal card.
+
+Your JSX file will import existing proposal card formats from `proposalBriefPrimitives.js` before exporting your custom proposal card object.
+
+> A simple example JSX file [sbtTransfer.jsx](https://github.com/HausDAO/daohaus-app/blob/680707bf893075bf27f993c6e08cf88f7fe012e0/src/proposalBuilder/sbtTransfer.jsx) is available from the [SBT Boost Tutorial](https://www.youtube.com/watch?v=HGIsBsfeoGY)
+> A more complex JSX file is avilable at [multiTxTransfer.js](https://github.com/HausDAO/daohaus-app/blob/df34b74952ed39c8d46d54c1794f47a771e9996e/src/proposalBuilder/multiTxTransfer.jsx)
+
+#### [**customTransferFactory.jsx**](https://github.com/HausDAO/daohaus-app/blob/680707bf893075bf27f993c6e08cf88f7fe012e0/src/proposalBuilder/customTransferFactory.jsx)
+
+`customTransferFactory.jsx` is a central directory of proposal card transfer types in the DAOhaus app. You will need to import the object from your custom Form JS file into `customTransferFactory.jsx`

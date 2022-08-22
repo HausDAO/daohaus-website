@@ -63,10 +63,6 @@ module.exports = {
               label: "Handbook",
               to: "/docs/handbook",
             },
-            {
-              label: "Developers",
-              to: "/docs/devs",
-            },
           ],
         },
         {

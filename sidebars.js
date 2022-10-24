@@ -1,6 +1,6 @@
 module.exports = {
   mainSidebar: {
-    "Developer Overview": ["devs/get-started", "devs/overview"],
+    "Developer Overview": ["devs/get-started", "devs/overview","devs/dev-subgraphs",],
     Concepts: ["devs/dev-proposals", "devs/treasury"],
     "DAOhaus App": [
       "devs/app-overview",

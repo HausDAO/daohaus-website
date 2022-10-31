@@ -1,19 +1,10 @@
 ---
 id: dev-subgraphs
-title: Subgraphs
-sidebar_label: Subgraphs
+title: DAOhaus Subgraphs
+sidebar_label: DAOhaus Subgraphs
 slug: /devs/subgraphs
 ---
 
-## DAOhaus v2 Subgraph Studio 
-To query DAOhaus v2 data via Subgraph Studio, please visit our [Subgraph Studio Link here](https://thegraph.com/explorer/subgraph?id=9uvKq57ZiNCdT9uZ6xaFhp3yYczTM4Fgr7CJHM6tdX9H&view=Indexers)
-
-If you are new to Subgraph Studio, you will need to:  
-1. Create your API keys at [Subgraph Studio API Keys](https://thegraph.com/studio/apikeys/) (Comes with 1,000 free API calls)
-2. Fund your billing balance (if needed)
-3. Query the DAOhaus v2 Subgraph via `https://gateway.thegraph.com/api/[api-key]/subgraphs/id/9uvKq57ZiNCdT9uZ6xaFhp3yYczTM4Fgr7CJHM6tdX9H`
-
-Facing any issues? Hop into our [Discord](https://discord.gg/invite/daohaus)'s' and give `@arentweall` and `@UI369` a ping! We will help you get set up with whatever you need.
 
 ## Entity Relationship Diagrams
 
@@ -21,16 +12,24 @@ This Entity Relationship Diagram (ERD) provides a high-level overview about the 
 
 ![](https://i.imgur.com/8yI8lAB.png)
 
+## Querying DAOhaus v2 Data for Mainnet
+DAOhaus' v2 data for Mainnet are available through Subgraph Studio. To query DAOhaus v2 data, please visit our [Subgraph Studio Link here](https://thegraph.com/explorer/subgraph?id=9uvKq57ZiNCdT9uZ6xaFhp3yYczTM4Fgr7CJHM6tdX9H&view=Indexers)
 
----
+If you are new to Subgraph Studio, you will need to:  
+1. Create your API keys at [Subgraph Studio API Keys](https://thegraph.com/studio/apikeys/) (Comes with 1,000 free API calls)
+2. Fund your billing balance (if needed)s
+3. Query the DAOhaus v2 Subgraph via `https://gateway.thegraph.com/api/[api-key]/subgraphs/id/9uvKq57ZiNCdT9uZ6xaFhp3yYczTM4Fgr7CJHM6tdX9H`
 
-<h4>
+Facing any issues? Hop into our [Discord](https://discord.gg/invite/daohaus)'s' and give `@arentweall` and `@UI369` a ping! We will help you get set up with whatever you need.
+
+## Querying DAOhaus v2 Data for Other Chains
+
+DAOhaus' v2 data for other chains (Gnosis Chain, Polygon, Arbitrum, Optimism, Celo) are available through Subgraph's Hosted Service, To query DAOhaus v2 data, please visit the following links
+
+<h5>
   <details>
-    <summary>Archived: DAOhaus Subgraphs through The Graph's Hosted Service </summary>
-        <p>The primary DAOhaus Subgraph tracks the primary entities of DAOs: members, proposals, votes, and tokens.</p>
-        <b>DAOhaus Subgraph Explorers</b>
+    <summary>DAOhaus Subgraph Explorers</summary>
         <ul>
-            <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus">Mainnet</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-kovan">Kovan</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-rinkeby">Rinkeby</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-xdai">Gnosis Chain</a></li>
@@ -39,10 +38,13 @@ This Entity Relationship Diagram (ERD) provides a high-level overview about the 
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-arbitrum">Arbitrum</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-celo">Celo</a></li>
         </ul>
-        <br/>
-        <b>Stats Subgraph Explorers</b>
+  </details>
+</h5>
+
+<h5>
+  <details>
+    <summary>DAOhaus Stats Subgraph Explorers</summary>
         <ul>
-            <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats">Mainnet</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-kovan">Kovan</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-rinkeby">Rinkeby</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-xdai">Gnosis Chain</a></li>
@@ -51,10 +53,12 @@ This Entity Relationship Diagram (ERD) provides a high-level overview about the 
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-arbitrum">Arbitrum</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-stats-celo">Celo</a></li>
         </ul>
-        <b>Boosts Subgraph Explorers</b>
-        <br/>
-        <ul>
-            <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts">Mainnet</a></li>
+  </details>
+</h5>
+<h5>
+  <details>
+    <summary>DAOhaus Boosts Subgraph Explorers</summary>
+       <ul>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-kovan">Kovan</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-rinkeby">Rinkeby</a></li>
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-xdai">Gnosis Chain</a></li>
@@ -64,4 +68,5 @@ This Entity Relationship Diagram (ERD) provides a high-level overview about the 
             <li><a href="https://thegraph.com/hosted-service/subgraph/odyssy-automaton/daohaus-boosts-celo">Celo</a></li>
         </ul>
   </details>
-</h4>
+</h5>
+

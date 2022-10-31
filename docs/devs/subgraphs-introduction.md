@@ -1,7 +1,7 @@
 ---
-title: Introduction
+title: Introduction to Subgraphs
 sidebar_position: 1
-sidebar_label: Subgraph Introduction
+sidebar_label: Introduction to Subgraphs
 ---
 
 # DAOhaus V2 Subgraph Introduction

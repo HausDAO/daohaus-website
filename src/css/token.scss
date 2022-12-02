@@ -385,3 +385,31 @@
   font-size: 0.75em;
   color: white;
 }
+
+.Daocember__Block {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  h1 {
+    text-align: center;
+  }
+  .iframe {
+    display: flex;
+    justify-content: center;
+  }
+
+  .link {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.VideoSize {
+  width: 800px;
+  height: 600px;
+  @media (max-width: $mobile) {
+    width: 100%;
+    height: 100%;
+  }
+}

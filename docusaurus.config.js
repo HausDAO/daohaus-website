@@ -106,6 +106,10 @@ module.exports = {
               to: "/docs/handbook",
               label: "Handbook",
             },
+            {
+              to: "/daocember",
+              label: "DAOcember Schedule",
+            },
           ],
         },
         {

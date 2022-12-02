@@ -180,9 +180,9 @@ export default function Home() {
               <iframe
                 className="VideoSize"
                 src="https://www.youtube.com/embed/7MaucjMwEUA"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <p style={{ marginTop: "15px" }}>
                 A DAO explainer built by a DAO for DAOs funded by a DAO. That's

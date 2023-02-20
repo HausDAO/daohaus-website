@@ -20,7 +20,7 @@ module.exports = {
   themeConfig: {
     announcementBar: {
       id: "moloch_v3",
-      content: `<div style="font-size:20px;font-weight:700;">👹 MOLOCH V3 IS RISING 👹 <span style="font-size:16px;font-weight:400;">Look for us at ETHDenver 2023</span><div>`,
+      content: `👹 MOLOCH V3 IS RISING - Look for us at ETHDenver 2023 👹 `,
       backgroundColor: "#e53e3e",
       textColor: "#fff",
       isCloseable: false,

@@ -8,6 +8,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "hausdao", // Usually your GitHub org/user name.
   projectName: "daohaus-docs", // Usually your repo name.
+
   scripts: [
     {
       src: "https://plausible.io/js/plausible.outbound-links.js",
@@ -17,6 +18,13 @@ module.exports = {
     },
   ],
   themeConfig: {
+    announcementBar: {
+      id: "moloch_v3",
+      content: `<div style="font-size:20px;font-weight:700;">👹 MOLOCH V3 IS RISING 👹 <span style="font-size:16px;font-weight:400;">Look for us at ETHDenver 2023</span><div>`,
+      backgroundColor: "#e53e3e",
+      textColor: "#fff",
+      isCloseable: false,
+    },
     image: "img/haus__icon.png",
     metadata: [
       { name: "og:type", content: "website" },
@@ -105,10 +113,6 @@ module.exports = {
             {
               to: "/docs/handbook",
               label: "Handbook",
-            },
-            {
-              to: "/daocember",
-              label: "DAOcember Schedule",
             },
           ],
         },
